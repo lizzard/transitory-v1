@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ifindex version="1.0" xmlns="http://babel.ifarchive.org/protocol/iFiction/">
+    <story>
+        <identification>
+            <ifid>9BB42EE8-EEFF-4F67-B265-3AAA2ABB27C0</ifid>
+            <format>glulx</format>
+        </identification>
+        <bibliographic>
+            <title>Transitory</title>
+            <author>lizzard</author>
+            <headline>An Interactive Fiction</headline>
+            <genre>Fiction</genre>
+            <firstpublished>2019</firstpublished>
+            <language>en</language>
+            <group>Inform</group>
+        </bibliographic>
+        <releases>
+            <attached>
+                <release>
+                    <releasedate>2019-01-20</releasedate>
+                    <version>1</version>
+                    <compiler>Inform 7</compiler>
+                    <compilerversion>6M62</compilerversion>
+                </release>
+            </attached>
+        </releases>
+        <colophon>
+            <generator>Inform 7</generator>
+            <generatorversion>6M62</generatorversion>
+            <originated>2019-01-20</originated>
+        </colophon>
+        <glulx>
+            <serial>190120</serial>
+            <release>1</release>
+            <compiler>Inform 7 build 6M62</compiler>
+        </glulx>
+    </story>
+</ifindex>

@@ -1,0 +1,38 @@
+! Blurb file created by Inform build 6M62
+
+status "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/CblorbModel.html" "/Users/ehenry/Documents/Transitory.inform/Build/StatusCblorb.html"
+
+
+! Identification
+
+project folder "/Users/ehenry/Documents/Transitory.inform"
+release to "/Users/ehenry/Documents/Transitory.materials/Release"
+
+! Blorb instructions
+
+storyfile leafname "Transitory.gblorb"
+storyfile "/Users/ehenry/Documents/Transitory.inform/Build/output.ulx" include
+ifiction "/Users/ehenry/Documents/Transitory.inform/Metadata.iFiction" include
+cover "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/Cover.jpg"
+picture 1 "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/Cover.jpg"
+
+! Placeholder variables
+
+placeholder [IFID] = "9BB42EE8-EEFF-4F67-B265-3AAA2ABB27C0"
+placeholder [RELEASE] = "1"
+placeholder [YEAR] = "2019"
+placeholder [TITLE] = "Transitory"
+placeholder [AUTHOR] = "lizzard"
+placeholder [BLURB] = "A work of interactive fiction."
+
+! Other material to release
+
+status alternative ||Using 'Release along with cover art', to provide something more distinctive than the default artwork above&nbsp;<a href=inform:/doc403.html><img border=0 src=inform:/doc_images/help.png></a>||
+status alternative ||Using 'Release along with a website'&nbsp;<a href=inform:/doc405.html><img border=0 src=inform:/doc_images/help.png></a>||
+status alternative ||Using 'Release along with an interpreter', for in-browser play on your website&nbsp;<a href=inform:/doc406.html><img border=0 src=inform:/doc_images/help.png></a>||
+status alternative ||Using 'Release along with a file of "Such-and-Such" called "whatever.pdf"', perhaps to add a manual, or a welcoming note&nbsp;<a href=inform:/doc401.html><img border=0 src=inform:/doc_images/help.png></a>||
+status alternative ||Using 'Release along with the source text'&nbsp;<a href=inform:/doc412.html><img border=0 src=inform:/doc_images/help.png></a>||
+status alternative ||Using 'Release along with a solution'&nbsp;<a href=inform:/doc411.html><img border=0 src=inform:/doc_images/help.png></a>||
+status alternative ||Using 'Release along with the library card'&nbsp;<a href=inform:/doc412.html><img border=0 src=inform:/doc_images/help.png></a>||
+status alternative ||Using 'Release along with the introductory booklet'&nbsp;<a href=inform:/doc404.html><img border=0 src=inform:/doc_images/help.png></a>||
+status alternative ||Using 'Release along with the introductory postcard'&nbsp;<a href=inform:/doc404.html><img border=0 src=inform:/doc_images/help.png></a>||
