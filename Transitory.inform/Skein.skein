@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 
-<Skein rootNode="node-1623">
+<Skein rootNode="node-2339">
     <generator>Inform Mac Client (Inform version 1.65/6.33/6M62)</generator>
-    <item nodeId="node-1623">
+    <item nodeId="node-2339">
         <command xml:space="preserve">Transitory</command>
         <result xml:space="preserve">
 
@@ -11,64 +11,68 @@ Transitory
 An Interactive Fiction by lizzard
 Release 1 / Serial number 190120 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 
-Mission 24th St
-You are underground, on a BART platform. The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. An elevator is in the median wall to the north. On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset.
+Calle 24 Southwest Plaza
+Little tables and tent-covered booths are scattered throughout this busy plaza, with people selling souvenirs from Mexico and Guatemala, shopping bags, embroidered huipil blouses, woolen ponchos, phone chargers and cases, jewelry, and flowers. Many kinds of music are playing here - norteño blasts its cheerful accordions from speakers at a booth, saxophone notes float up from the huge, round stairwell which goes down to the station, songs blare from passing cars. There is a sloping area useful as a stage underneath the Coffee and Mission mural. Across 24th street to the north, there's a donut shop.
+
+You can see a flower seller here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1970"></child>
-            <child nodeId="node-1626"></child>
-            <child nodeId="node-1635"></child>
-            <child nodeId="node-1974"></child>
-            <child nodeId="node-1980"></child>
-            <child nodeId="node-1922"></child>
-            <child nodeId="node-2054"></child>
+        <children><child nodeId="node-2556"></child>
+            <child nodeId="node-2494"></child>
+            <child nodeId="node-2410"></child>
+            <child nodeId="node-2657"></child>
+            <child nodeId="node-2644"></child>
+            <child nodeId="node-2397"></child>
+            <child nodeId="node-2372"></child>
+            <child nodeId="node-2345"></child>
+            <child nodeId="node-2340"></child>
         </children>
     </item>
-    <item nodeId="node-2054">
+    <item nodeId="node-2340">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Time passes.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2055"></child>
+        <children><child nodeId="node-2341"></child>
         </children>
     </item>
-    <item nodeId="node-2055">
+    <item nodeId="node-2341">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Time passes.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2056"></child>
+        <children><child nodeId="node-2342"></child>
         </children>
     </item>
-    <item nodeId="node-2056">
+    <item nodeId="node-2342">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Time passes.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2057"></child>
+        <children><child nodeId="node-2343"></child>
         </children>
     </item>
-    <item nodeId="node-2057">
+    <item nodeId="node-2343">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Time passes.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2058"></child>
+        <children><child nodeId="node-2344"></child>
         </children>
     </item>
-    <item nodeId="node-2058">
+    <item nodeId="node-2344">
         <command xml:space="preserve">wait 2 minutes</command>
         <result xml:space="preserve">I only understood you as far as wanting to wait.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1922">
+    <item nodeId="node-2345">
         <command xml:space="preserve">up</command>
         <result xml:space="preserve">
 Mission 24th Concourse
@@ -76,11 +80,11 @@ Enormous concrete buttresses soar overhead, like a futuristic 70s airplane hanga
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2136"></child>
-            <child nodeId="node-1923"></child>
+        <children><child nodeId="node-2367"></child>
+            <child nodeId="node-2346"></child>
         </children>
     </item>
-    <item nodeId="node-1923">
+    <item nodeId="node-2346">
         <command xml:space="preserve">up</command>
         <result xml:space="preserve">
 Calle 24 Northeast Plaza
@@ -95,13 +99,13 @@ Mariquita fusses over her bunches of flowers, arranging thenm nicely.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1940"></child>
-            <child nodeId="node-1937"></child>
-            <child nodeId="node-1961"></child>
-            <child nodeId="node-1924"></child>
+        <children><child nodeId="node-2362"></child>
+            <child nodeId="node-2361"></child>
+            <child nodeId="node-2360"></child>
+            <child nodeId="node-2347"></child>
         </children>
     </item>
-    <item nodeId="node-1924">
+    <item nodeId="node-2347">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">
 Calle 24 Southeast Corner
@@ -113,32 +117,32 @@ A raccoon skulks into a nearby alleyway.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1931"></child>
-            <child nodeId="node-1965"></child>
-            <child nodeId="node-1925"></child>
+        <children><child nodeId="node-2356"></child>
+            <child nodeId="node-2351"></child>
+            <child nodeId="node-2348"></child>
         </children>
     </item>
-    <item nodeId="node-1925">
+    <item nodeId="node-2348">
         <command xml:space="preserve">w</command>
         <result xml:space="preserve">
 Calle 24 Southwest Plaza
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1926"></child>
+        <children><child nodeId="node-2349"></child>
         </children>
     </item>
-    <item nodeId="node-1926">
+    <item nodeId="node-2349">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">
 Calle 24 Northwest Corner
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1927"></child>
+        <children><child nodeId="node-2350"></child>
         </children>
     </item>
-    <item nodeId="node-1927">
+    <item nodeId="node-2350">
         <command xml:space="preserve">e</command>
         <result xml:space="preserve">
 Calle 24 Northeast Plaza
@@ -146,7 +150,7 @@ Calle 24 Northeast Plaza
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1965">
+    <item nodeId="node-2351">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">You can't go that way.
 
@@ -154,10 +158,10 @@ A raccoon hauls itsef out of a concrete trash bin.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1966"></child>
+        <children><child nodeId="node-2352"></child>
         </children>
     </item>
-    <item nodeId="node-1966">
+    <item nodeId="node-2352">
         <command xml:space="preserve">w</command>
         <result xml:space="preserve">
 Calle 24 Southwest Plaza
@@ -165,10 +169,10 @@ Little tables and tent-covered booths are scattered throughout this busy plaza, 
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1967"></child>
+        <children><child nodeId="node-2353"></child>
         </children>
     </item>
-    <item nodeId="node-1967">
+    <item nodeId="node-2353">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">
 Calle 24 Northwest Corner
@@ -176,19 +180,19 @@ This lively streetcorner just outside the Chinese Food and Donuts shop has buses
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1968"></child>
+        <children><child nodeId="node-2354"></child>
         </children>
     </item>
-    <item nodeId="node-1968">
+    <item nodeId="node-2354">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1969"></child>
+        <children><child nodeId="node-2355"></child>
         </children>
     </item>
-    <item nodeId="node-1969">
+    <item nodeId="node-2355">
         <command xml:space="preserve">e</command>
         <result xml:space="preserve">
 Calle 24 Northeast Plaza
@@ -201,7 +205,7 @@ A tamale lady shifts her weight from one foot to the other.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1931">
+    <item nodeId="node-2356">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Calle 24 Southeast Corner
 This busy street corner by the McDonalds is grimy. It's basically a crowded spot where people wait to cross the street. Across Mission to the west, there's a nice plaza with a busy market. Across 24th Street to the north, another lovely plaza with musicians, preachers, and some places to sit.
@@ -212,10 +216,10 @@ A raccoon hauls itsef out of a concrete trash bin.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1956"></child>
+        <children><child nodeId="node-2357"></child>
         </children>
     </item>
-    <item nodeId="node-1956">
+    <item nodeId="node-2357">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Calle 24 Southeast Corner
 This busy street corner by the McDonalds is grimy. It's basically a crowded spot where people wait to cross the street. Across Mission to the west, there's a nice plaza with a busy market. Across 24th Street to the north, another lovely plaza with musicians, preachers, and some places to sit.
@@ -226,10 +230,10 @@ A raccoon skulks into a nearby alleyway.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1957"></child>
+        <children><child nodeId="node-2358"></child>
         </children>
     </item>
-    <item nodeId="node-1957">
+    <item nodeId="node-2358">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Calle 24 Southeast Corner
 This busy street corner by the McDonalds is grimy. It's basically a crowded spot where people wait to cross the street. Across Mission to the west, there's a nice plaza with a busy market. Across 24th Street to the north, another lovely plaza with musicians, preachers, and some places to sit.
@@ -240,10 +244,10 @@ A raccoon hauls itsef out of a concrete trash bin.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1958"></child>
+        <children><child nodeId="node-2359"></child>
         </children>
     </item>
-    <item nodeId="node-1958">
+    <item nodeId="node-2359">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Calle 24 Southeast Corner
 This busy street corner by the McDonalds is grimy. It's basically a crowded spot where people wait to cross the street. Across Mission to the west, there's a nice plaza with a busy market. Across 24th Street to the north, another lovely plaza with musicians, preachers, and some places to sit.
@@ -255,7 +259,7 @@ A raccoon hides in a little nook, eating some discarded fries.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1961">
+    <item nodeId="node-2360">
         <command xml:space="preserve">look at preacher</command>
         <result xml:space="preserve">A short man yells in Spanish into a microphone. You recognize some things from the Bible though it is hard to understand him from the low quality amp at his feet.
 
@@ -265,14 +269,14 @@ A tamale lady says "Tamales!"
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1937">
+    <item nodeId="node-2361">
         <command xml:space="preserve">look at lady</command>
         <result xml:space="preserve">A short, smiling woman in jeans and an army jacket stands next to a cooler on wheels.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1940">
+    <item nodeId="node-2362">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Calle 24 Northeast Plaza
 Palm trees sway high overhead. Delicate metal rails surround the enormous circular stairwell that goes down to the station concourse. All around you are little shops, restaurants, taquerias, people talking, buses pulling up to the stops on Mission and on 24th Street, music blasting from cars going by. A huge mural runs across the wall of the taqueria bordering the plaza to the north, of a gleaming BART train carried on the backs of determined workers amid a geometric cityscape.
@@ -284,10 +288,10 @@ A tamale lady says "Tamales de pollo!"
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1941"></child>
+        <children><child nodeId="node-2363"></child>
         </children>
     </item>
-    <item nodeId="node-1941">
+    <item nodeId="node-2363">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Calle 24 Northeast Plaza
 Palm trees sway high overhead. Delicate metal rails surround the enormous circular stairwell that goes down to the station concourse. All around you are little shops, restaurants, taquerias, people talking, buses pulling up to the stops on Mission and on 24th Street, music blasting from cars going by. A huge mural runs across the wall of the taqueria bordering the plaza to the north, of a gleaming BART train carried on the backs of determined workers amid a geometric cityscape.
@@ -299,10 +303,10 @@ A tamale lady says "Tamales!"
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1942"></child>
+        <children><child nodeId="node-2364"></child>
         </children>
     </item>
-    <item nodeId="node-1942">
+    <item nodeId="node-2364">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Calle 24 Northeast Plaza
 Palm trees sway high overhead. Delicate metal rails surround the enormous circular stairwell that goes down to the station concourse. All around you are little shops, restaurants, taquerias, people talking, buses pulling up to the stops on Mission and on 24th Street, music blasting from cars going by. A huge mural runs across the wall of the taqueria bordering the plaza to the north, of a gleaming BART train carried on the backs of determined workers amid a geometric cityscape.
@@ -313,10 +317,10 @@ A tamale lady watches the people passing by.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1943"></child>
+        <children><child nodeId="node-2365"></child>
         </children>
     </item>
-    <item nodeId="node-1943">
+    <item nodeId="node-2365">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Calle 24 Northeast Plaza
 Palm trees sway high overhead. Delicate metal rails surround the enormous circular stairwell that goes down to the station concourse. All around you are little shops, restaurants, taquerias, people talking, buses pulling up to the stops on Mission and on 24th Street, music blasting from cars going by. A huge mural runs across the wall of the taqueria bordering the plaza to the north, of a gleaming BART train carried on the backs of determined workers amid a geometric cityscape.
@@ -327,10 +331,10 @@ A tamale lady shifts her weight from one foot to the other.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1944"></child>
+        <children><child nodeId="node-2366"></child>
         </children>
     </item>
-    <item nodeId="node-1944">
+    <item nodeId="node-2366">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Calle 24 Northeast Plaza
 Palm trees sway high overhead. Delicate metal rails surround the enormous circular stairwell that goes down to the station concourse. All around you are little shops, restaurants, taquerias, people talking, buses pulling up to the stops on Mission and on 24th Street, music blasting from cars going by. A huge mural runs across the wall of the taqueria bordering the plaza to the north, of a gleaming BART train carried on the backs of determined workers amid a geometric cityscape.
@@ -342,16 +346,16 @@ A tamale lady shifts her weight from one foot to the other.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-2136">
+    <item nodeId="node-2367">
         <command xml:space="preserve">kup</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2137"></child>
+        <children><child nodeId="node-2368"></child>
         </children>
     </item>
-    <item nodeId="node-2137">
+    <item nodeId="node-2368">
         <command xml:space="preserve">up</command>
         <result xml:space="preserve">
 Calle 24 Northeast Plaza
@@ -364,10 +368,10 @@ A tamale lady says "Tamales de pollo!"
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2138"></child>
+        <children><child nodeId="node-2369"></child>
         </children>
     </item>
-    <item nodeId="node-2138">
+    <item nodeId="node-2369">
         <command xml:space="preserve">e</command>
         <result xml:space="preserve">You can't go that way.
 
@@ -376,10 +380,10 @@ A tamale lady says "Tamales!"
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2139"></child>
+        <children><child nodeId="node-2370"></child>
         </children>
     </item>
-    <item nodeId="node-2139">
+    <item nodeId="node-2370">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">
 Calle 24 Southeast Corner
@@ -391,10 +395,10 @@ A raccoon hides in a little nook, eating some discarded fries.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2140"></child>
+        <children><child nodeId="node-2371"></child>
         </children>
     </item>
-    <item nodeId="node-2140">
+    <item nodeId="node-2371">
         <command xml:space="preserve">w</command>
         <result xml:space="preserve">
 Calle 24 Southwest Plaza
@@ -407,16 +411,16 @@ Mariquita fusses over her bunches of flowers, arranging thenm nicely.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1980">
+    <item nodeId="node-2372">
         <command xml:space="preserve">nw</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1981"></child>
+        <children><child nodeId="node-2373"></child>
         </children>
     </item>
-    <item nodeId="node-1981">
+    <item nodeId="node-2373">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">The doors slowly close. The elevator almost imperceptibly moves. Time passes. You smell a lot of things, wishing you couldn't. The doors open again, looking south.
 
@@ -424,19 +428,19 @@ Mission 24th Platform Elevator
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1982"></child>
+        <children><child nodeId="node-2374"></child>
         </children>
     </item>
-    <item nodeId="node-1982">
+    <item nodeId="node-2374">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Mission 24th Platform Elevator
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1983"></child>
+        <children><child nodeId="node-2375"></child>
         </children>
     </item>
-    <item nodeId="node-1983">
+    <item nodeId="node-2375">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">
 Mission 24th St
@@ -444,20 +448,20 @@ You are underground, on a BART platform. The hollow sound of vibrating train rai
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1984"></child>
+        <children><child nodeId="node-2376"></child>
         </children>
     </item>
-    <item nodeId="node-1984">
+    <item nodeId="node-2376">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Mission 24th St
 You are underground, on a BART platform. The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. An elevator is in the median wall to the north. On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1985"></child>
+        <children><child nodeId="node-2377"></child>
         </children>
     </item>
-    <item nodeId="node-1985">
+    <item nodeId="node-2377">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">The doors slowly close. The elevator almost imperceptibly moves. Time passes. You smell a lot of things, wishing you couldn't. The doors open again, looking south.
 
@@ -465,10 +469,10 @@ Mission 24th Platform Elevator
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1986"></child>
+        <children><child nodeId="node-2378"></child>
         </children>
     </item>
-    <item nodeId="node-1986">
+    <item nodeId="node-2378">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">
 Mission 24th St
@@ -476,10 +480,10 @@ You are underground, on a BART platform. The hollow sound of vibrating train rai
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1987"></child>
+        <children><child nodeId="node-2379"></child>
         </children>
     </item>
-    <item nodeId="node-1987">
+    <item nodeId="node-2379">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">The doors slowly close. The elevator almost imperceptibly moves. Time passes. You smell a lot of things, wishing you couldn't. The doors open again, looking south.
 
@@ -487,10 +491,10 @@ Mission 24th Platform Elevator
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1988"></child>
+        <children><child nodeId="node-2380"></child>
         </children>
     </item>
-    <item nodeId="node-1988">
+    <item nodeId="node-2380">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">
 Mission 24th St
@@ -498,10 +502,10 @@ You are underground, on a BART platform. The hollow sound of vibrating train rai
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1989"></child>
+        <children><child nodeId="node-2381"></child>
         </children>
     </item>
-    <item nodeId="node-1989">
+    <item nodeId="node-2381">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">The doors slowly close. The elevator almost imperceptibly moves. Time passes. You smell a lot of things, wishing you couldn't. The doors open again, looking south.
 
@@ -509,10 +513,10 @@ Mission 24th Platform Elevator
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1990"></child>
+        <children><child nodeId="node-2382"></child>
         </children>
     </item>
-    <item nodeId="node-1990">
+    <item nodeId="node-2382">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">
 Mission 24th St
@@ -522,10 +526,10 @@ The Red Line train pulls up. The door opens.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1991"></child>
+        <children><child nodeId="node-2383"></child>
         </children>
     </item>
-    <item nodeId="node-1991">
+    <item nodeId="node-2383">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">The doors slowly close. The elevator almost imperceptibly moves. Time passes. You smell a lot of things, wishing you couldn't. The doors open again, looking south.
 
@@ -533,10 +537,10 @@ Mission 24th Platform Elevator
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1992"></child>
+        <children><child nodeId="node-2384"></child>
         </children>
     </item>
-    <item nodeId="node-1992">
+    <item nodeId="node-2384">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">
 Mission 24th St
@@ -550,20 +554,20 @@ The Red Line train sets off.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1993"></child>
+        <children><child nodeId="node-2385"></child>
         </children>
     </item>
-    <item nodeId="node-1993">
+    <item nodeId="node-2385">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Mission 24th St
 You are underground, on a BART platform. The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. An elevator is in the median wall to the north. On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1994"></child>
+        <children><child nodeId="node-2386"></child>
         </children>
     </item>
-    <item nodeId="node-1994">
+    <item nodeId="node-2386">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">The doors slowly close. The elevator almost imperceptibly moves. Time passes. You smell a lot of things, wishing you couldn't. The doors open again, looking south.
 
@@ -571,19 +575,19 @@ Mission 24th Platform Elevator
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1995"></child>
+        <children><child nodeId="node-2387"></child>
         </children>
     </item>
-    <item nodeId="node-1995">
+    <item nodeId="node-2387">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Mission 24th Platform Elevator
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1996"></child>
+        <children><child nodeId="node-2388"></child>
         </children>
     </item>
-    <item nodeId="node-1996">
+    <item nodeId="node-2388">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">
 Mission 24th St
@@ -593,10 +597,10 @@ The Red Line train pulls up. The door opens.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1997"></child>
+        <children><child nodeId="node-2389"></child>
         </children>
     </item>
-    <item nodeId="node-1997">
+    <item nodeId="node-2389">
         <command xml:space="preserve">up</command>
         <result xml:space="preserve">
 Mission 24th Concourse
@@ -604,10 +608,10 @@ Enormous concrete buttresses soar overhead, like a futuristic 70s airplane hanga
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1998"></child>
+        <children><child nodeId="node-2390"></child>
         </children>
     </item>
-    <item nodeId="node-1998">
+    <item nodeId="node-2390">
         <command xml:space="preserve">nw</command>
         <result xml:space="preserve">The doors slowly close. The elevator almost imperceptibly moves. Time passes. You smell a lot of things, wishing you couldn't. The doors open again, looking southeast.
 
@@ -615,19 +619,19 @@ Mission 24th Street Elevator
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1999"></child>
+        <children><child nodeId="node-2391"></child>
         </children>
     </item>
-    <item nodeId="node-1999">
+    <item nodeId="node-2391">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Mission 24th Street Elevator
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2000"></child>
+        <children><child nodeId="node-2392"></child>
         </children>
     </item>
-    <item nodeId="node-2000">
+    <item nodeId="node-2392">
         <command xml:space="preserve">se</command>
         <result xml:space="preserve">
 Mission 24th Concourse
@@ -635,10 +639,10 @@ Enormous concrete buttresses soar overhead, like a futuristic 70s airplane hanga
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2001"></child>
+        <children><child nodeId="node-2393"></child>
         </children>
     </item>
-    <item nodeId="node-2001">
+    <item nodeId="node-2393">
         <command xml:space="preserve">nw</command>
         <result xml:space="preserve">The doors slowly close. The elevator almost imperceptibly moves. Time passes. You smell a lot of things, wishing you couldn't. The doors open again, looking southeast.
 
@@ -646,28 +650,28 @@ Mission 24th Street Elevator
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2002"></child>
+        <children><child nodeId="node-2394"></child>
         </children>
     </item>
-    <item nodeId="node-2002">
+    <item nodeId="node-2394">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2003"></child>
+        <children><child nodeId="node-2395"></child>
         </children>
     </item>
-    <item nodeId="node-2003">
+    <item nodeId="node-2395">
         <command xml:space="preserve">sw</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2004"></child>
+        <children><child nodeId="node-2396"></child>
         </children>
     </item>
-    <item nodeId="node-2004">
+    <item nodeId="node-2396">
         <command xml:space="preserve">se</command>
         <result xml:space="preserve">
 Mission 24th Concourse
@@ -676,19 +680,19 @@ Enormous concrete buttresses soar overhead, like a futuristic 70s airplane hanga
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1974">
+    <item nodeId="node-2397">
         <command xml:space="preserve">n</command>
-        <result xml:space="preserve">The doors slowly close. The elevator almost imperceptibly moves. Time passes. You smell a lot of things, wishing you couldn't. The doors open again, looking south.
-
-Mission 24th Platform Elevator
-The elevator is grimy and smells like pee.
+        <result xml:space="preserve">
+Calle 24 Northwest Corner
+Just outside the Chinese Food and Donuts shop, this lively streetcorner has buses pulling up along 24th Street, many cars going by, people crossing the street and just standing around, music blaring from passing cars and from the shops all around. Along Mission, high overhead, washingtonia palms stretch into the sky. To the east, there's another BART plaza with an elevator.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1975"></child>
+        <children><child nodeId="node-2653"></child>
+            <child nodeId="node-2398"></child>
         </children>
     </item>
-    <item nodeId="node-1975">
+    <item nodeId="node-2398">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">
 Mission 24th Concourse
@@ -696,10 +700,10 @@ Enormous concrete buttresses soar overhead, like a futuristic 70s airplane hanga
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1976"></child>
+        <children><child nodeId="node-2399"></child>
         </children>
     </item>
-    <item nodeId="node-1976">
+    <item nodeId="node-2399">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">The doors slowly close. The elevator almost imperceptibly moves. Time passes. You smell a lot of things, wishing you couldn't. The doors open again, looking south.
 
@@ -708,11 +712,11 @@ The elevator is grimy and smells like pee.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1977"></child>
-            <child nodeId="node-2017"></child>
+        <children><child nodeId="node-2407"></child>
+            <child nodeId="node-2400"></child>
         </children>
     </item>
-    <item nodeId="node-2017">
+    <item nodeId="node-2400">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">
 Mission 24th St
@@ -720,10 +724,10 @@ You are underground, on a BART platform. The hollow sound of vibrating train rai
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2028"></child>
+        <children><child nodeId="node-2401"></child>
         </children>
     </item>
-    <item nodeId="node-2028">
+    <item nodeId="node-2401">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">The doors slowly close. The elevator almost imperceptibly moves. Time passes. You smell a lot of things, wishing you couldn't. The doors open again, looking south.
 
@@ -732,28 +736,28 @@ The elevator is grimy and smells like pee.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2029"></child>
+        <children><child nodeId="node-2402"></child>
         </children>
     </item>
-    <item nodeId="node-2029">
+    <item nodeId="node-2402">
         <command xml:space="preserve">nw</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2030"></child>
+        <children><child nodeId="node-2403"></child>
         </children>
     </item>
-    <item nodeId="node-2030">
+    <item nodeId="node-2403">
         <command xml:space="preserve">ne</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2031"></child>
+        <children><child nodeId="node-2404"></child>
         </children>
     </item>
-    <item nodeId="node-2031">
+    <item nodeId="node-2404">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">
 Mission 24th Concourse
@@ -761,10 +765,10 @@ Enormous concrete buttresses soar overhead, like a futuristic 70s airplane hanga
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2032"></child>
+        <children><child nodeId="node-2405"></child>
         </children>
     </item>
-    <item nodeId="node-2032">
+    <item nodeId="node-2405">
         <command xml:space="preserve">nw</command>
         <result xml:space="preserve">The doors slowly close. The elevator almost imperceptibly moves. Time passes. You smell a lot of things, wishing you couldn't. The doors open again, looking southeast.
 
@@ -772,10 +776,10 @@ Mission 24th Street Elevator
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2033"></child>
+        <children><child nodeId="node-2406"></child>
         </children>
     </item>
-    <item nodeId="node-2033">
+    <item nodeId="node-2406">
         <command xml:space="preserve">se</command>
         <result xml:space="preserve">
 Calle 24 Northeast Plaza
@@ -788,7 +792,7 @@ A tamale lady shifts her weight from one foot to the other.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1977">
+    <item nodeId="node-2407">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">
 Mission 24th Concourse
@@ -796,20 +800,20 @@ Enormous concrete buttresses soar overhead, like a futuristic 70s airplane hanga
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1978"></child>
+        <children><child nodeId="node-2408"></child>
         </children>
     </item>
-    <item nodeId="node-1978">
+    <item nodeId="node-2408">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Mission 24th Concourse
 Enormous concrete buttresses soar overhead, like a futuristic 70s airplane hangar. Music echoes hauntingly from a monumental stairwell rising up to the plaza, combining with the wild harmonics of trains below.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1979"></child>
+        <children><child nodeId="node-2409"></child>
         </children>
     </item>
-    <item nodeId="node-1979">
+    <item nodeId="node-2409">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">The doors slowly close. The elevator almost imperceptibly moves. Time passes. You smell a lot of things, wishing you couldn't. The doors open again, looking south.
 
@@ -818,123 +822,611 @@ Mission 24th Platform Elevator
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1635">
+    <item nodeId="node-2653">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Calle 24 Northeast Plaza
+Palm trees sway high overhead. Delicate metal rails surround the enormous circular stairwell that goes down to the station concourse. All around you are little shops, restaurants, taquerias, people talking, buses pulling up to the stops on Mission and on 24th Street, music blasting from cars going by. A huge mural runs across the wall of the taqueria bordering the plaza to the north, of a gleaming BART train carried on the backs of determined workers amid a geometric cityscape.
+
+You can see a tamale lady and a yelling preacher here.
+
+A tamale lady says "Tamales de pollo!"
+.
+
+If you look around past the crowds you might find the elevator.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2654"></child>
+        </children>
+    </item>
+    <item nodeId="node-2654">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Calle 24 Northeast Plaza
+Palm trees sway high overhead. Delicate metal rails surround the enormous circular stairwell that goes down to the station concourse. All around you are little shops, restaurants, taquerias, people talking, buses pulling up to the stops on Mission and on 24th Street, music blasting from cars going by. A huge mural runs across the wall of the taqueria bordering the plaza to the north, of a gleaming BART train carried on the backs of determined workers amid a geometric cityscape.
+
+You can see an elevator (empty), a tamale lady and a yelling preacher here.
+
+A tamale lady says "Tamales!"
+.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2655"></child>
+            <child nodeId="node-2665"></child>
+        </children>
+    </item>
+    <item nodeId="node-2665">
+        <command xml:space="preserve">search</command>
+        <result xml:space="preserve">What do you want to search?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2666"></child>
+        </children>
+    </item>
+    <item nodeId="node-2666">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Calle 24 Northeast Plaza
+Palm trees sway high overhead. Delicate metal rails surround the enormous circular stairwell that goes down to the station concourse. All around you are little shops, restaurants, taquerias, people talking, buses pulling up to the stops on Mission and on 24th Street, music blasting from cars going by. A huge mural runs across the wall of the taqueria bordering the plaza to the north, of a gleaming BART train carried on the backs of determined workers amid a geometric cityscape.
+
+You can see an elevator (empty), a tamale lady and a yelling preacher here.
+
+A tamale lady shifts her weight from one foot to the other.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2667"></child>
+        </children>
+    </item>
+    <item nodeId="node-2667">
+        <command xml:space="preserve">in</command>
+        <result xml:space="preserve">You can't go that way.
+
+A tamale lady says "Tamales!"
+.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2668"></child>
+        </children>
+    </item>
+    <item nodeId="node-2668">
+        <command xml:space="preserve">enter elevator</command>
+        <result xml:space="preserve">You get into the elevator. The doors close. Best to go up or down as fast as possible to get out of the stench.
+
+A tamale lady watches the people passing by.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2669"></child>
+        </children>
+    </item>
+    <item nodeId="node-2669">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">You can't go that way.
+
+A tamale lady watches the people passing by.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2670"></child>
+        </children>
+    </item>
+    <item nodeId="node-2670">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">The elevator almost imperceptibly moves down. Time passes. You smell a lot of things, wishing you couldn't. The doors open again.
+
+Mission 24th Concourse (in the elevator)
+Enormous concrete buttresses soar overhead, like a futuristic 70s airplane hangar. Music echoes hauntingly from a monumental stairwell rising up to the plaza, combining with the wild harmonics of trains below. There is an elevator to the platform to the north, and another elevator to the street to the northwest.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2671"></child>
+        </children>
+    </item>
+    <item nodeId="node-2671">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">The elevator almost imperceptibly moves down. Time passes. You smell a lot of things, wishing you couldn't. The doors open again.
+
+Mission 24th St (in the elevator)
+You are underground, on a BART platform. The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. An elevator is in the median wall to the north. On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2672"></child>
+        </children>
+    </item>
+    <item nodeId="node-2672">
+        <command xml:space="preserve">exit</command>
+        <result xml:space="preserve">You get out of the elevator.
+
+Mission 24th St
+You are underground, on a BART platform. The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. An elevator is in the median wall to the north. On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset.
+
+You can see an elevator (empty) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2673"></child>
+        </children>
+    </item>
+    <item nodeId="node-2673">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Mission 24th St
+You are underground, on a BART platform. The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. An elevator is in the median wall to the north. On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset.
+
+You can see an elevator (empty) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2674"></child>
+        </children>
+    </item>
+    <item nodeId="node-2674">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Mission 24th St
+You are underground, on a BART platform. The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. An elevator is in the median wall to the north. On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset.
+
+You can see an elevator (empty) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2675"></child>
+        </children>
+    </item>
+    <item nodeId="node-2675">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Mission 24th St
+You are underground, on a BART platform. The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. An elevator is in the median wall to the north. On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset.
+
+You can see an elevator (empty) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2676"></child>
+        </children>
+    </item>
+    <item nodeId="node-2676">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Mission 24th St
+You are underground, on a BART platform. The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. An elevator is in the median wall to the north. On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset.
+
+You can see an elevator (empty) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2677"></child>
+        </children>
+    </item>
+    <item nodeId="node-2677">
+        <command xml:space="preserve">wait</command>
+        <result xml:space="preserve">Time passes.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2678"></child>
+        </children>
+    </item>
+    <item nodeId="node-2678">
+        <command xml:space="preserve">wait</command>
+        <result xml:space="preserve">Time passes.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2679"></child>
+        </children>
+    </item>
+    <item nodeId="node-2679">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Mission 24th St
+You are underground, on a BART platform. The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. An elevator is in the median wall to the north. On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset.
+
+You can see an elevator (empty) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2680"></child>
+        </children>
+    </item>
+    <item nodeId="node-2680">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Mission 24th St
+You are underground, on a BART platform. The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. An elevator is in the median wall to the north. On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset.
+
+You can see an elevator (empty) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2681"></child>
+        </children>
+    </item>
+    <item nodeId="node-2681">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Mission 24th St
+You are underground, on a BART platform. The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. An elevator is in the median wall to the north. On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset.
+
+You can see an elevator (empty) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2682"></child>
+        </children>
+    </item>
+    <item nodeId="node-2682">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Mission 24th St
+You are underground, on a BART platform. The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. An elevator is in the median wall to the north. On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset.
+
+You can see an elevator (empty) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2683"></child>
+        </children>
+    </item>
+    <item nodeId="node-2683">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Mission 24th St
+You are underground, on a BART platform. The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. An elevator is in the median wall to the north. On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset.
+
+You can see an elevator (empty) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2684"></child>
+        </children>
+    </item>
+    <item nodeId="node-2684">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Mission 24th St
+You are underground, on a BART platform. The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. An elevator is in the median wall to the north. On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset.
+
+You can see an elevator (empty) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2685"></child>
+        </children>
+    </item>
+    <item nodeId="node-2685">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Mission 24th St
+You are underground, on a BART platform. The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. An elevator is in the median wall to the north. On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset.
+
+You can see an elevator (empty) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2686"></child>
+        </children>
+    </item>
+    <item nodeId="node-2686">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Mission 24th St
+You are underground, on a BART platform. The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. An elevator is in the median wall to the north. On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset.
+
+You can see an elevator (empty) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2687"></child>
+        </children>
+    </item>
+    <item nodeId="node-2687">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Mission 24th St
+You are underground, on a BART platform. The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. An elevator is in the median wall to the north. On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset.
+
+You can see an elevator (empty) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2688"></child>
+        </children>
+    </item>
+    <item nodeId="node-2688">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Mission 24th St
+You are underground, on a BART platform. The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. An elevator is in the median wall to the north. On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset.
+
+You can see an elevator (empty) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2689"></child>
+        </children>
+    </item>
+    <item nodeId="node-2689">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Mission 24th St
+You are underground, on a BART platform. The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. An elevator is in the median wall to the north. On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset.
+
+You can see an elevator (empty) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2655">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Calle 24 Southeast Corner
+This busy street corner by the McDonalds is grimy. It's basically a crowded spot where people wait to cross the street. Across Mission to the west, there's a nice plaza with a busy market. Across 24th Street to the north, another lovely plaza with musicians, preachers, and some places to sit.
+
+You can see a raccoon here.
+
+A raccoon hauls itsef out of a concrete trash bin.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2656"></child>
+        </children>
+    </item>
+    <item nodeId="node-2656">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Calle 24 Northeast Plaza
+Palm trees sway high overhead. Delicate metal rails surround the enormous circular stairwell that goes down to the station concourse. All around you are little shops, restaurants, taquerias, people talking, buses pulling up to the stops on Mission and on 24th Street, music blasting from cars going by. A huge mural runs across the wall of the taqueria bordering the plaza to the north, of a gleaming BART train carried on the backs of determined workers amid a geometric cityscape.
+
+You can see an elevator (empty), a tamale lady and a yelling preacher here.
+
+A tamale lady says "Tamales!"
+.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2644">
+        <command xml:space="preserve">look at flower seller</command>
+        <result xml:space="preserve">A short, smiling woman in a baseball hat and a red checked scarf pushes  her wheely cart full of roses and carnations. Her jacket has a ladybug pin.
+
+A flower seller watches the people passing by.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2645"></child>
+            <child nodeId="node-2649"></child>
+        </children>
+    </item>
+    <item nodeId="node-2649">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Calle 24 Southwest Plaza
+Little tables and tent-covered booths are scattered throughout this busy plaza, with people selling souvenirs from Mexico and Guatemala, shopping bags, embroidered huipil blouses, woolen ponchos, phone chargers and cases, jewelry, and flowers. Many kinds of music are playing here - norteño blasts its cheerful accordions from speakers at a booth, saxophone notes float up from the huge, round stairwell which goes down to the station, songs blare from passing cars. There is a sloping area useful as a stage underneath the Coffee and Mission mural. Across 24th street to the north, there's a donut shop.
+
+You can see a flower seller here.
+
+A flower seller offers you a little bunch of carnations tied with string.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2650"></child>
+        </children>
+    </item>
+    <item nodeId="node-2650">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Calle 24 Northwest Corner
+This lively streetcorner just outside the Chinese Food and Donuts shop has buses pulling up along 24th Street, many cars going by, people crossing the street and just standing around, music blaring from passing cars and from the shops all around. Along Mission, tall washingtonia palms spring into the sky.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2645">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You can't go that way.
+
+A flower seller shares a coffee with a friend.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2646"></child>
+        </children>
+    </item>
+    <item nodeId="node-2646">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Calle 24 Southwest Plaza
+Little tables and tent-covered booths are scattered throughout this busy plaza, with people selling souvenirs from Mexico and Guatemala, shopping bags, embroidered huipil blouses, woolen ponchos, phone chargers and cases, jewelry, and flowers. Many kinds of music are playing here - norteño blasts its cheerful accordions from speakers at a booth, saxophone notes float up from the huge, round stairwell which goes down to the station, songs blare from passing cars. There is a sloping area useful as a stage underneath the Coffee and Mission mural to the west.
+
+You can see a flower seller here.
+
+A flower seller called out, "Flores!"
+.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2647"></child>
+        </children>
+    </item>
+    <item nodeId="node-2647">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Calle 24 Northwest Corner
+This lively streetcorner just outside the Chinese Food and Donuts shop has buses pulling up along 24th Street, many cars going by, people crossing the street and just standing around, music blaring from passing cars and from the shops all around. Along Mission, tall washingtonia palms spring into the sky.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2657">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Calle 24 Southwest Plaza
+Little tables and tent-covered booths are scattered throughout this busy plaza, with people selling souvenirs from Mexico and Guatemala, shopping bags, embroidered huipil blouses, woolen ponchos, phone chargers and cases, jewelry, and flowers. Many kinds of music are playing here - norteño blasts its cheerful accordions from speakers at a booth, saxophone notes float up from the huge, round stairwell which goes down to the station, songs blare from passing cars. There is a sloping area useful as a stage underneath the Coffee and Mission mural. Across 24th street to the north, there's a donut shop.
+
+You can see a flower seller here.
+
+A flower seller called out, "Flores!"
+.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2658"></child>
+        </children>
+    </item>
+    <item nodeId="node-2658">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Calle 24 Northwest Corner
+Just outside the Chinese Food and Donuts shop, this lively streetcorner has buses pulling up along 24th Street, many cars going by, people crossing the street and just standing around, music blaring from passing cars and from the shops all around. Along Mission, high overhead, washingtonia palms stretch into the sky. To the east, there's another BART plaza with an elevator.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2659"></child>
+        </children>
+    </item>
+    <item nodeId="node-2659">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Calle 24 Northwest Corner
+Just outside the Chinese Food and Donuts shop, this lively streetcorner has buses pulling up along 24th Street, many cars going by, people crossing the street and just standing around, music blaring from passing cars and from the shops all around. Along Mission, high overhead, washingtonia palms stretch into the sky. To the east, there's another BART plaza with an elevator.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2660"></child>
+        </children>
+    </item>
+    <item nodeId="node-2660">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Calle 24 Northeast Plaza
+Palm trees sway high overhead. Delicate metal rails surround the enormous circular stairwell that goes down to the station concourse. All around you are little shops, restaurants, taquerias, people talking, buses pulling up to the stops on Mission and on 24th Street, music blasting from cars going by. A huge mural runs across the wall of the taqueria bordering the plaza to the north, of a gleaming BART train carried on the backs of determined workers amid a geometric cityscape.
+
+You can see a tamale lady and a yelling preacher here.
+
+A tamale lady shifts her weight from one foot to the other.
+
+If you look around past the crowds you might find the elevator
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2661"></child>
+        </children>
+    </item>
+    <item nodeId="node-2661">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Calle 24 Northeast Plaza
+Palm trees sway high overhead. Delicate metal rails surround the enormous circular stairwell that goes down to the station concourse. All around you are little shops, restaurants, taquerias, people talking, buses pulling up to the stops on Mission and on 24th Street, music blasting from cars going by. A huge mural runs across the wall of the taqueria bordering the plaza to the north, of a gleaming BART train carried on the backs of determined workers amid a geometric cityscape.
+
+You can see an elevator (empty), a tamale lady and a yelling preacher here.
+
+A tamale lady watches the people passing by.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2410">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Mission 24th St
 You are underground, on a BART platform. The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. An elevator is in the median wall to the north. On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1636"></child>
-            <child nodeId="node-2069"></child>
+        <children><child nodeId="node-2413"></child>
+            <child nodeId="node-2411"></child>
         </children>
     </item>
-    <item nodeId="node-2069">
+    <item nodeId="node-2411">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Time passes.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2070"></child>
+        <children><child nodeId="node-2412"></child>
         </children>
     </item>
-    <item nodeId="node-2070">
+    <item nodeId="node-2412">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Time passes.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1636">
+    <item nodeId="node-2413">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Mission 24th St
 You are underground, on a BART platform. The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. An elevator is in the median wall to the north. On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1637"></child>
-            <child nodeId="node-1649"></child>
-            <child nodeId="node-1641"></child>
+        <children><child nodeId="node-2492"></child>
+            <child nodeId="node-2486"></child>
+            <child nodeId="node-2414"></child>
         </children>
     </item>
-    <item nodeId="node-1641">
+    <item nodeId="node-2414">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Mission 24th St
 You are underground, on a BART platform. The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. An elevator is in the median wall to the north. On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1642"></child>
+        <children><child nodeId="node-2415"></child>
         </children>
     </item>
-    <item nodeId="node-1642">
+    <item nodeId="node-2415">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Mission 24th St
 You are underground, on a BART platform. The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. An elevator is in the median wall to the north. On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1643"></child>
+        <children><child nodeId="node-2416"></child>
         </children>
     </item>
-    <item nodeId="node-1643">
+    <item nodeId="node-2416">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Mission 24th St
 You are underground, on a BART platform. The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. An elevator is in the median wall to the north. On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1644"></child>
-            <child nodeId="node-1660"></child>
-            <child nodeId="node-2039"></child>
+        <children><child nodeId="node-2483"></child>
+            <child nodeId="node-2432"></child>
+            <child nodeId="node-2417"></child>
         </children>
     </item>
-    <item nodeId="node-2039">
+    <item nodeId="node-2417">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Time passes.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2040"></child>
+        <children><child nodeId="node-2418"></child>
         </children>
     </item>
-    <item nodeId="node-2040">
+    <item nodeId="node-2418">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Time passes.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2041"></child>
+        <children><child nodeId="node-2419"></child>
         </children>
     </item>
-    <item nodeId="node-2041">
+    <item nodeId="node-2419">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Time passes.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2042"></child>
+        <children><child nodeId="node-2420"></child>
         </children>
     </item>
-    <item nodeId="node-2042">
+    <item nodeId="node-2420">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Time passes.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2043"></child>
+        <children><child nodeId="node-2421"></child>
         </children>
     </item>
-    <item nodeId="node-2043">
+    <item nodeId="node-2421">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Time passes.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2044"></child>
+        <children><child nodeId="node-2422"></child>
         </children>
     </item>
-    <item nodeId="node-2044">
+    <item nodeId="node-2422">
         <command xml:space="preserve">up</command>
         <result xml:space="preserve">
 Mission 24th Concourse
@@ -942,10 +1434,10 @@ Enormous concrete buttresses soar overhead, like a futuristic 70s airplane hanga
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2045"></child>
+        <children><child nodeId="node-2423"></child>
         </children>
     </item>
-    <item nodeId="node-2045">
+    <item nodeId="node-2423">
         <command xml:space="preserve">d</command>
         <result xml:space="preserve">
 Mission 24th St
@@ -955,10 +1447,10 @@ You can see a Red Line train here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2046"></child>
+        <children><child nodeId="node-2424"></child>
         </children>
     </item>
-    <item nodeId="node-2046">
+    <item nodeId="node-2424">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">The doors slowly close. The elevator almost imperceptibly moves. Time passes. You smell a lot of things, wishing you couldn't. The doors open again, looking south.
 
@@ -967,10 +1459,10 @@ The elevator is grimy and smells like pee.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2047"></child>
+        <children><child nodeId="node-2425"></child>
         </children>
     </item>
-    <item nodeId="node-2047">
+    <item nodeId="node-2425">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">
 Mission 24th Concourse
@@ -978,10 +1470,10 @@ Enormous concrete buttresses soar overhead, like a futuristic 70s airplane hanga
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2048"></child>
+        <children><child nodeId="node-2426"></child>
         </children>
     </item>
-    <item nodeId="node-2048">
+    <item nodeId="node-2426">
         <command xml:space="preserve">nw</command>
         <result xml:space="preserve">The doors slowly close. The elevator almost imperceptibly moves. Time passes. You smell a lot of things, wishing you couldn't. The doors open again, looking southeast.
 
@@ -989,10 +1481,10 @@ Mission 24th Street Elevator
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2049"></child>
+        <children><child nodeId="node-2427"></child>
         </children>
     </item>
-    <item nodeId="node-2049">
+    <item nodeId="node-2427">
         <command xml:space="preserve">se</command>
         <result xml:space="preserve">
 Calle 24 Northeast Plaza
@@ -1004,10 +1496,10 @@ A tamale lady watches the people passing by.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2050"></child>
+        <children><child nodeId="node-2428"></child>
         </children>
     </item>
-    <item nodeId="node-2050">
+    <item nodeId="node-2428">
         <command xml:space="preserve">look at tamale lady</command>
         <result xml:space="preserve">A short, smiling woman in jeans and an army jacket stands next to a cooler on wheels.
 
@@ -1015,10 +1507,10 @@ A tamale lady watches the people passing by.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2051"></child>
+        <children><child nodeId="node-2429"></child>
         </children>
     </item>
-    <item nodeId="node-2051">
+    <item nodeId="node-2429">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Calle 24 Northeast Plaza
 Palm trees sway high overhead. Delicate metal rails surround the enormous circular stairwell that goes down to the station concourse. All around you are little shops, restaurants, taquerias, people talking, buses pulling up to the stops on Mission and on 24th Street, music blasting from cars going by. A huge mural runs across the wall of the taqueria bordering the plaza to the north, of a gleaming BART train carried on the backs of determined workers amid a geometric cityscape.
@@ -1029,10 +1521,10 @@ A tamale lady watches the people passing by.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2052"></child>
+        <children><child nodeId="node-2430"></child>
         </children>
     </item>
-    <item nodeId="node-2052">
+    <item nodeId="node-2430">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">
 Calle 24 Southeast Corner
@@ -1044,10 +1536,10 @@ A raccoon hides in a little nook, eating some discarded fries.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2053"></child>
+        <children><child nodeId="node-2431"></child>
         </children>
     </item>
-    <item nodeId="node-2053">
+    <item nodeId="node-2431">
         <command xml:space="preserve">w</command>
         <result xml:space="preserve">
 Calle 24 Southwest Plaza
@@ -1056,43 +1548,43 @@ Little tables and tent-covered booths are scattered throughout this busy plaza, 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1660">
+    <item nodeId="node-2432">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Mission 24th St
 You are underground, on a BART platform. The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. An elevator is in the median wall to the north. On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1661"></child>
-            <child nodeId="node-2065"></child>
+        <children><child nodeId="node-2436"></child>
+            <child nodeId="node-2433"></child>
         </children>
     </item>
-    <item nodeId="node-2065">
+    <item nodeId="node-2433">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Time passes.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2066"></child>
+        <children><child nodeId="node-2434"></child>
         </children>
     </item>
-    <item nodeId="node-2066">
+    <item nodeId="node-2434">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Time passes.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2067"></child>
+        <children><child nodeId="node-2435"></child>
         </children>
     </item>
-    <item nodeId="node-2067">
+    <item nodeId="node-2435">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Time passes.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1661">
+    <item nodeId="node-2436">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Embarcadero
 You are on a BART platform underground. Lots of people are around and there are muffled announcements over an intercom.
@@ -1108,10 +1600,10 @@ The Green Line train sets off.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1662"></child>
+        <children><child nodeId="node-2437"></child>
         </children>
     </item>
-    <item nodeId="node-1662">
+    <item nodeId="node-2437">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Embarcadero
 You are on a BART platform underground. Lots of people are around and there are muffled announcements over an intercom.
@@ -1122,139 +1614,139 @@ The Yellow Line train pulls up. The door opens.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1916"></child>
-            <child nodeId="node-1663"></child>
+        <children><child nodeId="node-2477"></child>
+            <child nodeId="node-2438"></child>
         </children>
     </item>
-    <item nodeId="node-1663">
+    <item nodeId="node-2438">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Richmond Platform
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1664"></child>
+        <children><child nodeId="node-2439"></child>
         </children>
     </item>
-    <item nodeId="node-1664">
+    <item nodeId="node-2439">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Richmond Platform
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1665"></child>
+        <children><child nodeId="node-2440"></child>
         </children>
     </item>
-    <item nodeId="node-1665">
+    <item nodeId="node-2440">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Richmond Platform
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1666"></child>
+        <children><child nodeId="node-2441"></child>
         </children>
     </item>
-    <item nodeId="node-1666">
+    <item nodeId="node-2441">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Richmond Platform
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1667"></child>
+        <children><child nodeId="node-2442"></child>
         </children>
     </item>
-    <item nodeId="node-1667">
+    <item nodeId="node-2442">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Richmond Platform
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1668"></child>
+        <children><child nodeId="node-2443"></child>
         </children>
     </item>
-    <item nodeId="node-1668">
+    <item nodeId="node-2443">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Richmond Platform
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1669"></child>
+        <children><child nodeId="node-2444"></child>
         </children>
     </item>
-    <item nodeId="node-1669">
+    <item nodeId="node-2444">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Richmond Platform
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1670"></child>
+        <children><child nodeId="node-2445"></child>
         </children>
     </item>
-    <item nodeId="node-1670">
+    <item nodeId="node-2445">
         <command xml:space="preserve">wait</command>
         <result xml:space="preserve">Time passes.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1671"></child>
+        <children><child nodeId="node-2446"></child>
         </children>
     </item>
-    <item nodeId="node-1671">
+    <item nodeId="node-2446">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Richmond Platform
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1672"></child>
+        <children><child nodeId="node-2447"></child>
         </children>
     </item>
-    <item nodeId="node-1672">
+    <item nodeId="node-2447">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Richmond Platform
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1673"></child>
+        <children><child nodeId="node-2448"></child>
         </children>
     </item>
-    <item nodeId="node-1673">
+    <item nodeId="node-2448">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Richmond Platform
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1674"></child>
+        <children><child nodeId="node-2449"></child>
         </children>
     </item>
-    <item nodeId="node-1674">
+    <item nodeId="node-2449">
         <command xml:space="preserve">e</command>
         <result xml:space="preserve">
 Richmond Platform 2 Northbound
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1675"></child>
+        <children><child nodeId="node-2450"></child>
         </children>
     </item>
-    <item nodeId="node-1675">
+    <item nodeId="node-2450">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Richmond Platform 2 Northbound
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1676"></child>
+        <children><child nodeId="node-2451"></child>
         </children>
     </item>
-    <item nodeId="node-1676">
+    <item nodeId="node-2451">
         <command xml:space="preserve">w</command>
         <result xml:space="preserve">
 Richmond Platform
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1677"></child>
+        <children><child nodeId="node-2452"></child>
         </children>
     </item>
-    <item nodeId="node-1677">
+    <item nodeId="node-2452">
         <command xml:space="preserve">w</command>
         <result xml:space="preserve">
 Richmond Platform 1 Southbound
@@ -1262,64 +1754,64 @@ You can see a Millbrae Red Line train here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1678"></child>
+        <children><child nodeId="node-2453"></child>
         </children>
     </item>
-    <item nodeId="node-1678">
+    <item nodeId="node-2453">
         <command xml:space="preserve">enter train</command>
         <result xml:space="preserve">You get into the Millbrae Red Line train.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1679"></child>
+        <children><child nodeId="node-2454"></child>
         </children>
     </item>
-    <item nodeId="node-1679">
+    <item nodeId="node-2454">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Richmond Platform 1 Southbound (in the Millbrae Red Line train)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1680"></child>
+        <children><child nodeId="node-2455"></child>
         </children>
     </item>
-    <item nodeId="node-1680">
+    <item nodeId="node-2455">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Richmond Platform 1 Southbound (in the Millbrae Red Line train)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1681"></child>
+        <children><child nodeId="node-2456"></child>
         </children>
     </item>
-    <item nodeId="node-1681">
+    <item nodeId="node-2456">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Richmond Platform 1 Southbound (in the Millbrae Red Line train)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1682"></child>
+        <children><child nodeId="node-2457"></child>
         </children>
     </item>
-    <item nodeId="node-1682">
+    <item nodeId="node-2457">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Richmond Platform 1 Southbound (in the Millbrae Red Line train)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1683"></child>
+        <children><child nodeId="node-2458"></child>
         </children>
     </item>
-    <item nodeId="node-1683">
+    <item nodeId="node-2458">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Richmond Platform 1 Southbound (in the Millbrae Red Line train)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1684"></child>
+        <children><child nodeId="node-2459"></child>
         </children>
     </item>
-    <item nodeId="node-1684">
+    <item nodeId="node-2459">
         <command xml:space="preserve">exit</command>
         <result xml:space="preserve">You get out of the Millbrae Red Line train.
 
@@ -1328,50 +1820,50 @@ You can see a Millbrae Red Line train here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1685"></child>
+        <children><child nodeId="node-2460"></child>
         </children>
     </item>
-    <item nodeId="node-1685">
+    <item nodeId="node-2460">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Richmond Platform 1 Southbound
 You can see a Millbrae Red Line train here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1686"></child>
+        <children><child nodeId="node-2461"></child>
         </children>
     </item>
-    <item nodeId="node-1686">
+    <item nodeId="node-2461">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Richmond Platform 1 Southbound
 You can see a Millbrae Red Line train here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1687"></child>
+        <children><child nodeId="node-2462"></child>
         </children>
     </item>
-    <item nodeId="node-1687">
+    <item nodeId="node-2462">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Richmond Platform 1 Southbound
 You can see a Millbrae Red Line train here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1688"></child>
+        <children><child nodeId="node-2463"></child>
         </children>
     </item>
-    <item nodeId="node-1688">
+    <item nodeId="node-2463">
         <command xml:space="preserve">e</command>
         <result xml:space="preserve">
 Richmond Platform
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1689"></child>
+        <children><child nodeId="node-2464"></child>
         </children>
     </item>
-    <item nodeId="node-1689">
+    <item nodeId="node-2464">
         <command xml:space="preserve">e</command>
         <result xml:space="preserve">
 Richmond Platform 2 Northbound
@@ -1379,19 +1871,19 @@ The Richmond Red Line train pulls up. The door opens.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1690"></child>
+        <children><child nodeId="node-2465"></child>
         </children>
     </item>
-    <item nodeId="node-1690">
+    <item nodeId="node-2465">
         <command xml:space="preserve">enter</command>
         <result xml:space="preserve">You get into the Richmond Red Line train.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1691"></child>
+        <children><child nodeId="node-2466"></child>
         </children>
     </item>
-    <item nodeId="node-1691">
+    <item nodeId="node-2466">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Richmond Platform 2 Northbound (in the Richmond Red Line train)
 The door closes.
@@ -1400,29 +1892,29 @@ The Richmond Red Line train starts moving again.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1692"></child>
+        <children><child nodeId="node-2467"></child>
         </children>
     </item>
-    <item nodeId="node-1692">
+    <item nodeId="node-2467">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">The Richmond Red Line train
 The Richmond Red Line train stops at Millbrae Platform 2 Northbound. The door opens.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1693"></child>
+        <children><child nodeId="node-2468"></child>
         </children>
     </item>
-    <item nodeId="node-1693">
+    <item nodeId="node-2468">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Millbrae Platform 2 Northbound (in the Richmond Red Line train)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1694"></child>
+        <children><child nodeId="node-2469"></child>
         </children>
     </item>
-    <item nodeId="node-1694">
+    <item nodeId="node-2469">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Millbrae Platform 2 Northbound (in the Richmond Red Line train)
 The door closes.
@@ -1431,29 +1923,29 @@ The Richmond Red Line train starts moving again.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1695"></child>
+        <children><child nodeId="node-2470"></child>
         </children>
     </item>
-    <item nodeId="node-1695">
+    <item nodeId="node-2470">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">The Richmond Red Line train
 The Richmond Red Line train stops at Embarcadero Platform 2 Northbound. The door opens.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1696"></child>
+        <children><child nodeId="node-2471"></child>
         </children>
     </item>
-    <item nodeId="node-1696">
+    <item nodeId="node-2471">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Embarcadero Platform 2 Northbound (in the Richmond Red Line train)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1697"></child>
+        <children><child nodeId="node-2472"></child>
         </children>
     </item>
-    <item nodeId="node-1697">
+    <item nodeId="node-2472">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Embarcadero Platform 2 Northbound (in the Richmond Red Line train)
 The door closes.
@@ -1462,29 +1954,29 @@ The Richmond Red Line train starts moving again.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1698"></child>
+        <children><child nodeId="node-2473"></child>
         </children>
     </item>
-    <item nodeId="node-1698">
+    <item nodeId="node-2473">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">The Richmond Red Line train
 The Richmond Red Line train stops at Richmond Platform 2 Northbound. The door opens.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1699"></child>
+        <children><child nodeId="node-2474"></child>
         </children>
     </item>
-    <item nodeId="node-1699">
+    <item nodeId="node-2474">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Richmond Platform 2 Northbound (in the Richmond Red Line train)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1700"></child>
+        <children><child nodeId="node-2475"></child>
         </children>
     </item>
-    <item nodeId="node-1700">
+    <item nodeId="node-2475">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Richmond Platform 2 Northbound (in the Richmond Red Line train)
 The door closes.
@@ -1493,10 +1985,10 @@ The Richmond Red Line train starts moving again.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1701"></child>
+        <children><child nodeId="node-2476"></child>
         </children>
     </item>
-    <item nodeId="node-1701">
+    <item nodeId="node-2476">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">The Richmond Red Line train
 The Richmond Red Line train stops at Millbrae Platform 2 Northbound. The door opens.
@@ -1504,17 +1996,17 @@ The Richmond Red Line train stops at Millbrae Platform 2 Northbound. The door op
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1916">
+    <item nodeId="node-2477">
         <command xml:space="preserve">enter red line</command>
         <result xml:space="preserve">(the Red Line train)
 You get into the Red Line train.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1917"></child>
+        <children><child nodeId="node-2478"></child>
         </children>
     </item>
-    <item nodeId="node-1917">
+    <item nodeId="node-2478">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Embarcadero (in the Red Line train)
 You are on a BART platform underground. Lots of people are around and there are muffled announcements over an intercom.
@@ -1527,30 +2019,30 @@ The Red Line train starts moving again.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1918"></child>
+        <children><child nodeId="node-2479"></child>
         </children>
     </item>
-    <item nodeId="node-1918">
+    <item nodeId="node-2479">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">The Red Line train
 The Red Line train stops at Mission 24th St. The door opens.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1919"></child>
+        <children><child nodeId="node-2480"></child>
         </children>
     </item>
-    <item nodeId="node-1919">
+    <item nodeId="node-2480">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Mission 24th St (in the Red Line train)
 You are underground, on a BART platform. The hollow sound of vibrating train rails echoes through the station.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1920"></child>
+        <children><child nodeId="node-2481"></child>
         </children>
     </item>
-    <item nodeId="node-1920">
+    <item nodeId="node-2481">
         <command xml:space="preserve">exit</command>
         <result xml:space="preserve">You get out of the Red Line train.
 
@@ -1565,10 +2057,10 @@ The Red Line train sets off.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1921"></child>
+        <children><child nodeId="node-2482"></child>
         </children>
     </item>
-    <item nodeId="node-1921">
+    <item nodeId="node-2482">
         <command xml:space="preserve">up</command>
         <result xml:space="preserve">
 Mission 24th Concourse
@@ -1576,25 +2068,25 @@ Mission 24th Concourse
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1644">
+    <item nodeId="node-2483">
         <command xml:space="preserve">enter train</command>
         <result xml:space="preserve">You get into the Millbrae Red Line train.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1645"></child>
+        <children><child nodeId="node-2484"></child>
         </children>
     </item>
-    <item nodeId="node-1645">
+    <item nodeId="node-2484">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Richmond (in the Millbrae Red Line train)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1646"></child>
+        <children><child nodeId="node-2485"></child>
         </children>
     </item>
-    <item nodeId="node-1646">
+    <item nodeId="node-2485">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Richmond (in the Millbrae Red Line train)
 The Richmond Red Line train pulls up. The door opens.
@@ -1605,52 +2097,52 @@ The Richmond Red Line train pulls up. The door opens.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1649">
+    <item nodeId="node-2486">
         <command xml:space="preserve">enter train</command>
         <result xml:space="preserve">You get into the Millbrae Red Line train.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1650"></child>
+        <children><child nodeId="node-2487"></child>
         </children>
     </item>
-    <item nodeId="node-1650">
+    <item nodeId="node-2487">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Richmond (in the Millbrae Red Line train)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1651"></child>
+        <children><child nodeId="node-2488"></child>
         </children>
     </item>
-    <item nodeId="node-1651">
+    <item nodeId="node-2488">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Richmond (in the Millbrae Red Line train)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1652"></child>
+        <children><child nodeId="node-2489"></child>
         </children>
     </item>
-    <item nodeId="node-1652">
+    <item nodeId="node-2489">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Richmond (in the Millbrae Red Line train)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1653"></child>
+        <children><child nodeId="node-2490"></child>
         </children>
     </item>
-    <item nodeId="node-1653">
+    <item nodeId="node-2490">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Richmond (in the Millbrae Red Line train)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1654"></child>
+        <children><child nodeId="node-2491"></child>
         </children>
     </item>
-    <item nodeId="node-1654">
+    <item nodeId="node-2491">
         <command xml:space="preserve">exit</command>
         <result xml:space="preserve">You get out of the Millbrae Red Line train.
 
@@ -1665,16 +2157,16 @@ The Richmond Red Line train pulls up. The door opens.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1637">
+    <item nodeId="node-2492">
         <command xml:space="preserve">enter millbrae yellow line train</command>
         <result xml:space="preserve">You get into the Millbrae Yellow Line train.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1638"></child>
+        <children><child nodeId="node-2493"></child>
         </children>
     </item>
-    <item nodeId="node-1638">
+    <item nodeId="node-2493">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Richmond (in the Millbrae Yellow Line train)
 You can see a Millbrae Red Line train here.
@@ -1686,7 +2178,7 @@ The Millbrae Yellow Line train starts moving again.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1626">
+    <item nodeId="node-2494">
         <command xml:space="preserve">enter train</command>
         <result xml:space="preserve">You get into the Red Line train.
 
@@ -1696,10 +2188,10 @@ The Red Line train starts moving again.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1627"></child>
+        <children><child nodeId="node-2495"></child>
         </children>
     </item>
-    <item nodeId="node-1627">
+    <item nodeId="node-2495">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">The Red Line train
 The Red Line train stops at Richmond. The door opens.
@@ -1708,10 +2200,10 @@ The Orange Line train pulls up. The door opens.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1628"></child>
+        <children><child nodeId="node-2496"></child>
         </children>
     </item>
-    <item nodeId="node-1628">
+    <item nodeId="node-2496">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Richmond (in the Red Line train)
 You are on a BART platform.
@@ -1720,10 +2212,10 @@ You can see an Orange Line train here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1629"></child>
+        <children><child nodeId="node-2497"></child>
         </children>
     </item>
-    <item nodeId="node-1629">
+    <item nodeId="node-2497">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Richmond (in the Red Line train)
 You are on a BART platform.
@@ -1736,29 +2228,29 @@ The Red Line train starts moving again.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1630"></child>
+        <children><child nodeId="node-2498"></child>
         </children>
     </item>
-    <item nodeId="node-1630">
+    <item nodeId="node-2498">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">The Red Line train
 The Red Line train stops at El Cerrito del Norte. The door opens.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1631"></child>
+        <children><child nodeId="node-2499"></child>
         </children>
     </item>
-    <item nodeId="node-1631">
+    <item nodeId="node-2499">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">El Cerrito del Norte (in the Red Line train)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1632"></child>
+        <children><child nodeId="node-2500"></child>
         </children>
     </item>
-    <item nodeId="node-1632">
+    <item nodeId="node-2500">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">El Cerrito del Norte (in the Red Line train)
 The door closes.
@@ -1767,29 +2259,29 @@ The Red Line train starts moving again.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1633"></child>
+        <children><child nodeId="node-2501"></child>
         </children>
     </item>
-    <item nodeId="node-1633">
+    <item nodeId="node-2501">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">The Red Line train
 The Red Line train stops at El Cerrito Plaza. The door opens.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1634"></child>
+        <children><child nodeId="node-2502"></child>
         </children>
     </item>
-    <item nodeId="node-1634">
+    <item nodeId="node-2502">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">El Cerrito Plaza (in the Red Line train)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2080"></child>
+        <children><child nodeId="node-2503"></child>
         </children>
     </item>
-    <item nodeId="node-2080">
+    <item nodeId="node-2503">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">El Cerrito Plaza (in the Red Line train)
 The door closes.
@@ -1798,29 +2290,29 @@ The Red Line train starts moving again.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2081"></child>
+        <children><child nodeId="node-2504"></child>
         </children>
     </item>
-    <item nodeId="node-2081">
+    <item nodeId="node-2504">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">The Red Line train
 The Red Line train stops at North Berkeley. The door opens.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2082"></child>
+        <children><child nodeId="node-2505"></child>
         </children>
     </item>
-    <item nodeId="node-2082">
+    <item nodeId="node-2505">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">North Berkeley (in the Red Line train)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2083"></child>
+        <children><child nodeId="node-2506"></child>
         </children>
     </item>
-    <item nodeId="node-2083">
+    <item nodeId="node-2506">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">North Berkeley (in the Red Line train)
 The door closes.
@@ -1829,29 +2321,29 @@ The Red Line train starts moving again.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2084"></child>
+        <children><child nodeId="node-2507"></child>
         </children>
     </item>
-    <item nodeId="node-2084">
+    <item nodeId="node-2507">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">The Red Line train
 The Red Line train stops at Downtown Berkeley. The door opens.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2085"></child>
+        <children><child nodeId="node-2508"></child>
         </children>
     </item>
-    <item nodeId="node-2085">
+    <item nodeId="node-2508">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Downtown Berkeley (in the Red Line train)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2086"></child>
+        <children><child nodeId="node-2509"></child>
         </children>
     </item>
-    <item nodeId="node-2086">
+    <item nodeId="node-2509">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Downtown Berkeley (in the Red Line train)
 The door closes.
@@ -1860,29 +2352,29 @@ The Red Line train starts moving again.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2087"></child>
+        <children><child nodeId="node-2510"></child>
         </children>
     </item>
-    <item nodeId="node-2087">
+    <item nodeId="node-2510">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">The Red Line train
 The Red Line train stops at Ashby. The door opens.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2088"></child>
+        <children><child nodeId="node-2511"></child>
         </children>
     </item>
-    <item nodeId="node-2088">
+    <item nodeId="node-2511">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Ashby (in the Red Line train)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2089"></child>
+        <children><child nodeId="node-2512"></child>
         </children>
     </item>
-    <item nodeId="node-2089">
+    <item nodeId="node-2512">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Ashby (in the Red Line train)
 The door closes.
@@ -1891,29 +2383,29 @@ The Red Line train starts moving again.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2090"></child>
+        <children><child nodeId="node-2513"></child>
         </children>
     </item>
-    <item nodeId="node-2090">
+    <item nodeId="node-2513">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">The Red Line train
 The Red Line train stops at MacArthur. The door opens.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2091"></child>
+        <children><child nodeId="node-2514"></child>
         </children>
     </item>
-    <item nodeId="node-2091">
+    <item nodeId="node-2514">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">MacArthur (in the Red Line train)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2092"></child>
+        <children><child nodeId="node-2515"></child>
         </children>
     </item>
-    <item nodeId="node-2092">
+    <item nodeId="node-2515">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">MacArthur (in the Red Line train)
 The door closes.
@@ -1922,29 +2414,29 @@ The Red Line train starts moving again.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2093"></child>
+        <children><child nodeId="node-2516"></child>
         </children>
     </item>
-    <item nodeId="node-2093">
+    <item nodeId="node-2516">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">The Red Line train
 The Red Line train stops at Oakland 19th St. The door opens.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2094"></child>
+        <children><child nodeId="node-2517"></child>
         </children>
     </item>
-    <item nodeId="node-2094">
+    <item nodeId="node-2517">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Oakland 19th St (in the Red Line train)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2095"></child>
+        <children><child nodeId="node-2518"></child>
         </children>
     </item>
-    <item nodeId="node-2095">
+    <item nodeId="node-2518">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Oakland 19th St (in the Red Line train)
 The door closes.
@@ -1953,29 +2445,29 @@ The Red Line train starts moving again.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2096"></child>
+        <children><child nodeId="node-2519"></child>
         </children>
     </item>
-    <item nodeId="node-2096">
+    <item nodeId="node-2519">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">The Red Line train
 The Red Line train stops at Oakland 12th St. The door opens.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2097"></child>
+        <children><child nodeId="node-2520"></child>
         </children>
     </item>
-    <item nodeId="node-2097">
+    <item nodeId="node-2520">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Oakland 12th St (in the Red Line train)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2098"></child>
+        <children><child nodeId="node-2521"></child>
         </children>
     </item>
-    <item nodeId="node-2098">
+    <item nodeId="node-2521">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Oakland 12th St (in the Red Line train)
 The door closes.
@@ -1984,30 +2476,30 @@ The Red Line train starts moving again.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2099"></child>
+        <children><child nodeId="node-2522"></child>
         </children>
     </item>
-    <item nodeId="node-2099">
+    <item nodeId="node-2522">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">The Red Line train
 The Red Line train stops at West Oakland. The door opens.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2100"></child>
+        <children><child nodeId="node-2523"></child>
         </children>
     </item>
-    <item nodeId="node-2100">
+    <item nodeId="node-2523">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">West Oakland (in the Red Line train)
 You are underground, on a BART platform. Sounds of trains are all around you.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2101"></child>
+        <children><child nodeId="node-2524"></child>
         </children>
     </item>
-    <item nodeId="node-2101">
+    <item nodeId="node-2524">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">West Oakland (in the Red Line train)
 You are underground, on a BART platform. Sounds of trains are all around you.
@@ -2018,10 +2510,10 @@ The Red Line train starts moving again.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2102"></child>
+        <children><child nodeId="node-2525"></child>
         </children>
     </item>
-    <item nodeId="node-2102">
+    <item nodeId="node-2525">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">The Red Line train
 The Red Line train stops at Embarcadero. The door opens.
@@ -2030,10 +2522,10 @@ The Yellow Line train pulls up. The door opens.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2103"></child>
+        <children><child nodeId="node-2526"></child>
         </children>
     </item>
-    <item nodeId="node-2103">
+    <item nodeId="node-2526">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Embarcadero (in the Red Line train)
 You are on a BART platform underground. Lots of people are around and there are muffled announcements over an intercom.
@@ -2042,10 +2534,10 @@ You can see a Yellow Line train here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2104"></child>
+        <children><child nodeId="node-2527"></child>
         </children>
     </item>
-    <item nodeId="node-2104">
+    <item nodeId="node-2527">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Embarcadero (in the Red Line train)
 You are on a BART platform underground. Lots of people are around and there are muffled announcements over an intercom.
@@ -2058,29 +2550,29 @@ The Red Line train starts moving again.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2105"></child>
+        <children><child nodeId="node-2528"></child>
         </children>
     </item>
-    <item nodeId="node-2105">
+    <item nodeId="node-2528">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">The Red Line train
 The Red Line train stops at Montgomery. The door opens.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2106"></child>
+        <children><child nodeId="node-2529"></child>
         </children>
     </item>
-    <item nodeId="node-2106">
+    <item nodeId="node-2529">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Montgomery (in the Red Line train)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2107"></child>
+        <children><child nodeId="node-2530"></child>
         </children>
     </item>
-    <item nodeId="node-2107">
+    <item nodeId="node-2530">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Montgomery (in the Red Line train)
 The door closes.
@@ -2089,29 +2581,29 @@ The Red Line train starts moving again.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2108"></child>
+        <children><child nodeId="node-2531"></child>
         </children>
     </item>
-    <item nodeId="node-2108">
+    <item nodeId="node-2531">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">The Red Line train
 The Red Line train stops at Powell. The door opens.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2109"></child>
+        <children><child nodeId="node-2532"></child>
         </children>
     </item>
-    <item nodeId="node-2109">
+    <item nodeId="node-2532">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Powell (in the Red Line train)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2110"></child>
+        <children><child nodeId="node-2533"></child>
         </children>
     </item>
-    <item nodeId="node-2110">
+    <item nodeId="node-2533">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Powell (in the Red Line train)
 The door closes.
@@ -2120,29 +2612,29 @@ The Red Line train starts moving again.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2111"></child>
+        <children><child nodeId="node-2534"></child>
         </children>
     </item>
-    <item nodeId="node-2111">
+    <item nodeId="node-2534">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">The Red Line train
 The Red Line train stops at Civic Center. The door opens.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2112"></child>
+        <children><child nodeId="node-2535"></child>
         </children>
     </item>
-    <item nodeId="node-2112">
+    <item nodeId="node-2535">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Civic Center (in the Red Line train)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2113"></child>
+        <children><child nodeId="node-2536"></child>
         </children>
     </item>
-    <item nodeId="node-2113">
+    <item nodeId="node-2536">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Civic Center (in the Red Line train)
 The door closes.
@@ -2151,29 +2643,29 @@ The Red Line train starts moving again.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2114"></child>
+        <children><child nodeId="node-2537"></child>
         </children>
     </item>
-    <item nodeId="node-2114">
+    <item nodeId="node-2537">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">The Red Line train
 The Red Line train stops at Mission 16th St. The door opens.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2115"></child>
+        <children><child nodeId="node-2538"></child>
         </children>
     </item>
-    <item nodeId="node-2115">
+    <item nodeId="node-2538">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Mission 16th St (in the Red Line train)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2116"></child>
+        <children><child nodeId="node-2539"></child>
         </children>
     </item>
-    <item nodeId="node-2116">
+    <item nodeId="node-2539">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Mission 16th St (in the Red Line train)
 The door closes.
@@ -2182,30 +2674,30 @@ The Red Line train starts moving again.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2117"></child>
+        <children><child nodeId="node-2540"></child>
         </children>
     </item>
-    <item nodeId="node-2117">
+    <item nodeId="node-2540">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">The Red Line train
 The Red Line train stops at Mission 24th St. The door opens.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2118"></child>
+        <children><child nodeId="node-2541"></child>
         </children>
     </item>
-    <item nodeId="node-2118">
+    <item nodeId="node-2541">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Mission 24th St (in the Red Line train)
 You are underground, on a BART platform. The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. An elevator is in the median wall to the north. On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2119"></child>
+        <children><child nodeId="node-2542"></child>
         </children>
     </item>
-    <item nodeId="node-2119">
+    <item nodeId="node-2542">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Mission 24th St (in the Red Line train)
 You are underground, on a BART platform. The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. An elevator is in the median wall to the north. On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset.
@@ -2216,29 +2708,29 @@ The Red Line train starts moving again.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2120"></child>
+        <children><child nodeId="node-2543"></child>
         </children>
     </item>
-    <item nodeId="node-2120">
+    <item nodeId="node-2543">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">The Red Line train
 The Red Line train stops at Glen Park. The door opens.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2121"></child>
+        <children><child nodeId="node-2544"></child>
         </children>
     </item>
-    <item nodeId="node-2121">
+    <item nodeId="node-2544">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Glen Park (in the Red Line train)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2122"></child>
+        <children><child nodeId="node-2545"></child>
         </children>
     </item>
-    <item nodeId="node-2122">
+    <item nodeId="node-2545">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Glen Park (in the Red Line train)
 The door closes.
@@ -2247,29 +2739,29 @@ The Red Line train starts moving again.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2123"></child>
+        <children><child nodeId="node-2546"></child>
         </children>
     </item>
-    <item nodeId="node-2123">
+    <item nodeId="node-2546">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">The Red Line train
 The Red Line train stops at Balboa Park. The door opens.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2124"></child>
+        <children><child nodeId="node-2547"></child>
         </children>
     </item>
-    <item nodeId="node-2124">
+    <item nodeId="node-2547">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Balboa Park (in the Red Line train)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2125"></child>
+        <children><child nodeId="node-2548"></child>
         </children>
     </item>
-    <item nodeId="node-2125">
+    <item nodeId="node-2548">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Balboa Park (in the Red Line train)
 The door closes.
@@ -2278,10 +2770,10 @@ The Red Line train starts moving again.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2126"></child>
+        <children><child nodeId="node-2549"></child>
         </children>
     </item>
-    <item nodeId="node-2126">
+    <item nodeId="node-2549">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">The Red Line train
 The Red Line train stops at Daly City. The door opens.
@@ -2292,10 +2784,10 @@ The Green Line train pulls up. The door opens.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2127"></child>
+        <children><child nodeId="node-2550"></child>
         </children>
     </item>
-    <item nodeId="node-2127">
+    <item nodeId="node-2550">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Daly City (in the Red Line train)
 You are on a BART platform. Fog drifts in from the nearby ocean.
@@ -2304,10 +2796,10 @@ You can see a Green Line train and a Blue Line train here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2128"></child>
+        <children><child nodeId="node-2551"></child>
         </children>
     </item>
-    <item nodeId="node-2128">
+    <item nodeId="node-2551">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Daly City (in the Red Line train)
 You are on a BART platform. Fog drifts in from the nearby ocean.
@@ -2320,30 +2812,30 @@ The Red Line train starts moving again.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2129"></child>
+        <children><child nodeId="node-2552"></child>
         </children>
     </item>
-    <item nodeId="node-2129">
+    <item nodeId="node-2552">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">The Red Line train
 The Red Line train stops at Millbrae. The door opens.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2130"></child>
+        <children><child nodeId="node-2553"></child>
         </children>
     </item>
-    <item nodeId="node-2130">
+    <item nodeId="node-2553">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Millbrae (in the Red Line train)
 You are on a BART platform outside. Many people and trains are all around. There are weird looking cement statues of commuters in awkward positions on the platform.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2131"></child>
+        <children><child nodeId="node-2554"></child>
         </children>
     </item>
-    <item nodeId="node-2131">
+    <item nodeId="node-2554">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Millbrae (in the Red Line train)
 You are on a BART platform outside. Many people and trains are all around. There are weird looking cement statues of commuters in awkward positions on the platform.
@@ -2354,10 +2846,10 @@ The Red Line train starts moving again.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2132"></child>
+        <children><child nodeId="node-2555"></child>
         </children>
     </item>
-    <item nodeId="node-2132">
+    <item nodeId="node-2555">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">The Red Line train
 The Red Line train stops at Daly City. The door opens.
@@ -2365,16 +2857,16 @@ The Red Line train stops at Daly City. The door opens.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1970">
+    <item nodeId="node-2556">
         <command xml:space="preserve">enter elevator</command>
         <result xml:space="preserve">You can't see any such thing.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1972"></child>
+        <children><child nodeId="node-2557"></child>
         </children>
     </item>
-    <item nodeId="node-1972">
+    <item nodeId="node-2557">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">The doors slowly close. The elevator almost imperceptibly moves. Time passes. You smell a lot of things, wishing you couldn't. The doors open again.
 
@@ -2382,10 +2874,10 @@ Mission 24th Platform Elevator
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1973"></child>
+        <children><child nodeId="node-2558"></child>
         </children>
     </item>
-    <item nodeId="node-1973">
+    <item nodeId="node-2558">
         <command xml:space="preserve">out</command>
         <result xml:space="preserve">But you aren't in anything at the moment.
 

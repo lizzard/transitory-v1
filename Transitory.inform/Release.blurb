@@ -1,18 +1,18 @@
 ! Blurb file created by Inform build 6M62
 
-status "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/CblorbModel.html" "/Users/ehenry/Documents/Transitory.inform/Build/StatusCblorb.html"
+status "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/CblorbModel.html" "/Users/ehenry/dev/inform7/transitory/Transitory.inform/Build/StatusCblorb.html"
 
 
 ! Identification
 
-project folder "/Users/ehenry/Documents/Transitory.inform"
-release to "/Users/ehenry/Documents/Transitory.materials/Release"
+project folder "/Users/ehenry/dev/inform7/transitory/Transitory.inform"
+release to "/Users/ehenry/dev/inform7/transitory/Transitory.materials/Release"
 
 ! Blorb instructions
 
 storyfile leafname "Transitory.gblorb"
-storyfile "/Users/ehenry/Documents/Transitory.inform/Build/output.ulx" include
-ifiction "/Users/ehenry/Documents/Transitory.inform/Metadata.iFiction" include
+storyfile "/Users/ehenry/dev/inform7/transitory/Transitory.inform/Build/output.ulx" include
+ifiction "/Users/ehenry/dev/inform7/transitory/Transitory.inform/Metadata.iFiction" include
 cover "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/Cover.jpg"
 picture 1 "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/Cover.jpg"
 

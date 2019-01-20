@@ -3,15 +3,15 @@
 <plist version="1.0"><dict>
     <key>Application Version</key><string>6M62</string>
     <key>0</key><dict>
-        <key>Filename</key><string>/Users/ehenry/Documents/Transitory.inform/Source/story.ni</string>
+        <key>Filename</key><string>/Users/ehenry/dev/inform7/transitory/Transitory.inform/Source/story.ni</string>
         <key>Line</key><integer>1</integer>
         <key>Title</key><string>"Transitory" by lizzard</string>
         <key>Level</key><integer>0</integer>
         <key>Indentation</key><integer>0</integer>
     </dict>
     <key>1</key><dict>
-        <key>Filename</key><string>/Users/ehenry/Documents/Transitory.inform/Source/story.ni</string>
-        <key>Line</key><integer>46</integer>
+        <key>Filename</key><string>/Users/ehenry/dev/inform7/transitory/Transitory.inform/Source/story.ni</string>
+        <key>Line</key><integer>50</integer>
         <key>Title</key><string>Section 1 - 24th Mission St</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
