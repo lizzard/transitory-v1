@@ -51,7 +51,7 @@ Section 1 - 24th Mission St
 
 The description of Mission 24th St is "You are underground, on a BART platform. The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. An elevator is in the median wall to the north. On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset." 
 
-Mission 24th Concourse is up from Mission 24th St. "Enormous concrete buttresses soar overhead, like a futuristic 70s airplane hangar. Music echoes hauntingly from a monumental stairwell rising up to the plaza, combining with the wild harmonics of trains below. There is an elevator to the platform to the north, and another elevator to the street to the northwest." 
+Mission 24th Concourse is up from Mission 24th St. "Enormous concrete buttresses soar overhead, like a futuristic 70s airplane hangar. Music echoes hauntingly from a monumental stairwell rising up to the plaza, combining with the wild harmonics of trains below. " 
 
 Calle 24 Northeast Plaza is up from Mission 24th Concourse. "Palm trees sway high overhead. Delicate metal rails surround the enormous circular stairwell that goes down to the station concourse. All around you are little shops, restaurants, taquerias, people talking, buses pulling up to the stops on Mission and on 24th Street, music blasting from cars going by. A huge mural runs across the wall of the taqueria bordering the plaza to the north, of a gleaming BART train carried on the backs of determined workers amid a geometric cityscape." 
 
@@ -92,6 +92,9 @@ Every turn when the location of the player is in Liftlandia, now the elevator is
 Liftlandia is a region. Mission 24th Concourse, Mission 24th St, and Calle 24 Northeast Plaza are in Liftlandia.
 
 The elevator is a vehicle. The description of the elevator is "A grimy elevator that smells like pee. You take a deep sniff and regret it as the stale urine smell mixes horribly with mildew, dusty heating ducts, and old machine oil which the vestiges of industrial strength floor cleaner do nothing to erase."
+
+The C button is a device that is part of the elevator.
+
 
 After entering the elevator, say "You get into the elevator. The doors close. Best to go up or down as fast as possible to get out of the stench."
 
