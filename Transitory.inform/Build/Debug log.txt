@@ -14,7 +14,7 @@ Reading language definition from </Applications/Inform.app/Contents/Resources/In
 Phase I ... Lexical analysis
 -----------------------------------------------------
 
-I've now read your source text, which is 1833 words long.
+I've now read your source text, which is 4184 words long.
 
 
 -----------------------------------------------------
@@ -24,6 +24,7 @@ Phase II ... Semantic analysis Ia
 I've also read Standard Rules by Graham Nelson, which is 42655 words long.
 I've also read English Language by Graham Nelson, which is 2297 words long.
 I've also read Transit System by Emily Short, which is 2145 words long.
+I've also read Rideable Vehicles by Graham Nelson, which is 1819 words long.
 
 
 -----------------------------------------------------
@@ -54,6 +55,24 @@ Phase VI ... Semantic analysis III
 Phase VII ... First pass through assertions
 -----------------------------------------------------
 
+    Regional: CONSTANT_VNT'liftlandia'-region()(I70'liftlandia')
+     == region
+    Regional: CONSTANT_VNT'platforms'-region()(I73'platforms')
+     == region
+    Regional: CONSTANT_VNT'platforms'-region()(I73'platforms')
+     == region
+    Regional: CONSTANT_VNT'platforms'-region()(I73'platforms')
+     == region
+    Regional: CONSTANT_VNT'platforms'-region()(I73'platforms')
+     == region
+    Regional: CONSTANT_VNT'platforms'-region()(I73'platforms')
+     == region
+    Regional: CONSTANT_VNT'platforms'-region()(I73'platforms')
+     == region
+    Regional: CONSTANT_VNT'platforms'-region()(I73'platforms')
+     == region
+    Regional: CONSTANT_VNT'platforms'-region()(I73'platforms')
+     == region
 
 
 -----------------------------------------------------
@@ -78,13 +97,13 @@ Phase X ... Tables and grammar
 Phase XI ... Phrases and rules
 -----------------------------------------------------
 
-Regional: CONSTANT_VNT'liftlandia'-region(I164_liftlandia)(I98'liftlandia')
+Regional: CONSTANT_VNT'liftlandia'-region(I138_liftlandia)(I70'liftlandia')
  == region
-Regional: CONSTANT_VNT'liftlandia'-region(I164_liftlandia)(I98'liftlandia')
+Regional: CONSTANT_VNT'liftlandia'-region(I138_liftlandia)(I70'liftlandia')
  == region
-Regional: CONSTANT_VNT'liftlandia'-region(I164_liftlandia)(I98'liftlandia')
+Regional: CONSTANT_VNT'liftlandia'-region(I138_liftlandia)(I70'liftlandia')
  == region
-Regional: CONSTANT_VNT'liftlandia'-region(I164_liftlandia)(I98'liftlandia')
+Regional: CONSTANT_VNT'liftlandia'-region(I138_liftlandia)(I70'liftlandia')
  == region
 
 
@@ -116,6 +135,78 @@ Phase XII ... Code generation
 
 ==== Phase XII.6 ... Compiling first block of phrases ====
 
+        Regional: CONSTANT_VNT'sfo extension'-region(I152_sfo_extension)(I84'sfo extension')
+         == region
+        Regional: CONSTANT_VNT'sfo extension'-region(I152_sfo_extension)(I84'sfo extension')
+         == region
+        Regional: CONSTANT_VNT'westside'-region(I142_westside)(I74'westside')
+         == region
+        Regional: CONSTANT_VNT'westside'-region(I142_westside)(I74'westside')
+         == region
+        Regional: CONSTANT_VNT'oakland central'-region(I157_oakland_central)(I89'oakland central')
+         == region
+        Regional: CONSTANT_VNT'oakland central'-region(I157_oakland_central)(I89'oakland central')
+         == region
+        Regional: CONSTANT_VNT'yellow line'-region(I161_yellow_line)(I93'yellow line')
+         == region
+        Regional: CONSTANT_VNT'yellow line'-region(I161_yellow_line)(I93'yellow line')
+         == region
+        Regional: CONSTANT_VNT'sfo extension'-region(I152_sfo_extension)(I84'sfo extension')
+         == region
+        Regional: CONSTANT_VNT'sfo extension'-region(I152_sfo_extension)(I84'sfo extension')
+         == region
+        Regional: CONSTANT_VNT'westside'-region(I142_westside)(I74'westside')
+         == region
+        Regional: CONSTANT_VNT'westside'-region(I142_westside)(I74'westside')
+         == region
+        Regional: CONSTANT_VNT'oakland central'-region(I157_oakland_central)(I89'oakland central')
+         == region
+        Regional: CONSTANT_VNT'oakland central'-region(I157_oakland_central)(I89'oakland central')
+         == region
+        Regional: CONSTANT_VNT'north bay'-region(I172_north_bay)(I104'north bay')
+         == region
+        Regional: CONSTANT_VNT'north bay'-region(I172_north_bay)(I104'north bay')
+         == region
+        Regional: CONSTANT_VNT'westside'-region(I142_westside)(I74'westside')
+         == region
+        Regional: CONSTANT_VNT'westside'-region(I142_westside)(I74'westside')
+         == region
+        Regional: CONSTANT_VNT'oakland south'-region(I179_oakland_south)(I111'oakland south')
+         == region
+        Regional: CONSTANT_VNT'oakland south'-region(I179_oakland_south)(I111'oakland south')
+         == region
+        Regional: CONSTANT_VNT'south bay'-region(I185_south_bay)(I117'south bay')
+         == region
+        Regional: CONSTANT_VNT'south bay'-region(I185_south_bay)(I117'south bay')
+         == region
+        Regional: CONSTANT_VNT'westside'-region(I142_westside)(I74'westside')
+         == region
+        Regional: CONSTANT_VNT'westside'-region(I142_westside)(I74'westside')
+         == region
+        Regional: CONSTANT_VNT'oakland south'-region(I179_oakland_south)(I111'oakland south')
+         == region
+        Regional: CONSTANT_VNT'oakland south'-region(I179_oakland_south)(I111'oakland south')
+         == region
+        Regional: CONSTANT_VNT'blue line'-region(I191_blue_line)(I123'blue line')
+         == region
+        Regional: CONSTANT_VNT'blue line'-region(I191_blue_line)(I123'blue line')
+         == region
+        Regional: CONSTANT_VNT'north bay'-region(I172_north_bay)(I104'north bay')
+         == region
+        Regional: CONSTANT_VNT'north bay'-region(I172_north_bay)(I104'north bay')
+         == region
+        Regional: CONSTANT_VNT'oakland central'-region(I157_oakland_central)(I89'oakland central')
+         == region
+        Regional: CONSTANT_VNT'oakland central'-region(I157_oakland_central)(I89'oakland central')
+         == region
+        Regional: CONSTANT_VNT'oakland south'-region(I179_oakland_south)(I111'oakland south')
+         == region
+        Regional: CONSTANT_VNT'oakland south'-region(I179_oakland_south)(I111'oakland south')
+         == region
+        Regional: CONSTANT_VNT'south bay'-region(I185_south_bay)(I117'south bay')
+         == region
+        Regional: CONSTANT_VNT'south bay'-region(I185_south_bay)(I117'south bay')
+         == region
 
 
 ==== Phase XII.7 ... Compiling the rulebooks ====
@@ -183,8 +274,8 @@ Providing for a total heap of 8192, given requirement of 8192
 Phase XIII ... Compilation now complete
 -----------------------------------------------------
 
-Total of 105 files written as streams.
-CPU time: 198 centiseconds
+Total of 109 files written as streams.
+CPU time: 230 centiseconds
 
 
 That concludes the debugging log from this run of Inform.
