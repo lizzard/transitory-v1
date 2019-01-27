@@ -1,16 +1,30 @@
 "Transitory" by lizzard
 
 Include Transit System by Emily Short.
-Include Rideable Vehicles by Graham Nelson.
+Include Mobility by Liz Henry.
+Use scoring.
 
-When play begins: now the command prompt is "[time of day] >". 
+Section 1 - Testing descriptions - Not for release 
+
+When play begins (this is the run property checks at the start of play rule):
+	repeat with item running through things:
+ 		if description of the item is "":
+			say "[item] has no description." 
+
+Section 2 - Some rules and stuff
+
+When play begins: 
+	now the command prompt is "[time of day] >" ;
+	now right hand status line is "[number of visited rooms]/[number of rooms] locations";
+
+
 
 [temporary start of game location for testing]
 Mission 24th St is a room.
 Calle 24 Southwest Plaza is a room.
 Wraparound mirrorshades are a wearable object.
 The player is carrying wraparound mirrorshades. 
-A snazzy black powerchair is in Calle 24 Southwest Plaza. A powerchair is a rideable vehicle.
+A snazzy black powerchair is in the elevator. A powerchair is a rideable vehicle.
 
 
 [sightedness ]
@@ -19,10 +33,16 @@ Sightedness is a kind of value. The sightednesses are blind, sighted, and unknow
  
 A person has a sightedness. The sightedness of the player is sighted.
 
+Before wearing the mirrorshades:
+	now the player is blind;
+	
+After taking off the mirrorshades:
+	now the player is sighted;
+
 Instead of looking when the player is blind: 
 	say "It might be more useful to listen, tap with your cane, examine, or feel, since you're blind."
 
-
+Section 3 - Regions
 [Regions]
 
 Liftlandia is a region.  [everywhere an elevator might appear]
@@ -46,42 +66,79 @@ South Bay is a region in Platforms. Hayward, South Hayward, Union City, Fremont,
 
 Blue Line is a region in Platforms. Castro Valley, West Dublin/Pleasanton, and Dublin/Pleasanton are in Blue Line. 
 
+Section 4 - Locations, organized by train stops
 
 [train stops, alphabetically with descriptions]
 
+Chapter 1 - Antioch 
+
 The description of Antioch is "You are on a BART platform. You hear the noise of cars on a nearby highway."
+
+Chapter 2 - Ashby
 
 The description of Ashby is "You are on a BART platform."
 
+Chapter 3 - Balboa Park
+
 The description of Balboa Park is "You are on a BART platform."
+
+Chapter 4 - Bay Fair
 
 The description of Bay Fair is "You are on a BART platform."
 
+Chapter 5 - Downtown Berkeley
+
 The description of Downtown Berkeley is "You are on a BART platform."
+
+Chapter 6 - Castro Valley
 
 The description of Castro Valley is "You are on a BART platform."
 
+Chapter 7 - Civic Center
+
 The description of Civic Center is "You are on a BART platform."
+
+Chapter 8 - Coliseum
 
 The description of Coliseum is "You are on a BART platform."
 
+Chapter 9 - Colma
+
 The description of Colma is "You are on a BART platform."
+
+Chapter 10 - Concord
 
 The description of Concord is "You are on a BART platform."
 
+Chapter 11 - Daly City
+
 The description of Daly City is "You are on a BART platform. Fog drifts in from the nearby ocean."
+
+Chapter 12 - Dublin/Pleasanton
 
 The description of Dublin/Pleasanton is "You are on a BART platform. The mysterious suburban world of Dublin/Pleasanton surrounds you."
 
+Chapter 13 - El Cerrito del Norte
+
 The description of El Cerrito del Norte is "You are on a BART platform."
+
+Chapter 14 - El Cerrito Plaza
 
 The description of El Cerrito Plaza is "You are on a BART platform."
 
+Chapter 15 - Embarcadero
+
 The description of Embarcadero is "You are on a BART platform underground. Lots of people are around and there are muffled announcements over an intercom."
+
+Chapter 16 - Fremont
 
 The description of Fremont is "You are on a BART platform."
 
+Chapter 17 - Fruitvale
+
 The description of Fruitvale is "You are on a BART platform."
+
+Chapter 18 - Glen Park
 
 The description of Glen Park is "You are on a BART platform."
 
@@ -97,55 +154,7 @@ The description of Millbrae is "You are on a BART platform outside. Many people 
 
 The description of Mission 16th St is "You are on a BART platform."
 
-The description of Montgomery is "You are on a BART platform."
-
-The description of North Berkeley is "You are on a BART platform."
-
-The description of North Concord/Martinez is "You are on a BART platform."
-
-The description of Oakland 12th St is "You are on a BART platform."
-
-The description of Oakland 19th St is "You are on a BART platform."
-
-The description of Oakland International Airport is "You are on a BART platform."
-
-The description of Orinda is "You are on a BART platform."
-
-The description of Pittsburg/Bay Point is "You are on a BART platform."
-
-The description of Pittsburg Center is "You are on a BART platform."
-
-The description of Pleasant Hill is "You are on a BART platform."
-
-The description of Powell is "You are on a BART platform."
-
-The description of Richmond is "You are on a BART platform."
-
-The description of Rockridge is "You are on a BART platform."
-
-The description of San Bruno is "You are on a BART platform."
-
-The description of San Francisco International Airport is "You are on a BART platform."
-
-The description of San Leandro is "You are on a BART platform."
-
-The description of South Hayward is "You are on a BART platform."
-
-The description of South San Francisco is "You are on a BART platform."
-
-The description of Union City is "You are on a BART platform."
-
-The description of Walnut Creek is "You are on a BART platform."
-
-The description of Warm Springs/South Fremont is "You are on a BART platform."
-
-The description of West Dublin/Pleasanton is "You are on a BART platform."
-
-The description of West Oakland is "You are on a BART platform."
-
-
-[once this section is finished, set up each station as its own section and put this one in order.]
-Section 1 - 24th Mission St  
+Chapter 19 - Mission 24th St
 
 The description of Mission 24th St is "You are underground, on a BART platform. The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. If you look around, you will probably find the elevator. On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset." 
 
@@ -153,9 +162,9 @@ Mission 24th Concourse is up from Mission 24th St. "Enormous concrete buttresses
 
 Calle 24 Northeast Plaza is up from Mission 24th Concourse. "Palm trees sway high overhead. Delicate metal rails surround the enormous circular stairwell that goes down to the station concourse. All around you are little shops, restaurants, taquerias, people talking, buses pulling up to the stops on Mission and on 24th Street, music blasting from cars going by. A huge mural runs across the wall of the taqueria bordering the plaza to the north, of a gleaming BART train carried on the backs of determined workers amid a geometric cityscape." 
 
-Every turn:
+[Every turn:
 	if Calle 24 Northeast Plaza is visited and Calle 24 Northeast Plaza was not visited:
-		say "If you look around past the crowds you might find the elevator.".
+		say "If you look around past the crowds you might find the elevator.".]
 
 A tamale lady is a person. In Calle 24 Northeast Plaza is a tamale lady. The description of a tamale lady is "A short, smiling woman in jeans and an army jacket stands next to a cooler on wheels." 
 Every turn when the player can see a tamale lady: 
@@ -177,6 +186,100 @@ A raccoon is a kind of animal.  In Calle 24 Southeast Corner is a raccoon. The d
 Every turn when the player can see a raccoon: 
     say "A raccoon [one of]hauls itsef out of a concrete trash bin[or]skulks into a nearby alleyway[or]hides in a little nook, eating some discarded fries[or]has a little nap in a pile of trash[as decreasingly likely outcomes]."
 
+Chapter 20 - Montgomery
+
+The description of Montgomery is "You are on a BART platform."
+
+Chapter 21 - North Berkeley
+
+The description of North Berkeley is "You are on a BART platform."
+
+Chapter 22 - North Concord/Martinez
+
+The description of North Concord/Martinez is "You are on a BART platform."
+
+Chapter 23 - Oakland 12th St
+
+The description of Oakland 12th St is "You are on a BART platform."
+
+Chapter 24 - Oakland 19th St
+
+The description of Oakland 19th St is "You are on a BART platform."
+
+Chapter 25 - Oakland International Airport
+
+The description of Oakland International Airport is "You are on a BART platform."
+
+Chapter 26 - Orinda
+
+The description of Orinda is "You are on a BART platform."
+
+Chapter 27 - Pittsburg/Bay Point
+
+The description of Pittsburg/Bay Point is "You are on a BART platform."
+
+Chapter 28 - Pittsburg Center
+
+The description of Pittsburg Center is "You are on a BART platform."
+
+Chapter 29 - Pleasant Hill
+
+The description of Pleasant Hill is "You are on a BART platform."
+
+Chapter 30 - Powell
+
+The description of Powell is "You are on a BART platform."
+
+Chapter 31 - Richmond
+
+The description of Richmond is "You are on a BART platform."
+
+Chapter 32 - Rockridge
+
+The description of Rockridge is "You are on a BART platform."
+
+Chapter 33 - San Bruno
+
+The description of San Bruno is "You are on a BART platform."
+
+Chapter 34 - San Francisco International Airport
+
+The description of San Francisco International Airport is "You are on a BART platform."
+
+Chapter 35 - San Leandro
+
+The description of San Leandro is "You are on a BART platform."
+
+Chapter 36 - South Hayward
+
+The description of South Hayward is "You are on a BART platform."
+
+Chapter 37 - South San Francisco
+
+The description of South San Francisco is "You are on a BART platform."
+
+Chapter 38 - Union City
+
+The description of Union City is "You are on a BART platform."
+
+Chapter 39 - Walnut Creek
+
+The description of Walnut Creek is "You are on a BART platform."
+
+Chapter 40 - Warm Springs/South Fremont
+
+The description of Warm Springs/South Fremont is "You are on a BART platform."
+
+Chapter 41 - West Dublin/Pleasanton
+
+The description of West Dublin/Pleasanton is "You are on a BART platform."
+
+Chapter 42 - West Oakland
+
+The description of West Oakland is "You are on a BART platform."
+
+
+Section 5 - Elevator
 
 [a simple elevator appears in any location where it might be, if the player goes there]
 
@@ -201,6 +304,8 @@ After going down:
 	say "The elevator almost imperceptibly moves down. Time passes. You smell a lot of things, wishing you couldn't. The doors open again.";
 	continue the action. 
 
+
+Section 6 - Train rules
 
 [train-display]
 
@@ -304,7 +409,6 @@ Every turn:
 		Unless time-till-orange is 0:
 			say "Next Orange Line train in [time-till-orange] minutes."
 			
-
 [train rules]
 
 A train-car can be northbound or southbound. 
