@@ -18,14 +18,17 @@ When play begins:
 	now right hand status line is "[number of visited rooms]/[number of rooms] locations";
 
 
-
 [temporary start of game location for testing]
-Mission 24th St is a room.
 Calle 24 Southwest Plaza is a room.
+
+A snazzy black powerchair is in Calle 24 Southwest Plaza. A powerchair is a rideable vehicle.
+The player is on the powerchair. 
+
 Wraparound mirrorshades are a wearable object.
 The player is carrying wraparound mirrorshades. 
-A snazzy black powerchair is in the elevator. A powerchair is a rideable vehicle.
 
+
+Mission 24th St is a room.
 
 [sightedness ]
 
@@ -281,28 +284,82 @@ The description of West Oakland is "You are on a BART platform."
 
 Section 5 - Elevator
 
-[a simple elevator appears in any location where it might be, if the player goes there]
+[a simple 3-level elevator appears in any train station location where it might be, if the player goes there]
 
-The Void is a room. In The Void is the elevator.
+The former location is a room that varies. 
+ First carry out going rule:
+    now the former location is the location. 
 
-Every turn when the location of the player is in Liftlandia, now the elevator is in the location of the player.
+The top of shaft is a room that varies. 
+The middle of shaft is a room that varies.
+The bottom of shaft is a room that varies.
 
-The elevator is a vehicle. The description of the elevator is "A grimy elevator that smells like pee. You take a deep sniff and regret it as the stale urine smell mixes horribly with mildew, dusty heating ducts, and old machine oil which the vestiges of industrial strength floor cleaner do nothing to erase."
+The elevator is a room. The description of the elevator is "A grimy elevator that smells like pee. You take a deep sniff and regret it as the stale urine smell mixes horribly with mildew, dusty heating ducts, and old machine oil which the vestiges of industrial strength floor cleaner do nothing to erase."
 
-The C button is a device that is part of the elevator.  [this doesn't work but maybe for the future]
+[this is a hack because putting the elevator inside another room doesn't work correctly with exiting]
+Every turn when the elevator does not enclose the player and the player is in Liftlandia:
+	say "There is an elevator in the north wall.";
+	now the elevator is mapped north of the location of the player;
 
-After entering the elevator, say "You get into the elevator. The doors close. Best to go up or down as fast as possible to get out of the stench."
 
-Instead of going up when the player is not in the elevator and the location is in Liftlandia:
+A panel in the wall is in the elevator. It is fixed in place. "There are three buttons on the wall: S, C, and P."
+The S button, the C button, and the P button are parts of the panel in the wall. 
+
+[figure out what level you're entering the elevator from relative to other levels]
+After going to the elevator when the player is on the powerchair:
+	say "You roll your chair into the elevator. The door closes.";
+	now the powerchair is in the elevator;
+	now the former location is mapped south of the elevator;
+	if anywhere is mapped down of the former location and nowhere is mapped up of the former location:   [if you're at the top]
+		now the top of shaft is the former location; 
+		now the middle of shaft is the room down of the former location;
+		now the bottom of shaft is the room down of middle of shaft;
+	if anywhere is mapped down of the former location and anywhere is mapped up of the former location:   [if you're in the middle]
+		now the middle of shaft is the former location; 
+		now the top of shaft is the room up of middle of shaft;
+		now the bottom of shaft is the room down of middle of shaft;
+	if nowhere is mapped down of the former location and anywhere is mapped up of the former location:
+		now the bottom of shaft is the former location; 
+		now the middle of shaft is the room up of bottom of shaft;
+		now the top of shaft is the room up of middle of shaft;
+
+
+Instead of pushing the S button:
+	if the former location is top of shaft:
+		say "You're already at street level.";
+	otherwise:
+		say "You push the S button. It lights up. The elevator creaks and slowly goes up.";
+		say "Time passes. You smell a lot of things, wishing you couldn't.";
+		now the top of shaft is mapped south of the elevator;	
+		say "The doors open and you look out to [top of shaft] to the south.";
+	
+Instead of pushing the P button:
+	if the former location is bottom of shaft:
+		say "You're already at the platform level.";
+	otherwise:
+		say "You push the P button. It lights up. The elevator creaks and slowly goes down.";
+		say "Time passes. You smell a lot of things, wishing you couldn't.";
+		now the bottom of shaft is mapped south of the elevator;	
+		say "There is a horrible jolt. The doors open and you look out to [bottom of shaft] to the south.";
+		
+Instead of pushing the C button:
+	if the former location is middle of shaft:
+		say "You're already at the concourse level.";
+	if the former location is top of shaft:
+		say "You push the C button. It lights up. The elevator creaks and slowly goes down.";
+		now the middle of shaft is mapped south of the elevator;	
+		say "The doors open and you look out to [middle of shaft] to the south.";
+	if the former location is bottom of shaft:
+		say "You push the C button. It lights up. The elevator creaks and slowly goes up.";
+		say "The elevator almost imperceptibly moves up. Time passes. ";
+		now the middle of shaft is mapped south of the elevator;	
+		say "The doors open and you look out to [middle of shaft] to the south.";
+
+
+Instead of going up when the player is not in the elevator and the player is on the powerchair:
 	say "That's fairly challenging since your wheels won't make it up the stairs." 
-After going up:
-	say " The elevator almost imperceptibly moves up. Time passes. You smell a lot of things, wishing you couldn't. The doors open again.";
-	continue the action. 	
-Instead of going down when the player is not in the elevator and the location is in Liftlandia:
-	say "Quite challenging, since your wheels won't make it down the stairs." 
-After going down:
-	say "The elevator almost imperceptibly moves down. Time passes. You smell a lot of things, wishing you couldn't. The doors open again.";
-	continue the action. 
+Instead of going down when the player is not in the elevator and the player is on the powerchair:
+	say "It would be a short and brutal trip for you and your powerchair. Best not." 
 
 
 Section 6 - Train rules
