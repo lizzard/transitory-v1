@@ -44,8 +44,47 @@ After taking off the mirrorshades:
 
 Instead of looking when the player is blind: 
 	say "It might be more useful to listen, tap with your cane, examine, or feel, since you're blind."
+	
+Section 3 - Money stuff
 
-Section 3 - Regions
+Price is a kind of value. $1.99 specifies a price. A thing has a price. The price of a thing is usually $0.00. After examining something for sale, say "It can be yours for [the price of the noun]." 
+
+Definition: a thing is free if the price of it is $0.00.
+Definition: a thing is for sale if it is not free. 
+
+Instead of taking something for sale:
+	say "You'll have to pay for that." 
+
+Before buying something for sale when the money is not in the wallet:
+	say "You're broke." instead. 
+
+Before buying something for sale when the money is free:
+	say "You're broke." instead. 
+
+Before buying something for sale when the price of the money is less than the price of the noun:
+	say "Your funds do not run to the price of [the noun]." instead. 
+
+Instead of buying something:
+	decrease the price of the money by the price of the noun;
+	say "You fork over [the price of the noun] for [the noun], leaving yourself with [the price of the money].";
+	if the money is free:
+		now the money is nowhere;
+	now the price of the noun is $0.00;
+	now the player is carrying the noun. 
+
+The player carries a wallet. The wallet contains money. The price of the money is $20.00. The printed name of the money is "[price of the money] in cash". Understand "cash" as the money. 
+
+Instead of taking the money:
+	say "Best to leave it alone until you need to buy something." 
+
+Instead of buying something free:
+	say "[The noun] can't be bought." 
+
+Instead of buying the money:
+	say "The money belongs to you; you buy things with it." 
+
+
+Section 4 - Regions
 [Regions]
 
 Liftlandia is a region.  [everywhere an elevator might appear]
@@ -69,79 +108,79 @@ South Bay is a region in Platforms. Hayward, South Hayward, Union City, Fremont,
 
 Blue Line is a region in Platforms. Castro Valley, West Dublin/Pleasanton, and Dublin/Pleasanton are in Blue Line. 
 
-Section 4 - Locations, organized by train stops
+Section 5 - Locations, organized by train stops
 
 [train stops, alphabetically with descriptions]
 
-Chapter 1 - Antioch 
+Chapter 6 - Antioch 
 
 The description of Antioch is "You are on a BART platform. You hear the noise of cars on a nearby highway."
 
-Chapter 2 - Ashby
+Chapter 7 - Ashby
 
 The description of Ashby is "You are on a BART platform."
 
-Chapter 3 - Balboa Park
+Chapter 8 - Balboa Park
 
 The description of Balboa Park is "You are on a BART platform."
 
-Chapter 4 - Bay Fair
+Chapter 9 - Bay Fair
 
 The description of Bay Fair is "You are on a BART platform."
 
-Chapter 5 - Downtown Berkeley
+Chapter 10 - Downtown Berkeley
 
 The description of Downtown Berkeley is "You are on a BART platform."
 
-Chapter 6 - Castro Valley
+Chapter 11 - Castro Valley
 
 The description of Castro Valley is "You are on a BART platform."
 
-Chapter 7 - Civic Center
+Chapter 12 - Civic Center
 
 The description of Civic Center is "You are on a BART platform."
 
-Chapter 8 - Coliseum
+Chapter 13 - Coliseum
 
 The description of Coliseum is "You are on a BART platform."
 
-Chapter 9 - Colma
+Chapter 14 - Colma
 
 The description of Colma is "You are on a BART platform."
 
-Chapter 10 - Concord
+Chapter 15 - Concord
 
 The description of Concord is "You are on a BART platform."
 
-Chapter 11 - Daly City
+Chapter 16 - Daly City
 
 The description of Daly City is "You are on a BART platform. Fog drifts in from the nearby ocean."
 
-Chapter 12 - Dublin/Pleasanton
+Chapter 17 - Dublin/Pleasanton
 
 The description of Dublin/Pleasanton is "You are on a BART platform. The mysterious suburban world of Dublin/Pleasanton surrounds you."
 
-Chapter 13 - El Cerrito del Norte
+Chapter 18 - El Cerrito del Norte
 
 The description of El Cerrito del Norte is "You are on a BART platform."
 
-Chapter 14 - El Cerrito Plaza
+Chapter 19 - El Cerrito Plaza
 
 The description of El Cerrito Plaza is "You are on a BART platform."
 
-Chapter 15 - Embarcadero
+Chapter 20 - Embarcadero
 
 The description of Embarcadero is "You are on a BART platform underground. Lots of people are around and there are muffled announcements over an intercom."
 
-Chapter 16 - Fremont
+Chapter 21 - Fremont
 
 The description of Fremont is "You are on a BART platform."
 
-Chapter 17 - Fruitvale
+Chapter 22 - Fruitvale
 
 The description of Fruitvale is "You are on a BART platform."
 
-Chapter 18 - Glen Park
+Chapter 23 - Glen Park
 
 The description of Glen Park is "You are on a BART platform."
 
@@ -157,7 +196,7 @@ The description of Millbrae is "You are on a BART platform outside. Many people 
 
 The description of Mission 16th St is "You are on a BART platform."
 
-Chapter 19 - Mission 24th St
+Chapter 24 - Mission 24th St
 
 The description of Mission 24th St is "You are underground, on a BART platform. The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. If you look around, you will probably find the elevator. On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset." 
 
@@ -173,6 +212,13 @@ A tamale lady is a person. In Calle 24 Northeast Plaza is a tamale lady. The des
 Every turn when the player can see a tamale lady: 
     say "A tamale lady [one of]watches the people passing by[or]says 'Tamales!'[or]shifts her weight from one foot to the other[or]says 'Tamales de pollo!'[or]smiles at you[or]says 'Tamales de carne!'[as decreasingly likely outcomes]."
 
+A cooler on wheels is an openable container. It is in Calle 24 Northeast Plaza. 
+
+The tamal is an edible thing in the cooler on wheels. The price of the tamal is $3.00. The description is "A delicious-smelling tamal wrapped in paper and foil." 
+
+Instead of taking the cooler on wheels:
+	say "But that belongs to the nice tamale lady!";
+
 A yelling preacher is a person. In Calle 24 Northeast Plaza is a yelling preacher. The description of the preacher is "A short man yells fervently in Spanish into a microphone. You recognize some things from the Bible, though it is hard to understand him from the low quality amp at his feet."
 
 Calle 24 Northwest Corner is west of Calle 24 Northeast Plaza. "Just outside the Chinese Food and Donuts shop, this lively streetcorner has buses pulling up along 24th Street, many cars going by, people crossing the street and just standing around, music blaring from passing cars and from the shops all around. Along Mission, high overhead, washingtonia palms stretch into the sky. To the east, there's another BART plaza with an elevator."
@@ -183,101 +229,108 @@ A flower seller is a person. In Calle 24 Southwest Plaza is a flower seller. The
 Every turn when the player can see a flower seller: 
     say "A flower seller [one of]beams at you with a huge happy grin[or]called out, 'Flores!'[or]offers you a little bunch of carnations tied with string[or]shares a coffee with a friend[or]fusses over her bunches of flowers, arranging them nicely[or]watches the people passing by[or]smiles as she stops to talk with a friend[as decreasingly likely outcomes]."
 
+A shopping basket is an openable container. It is in Calle 24 Southwest Plaza. 
+
+The little bunch of carnations  is a thing in the shopping basket. The price of the carnations is $1.00. The description is "A bunch of red carnations, stems wrapped in paper and tied with green twine." 
+
+Instead of taking the basket:
+	say "But that belongs to Mariquita!";
+
 Calle 24 Southeast Corner is east of Calle 24 Southwest Plaza. "This busy street corner by the McDonalds is grimy. It's basically a crowded spot where people wait to cross the street. Across Mission to the west, there's a nice plaza with a busy market. Across 24th Street to the north, another lovely plaza with musicians, preachers, and some places to sit."
 Calle 24 Southeast Corner is south of Calle 24 Northeast Plaza. 
 A raccoon is a kind of animal.  In Calle 24 Southeast Corner is a raccoon. The description of the raccoon is "A greasy looking plump raccoon. It's battered, but unbowed."  
 Every turn when the player can see a raccoon: 
     say "A raccoon [one of]hauls itsef out of a concrete trash bin[or]skulks into a nearby alleyway[or]hides in a little nook, eating some discarded fries[or]has a little nap in a pile of trash[as decreasingly likely outcomes]."
 
-Chapter 20 - Montgomery
+Chapter 25 - Montgomery
 
 The description of Montgomery is "You are on a BART platform."
 
-Chapter 21 - North Berkeley
+Chapter 26 - North Berkeley
 
 The description of North Berkeley is "You are on a BART platform."
 
-Chapter 22 - North Concord/Martinez
+Chapter 27 - North Concord/Martinez
 
 The description of North Concord/Martinez is "You are on a BART platform."
 
-Chapter 23 - Oakland 12th St
+Chapter 28 - Oakland 12th St
 
 The description of Oakland 12th St is "You are on a BART platform."
 
-Chapter 24 - Oakland 19th St
+Chapter 29 - Oakland 19th St
 
 The description of Oakland 19th St is "You are on a BART platform."
 
-Chapter 25 - Oakland International Airport
+Chapter 30 - Oakland International Airport
 
 The description of Oakland International Airport is "You are on a BART platform."
 
-Chapter 26 - Orinda
+Chapter 31 - Orinda
 
 The description of Orinda is "You are on a BART platform."
 
-Chapter 27 - Pittsburg/Bay Point
+Chapter 32 - Pittsburg/Bay Point
 
 The description of Pittsburg/Bay Point is "You are on a BART platform."
 
-Chapter 28 - Pittsburg Center
+Chapter 33 - Pittsburg Center
 
 The description of Pittsburg Center is "You are on a BART platform."
 
-Chapter 29 - Pleasant Hill
+Chapter 34 - Pleasant Hill
 
 The description of Pleasant Hill is "You are on a BART platform."
 
-Chapter 30 - Powell
+Chapter 35 - Powell
 
 The description of Powell is "You are on a BART platform."
 
-Chapter 31 - Richmond
+Chapter 36 - Richmond
 
 The description of Richmond is "You are on a BART platform."
 
-Chapter 32 - Rockridge
+Chapter 37 - Rockridge
 
 The description of Rockridge is "You are on a BART platform."
 
-Chapter 33 - San Bruno
+Chapter 38 - San Bruno
 
 The description of San Bruno is "You are on a BART platform."
 
-Chapter 34 - San Francisco International Airport
+Chapter 39 - San Francisco International Airport
 
 The description of San Francisco International Airport is "You are on a BART platform."
 
-Chapter 35 - San Leandro
+Chapter 40 - San Leandro
 
 The description of San Leandro is "You are on a BART platform."
 
-Chapter 36 - South Hayward
+Chapter 41 - South Hayward
 
 The description of South Hayward is "You are on a BART platform."
 
-Chapter 37 - South San Francisco
+Chapter 42 - South San Francisco
 
 The description of South San Francisco is "You are on a BART platform."
 
-Chapter 38 - Union City
+Chapter 43 - Union City
 
 The description of Union City is "You are on a BART platform."
 
-Chapter 39 - Walnut Creek
+Chapter 44 - Walnut Creek
 
 The description of Walnut Creek is "You are on a BART platform."
 
-Chapter 40 - Warm Springs/South Fremont
+Chapter 45 - Warm Springs/South Fremont
 
 The description of Warm Springs/South Fremont is "You are on a BART platform."
 
-Chapter 41 - West Dublin/Pleasanton
+Chapter 46 - West Dublin/Pleasanton
 
 The description of West Dublin/Pleasanton is "You are on a BART platform."
 
-Chapter 42 - West Oakland
+Chapter 47 - West Oakland
 
 The description of West Oakland is "You are on a BART platform."
 
@@ -690,4 +743,5 @@ transit time	destination	relative position
 1 minute	North Berkeley	3
 1 minute	El Cerrito Plaza	2
 1 minute	El Cerrito del Norte	1
+
 
