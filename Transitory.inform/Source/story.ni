@@ -184,21 +184,37 @@ Chapter 23 - Glen Park
 
 The description of Glen Park is "You are on a BART platform."
 
+Chapter 24 - Hayward
+
 The description of Hayward is "You are on a BART platform."
+
+Chapter 25 - Lafayette
 
 The description of Lafayette is "You are on a BART platform."
 
+Chapter 26 - Lake Merritt
+
 The description of Lake Merritt is "You are on a BART platform."
+
+Chapter 27 - MacArthur
 
 The description of MacArthur is "You are on a BART platform."
 
+Chapter 28 - Millbrae
+
 The description of Millbrae is "You are on a BART platform outside. Many people and trains are all around. There are weird looking cement statues of commuters in awkward positions on the platform."
 
-The description of Mission 16th St is "You are on a BART platform."
+Chapter 29 - Mission 16th St
 
-Chapter 24 - Mission 24th St
+The description of Mission 16th St is "You are underground, on a BART platform. The haunting sound of train wheels on the rails echoes all around. The platform floor is covered with long brick-red tiles, while the median walls are tiled in light and dark blue, green, gold, and brown tiles like the colors of a tropical beach on a sunny day."
 
-The description of Mission 24th St is "You are underground, on a BART platform. The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. If you look around, you will probably find the elevator. On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset." 
+Mission 16th Concourse is up from Mission 16th St. "Low but nicely curved arches made of smooth concrete form the ceiling of this long, busy station. Music echoes from the stairwells. The acoustics are great!"
+
+																								
+
+Chapter 30 - Mission 24th St
+
+The description of Mission 24th St is "You are underground, on a BART platform. The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset." 
 
 Mission 24th Concourse is up from Mission 24th St. "Enormous concrete buttresses soar overhead, like a futuristic 70s airplane hangar. Music echoes hauntingly from a monumental stairwell rising up to the plaza, combining with the wild harmonics of trains below." 
 
@@ -219,7 +235,7 @@ The tamal is an edible thing in the cooler on wheels. The price of the tamal is 
 Instead of taking the cooler on wheels:
 	say "But that belongs to the nice tamale lady!";
 
-A yelling preacher is a person. In Calle 24 Northeast Plaza is a yelling preacher. The description of the preacher is "A short man yells fervently in Spanish into a microphone. You recognize some things from the Bible, though it is hard to understand him from the low quality amp at his feet."
+A yelling preacher is a person. In Calle 24 Northeast Plaza is a yelling preacher. The description of the preacher is "A short man yells fervently in Spanish into a microphone. You recognize some things from the Bible, though it's hard to understand him from the low quality amp at his feet."
 
 Calle 24 Northwest Corner is west of Calle 24 Northeast Plaza. "Just outside the Chinese Food and Donuts shop, this lively streetcorner has buses pulling up along 24th Street, many cars going by, people crossing the street and just standing around, music blaring from passing cars and from the shops all around. Along Mission, high overhead, washingtonia palms stretch into the sky. To the east, there's another BART plaza with an elevator."
 
@@ -234,7 +250,7 @@ A shopping basket is an openable container. It is in Calle 24 Southwest Plaza.
 The little bunch of carnations  is a thing in the shopping basket. The price of the carnations is $1.00. The description is "A bunch of red carnations, stems wrapped in paper and tied with green twine." 
 
 Instead of taking the basket:
-	say "But that belongs to Mariquita!";
+	say "But that belongs to Mariquita! And she's so nice.";
 
 Calle 24 Southeast Corner is east of Calle 24 Southwest Plaza. "This busy street corner by the McDonalds is grimy. It's basically a crowded spot where people wait to cross the street. Across Mission to the west, there's a nice plaza with a busy market. Across 24th Street to the north, another lovely plaza with musicians, preachers, and some places to sit."
 Calle 24 Southeast Corner is south of Calle 24 Northeast Plaza. 
@@ -242,95 +258,95 @@ A raccoon is a kind of animal.  In Calle 24 Southeast Corner is a raccoon. The d
 Every turn when the player can see a raccoon: 
     say "A raccoon [one of]hauls itsef out of a concrete trash bin[or]skulks into a nearby alleyway[or]hides in a little nook, eating some discarded fries[or]has a little nap in a pile of trash[as decreasingly likely outcomes]."
 
-Chapter 25 - Montgomery
+Chapter 31 - Montgomery
 
 The description of Montgomery is "You are on a BART platform."
 
-Chapter 26 - North Berkeley
+Chapter 32 - North Berkeley
 
 The description of North Berkeley is "You are on a BART platform."
 
-Chapter 27 - North Concord/Martinez
+Chapter 33 - North Concord/Martinez
 
 The description of North Concord/Martinez is "You are on a BART platform."
 
-Chapter 28 - Oakland 12th St
+Chapter 34 - Oakland 12th St
 
 The description of Oakland 12th St is "You are on a BART platform."
 
-Chapter 29 - Oakland 19th St
+Chapter 35 - Oakland 19th St
 
 The description of Oakland 19th St is "You are on a BART platform."
 
-Chapter 30 - Oakland International Airport
+Chapter 36 - Oakland International Airport
 
 The description of Oakland International Airport is "You are on a BART platform."
 
-Chapter 31 - Orinda
+Chapter 37 - Orinda
 
 The description of Orinda is "You are on a BART platform."
 
-Chapter 32 - Pittsburg/Bay Point
+Chapter 38 - Pittsburg/Bay Point
 
 The description of Pittsburg/Bay Point is "You are on a BART platform."
 
-Chapter 33 - Pittsburg Center
+Chapter 39 - Pittsburg Center
 
 The description of Pittsburg Center is "You are on a BART platform."
 
-Chapter 34 - Pleasant Hill
+Chapter 40 - Pleasant Hill
 
 The description of Pleasant Hill is "You are on a BART platform."
 
-Chapter 35 - Powell
+Chapter 41 - Powell
 
 The description of Powell is "You are on a BART platform."
 
-Chapter 36 - Richmond
+Chapter 42 - Richmond
 
 The description of Richmond is "You are on a BART platform."
 
-Chapter 37 - Rockridge
+Chapter 43 - Rockridge
 
 The description of Rockridge is "You are on a BART platform."
 
-Chapter 38 - San Bruno
+Chapter 44 - San Bruno
 
 The description of San Bruno is "You are on a BART platform."
 
-Chapter 39 - San Francisco International Airport
+Chapter 45 - San Francisco International Airport
 
 The description of San Francisco International Airport is "You are on a BART platform."
 
-Chapter 40 - San Leandro
+Chapter 46 - San Leandro
 
 The description of San Leandro is "You are on a BART platform."
 
-Chapter 41 - South Hayward
+Chapter 47 - South Hayward
 
 The description of South Hayward is "You are on a BART platform."
 
-Chapter 42 - South San Francisco
+Chapter 48 - South San Francisco
 
 The description of South San Francisco is "You are on a BART platform."
 
-Chapter 43 - Union City
+Chapter 49 - Union City
 
 The description of Union City is "You are on a BART platform."
 
-Chapter 44 - Walnut Creek
+Chapter 50 - Walnut Creek
 
 The description of Walnut Creek is "You are on a BART platform."
 
-Chapter 45 - Warm Springs/South Fremont
+Chapter 51 - Warm Springs/South Fremont
 
 The description of Warm Springs/South Fremont is "You are on a BART platform."
 
-Chapter 46 - West Dublin/Pleasanton
+Chapter 52 - West Dublin/Pleasanton
 
 The description of West Dublin/Pleasanton is "You are on a BART platform."
 
-Chapter 47 - West Oakland
+Chapter 53 - West Oakland
 
 The description of West Oakland is "You are on a BART platform."
 
