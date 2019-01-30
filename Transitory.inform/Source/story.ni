@@ -1,7 +1,7 @@
 "Transitory" by lizzard
 
 Include Transit System by Emily Short.
-Include Mobility by Liz Henry.
+Include Rideable Vehicles by Graham Nelson.
 Use scoring.
 
 Section 1 - Testing descriptions - Not for release 
@@ -27,6 +27,14 @@ The player is on the powerchair.
 Wraparound mirrorshades are a wearable object.
 The player is carrying wraparound mirrorshades. 
 
+A BART card is an device. The description of a BART card is "A blue and white card with a magnetic stripe. It says 'BART' in big black letters that look oddly like handwriting."
+The player is carrying a BART card. 
+
+A magic marker is an object. The description of a magic marker is "A magic marker. It fizzes and tingles with energy as if it were eager to make its mark."
+The player is carrying a magic marker.
+
+A room can be a platform.
+A room can be a concourse.
 
 Mission 24th St is a room.
 
@@ -208,7 +216,7 @@ Chapter 29 - Mission 16th St
 
 The description of Mission 16th St is "You are underground, on a BART platform. The haunting sound of train wheels on the rails echoes all around. The platform floor is covered with long brick-red tiles, while the median walls are tiled in light and dark blue, green, gold, and brown tiles like the colors of a tropical beach on a sunny day."
 
-Mission 16th Concourse is up from Mission 16th St. "Low but nicely curved arches made of smooth concrete form the ceiling of this long, busy station. Music echoes from the stairwells. The acoustics are great!"
+Mission 16th Concourse is up from Mission 16th St. Mission 16th Concourse is a concourse. "Low but nicely curved arches made of smooth concrete form the ceiling of this long, busy station. Music echoes from the stairwells. The acoustics are great!"
 
 																								
 
@@ -216,7 +224,7 @@ Chapter 30 - Mission 24th St
 
 The description of Mission 24th St is "You are underground, on a BART platform. The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset." 
 
-Mission 24th Concourse is up from Mission 24th St. "Enormous concrete buttresses soar overhead, like a futuristic 70s airplane hangar. Music echoes hauntingly from a monumental stairwell rising up to the plaza, combining with the wild harmonics of trains below." 
+Mission 24th Concourse is up from Mission 24th St. Mission 24th Concourse is a concourse. "Enormous concrete buttresses soar overhead, like a futuristic 70s airplane hangar. Music echoes hauntingly from a monumental stairwell rising up to the plaza, combining with the wild harmonics of trains below. Abstract cement shapes are sculpted in relief along the oddly corrugated sides of the stairwell, open to the sky." 
 
 Calle 24 Northeast Plaza is up from Mission 24th Concourse. "Palm trees sway high overhead. Delicate metal rails surround the enormous circular stairwell that goes down to the station concourse. All around you are little shops, restaurants, taquerias, people talking, buses pulling up to the stops on Mission and on 24th Street, music blasting from cars going by. A huge mural runs across the wall of the taqueria bordering the plaza to the north, of a gleaming BART train carried on the backs of determined workers amid a geometric cityscape." 
 
@@ -351,7 +359,8 @@ Chapter 53 - West Oakland
 The description of West Oakland is "You are on a BART platform."
 
 
-Section 5 - Elevator
+
+Section 5 - Elevator 
 
 [a simple 3-level elevator appears in any train station location where it might be, if the player goes there]
 
@@ -431,7 +440,32 @@ Instead of going down when the player is not in the elevator and the player is o
 	say "It would be a short and brutal trip for you and your powerchair. Best not." 
 
 
-Section 6 - Train rules
+Section 6 - Ticket reader
+
+[the reader itself]
+A ticket reader is a thing. It is fixed in place. "A ticket reader machine is here in a little kiosk, softly humming." 
+The description of the ticket reader is "Its labels are somewhat worn by time. A sign on the machine says 'Swipe *ART card for entry and exit." 
+Understand "machine" as a ticket reader.   
+
+Every turn when the location of the player is a concourse:
+	now a ticket reader is in the location of the player;
+
+[the ticket]
+Instead of switching off the card when the card is switched off, silently try switching on the card.
+
+Instead of switching on the card when the card is switched on, try switching off the card.
+	
+Instead of switching on the BART card when the location of the player is not a concourse:
+	say "You need to do that by swiping it on a ticket reader.";
+Instead of switching off the BART card when the location of the player is not a concourse:
+	say "You need to do that by swiping it on a ticket reader.";	
+
+
+	
+	
+Understand "swipe [something]" as switching on. 
+
+Section 7 - Train rules
 
 [train-display]
 
