@@ -22,16 +22,10 @@ When play begins:
 Calle 24 Southwest Plaza is a room.
 
 A snazzy black powerchair is in Calle 24 Southwest Plaza. A powerchair is a rideable vehicle.
-The player is on the powerchair. 
+The player is on the powerchair. The description of the powerchair is "It's shiny black, it's powerful, and it's from the future."
 
-Wraparound mirrorshades are a wearable object.
-The player is carrying wraparound mirrorshades. 
-
-A BART card is an device. The description of a BART card is "A blue and white card with a magnetic stripe. It says 'BART' in big black letters that look oddly like handwriting."
-The player is carrying a BART card. 
-
-A magic marker is an object. The description of a magic marker is "A magic marker. It fizzes and tingles with energy as if it were eager to make its mark."
-The player is carrying a magic marker.
+Wraparound mirrorshades are a wearable object. "Shiny reflecting glasses."
+The player is carrying wraparound mirrorshades.  
 
 A room can be a platform.
 A room can be a concourse.
@@ -80,7 +74,7 @@ Instead of buying something:
 	now the price of the noun is $0.00;
 	now the player is carrying the noun. 
 
-The player carries a wallet. The wallet contains money. The price of the money is $20.00. The printed name of the money is "[price of the money] in cash". Understand "cash" as the money. 
+The player carries a wallet. The wallet contains money. The price of the money is $20.00. The printed name of the money is "[price of the money] in cash". Understand "cash" as the money. The description of a wallet is "A nice, compact leather wallet."
 
 Instead of taking the money:
 	say "Best to leave it alone until you need to buy something." 
@@ -236,7 +230,7 @@ A tamale lady is a person. In Calle 24 Northeast Plaza is a tamale lady. The des
 Every turn when the player can see a tamale lady: 
     say "A tamale lady [one of]watches the people passing by[or]says 'Tamales!'[or]shifts her weight from one foot to the other[or]says 'Tamales de pollo!'[or]smiles at you[or]says 'Tamales de carne!'[as decreasingly likely outcomes]."
 
-A cooler on wheels is an openable container. It is in Calle 24 Northeast Plaza. 
+A cooler on wheels is an openable container. It is in Calle 24 Northeast Plaza. "A red and white cooler with a hinged lid."
 
 The tamal is an edible thing in the cooler on wheels. The price of the tamal is $3.00. The description is "A delicious-smelling tamal wrapped in paper and foil." 
 
@@ -253,7 +247,7 @@ A flower seller is a person. In Calle 24 Southwest Plaza is a flower seller. The
 Every turn when the player can see a flower seller: 
     say "A flower seller [one of]beams at you with a huge happy grin[or]called out, 'Flores!'[or]offers you a little bunch of carnations tied with string[or]shares a coffee with a friend[or]fusses over her bunches of flowers, arranging them nicely[or]watches the people passing by[or]smiles as she stops to talk with a friend[as decreasingly likely outcomes]."
 
-A shopping basket is an openable container. It is in Calle 24 Southwest Plaza. 
+A shopping basket is an openable container. It is in Calle 24 Southwest Plaza. "A metal folding shopping basket on wheels. "
 
 The little bunch of carnations  is a thing in the shopping basket. The price of the carnations is $1.00. The description is "A bunch of red carnations, stems wrapped in paper and tied with green twine." 
 
@@ -382,6 +376,9 @@ Every turn when the elevator does not enclose the player and the player is in Li
 
 A panel in the wall is in the elevator. It is fixed in place. "There are three buttons on the wall: S, C, and P."
 The S button, the C button, and the P button are parts of the panel in the wall. 
+The description of the S button is "A round button printed with a raised S."
+The description of the C button is "A round button printed with a raised C."
+The description of the P button is "A round button printed with a raised P."
 
 [figure out what level you're entering the elevator from relative to other levels]
 After going to the elevator when the player is on the powerchair:
@@ -451,19 +448,47 @@ Every turn when the location of the player is a concourse:
 	now a ticket reader is in the location of the player;
 
 [the ticket]
-Instead of switching off the card when the card is switched off, silently try switching on the card.
+Instead of switching off the BART card when the BART card is switched off, silently try switching on the BART card.
 
-Instead of switching on the card when the card is switched on, try switching off the card.
+Instead of switching on the BART card when the BART card is switched on, try switching off the BART card.
 	
-Instead of switching on the BART card when the location of the player is not a concourse:
+Instead of switching on a card when the location of the player is not a concourse:
 	say "You need to do that by swiping it on a ticket reader.";
-Instead of switching off the BART card when the location of the player is not a concourse:
-	say "You need to do that by swiping it on a ticket reader.";	
-
-
-	
+Instead of switching off a card when the location of the player is not a concourse:
+	say "You need to do that by swiping it on a ticket reader.";		
 	
 Understand "swipe [something]" as switching on. 
+
+A writing utensil is a kind of thing. A magic marker is a writing utensil.
+A card is a kind of device.  A BART card and an ART card are cards.
+
+The description of a BART card is "A blue and white card with a magnetic stripe. It says 'BART' in big black letters that look oddly like scribbly handwriting. "
+
+The description of an ART card is "A blue and white card with a stripe. It says 'ART' in big black letters. The letters blur and seem to move."
+
+The player is carrying a magic marker and a BART card.
+
+A magic marker is an object. The description of a magic marker is "A magic marker. It fizzes and tingles with energy as if it were eager to make its mark."
+
+
+
+Writing on is an action applying to one visible thing. Understand "write on [something]" as writing on. 
+
+Check writing on:
+	if the noun is not a card, say "You decide not to scribble on that." instead.
+
+Carry out writing on:
+	say "You scribble on the card. It fizzes and tingles.";
+	if the player is carrying the BART card:
+		now the BART card is nowhere;
+		now the player is carrying an ART card;
+	otherwise:
+		if the player is carrying the ART card:
+			now the ART card is nowhere;
+			now the player is carrying a BART card.
+
+
+
 
 Section 7 - Train rules
 
@@ -573,15 +598,15 @@ Every turn:
 
 A train-car can be northbound or southbound. 
 
-The Red Line train is a relatively-scheduled train-car. The Red Line Train is in El Cerrito del Norte. The waiting duration of the Red Line train is 1 minute. The t-schedule of the Red Line train is the Table of Red Line Schedule. 
+The Red Line train is a relatively-scheduled train-car. The Red Line Train is in El Cerrito del Norte. The waiting duration of the Red Line train is 1 minute. The t-schedule of the Red Line train is the Table of Red Line Schedule.  "A 9 car train."
 
-The Yellow Line train is a relatively-scheduled train-car. The Yellow Line Train is in Millbrae. The waiting duration of the Yellow Line train is 1 minute. The t-schedule of the Yellow Line train is the Table of Yellow Line Schedule.
+The Yellow Line train is a relatively-scheduled train-car. The Yellow Line Train is in Millbrae. The waiting duration of the Yellow Line train is 1 minute. The t-schedule of the Yellow Line train is the Table of Yellow Line Schedule. "A 5 car train."
 
-The Blue Line train is a relatively-scheduled train-car. The Blue Line Train is in Daly City. The waiting duration of the Blue Line train is 1 minute. The t-schedule of the Blue Line train is the Table of Blue Line Schedule.
+The Blue Line train is a relatively-scheduled train-car. The Blue Line Train is in Daly City. The waiting duration of the Blue Line train is 1 minute. The t-schedule of the Blue Line train is the Table of Blue Line Schedule. "Some train cars, you aren't sure how many."
 
-The Green Line train is a relatively-scheduled train-car. The Green Line Train is in Daly City. The waiting duration of the Green Line train is 1 minute. The t-schedule of the Green Line train is the Table of Green Line Schedule.
+The Green Line train is a relatively-scheduled train-car. The Green Line Train is in Daly City. The waiting duration of the Green Line train is 1 minute. The t-schedule of the Green Line train is the Table of Green Line Schedule. "A 5 car train."
 
-The Orange Line train is a relatively-scheduled train-car. The Orange Line Train is in Richmond. The waiting duration of the Orange Line train is 1 minute. The t-schedule of the Orange Line train is the Table of Orange Line Schedule.
+The Orange Line train is a relatively-scheduled train-car. The Orange Line Train is in Richmond. The waiting duration of the Orange Line train is 1 minute. The t-schedule of the Orange Line train is the Table of Orange Line Schedule. "A 10-car train."
 
 
 [train schedules]
