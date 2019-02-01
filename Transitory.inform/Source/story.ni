@@ -2,14 +2,19 @@
 
 Include Transit System by Emily Short.
 Include Rideable Vehicles by Graham Nelson.
+Include Touchy Feely by Quantum Games. 
+
 Use scoring.
 
 Section 1 - Testing descriptions - Not for release 
 
 When play begins (this is the run property checks at the start of play rule):
 	repeat with item running through things:
- 		if description of the item is "":
-			say "[item] has no description." 
+		if description of the item is "":
+			say "[item] has no description.";
+		if the sound of the item is "" and the feel of the item is "":
+			say "[item] lacks a sound or feel."
+		
 
 Section 2 - Some rules and stuff
 
@@ -24,7 +29,9 @@ Calle 24 Southwest Plaza is a room.
 A snazzy black powerchair is in Calle 24 Southwest Plaza. A powerchair is a rideable vehicle.
 The player is on the powerchair. The description of the powerchair is "It's shiny black, it's powerful, and it's from the future."
 
-Wraparound mirrorshades are a wearable object. "Shiny reflecting glasses."
+wraparound mirrorshades are a wearable object. "Shiny reflecting glasses." 
+The description of wraparound mirrorshades is "Astonishingly dorky metallic glasses."
+Understand "glasses" or "sunglasses" or "shades" as wraparound mirrorshades.
 The player is carrying wraparound mirrorshades.  
 
 A room can be a platform.
@@ -46,6 +53,8 @@ After taking off the mirrorshades:
 
 Instead of looking when the player is blind: 
 	say "It might be more useful to listen, tap with your cane, examine, or feel, since you're blind."
+	
+
 	
 Section 3 - Money stuff
 
@@ -74,7 +83,7 @@ Instead of buying something:
 	now the price of the noun is $0.00;
 	now the player is carrying the noun. 
 
-The player carries a wallet. The wallet contains money. The price of the money is $20.00. The printed name of the money is "[price of the money] in cash". Understand "cash" as the money. The description of a wallet is "A nice, compact leather wallet."
+The player carries a wallet. The wallet contains money. The price of the money is $20.00. The printed name of the money is "[price of the money] in cash". Understand "cash" as the money. The description of a wallet is "A nice, compact leather wallet." The description of cash is "Cold hard cash."
 
 Instead of taking the money:
 	say "Best to leave it alone until you need to buy something." 
@@ -230,7 +239,7 @@ A tamale lady is a person. In Calle 24 Northeast Plaza is a tamale lady. The des
 Every turn when the player can see a tamale lady: 
     say "A tamale lady [one of]watches the people passing by[or]says 'Tamales!'[or]shifts her weight from one foot to the other[or]says 'Tamales de pollo!'[or]smiles at you[or]says 'Tamales de carne!'[as decreasingly likely outcomes]."
 
-A cooler on wheels is an openable container. It is in Calle 24 Northeast Plaza. "A red and white cooler with a hinged lid."
+A cooler on wheels is an openable container. It is in Calle 24 Northeast Plaza. The description is "A red and white cooler with a hinged lid." The sound of the cooler is "As the tamale seller handles the cooler, opening and closing the lid, you can hear that it's made of hollow plastic."
 
 The tamal is an edible thing in the cooler on wheels. The price of the tamal is $3.00. The description is "A delicious-smelling tamal wrapped in paper and foil." 
 
@@ -241,13 +250,14 @@ A yelling preacher is a person. In Calle 24 Northeast Plaza is a yelling preache
 
 Calle 24 Northwest Corner is west of Calle 24 Northeast Plaza. "Just outside the Chinese Food and Donuts shop, this lively streetcorner has buses pulling up along 24th Street, many cars going by, people crossing the street and just standing around, music blaring from passing cars and from the shops all around. Along Mission, high overhead, washingtonia palms stretch into the sky. To the east, there's another BART plaza with an elevator."
 
-Calle 24 Southwest Plaza is south of Calle 24 Northwest Corner. "Little tables and tent-covered booths are scattered throughout this busy plaza, with people selling souvenirs from Mexico and Guatemala, shopping bags, embroidered huipil blouses, woolen ponchos, phone chargers and cases, jewelry, and flowers. Many kinds of music are playing here – norteño blasts its cheerful accordions from speakers at a booth, saxophone notes float up from the huge, round stairwell which goes down to the station, songs blare from passing cars. There is a sloping area useful as a stage underneath the Coffee and Mission mural. Across 24th street to the north, there's a donut shop."
+Calle 24 Southwest Plaza is south of Calle 24 Northwest Corner. "[if player is blind]A busy open space on Mission Street. Many kinds of music are playing here – norteño blasts its cheerful accordions from speakers at a booth, saxophone notes float up from the huge, round stairwell which goes down to the station, songs blare from passing cars.[end if] Little tables and tent-covered booths are scattered throughout this busy plaza, with people selling souvenirs from Mexico and Guatemala, shopping bags, embroidered huipil blouses, woolen ponchos, phone chargers and cases, jewelry, and flowers. Many kinds of music are playing here – norteño blasts its cheerful accordions from speakers at a booth, saxophone notes float up from the huge, round stairwell which goes down to the station, songs blare from passing cars. There is a sloping area useful as a stage underneath the Coffee and Mission mural. Across 24th street to the north, there's a donut shop."
 
-A flower seller is a person. In Calle 24 Southwest Plaza is a flower seller. The description of a flower seller is "A short, smiling woman in a baseball hat and a red checked scarf pushes  her wheely cart full of roses and carnations. Her jacket has a ladybug pin." 
+A flower seller is a person. In Calle 24 Southwest Plaza is a flower seller. The description of a flower seller is "A short, smiling woman in a baseball hat and a red checked scarf pushes  her wheely cart full of roses and carnations. Her jacket has a ladybug pin. [if player is blind]You can hear a short woman just next to you, fussing over a metal cart.[end if]".
+
 Every turn when the player can see a flower seller: 
     say "A flower seller [one of]beams at you with a huge happy grin[or]called out, 'Flores!'[or]offers you a little bunch of carnations tied with string[or]shares a coffee with a friend[or]fusses over her bunches of flowers, arranging them nicely[or]watches the people passing by[or]smiles as she stops to talk with a friend[as decreasingly likely outcomes]."
 
-A shopping basket is an openable container. It is in Calle 24 Southwest Plaza. "A metal folding shopping basket on wheels. "
+A shopping basket is an openable container. It is in Calle 24 Southwest Plaza. The description of the shopping basket is "A metal folding shopping basket on wheels. "
 
 The little bunch of carnations  is a thing in the shopping basket. The price of the carnations is $1.00. The description is "A bunch of red carnations, stems wrapped in paper and tied with green twine." 
 
@@ -374,7 +384,7 @@ Every turn when the elevator does not enclose the player and the player is in Li
 	now the elevator is mapped north of the location of the player;
 
 
-A panel in the wall is in the elevator. It is fixed in place. "There are three buttons on the wall: S, C, and P."
+A panel in the wall is in the elevator. It is fixed in place. The description is "There are three buttons on the wall: S, C, and P."
 The S button, the C button, and the P button are parts of the panel in the wall. 
 The description of the S button is "A round button printed with a raised S."
 The description of the C button is "A round button printed with a raised C."
@@ -403,7 +413,8 @@ Instead of pushing the S button:
 	if the former location is top of shaft:
 		say "You're already at street level.";
 	otherwise:
-		say "You push the S button. It lights up. The elevator creaks and slowly goes up.";
+		say "You push the S button. It lights up.";
+		say "The elevator creaks and slowly goes up.";
 		say "Time passes. You smell a lot of things, wishing you couldn't.";
 		now the top of shaft is mapped south of the elevator;	
 		say "The doors open and you look out to [top of shaft] to the south.";
@@ -412,7 +423,8 @@ Instead of pushing the P button:
 	if the former location is bottom of shaft:
 		say "You're already at the platform level.";
 	otherwise:
-		say "You push the P button. It lights up. The elevator creaks and slowly goes down.";
+		say "You push the P button. It lights up. ";
+		say "The elevator creaks and slowly goes down.";
 		say "Time passes. You smell a lot of things, wishing you couldn't.";
 		now the bottom of shaft is mapped south of the elevator;	
 		say "There is a horrible jolt. The doors open and you look out to [bottom of shaft] to the south.";
@@ -421,7 +433,8 @@ Instead of pushing the C button:
 	if the former location is middle of shaft:
 		say "You're already at the concourse level.";
 	if the former location is top of shaft:
-		say "You push the C button. It lights up. The elevator creaks and slowly goes down.";
+		say "You push the C button. It lights up." ;
+		say "lThe elevator creaks and slowly goes down.";
 		now the middle of shaft is mapped south of the elevator;	
 		say "The doors open and you look out to [middle of shaft] to the south.";
 	if the former location is bottom of shaft:
@@ -460,11 +473,14 @@ Instead of switching off a card when the location of the player is not a concour
 Understand "swipe [something]" as switching on. 
 
 A writing utensil is a kind of thing. A magic marker is a writing utensil.
-A card is a kind of device.  A BART card and an ART card are cards.
+A card is a kind of device.  
+A BART card, an ART card, a BAT card, a BAR card, a CART card, and a WART card are cards.
 
 The description of a BART card is "A blue and white card with a magnetic stripe. It says 'BART' in big black letters that look oddly like scribbly handwriting. "
 
 The description of an ART card is "A blue and white card with a stripe. It says 'ART' in big black letters. The letters blur and seem to move."
+
+The description of a BAT card is "A blue and white card with a stripe. It says 'BAT' in big black letters. The letters blur and seem to move."
 
 The player is carrying a magic marker and a BART card.
 
@@ -598,15 +614,15 @@ Every turn:
 
 A train-car can be northbound or southbound. 
 
-The Red Line train is a relatively-scheduled train-car. The Red Line Train is in El Cerrito del Norte. The waiting duration of the Red Line train is 1 minute. The t-schedule of the Red Line train is the Table of Red Line Schedule.  "A 9 car train."
+The Red Line train is a relatively-scheduled train-car. The Red Line Train is in El Cerrito del Norte. The waiting duration of the Red Line train is 1 minute. The t-schedule of the Red Line train is the Table of Red Line Schedule.  The description is "A 9 car train."
 
-The Yellow Line train is a relatively-scheduled train-car. The Yellow Line Train is in Millbrae. The waiting duration of the Yellow Line train is 1 minute. The t-schedule of the Yellow Line train is the Table of Yellow Line Schedule. "A 5 car train."
+The Yellow Line train is a relatively-scheduled train-car. The Yellow Line Train is in Millbrae. The waiting duration of the Yellow Line train is 1 minute. The t-schedule of the Yellow Line train is the Table of Yellow Line Schedule. The description is "A 5 car train."
 
-The Blue Line train is a relatively-scheduled train-car. The Blue Line Train is in Daly City. The waiting duration of the Blue Line train is 1 minute. The t-schedule of the Blue Line train is the Table of Blue Line Schedule. "Some train cars, you aren't sure how many."
+The Blue Line train is a relatively-scheduled train-car. The Blue Line Train is in Daly City. The waiting duration of the Blue Line train is 1 minute. The t-schedule of the Blue Line train is the Table of Blue Line Schedule. The description is "Some train cars, you aren't sure how many."
 
-The Green Line train is a relatively-scheduled train-car. The Green Line Train is in Daly City. The waiting duration of the Green Line train is 1 minute. The t-schedule of the Green Line train is the Table of Green Line Schedule. "A 5 car train."
+The Green Line train is a relatively-scheduled train-car. The Green Line Train is in Daly City. The waiting duration of the Green Line train is 1 minute. The t-schedule of the Green Line train is the Table of Green Line Schedule. The description is "A 5 car train."
 
-The Orange Line train is a relatively-scheduled train-car. The Orange Line Train is in Richmond. The waiting duration of the Orange Line train is 1 minute. The t-schedule of the Orange Line train is the Table of Orange Line Schedule. "A 10-car train."
+The Orange Line train is a relatively-scheduled train-car. The Orange Line Train is in Richmond. The waiting duration of the Orange Line train is 1 minute. The t-schedule of the Orange Line train is the Table of Orange Line Schedule. The description is "A 10-car train."
 
 
 [train schedules]
