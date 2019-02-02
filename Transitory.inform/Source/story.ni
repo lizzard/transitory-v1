@@ -29,11 +29,6 @@ Calle 24 Southwest Plaza is a room.
 A snazzy black powerchair is in Calle 24 Southwest Plaza. A powerchair is a rideable vehicle.
 The player is on the powerchair. The description of the powerchair is "It's shiny black, it's powerful, and it's from the future."
 
-wraparound mirrorshades are a wearable object. "Shiny reflecting glasses." 
-The description of wraparound mirrorshades is "Astonishingly dorky metallic glasses."
-Understand "glasses" or "sunglasses" or "shades" as wraparound mirrorshades.
-The player is carrying wraparound mirrorshades.  
-
 A room can be a platform.
 A room can be a concourse.
 
@@ -41,18 +36,36 @@ Mission 24th St is a room.
 
 [sightedness ]
 
-Sightedness is a kind of value. The sightednesses are blind, sighted, and unknown. Understand “blind” as blind. Understand “sighted” as sighted.
+Sightedness is a kind of value. The sightednesses are blind, sighted, low-vision, and unknown. Understand “blind” as blind. Understand “sighted” as sighted. Understand "low vision" as low-vision.
  
 A person has a sightedness. The sightedness of the player is sighted.
+
+wraparound mirrorshades are a wearable object. "Shiny reflecting glasses." 
+The description of wraparound mirrorshades is "Astonishingly dorky metallic glasses."
+Understand "glasses" or "shades" as wraparound mirrorshades.
+The player is carrying wraparound mirrorshades.  
+
+blue goggles are a wearable object. "Thick blue goggles." 
+The description of blue goggles is "Large, thick-lensed, coke-bottle tinted goggles."
+Understand "goggles" as blue goggles.
+The player is carrying blue goggles.
 
 Before wearing the mirrorshades:
 	now the player is blind;
 	
 After taking off the mirrorshades:
 	now the player is sighted;
+	
+Before wearing the goggles:
+	now the player is low-vision;
+	
+After taking off the goggles:
+	now the player is sighted;
 
 Instead of looking when the player is blind: 
 	say "It might be more useful to listen, tap with your cane, examine, or feel, since you're blind."
+	
+
 	
 
 	
@@ -455,10 +468,12 @@ Section 6 - Ticket reader
 [the reader itself]
 A ticket reader is a thing. It is fixed in place. "A ticket reader machine is here in a little kiosk, softly humming." 
 The description of the ticket reader is "Its labels are somewhat worn by time. A sign on the machine says 'Swipe *ART card for entry and exit." 
+
+[A ticket reader is scenery. It is in every concourse. "A ticket reader machine is here, softly humming."]
 Understand "machine" as a ticket reader.   
 
-Every turn when the location of the player is a concourse:
-	now a ticket reader is in the location of the player;
+[Every turn when the location of the player is a concourse:
+	now a ticket reader is in the location of the player;]
 
 [the ticket]
 Instead of switching off the BART card when the BART card is switched off, silently try switching on the BART card.
