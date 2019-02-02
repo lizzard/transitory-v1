@@ -16,7 +16,7 @@ When play begins (this is the run property checks at the start of play rule):
 			say "[item] lacks a sound or feel."
 		
 
-Section 2 - Some rules and stuff
+Section 2 - Some beginning stuff
 
 When play begins: 
 	now the command prompt is "[time of day] >" ;
@@ -33,6 +33,8 @@ A room can be a platform.
 A room can be a concourse.
 
 Mission 24th St is a room.
+
+Section 3 - Sightedness
 
 [sightedness ]
 
@@ -54,10 +56,10 @@ Before wearing the mirrorshades:
 	now the player is blind;
 	
 After taking off the mirrorshades:
-	now the player is sighted;
+	now the player is sighted; 
 	
 Before wearing the goggles:
-	now the player is low-vision;
+	now the player is low-vision; [this doesn't have an effect yet, until i have text munging]
 	
 After taking off the goggles:
 	now the player is sighted;
@@ -65,11 +67,56 @@ After taking off the goggles:
 Instead of looking when the player is blind: 
 	say "It might be more useful to listen, tap with your cane, examine, or feel, since you're blind."
 	
+[todo: figure out how to write a rule for cane tap action. Maybe tapping finds scenery and exits]	
+
+[right now, this depends on rooms and other things having carefully written descriptions with sections for sound, visual, and other senses]
+	
+Section 4 - Deafness
+
+Deafness is a kind of value. The deafnesses are Deaf, deaf, HoH, hearing, and not known. Understand “Deaf” as Deaf. Understand “deaf” as deaf. Understand "hard of hearing" as HoH. 
+
+A person has a deafness. The deafness of the player is hearing.
+
+The sticker-covered headphones are a wearable object. "Headphones covered with stickers." 
+The description is "These big, fashionable headphones are slathered in Deaf culture and Deaf Pride stickers." 
+The sound is "These are headphones that block out sound. So it would be weird if you could hear them."
+The feel is "Slick headphones with cushiony, soft, breathable earpieces."
+The player is carrying sticker-covered headphones.
+
+Before wearing the headphones:
+	now the player is Deaf;
+	
+After taking off the headphones:
+	now the player is hearing;
+	
+A thick woolly hat is a wearable object. "A thick woolly knit hat." 
+The description is "An attractive woollen hat knitted from thick yarn. It comes down well over your ears."
+The sound is "It makes a scrunchy sort of yarn noise if you get up real close and squeeze it."
+The feel is "Cozy, warm, soft and comfortable. It's a knit hat. It loves you."
+The player is carrying a thick woolly hat. 
+
+Before wearing the thick woolly hat:
+	now the player is HoH;
+	
+After taking off the thick woolly hat:
+	now the player is hearing;
+	
+The earplugs are a wearable object. "Little orange foam earplugs." 
+The description is "Foam earplugs, useful for when you don't want to be bothered by noise." 
+The sound is "They don't have a sound. That's the whole point."
+The feel is "Squashy little bits of foam."
+The player is carrying earplugs.
+
+Before wearing the earplugs:
+	now the player is deaf;
+	
+After taking off the earplugs:
+	now the player is hearing;
+
+Section 5 - Mobility
 
 	
-
-	
-Section 3 - Money stuff
+Section 6 - Money stuff
 
 Price is a kind of value. $1.99 specifies a price. A thing has a price. The price of a thing is usually $0.00. After examining something for sale, say "It can be yours for [the price of the noun]." 
 
@@ -108,7 +155,7 @@ Instead of buying the money:
 	say "The money belongs to you; you buy things with it." 
 
 
-Section 4 - Regions
+Section 7 - Regions
 [Regions]
 
 Liftlandia is a region.  [everywhere an elevator might appear]
@@ -132,103 +179,103 @@ South Bay is a region in Platforms. Hayward, South Hayward, Union City, Fremont,
 
 Blue Line is a region in Platforms. Castro Valley, West Dublin/Pleasanton, and Dublin/Pleasanton are in Blue Line. 
 
-Section 5 - Locations, organized by train stops
+Section 8 - Locations, organized by train stops
 
 [train stops, alphabetically with descriptions]
 
-Chapter 6 - Antioch 
+Chapter 9 - Antioch 
 
 The description of Antioch is "You are on a BART platform. You hear the noise of cars on a nearby highway."
 
-Chapter 7 - Ashby
+Chapter 10 - Ashby
 
 The description of Ashby is "You are on a BART platform."
 
-Chapter 8 - Balboa Park
+Chapter 11 - Balboa Park
 
 The description of Balboa Park is "You are on a BART platform."
 
-Chapter 9 - Bay Fair
+Chapter 12 - Bay Fair
 
 The description of Bay Fair is "You are on a BART platform."
 
-Chapter 10 - Downtown Berkeley
+Chapter 13 - Downtown Berkeley
 
 The description of Downtown Berkeley is "You are on a BART platform."
 
-Chapter 11 - Castro Valley
+Chapter 14 - Castro Valley
 
 The description of Castro Valley is "You are on a BART platform."
 
-Chapter 12 - Civic Center
+Chapter 15 - Civic Center
 
 The description of Civic Center is "You are on a BART platform."
 
-Chapter 13 - Coliseum
+Chapter 16 - Coliseum
 
 The description of Coliseum is "You are on a BART platform."
 
-Chapter 14 - Colma
+Chapter 17 - Colma
 
 The description of Colma is "You are on a BART platform."
 
-Chapter 15 - Concord
+Chapter 18 - Concord
 
 The description of Concord is "You are on a BART platform."
 
-Chapter 16 - Daly City
+Chapter 19 - Daly City
 
 The description of Daly City is "You are on a BART platform. Fog drifts in from the nearby ocean."
 
-Chapter 17 - Dublin/Pleasanton
+Chapter 20 - Dublin/Pleasanton
 
 The description of Dublin/Pleasanton is "You are on a BART platform. The mysterious suburban world of Dublin/Pleasanton surrounds you."
 
-Chapter 18 - El Cerrito del Norte
+Chapter 21 - El Cerrito del Norte
 
 The description of El Cerrito del Norte is "You are on a BART platform."
 
-Chapter 19 - El Cerrito Plaza
+Chapter 22 - El Cerrito Plaza
 
 The description of El Cerrito Plaza is "You are on a BART platform."
 
-Chapter 20 - Embarcadero
+Chapter 23 - Embarcadero
 
 The description of Embarcadero is "You are on a BART platform underground. Lots of people are around and there are muffled announcements over an intercom."
 
-Chapter 21 - Fremont
+Chapter 24 - Fremont
 
 The description of Fremont is "You are on a BART platform."
 
-Chapter 22 - Fruitvale
+Chapter 25 - Fruitvale
 
 The description of Fruitvale is "You are on a BART platform."
 
-Chapter 23 - Glen Park
+Chapter 26 - Glen Park
 
 The description of Glen Park is "You are on a BART platform."
 
-Chapter 24 - Hayward
+Chapter 27 - Hayward
 
 The description of Hayward is "You are on a BART platform."
 
-Chapter 25 - Lafayette
+Chapter 28 - Lafayette
 
 The description of Lafayette is "You are on a BART platform."
 
-Chapter 26 - Lake Merritt
+Chapter 29 - Lake Merritt
 
 The description of Lake Merritt is "You are on a BART platform."
 
-Chapter 27 - MacArthur
+Chapter 30 - MacArthur
 
 The description of MacArthur is "You are on a BART platform."
 
-Chapter 28 - Millbrae
+Chapter 31 - Millbrae
 
 The description of Millbrae is "You are on a BART platform outside. Many people and trains are all around. There are weird looking cement statues of commuters in awkward positions on the platform."
 
-Chapter 29 - Mission 16th St
+Chapter 32 - Mission 16th St
 
 The description of Mission 16th St is "You are underground, on a BART platform. The haunting sound of train wheels on the rails echoes all around. The platform floor is covered with long brick-red tiles, while the median walls are tiled in light and dark blue, green, gold, and brown tiles like the colors of a tropical beach on a sunny day."
 
@@ -236,7 +283,7 @@ Mission 16th Concourse is up from Mission 16th St. Mission 16th Concourse is a c
 
 																								
 
-Chapter 30 - Mission 24th St
+Chapter 33 - Mission 24th St
 
 The description of Mission 24th St is "You are underground, on a BART platform. The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset." 
 
@@ -263,12 +310,12 @@ A yelling preacher is a person. In Calle 24 Northeast Plaza is a yelling preache
 
 Calle 24 Northwest Corner is west of Calle 24 Northeast Plaza. "Just outside the Chinese Food and Donuts shop, this lively streetcorner has buses pulling up along 24th Street, many cars going by, people crossing the street and just standing around, music blaring from passing cars and from the shops all around. Along Mission, high overhead, washingtonia palms stretch into the sky. To the east, there's another BART plaza with an elevator."
 
-Calle 24 Southwest Plaza is south of Calle 24 Northwest Corner. "[if player is blind]A busy open space on Mission Street. Many kinds of music are playing here – norteño blasts its cheerful accordions from speakers at a booth, saxophone notes float up from the huge, round stairwell which goes down to the station, songs blare from passing cars.[end if] Little tables and tent-covered booths are scattered throughout this busy plaza, with people selling souvenirs from Mexico and Guatemala, shopping bags, embroidered huipil blouses, woolen ponchos, phone chargers and cases, jewelry, and flowers. Many kinds of music are playing here – norteño blasts its cheerful accordions from speakers at a booth, saxophone notes float up from the huge, round stairwell which goes down to the station, songs blare from passing cars. There is a sloping area useful as a stage underneath the Coffee and Mission mural. Across 24th street to the north, there's a donut shop."
+Calle 24 Southwest Plaza is south of Calle 24 Northwest Corner. "[if player is sighted]Little tables and tent-covered booths are scattered throughout this busy plaza, with people selling souvenirs from Mexico and Guatemala, shopping bags, embroidered huipil blouses, woolen ponchos, phone chargers and cases, jewelry, and flowers.  There is a sloping area useful as a stage underneath the Coffee and Mission mural. Across 24th street to the north, there's a donut shop. [end if][if player is hearing]Many kinds of music are playing here – norteño blasts its cheerful accordions from speakers at a booth, saxophone notes float up from the huge, round stairwell which goes down to the station, songs blare from passing cars.[otherwise]A busy open space on Mission Street.[end if]"
 
 A flower seller is a person. In Calle 24 Southwest Plaza is a flower seller. The description of a flower seller is "A short, smiling woman in a baseball hat and a red checked scarf pushes  her wheely cart full of roses and carnations. Her jacket has a ladybug pin. [if player is blind]You can hear a short woman just next to you, fussing over a metal cart.[end if]".
 
 Every turn when the player can see a flower seller: 
-    say "A flower seller [one of]beams at you with a huge happy grin[or]called out, 'Flores!'[or]offers you a little bunch of carnations tied with string[or]shares a coffee with a friend[or]fusses over her bunches of flowers, arranging them nicely[or]watches the people passing by[or]smiles as she stops to talk with a friend[as decreasingly likely outcomes]."
+    say "A flower seller [one of]beams at you with a huge happy grin[or]calles out, 'Flores!'[or]offers you a little bunch of carnations tied with string[or]shares a coffee with a friend[or]fusses over her bunches of flowers, arranging them nicely[or]watches the people passing by[or]smiles as she stops to talk with a friend[as decreasingly likely outcomes]."
 
 A shopping basket is an openable container. It is in Calle 24 Southwest Plaza. The description of the shopping basket is "A metal folding shopping basket on wheels. "
 
@@ -283,95 +330,95 @@ A raccoon is a kind of animal.  In Calle 24 Southeast Corner is a raccoon. The d
 Every turn when the player can see a raccoon: 
     say "A raccoon [one of]hauls itsef out of a concrete trash bin[or]skulks into a nearby alleyway[or]hides in a little nook, eating some discarded fries[or]has a little nap in a pile of trash[as decreasingly likely outcomes]."
 
-Chapter 31 - Montgomery
+Chapter 34 - Montgomery
 
 The description of Montgomery is "You are on a BART platform."
 
-Chapter 32 - North Berkeley
+Chapter 35 - North Berkeley
 
 The description of North Berkeley is "You are on a BART platform."
 
-Chapter 33 - North Concord/Martinez
+Chapter 36 - North Concord/Martinez
 
 The description of North Concord/Martinez is "You are on a BART platform."
 
-Chapter 34 - Oakland 12th St
+Chapter 37 - Oakland 12th St
 
 The description of Oakland 12th St is "You are on a BART platform."
 
-Chapter 35 - Oakland 19th St
+Chapter 38 - Oakland 19th St
 
 The description of Oakland 19th St is "You are on a BART platform."
 
-Chapter 36 - Oakland International Airport
+Chapter 39 - Oakland International Airport
 
 The description of Oakland International Airport is "You are on a BART platform."
 
-Chapter 37 - Orinda
+Chapter 40 - Orinda
 
 The description of Orinda is "You are on a BART platform."
 
-Chapter 38 - Pittsburg/Bay Point
+Chapter 41 - Pittsburg/Bay Point
 
 The description of Pittsburg/Bay Point is "You are on a BART platform."
 
-Chapter 39 - Pittsburg Center
+Chapter 42 - Pittsburg Center
 
 The description of Pittsburg Center is "You are on a BART platform."
 
-Chapter 40 - Pleasant Hill
+Chapter 43 - Pleasant Hill
 
 The description of Pleasant Hill is "You are on a BART platform."
 
-Chapter 41 - Powell
+Chapter 44 - Powell
 
 The description of Powell is "You are on a BART platform."
 
-Chapter 42 - Richmond
+Chapter 45 - Richmond
 
 The description of Richmond is "You are on a BART platform."
 
-Chapter 43 - Rockridge
+Chapter 46 - Rockridge
 
 The description of Rockridge is "You are on a BART platform."
 
-Chapter 44 - San Bruno
+Chapter 47 - San Bruno
 
 The description of San Bruno is "You are on a BART platform."
 
-Chapter 45 - San Francisco International Airport
+Chapter 48 - San Francisco International Airport
 
 The description of San Francisco International Airport is "You are on a BART platform."
 
-Chapter 46 - San Leandro
+Chapter 49 - San Leandro
 
 The description of San Leandro is "You are on a BART platform."
 
-Chapter 47 - South Hayward
+Chapter 50 - South Hayward
 
 The description of South Hayward is "You are on a BART platform."
 
-Chapter 48 - South San Francisco
+Chapter 51 - South San Francisco
 
 The description of South San Francisco is "You are on a BART platform."
 
-Chapter 49 - Union City
+Chapter 52 - Union City
 
 The description of Union City is "You are on a BART platform."
 
-Chapter 50 - Walnut Creek
+Chapter 53 - Walnut Creek
 
 The description of Walnut Creek is "You are on a BART platform."
 
-Chapter 51 - Warm Springs/South Fremont
+Chapter 54 - Warm Springs/South Fremont
 
 The description of Warm Springs/South Fremont is "You are on a BART platform."
 
-Chapter 52 - West Dublin/Pleasanton
+Chapter 55 - West Dublin/Pleasanton
 
 The description of West Dublin/Pleasanton is "You are on a BART platform."
 
-Chapter 53 - West Oakland
+Chapter 56 - West Oakland
 
 The description of West Oakland is "You are on a BART platform."
 
