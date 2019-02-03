@@ -1,46 +1,204 @@
 "Transitory" by lizzard
 
 Include Transit System by Emily Short.
-Include Rideable Vehicles by Graham Nelson.
-Include Touchy Feely by Quantum Games. 
+[Include Rideable Vehicles by Graham Nelson.]
+
+Include Exit Lister by Eric Eve.
 
 Use scoring.
 
-Section 1 - Testing descriptions - Not for release 
 
-When play begins (this is the run property checks at the start of play rule):
-	repeat with item running through things:
-		if description of the item is "":
-			say "[item] has no description.";
-		if the sound of the item is "" and the feel of the item is "":
-			say "[item] lacks a sound or feel."
-		
+Section 1 - Multisensory
+[Written to include and extend Touchy Feely]
+[Touchy Feely by Quantum Games begins here. Extended by Liz Henry 2019]
 
-Section 2 - Some beginning stuff
+["Allows the player to use the other senses on things much more fully. Works well with, but does not require, Fully Spatial by Quantum Games. Fixed some report rules, Liz, 2019."] [Use authorial modesty.]
+[Putting this in main game code for ease of updating for playtesting]
+[2019-01-15 Fixed some report rules that didn't work right]
+[2019-02-02 Putting more possible default sensory descriptions]
 
-When play begins: 
-	now the command prompt is "[time of day] >" ;
-	now right hand status line is "[number of visited rooms]/[number of rooms] locations";
+Part I - Feels
+
+Understand "touch" as touching the room. Touching the room is an action applying to nothing.
+
+A thing has some text called the feel. The feel of a thing is usually "".
+
+A room has some text called the feel. The feel of a room is usually "".
+
+The report touching yourself rule is not listed in the report touching rulebook.
+
+The report touching other people rule is not listed in the report touching rulebook.
+
+The report touching things rule is not listed in the report touching rulebook.
+
+Report touching (this is the Touchy Feely report touching rule):
+	if the feel of the noun is not "":
+		say "[the feel of the noun][line break]";
+	otherwise:
+		say "[thing without feel value][line break]";
+
+Report touching the room (this is the Touchy Feely report touching the room rule):
+	if the feel of the location of the player is not "":
+		say "[the feel of the location of the player][line break]";
+	otherwise:
+		say "[thing without feel value][line break]";
+
+The thing without feel value is a text variable. The thing without feel value is "[one of]Feels okay.[or]Feels like [a noun].[or]You feel nothing unexpected.[or]Yeah, that's [a noun] alright.[or]Feels pretty much like you'd think it would.[purely at random]"
+
+Part II - Scents
+
+A thing has some text called the scent. The scent of a thing is usually "".
+
+A room has some text called the scent. The scent of a room is usually "".
+
+The scent of a person is usually "Smells okay. Recently bathed, even."
+
+The report smelling rule is not listed in the report smelling rulebook.
+
+Report smelling (this is the Touchy Feely report smelling rule):
+	if the noun is nothing:
+		if the feel of the location of the player is not "":
+			say "[the scent of the location of the player][line break]";
+		otherwise:
+			say "[thing without scent value][line break]";
+	otherwise:
+		if the scent of the noun is not "":
+			say "[the scent of the noun][line break]";
+		otherwise:
+			say "[thing without scent value][line break]";
+
+The thing without scent value is a text variable. The thing without scent value is "[one of]It doesn't have much of a scent.[or]Smells okay.[or]Not much to report about how it smells.[or]Your nose doesn't detect much in this case.[or]Someday you may regret going around sniffing random objects. But not today.[as decreasingly likely outcomes]"
+
+Part III - Tastes
+
+Understand "taste" as tasting the room. Tasting the room is an action applying to nothing.
+
+A thing has some text called the taste. The taste of a thing is usually "".
+
+A room has some text called the taste. The taste of a room is usually "".
+
+The taste of a person is "Tastes faintly salty. Should you be doing this?"
+
+The report tasting rule is not listed in the report tasting rulebook.
+	
+Report tasting (this is the Touchy Feely report tasting rule):
+	if the taste of the noun is not "":
+		say "[the taste of the noun][line break]";
+	otherwise:
+		say "[thing without taste value][line break]";	
+
+Report tasting the room (this is the Touchy Feely report tasting the room rule):
+	if the taste of the location of the player is not "":
+		say "[the taste of the location of the player][line break]";
+	otherwise:
+		say "[thing without taste value][line break]";
+
+The thing without taste value is a text variable. The thing without taste value is "[one of]You give the [noun] a quick experimental lick. Hmm.[or]You go to taste the [noun], then decide not to.[or]Tastes like you'd expect any [noun] to taste.[purely at random]"
+
+Part IV - Sounds
+
+Understand "hear" as listening.
+
+A thing has some text called the sound. The sound of a thing is usually "".
+
+A room has some text called the sound. The sound of a room is usually "".
+
+The sound of a person is usually "You hear quiet breathing."
+
+The report listening rule is not listed in the report listening to rulebook.
+
+Report listening to (this is the Touchy Feely report listening rule):
+	if the noun is nothing:
+		if the sound of the location of the player is not "":
+			say "[the sound of the location of the player][line break]";
+		otherwise:
+			say "[thing without sound value][line break]";
+	otherwise:
+		if the sound of the noun is not "":
+			say "[the sound of the noun][line break]";
+		otherwise:
+			say "[thing without sound value][line break]";
+
+The thing without sound value is a text variable. The thing without sound value is "[one of]It's silent.[or]You hear nothing unexpected.[or]The [noun] doesn't make any noise.[or]The sound of silence.[or]It's quiet. Too quiet.[as decreasingly likely outcomes]"
+
+Part V - Descriptions
+
+Understand "see" as looking.
+
+Understand "see [something]" as examining.
 
 
-[temporary start of game location for testing]
-Calle 24 Southwest Plaza is a room.
 
-A snazzy black powerchair is in Calle 24 Southwest Plaza. A powerchair is a rideable vehicle.
-The player is on the powerchair. The description of the powerchair is "It's shiny black, it's powerful, and it's from the future."
 
-A room can be a platform.
-A room can be a concourse.
+Part VI - Special testing commands - Not for release
 
-Mission 24th St is a room.
+Understand "testfeel" as testing the feel of things. Testing the feel of things is an action out of world, applying to nothing.
 
-Section 3 - Sightedness
+Report testing the feel of things (this is the Touchy Feely feel testing rule):
+	repeat with R running through things:
+		if the feel of R is not "":
+			say "[R]: [feel of R][line break]";
+		otherwise:
+			say "[R]: [thing without feel value][line break]";
+	repeat with R running through rooms:
+		if the feel of R is not "":
+			say "[R]: [feel of R][line break]";
+		otherwise:
+			say "[R]: [thing without feel value][line break]";
 
-[sightedness ]
+Understand "testscent" as testing the scent of things. Testing the scent of things is an action out of world, applying to nothing.
+
+Report testing the scent of things (this is the Touchy Feely scent testing rule):
+	repeat with R running through things:
+		if the scent of R is not "":
+			say "[R]: [scent of R][line break]";
+		otherwise:
+			say "[R]: [thing without scent value][line break]";
+	repeat with R running through rooms:
+		if the scent of R is not "":
+			say "[R]: [scent of R][line break]";
+		otherwise:
+			say "[R]: [thing without scent value][line break]";
+
+Understand "testtaste" as testing the taste of things. Testing the taste of things is an action out of world, applying to nothing.
+
+Report testing the taste of things (this is the Touchy Feely taste testing rule):
+	repeat with R running through things:
+		if the taste of R is not "":
+			say "[R]: [taste of R][line break]";
+		otherwise:
+			say "[R]: [thing without taste value][line break]";
+	repeat with R running through rooms:
+		if the taste of R is not "":
+			say "[R]: [taste of R][line break]";
+		otherwise:
+			say "[R]: [thing without taste value][line break]";
+
+Understand "testsound" as testing the sound of things. Testing the sound of things is an action out of world, applying to nothing.
+
+Report testing the sound of things (this is the Touchy Feely sound testing rule):
+	repeat with R running through things:
+		if the sound of R is not "":
+			say "[R]: [sound of R][line break]";
+		otherwise:
+			say "[R]: [thing without sound value][line break]";
+	repeat with R running through rooms:
+		if the sound of R is not "":
+			say "[R]: [sound of R][line break]";
+		otherwise:
+			say "[R]: [thing without sound value][line break]";
+
+[Touchy Feely Extended ends here.]
+
+
+Section 3 - Disabilities
+
+
+Part 1 - Sightedness
 
 Sightedness is a kind of value. The sightednesses are blind, sighted, low-vision, and unknown. Understand “blind” as blind. Understand “sighted” as sighted. Understand "low vision" as low-vision.
  
-A person has a sightedness. The sightedness of the player is sighted.
+A person has a sightedness. The sightedness of a person is usually sighted. The sightedness of the player is sighted.
 
 wraparound mirrorshades are a wearable object. "Shiny reflecting glasses." 
 The description of wraparound mirrorshades is "Astonishingly dorky metallic glasses."
@@ -51,6 +209,9 @@ blue goggles are a wearable object. "Thick blue goggles."
 The description of blue goggles is "Large, thick-lensed, coke-bottle tinted goggles."
 Understand "goggles" as blue goggles.
 The player is carrying blue goggles.
+
+A white cane is an object. "A long white cane."
+The description of the white cane is "A long, thin, white cane, used for navigation by people who don't see well or who are blind"
 
 Before wearing the mirrorshades:
 	now the player is blind;
@@ -64,20 +225,28 @@ Before wearing the goggles:
 After taking off the goggles:
 	now the player is sighted;
 
-Instead of looking when the player is blind: 
-	say "It might be more useful to listen, tap with your cane, examine, or feel, since you're blind."
-	
-[todo: figure out how to write a rule for cane tap action. Maybe tapping finds scenery and exits]	
+[Instead of looking when the player is blind: 
+	say "It might be more useful to tap with your cane, since you're blind. You can also explore, or use other sensory actions like listening, feeling, smelling, or tasting."]
 
+[this doesn't work yet but I want to replace room description mechanism for looking or going, with a sensory room description built from all available senses, for ease of writing the descriptions.]
+[A room has a list of text called the aggregate description. .
+
+A room has a text called visual.
+
+Every turn when the player is sighted:
+	add the description of the location of the player to the aggregate description of the location;
+	add "visual"  to the aggregate description of the location; 
+	say "[the aggregate description of the location]";]
+	
 [right now, this depends on rooms and other things having carefully written descriptions with sections for sound, visual, and other senses]
-	
-Section 4 - Deafness
 
-Deafness is a kind of value. The deafnesses are Deaf, deaf, HoH, hearing, and not known. Understand “Deaf” as Deaf. Understand “deaf” as deaf. Understand "hard of hearing" as HoH. 
+Part 2 - Deafness
+
+Deafness is a kind of value. The deafnesses are Deaf, HoH, hearing, and not known. Understand “Deaf” as Deaf. Understand "hard of hearing" as HoH. 
 
 A person has a deafness. The deafness of the player is hearing.
 
-The sticker-covered headphones are a wearable object. "Headphones covered with stickers." 
+sticker-covered headphones are a wearable object. "Headphones covered with stickers." 
 The description is "These big, fashionable headphones are slathered in Deaf culture and Deaf Pride stickers." 
 The sound is "These are headphones that block out sound. So it would be weird if you could hear them."
 The feel is "Slick headphones with cushiony, soft, breathable earpieces."
@@ -101,22 +270,148 @@ Before wearing the thick woolly hat:
 After taking off the thick woolly hat:
 	now the player is hearing;
 	
-The earplugs are a wearable object. "Little orange foam earplugs." 
+earplugs are a wearable object. "Little orange foam earplugs." 
 The description is "Foam earplugs, useful for when you don't want to be bothered by noise." 
 The sound is "They don't have a sound. That's the whole point."
 The feel is "Squashy little bits of foam."
 The player is carrying earplugs.
 
 Before wearing the earplugs:
-	now the player is deaf;
+	now the player is Deaf;  [this is meant to be little-d deaf but i havent figured out differentiation]
 	
 After taking off the earplugs:
 	now the player is hearing;
 
-Section 5 - Mobility
+Instead of listening when the player is Deaf: 
+	say "Good luck with that one. You can't hear a thing!"
+	[weird, this causes a compiler error]
 
+Part 3 - Mobility
+
+Ambulation is a kind of value. The ambulations are wheeling, walking, limping, and hopping. Understand “wheeled” as wheeling. Understand “walking” as walking. Understand "limping" as limping. Understand "hopping" as hopping.
+ 
+A person has an ambulation. The ambulation of a person is usually walking. 
+The ambulation of the player is walking.
+
+The cruel shoes are a wearable object. The player is carrying the cruel shoes. 
+Before wearing the cruel shoes:
+	now the player is wheeling;
 	
-Section 6 - Money stuff
+After taking off the cruel shoes:
+	now the player is walking;
+
+
+
+[experiment with wearing a wheelchair rather than using Rideable Vehicles]
+
+A wheelchair is a kind of wearable thing. A powerchair is a wheelchair. A manual chair is a wheelchair. A scooter is a wheelchair. 
+
+The player is carrying a powerchair. 
+The description of a powerchair is "It's shiny black, it's powerful, and it's from the future."
+
+
+Before going to any room:
+	if the ambulation of the player is wheeling:
+		unless the player is wearing a wheelchair:
+			say "You have some trouble getting around.";
+			stop the action;
+		otherwise:
+			say "[one of][or]You wheel across pleasantly flat ground.[or]You zoom on over.[or]This is such a nice, zippy chair.[or]There's a little bumpiness to the floor but no big deal.[or]Pirouetting a bit in place, you wheel on over.[as decreasingly likely outcomes]";
+	if the ambulation of the player is walking:
+		if the player is carrying a wheelchair:
+			say "You have some trouble going anywhere while carrying something that big. Maybe if you wear it.";
+			stop the action;
+	
+The print standard inventory rule is not listed in any rulebook. 		
+
+Carry out taking inventory (this is the new print inventory rule):
+	say "You are carrying: [line break]";
+	list the contents of the player, with newlines, indented, including contents, with extra indentation. 
+
+After printing the name of something (called target) while taking inventory:
+    follow the property-aggregation rules for the target. 
+
+The property-aggregation rules are an object-based rulebook.
+The property-aggregation rulebook has a list of text called the tagline. 
+
+A first property-aggregation rule for an openable open thing (this is the mention open openables rule):
+        add "open" to the tagline. 
+
+A first property-aggregation rule for an openable closed thing (this is the mention closed openables rule):
+        add "closed" to the tagline. 
+
+A property-aggregation rule for a closed transparent container which contains nothing (this is the mention empty transparent containers rule):
+        add "empty" to the tagline. 
+
+A property-aggregation rule for an open container which contains nothing (this is the mention empty open containers rule):
+        add "empty" to the tagline. 
+
+A property-aggregation rule for a lit thing (this is the mention lit objects rule):
+        add "providing light" to the tagline. 
+
+A property-aggregation rule for a wheelchair worn by the player (this is the mention worn wheelchairs rule):
+	add "sitting in it" to the tagline;
+
+A property-aggregation rule for an object that is not a wheelchair worn by the player (this is the mention other worn objects rule):
+	add "being worn" to the tagline.
+
+The last property-aggregation rule (this is the print aggregated properties rule):
+	if the number of entries in the tagline is greater than 0:
+		say " ([tagline])";
+		rule succeeds;
+	rule fails. 
+
+
+
+
+Part 4 - Some varied defaults for examining
+
+[replace the look description for examining objects, without assuming sightedness]
+
+The examine undescribed things rule is not listed in any rulebook.
+
+Carry out examining (this is the multisensory examine undescribed things rule):
+	if examine text printed is false:
+		say "[one of]Nothing special about [the noun].[or]Ordinary enough.[or]Yeah, it's [a noun].[or]You note the presence of [a noun].[purely at random][run paragraph on]";
+
+The description of yourself is "As good-looking as ever. [line break] You are [sightedness], [deafness], and [ambulation]."	
+[todo: fix the paragraph breaks after objects with descriptions]	
+Studying the vicinity is an action applying to nothing. 
+
+Report studying the vicinity:
+	if the player is blind or the player is low-vision:
+		say "You explore with your cane tip and free hand, navigating the area. [paragraph break]";
+		if the location does not contain something which is scenery:
+			say "There's little of interest in the [location]." instead;	
+		repeat with point of interest running through scenery in the location:
+			say "[point of interest]: [run paragraph on]";
+			try examining the point of interest;			
+	otherwise:
+		say "You should try examining specific things with all available senses."
+
+Understand "tap" or "explore" as studying the vicinity. 
+
+
+
+Section 4 - Some beginning stuff
+
+When play begins: 
+	now the command prompt is "[time of day] >" ;
+	now right hand status line is "[number of visited rooms]/[number of rooms] locations";
+
+
+[temporary start of game location for testing]
+Calle 24 Southwest Plaza is a room.
+
+
+
+A room can be a platform.
+A room can be a concourse.
+
+Mission 24th St is a room.
+	
+
+Section 8 - Money stuff
 
 Price is a kind of value. $1.99 specifies a price. A thing has a price. The price of a thing is usually $0.00. After examining something for sale, say "It can be yours for [the price of the noun]." 
 
@@ -155,7 +450,7 @@ Instead of buying the money:
 	say "The money belongs to you; you buy things with it." 
 
 
-Section 7 - Regions
+Section 9 - Regions
 [Regions]
 
 Liftlandia is a region.  [everywhere an elevator might appear]
@@ -179,103 +474,103 @@ South Bay is a region in Platforms. Hayward, South Hayward, Union City, Fremont,
 
 Blue Line is a region in Platforms. Castro Valley, West Dublin/Pleasanton, and Dublin/Pleasanton are in Blue Line. 
 
-Section 8 - Locations, organized by train stops
+Section 10 - Locations, organized by train stops
 
 [train stops, alphabetically with descriptions]
 
-Chapter 9 - Antioch 
+Chapter 11 - Antioch 
 
 The description of Antioch is "You are on a BART platform. You hear the noise of cars on a nearby highway."
 
-Chapter 10 - Ashby
+Chapter 12 - Ashby
 
 The description of Ashby is "You are on a BART platform."
 
-Chapter 11 - Balboa Park
+Chapter 13 - Balboa Park
 
 The description of Balboa Park is "You are on a BART platform."
 
-Chapter 12 - Bay Fair
+Chapter 14 - Bay Fair
 
 The description of Bay Fair is "You are on a BART platform."
 
-Chapter 13 - Downtown Berkeley
+Chapter 15 - Downtown Berkeley
 
 The description of Downtown Berkeley is "You are on a BART platform."
 
-Chapter 14 - Castro Valley
+Chapter 16 - Castro Valley
 
 The description of Castro Valley is "You are on a BART platform."
 
-Chapter 15 - Civic Center
+Chapter 17 - Civic Center
 
 The description of Civic Center is "You are on a BART platform."
 
-Chapter 16 - Coliseum
+Chapter 18 - Coliseum
 
 The description of Coliseum is "You are on a BART platform."
 
-Chapter 17 - Colma
+Chapter 19 - Colma
 
 The description of Colma is "You are on a BART platform."
 
-Chapter 18 - Concord
+Chapter 20 - Concord
 
 The description of Concord is "You are on a BART platform."
 
-Chapter 19 - Daly City
+Chapter 21 - Daly City
 
 The description of Daly City is "You are on a BART platform. Fog drifts in from the nearby ocean."
 
-Chapter 20 - Dublin/Pleasanton
+Chapter 22 - Dublin/Pleasanton
 
 The description of Dublin/Pleasanton is "You are on a BART platform. The mysterious suburban world of Dublin/Pleasanton surrounds you."
 
-Chapter 21 - El Cerrito del Norte
+Chapter 23 - El Cerrito del Norte
 
 The description of El Cerrito del Norte is "You are on a BART platform."
 
-Chapter 22 - El Cerrito Plaza
+Chapter 24 - El Cerrito Plaza
 
 The description of El Cerrito Plaza is "You are on a BART platform."
 
-Chapter 23 - Embarcadero
+Chapter 25 - Embarcadero
 
 The description of Embarcadero is "You are on a BART platform underground. Lots of people are around and there are muffled announcements over an intercom."
 
-Chapter 24 - Fremont
+Chapter 26 - Fremont
 
 The description of Fremont is "You are on a BART platform."
 
-Chapter 25 - Fruitvale
+Chapter 27 - Fruitvale
 
 The description of Fruitvale is "You are on a BART platform."
 
-Chapter 26 - Glen Park
+Chapter 28 - Glen Park
 
 The description of Glen Park is "You are on a BART platform."
 
-Chapter 27 - Hayward
+Chapter 29 - Hayward
 
 The description of Hayward is "You are on a BART platform."
 
-Chapter 28 - Lafayette
+Chapter 30 - Lafayette
 
 The description of Lafayette is "You are on a BART platform."
 
-Chapter 29 - Lake Merritt
+Chapter 31 - Lake Merritt
 
 The description of Lake Merritt is "You are on a BART platform."
 
-Chapter 30 - MacArthur
+Chapter 32 - MacArthur
 
 The description of MacArthur is "You are on a BART platform."
 
-Chapter 31 - Millbrae
+Chapter 33 - Millbrae
 
 The description of Millbrae is "You are on a BART platform outside. Many people and trains are all around. There are weird looking cement statues of commuters in awkward positions on the platform."
 
-Chapter 32 - Mission 16th St
+Chapter 34 - Mission 16th St
 
 The description of Mission 16th St is "You are underground, on a BART platform. The haunting sound of train wheels on the rails echoes all around. The platform floor is covered with long brick-red tiles, while the median walls are tiled in light and dark blue, green, gold, and brown tiles like the colors of a tropical beach on a sunny day."
 
@@ -283,7 +578,7 @@ Mission 16th Concourse is up from Mission 16th St. Mission 16th Concourse is a c
 
 																								
 
-Chapter 33 - Mission 24th St
+Chapter 35 - Mission 24th St
 
 The description of Mission 24th St is "You are underground, on a BART platform. The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset." 
 
@@ -310,19 +605,26 @@ A yelling preacher is a person. In Calle 24 Northeast Plaza is a yelling preache
 
 Calle 24 Northwest Corner is west of Calle 24 Northeast Plaza. "Just outside the Chinese Food and Donuts shop, this lively streetcorner has buses pulling up along 24th Street, many cars going by, people crossing the street and just standing around, music blaring from passing cars and from the shops all around. Along Mission, high overhead, washingtonia palms stretch into the sky. To the east, there's another BART plaza with an elevator."
 
-Calle 24 Southwest Plaza is south of Calle 24 Northwest Corner. "[if player is sighted]Little tables and tent-covered booths are scattered throughout this busy plaza, with people selling souvenirs from Mexico and Guatemala, shopping bags, embroidered huipil blouses, woolen ponchos, phone chargers and cases, jewelry, and flowers.  There is a sloping area useful as a stage underneath the Coffee and Mission mural. Across 24th street to the north, there's a donut shop. [end if][if player is hearing]Many kinds of music are playing here – norteño blasts its cheerful accordions from speakers at a booth, saxophone notes float up from the huge, round stairwell which goes down to the station, songs blare from passing cars.[otherwise]A busy open space on Mission Street.[end if]"
-
-A flower seller is a person. In Calle 24 Southwest Plaza is a flower seller. The description of a flower seller is "A short, smiling woman in a baseball hat and a red checked scarf pushes  her wheely cart full of roses and carnations. Her jacket has a ladybug pin. [if player is blind]You can hear a short woman just next to you, fussing over a metal cart.[end if]".
-
 Every turn when the player can see a flower seller: 
     say "A flower seller [one of]beams at you with a huge happy grin[or]calles out, 'Flores!'[or]offers you a little bunch of carnations tied with string[or]shares a coffee with a friend[or]fusses over her bunches of flowers, arranging them nicely[or]watches the people passing by[or]smiles as she stops to talk with a friend[as decreasingly likely outcomes]."
 
 A shopping basket is an openable container. It is in Calle 24 Southwest Plaza. The description of the shopping basket is "A metal folding shopping basket on wheels. "
 
-The little bunch of carnations  is a thing in the shopping basket. The price of the carnations is $1.00. The description is "A bunch of red carnations, stems wrapped in paper and tied with green twine." 
+The little bunch of carnations is a thing in the shopping basket. The price of the carnations is $1.00. The description is "A bunch of red carnations, stems wrapped in paper and tied with green twine." 
 
 Instead of taking the basket:
 	say "But that belongs to Mariquita! And she's so nice.";
+
+Calle 24 Southwest Plaza is south of Calle 24 Northwest Corner. "
+[if player is sighted]Little tables and tent-covered booths are scattered throughout this busy plaza, with people selling souvenirs from Mexico and Guatemala, shopping bags, embroidered huipil blouses, woolen ponchos, phone chargers and cases, jewelry, and flowers. There is a sloping area useful as a stage underneath the Coffee and Mission mural. Across 24th street to the north, there's a donut shop. [end if]
+[if player is hearing]Many kinds of music are playing here – norteño blasts its cheerful accordions from speakers at a booth, saxophone notes float up from the huge, round stairwell which goes down to the station, songs blare from passing cars.[end if]
+[if player is not hearing and player is not sighted]A busy open space on Mission Street.[end if]"
+
+
+
+A flower seller is a person. In Calle 24 Northwest Corner is a flower seller. The description of a flower seller is "A short, smiling woman in a baseball hat and a red checked scarf pushes  her wheely cart full of roses and carnations. Her jacket has a ladybug pin. [if player is blind]You can hear a short woman just next to you, fussing over a metal cart.[end if]".
+
+
 
 Calle 24 Southeast Corner is east of Calle 24 Southwest Plaza. "This busy street corner by the McDonalds is grimy. It's basically a crowded spot where people wait to cross the street. Across Mission to the west, there's a nice plaza with a busy market. Across 24th Street to the north, another lovely plaza with musicians, preachers, and some places to sit."
 Calle 24 Southeast Corner is south of Calle 24 Northeast Plaza. 
@@ -330,95 +632,95 @@ A raccoon is a kind of animal.  In Calle 24 Southeast Corner is a raccoon. The d
 Every turn when the player can see a raccoon: 
     say "A raccoon [one of]hauls itsef out of a concrete trash bin[or]skulks into a nearby alleyway[or]hides in a little nook, eating some discarded fries[or]has a little nap in a pile of trash[as decreasingly likely outcomes]."
 
-Chapter 34 - Montgomery
+Chapter 36 - Montgomery
 
 The description of Montgomery is "You are on a BART platform."
 
-Chapter 35 - North Berkeley
+Chapter 37 - North Berkeley
 
 The description of North Berkeley is "You are on a BART platform."
 
-Chapter 36 - North Concord/Martinez
+Chapter 38 - North Concord/Martinez
 
 The description of North Concord/Martinez is "You are on a BART platform."
 
-Chapter 37 - Oakland 12th St
+Chapter 39 - Oakland 12th St
 
 The description of Oakland 12th St is "You are on a BART platform."
 
-Chapter 38 - Oakland 19th St
+Chapter 40 - Oakland 19th St
 
 The description of Oakland 19th St is "You are on a BART platform."
 
-Chapter 39 - Oakland International Airport
+Chapter 41 - Oakland International Airport
 
 The description of Oakland International Airport is "You are on a BART platform."
 
-Chapter 40 - Orinda
+Chapter 42 - Orinda
 
 The description of Orinda is "You are on a BART platform."
 
-Chapter 41 - Pittsburg/Bay Point
+Chapter 43 - Pittsburg/Bay Point
 
 The description of Pittsburg/Bay Point is "You are on a BART platform."
 
-Chapter 42 - Pittsburg Center
+Chapter 44 - Pittsburg Center
 
 The description of Pittsburg Center is "You are on a BART platform."
 
-Chapter 43 - Pleasant Hill
+Chapter 45 - Pleasant Hill
 
 The description of Pleasant Hill is "You are on a BART platform."
 
-Chapter 44 - Powell
+Chapter 46 - Powell
 
 The description of Powell is "You are on a BART platform."
 
-Chapter 45 - Richmond
+Chapter 47 - Richmond
 
 The description of Richmond is "You are on a BART platform."
 
-Chapter 46 - Rockridge
+Chapter 48 - Rockridge
 
 The description of Rockridge is "You are on a BART platform."
 
-Chapter 47 - San Bruno
+Chapter 49 - San Bruno
 
 The description of San Bruno is "You are on a BART platform."
 
-Chapter 48 - San Francisco International Airport
+Chapter 50 - San Francisco International Airport
 
 The description of San Francisco International Airport is "You are on a BART platform."
 
-Chapter 49 - San Leandro
+Chapter 51 - San Leandro
 
 The description of San Leandro is "You are on a BART platform."
 
-Chapter 50 - South Hayward
+Chapter 52 - South Hayward
 
 The description of South Hayward is "You are on a BART platform."
 
-Chapter 51 - South San Francisco
+Chapter 53 - South San Francisco
 
 The description of South San Francisco is "You are on a BART platform."
 
-Chapter 52 - Union City
+Chapter 54 - Union City
 
 The description of Union City is "You are on a BART platform."
 
-Chapter 53 - Walnut Creek
+Chapter 55 - Walnut Creek
 
 The description of Walnut Creek is "You are on a BART platform."
 
-Chapter 54 - Warm Springs/South Fremont
+Chapter 56 - Warm Springs/South Fremont
 
 The description of Warm Springs/South Fremont is "You are on a BART platform."
 
-Chapter 55 - West Dublin/Pleasanton
+Chapter 57 - West Dublin/Pleasanton
 
 The description of West Dublin/Pleasanton is "You are on a BART platform."
 
-Chapter 56 - West Oakland
+Chapter 58 - West Oakland
 
 The description of West Oakland is "You are on a BART platform."
 
@@ -451,9 +753,9 @@ The description of the C button is "A round button printed with a raised C."
 The description of the P button is "A round button printed with a raised P."
 
 [figure out what level you're entering the elevator from relative to other levels]
-After going to the elevator when the player is on the powerchair:
+After going to the elevator when the player is wearing the powerchair:
 	say "You roll your chair into the elevator. The door closes.";
-	now the powerchair is in the elevator;
+	[now the powerchair is in the elevator;]
 	now the former location is mapped south of the elevator;
 	if anywhere is mapped down of the former location and nowhere is mapped up of the former location:   [if you're at the top]
 		now the top of shaft is the former location; 
@@ -494,7 +796,7 @@ Instead of pushing the C button:
 		say "You're already at the concourse level.";
 	if the former location is top of shaft:
 		say "You push the C button. It lights up." ;
-		say "lThe elevator creaks and slowly goes down.";
+		say "The elevator creaks and slowly goes down.";
 		now the middle of shaft is mapped south of the elevator;	
 		say "The doors open and you look out to [middle of shaft] to the south.";
 	if the former location is bottom of shaft:
@@ -504,9 +806,9 @@ Instead of pushing the C button:
 		say "The doors open and you look out to [middle of shaft] to the south.";
 
 
-Instead of going up when the player is not in the elevator and the player is on the powerchair:
+Instead of going up when the player is not in the elevator and the player is wearing the powerchair:
 	say "That's fairly challenging since your wheels won't make it up the stairs." 
-Instead of going down when the player is not in the elevator and the player is on the powerchair:
+Instead of going down when the player is not in the elevator and the player is wearing the powerchair:
 	say "It would be a short and brutal trip for you and your powerchair. Best not." 
 
 
