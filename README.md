@@ -8,10 +8,12 @@ Instructions: http://dhayton.haverford.edu/wp-content/uploads/Inform-manuals/WI_
 You'll need to download these 2 extensions and put them into the proper folder, inside folders named after the author:
 
 Transit System by Emily Short.
-Touchy Feely by Quantum Games.  
-Note: (I may need to replace Touchy Feely or explain how to fix, as it has a couple of buggy lines)
+Exit Lister by Eric Eve.
+
+Note: This also uses a modified version of Touchy Feely by Quantum Games, temporarily included in the main body of the game.   
+
 
 Download from: 
 http://inform7.com/extensions/Emily%20Short/Transit%20System/index.html
-http://inform7.com/extensions/Quantum%20Games/Touchy%20Feely/index.html
+http://inform7.com/extensions/Eric%20Eve/Exit%20Lister/index.html
 Rideable Vehicles by Graham Nelson should already be included in Inform7 but if it isn't you can download and install it.
