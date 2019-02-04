@@ -399,11 +399,8 @@ When play begins:
 	now the command prompt is "[time of day] >" ;
 	now right hand status line is "[number of visited rooms]/[number of rooms] locations";
 
-
 [temporary start of game location for testing]
 Calle 24 Southwest Plaza is a room.
-
-
 
 A room can be a platform.
 A room can be a concourse.
@@ -738,7 +735,7 @@ The top of shaft is a room that varies.
 The middle of shaft is a room that varies.
 The bottom of shaft is a room that varies.
 
-The elevator is a room. The description of the elevator is "A grimy elevator that smells like pee. You take a deep sniff and regret it as the stale urine smell mixes horribly with mildew, dusty heating ducts, and old machine oil which the vestiges of industrial strength floor cleaner do nothing to erase."
+The Elevator is a room. The description of the Elevator is "A grimy elevator that smells like pee. You take a deep sniff and regret it as the stale urine smell mixes horribly with mildew, dusty heating ducts, and old machine oil which the vestiges of industrial strength floor cleaner do nothing to erase. There is a panel in the wall studded with buttons."
 
 [this is a hack because putting the elevator inside another room doesn't work correctly with exiting]
 Every turn when the elevator does not enclose the player and the player is in Liftlandia:
@@ -746,16 +743,18 @@ Every turn when the elevator does not enclose the player and the player is in Li
 	now the elevator is mapped north of the location of the player;
 
 
-A panel in the wall is in the elevator. It is fixed in place. The description is "There are three buttons on the wall: S, C, and P."
+A panel in the wall is in the elevator. It is scenery. The description is "There are three buttons on the wall: S, C, and P."
 The S button, the C button, and the P button are parts of the panel in the wall. 
 The description of the S button is "A round button printed with a raised S."
 The description of the C button is "A round button printed with a raised C."
 The description of the P button is "A round button printed with a raised P."
 
 [figure out what level you're entering the elevator from relative to other levels]
-After going to the elevator when the player is wearing the powerchair:
-	say "You roll your chair into the elevator. The door closes.";
-	[now the powerchair is in the elevator;]
+After going to the elevator:
+	if the player is wearing the powerchair:
+		say "You roll your chair into the elevator. The door closes.";
+	if the player is not wearing the powerchair:
+		say "You step into the elevator. The door closes.";
 	now the former location is mapped south of the elevator;
 	if anywhere is mapped down of the former location and nowhere is mapped up of the former location:   [if you're at the top]
 		now the top of shaft is the former location; 
@@ -775,7 +774,7 @@ Instead of pushing the S button:
 	if the former location is top of shaft:
 		say "You're already at street level.";
 	otherwise:
-		say "You push the S button. It lights up.";
+		say "You push the S button. [if player is not blind]It lights up.[end if]";
 		say "The elevator creaks and slowly goes up.";
 		say "Time passes. You smell a lot of things, wishing you couldn't.";
 		now the top of shaft is mapped south of the elevator;	
@@ -785,7 +784,7 @@ Instead of pushing the P button:
 	if the former location is bottom of shaft:
 		say "You're already at the platform level.";
 	otherwise:
-		say "You push the P button. It lights up. ";
+		say "You push the P button. [if player is not blind]It lights up.[end if]";
 		say "The elevator creaks and slowly goes down.";
 		say "Time passes. You smell a lot of things, wishing you couldn't.";
 		now the bottom of shaft is mapped south of the elevator;	
@@ -795,7 +794,7 @@ Instead of pushing the C button:
 	if the former location is middle of shaft:
 		say "You're already at the concourse level.";
 	if the former location is top of shaft:
-		say "You push the C button. It lights up." ;
+		say "You push the C button. [if player is not blind]It lights up.[end if]" ;
 		say "The elevator creaks and slowly goes down.";
 		now the middle of shaft is mapped south of the elevator;	
 		say "The doors open and you look out to [middle of shaft] to the south.";
@@ -806,23 +805,24 @@ Instead of pushing the C button:
 		say "The doors open and you look out to [middle of shaft] to the south.";
 
 
-Instead of going up when the player is not in the elevator and the player is wearing the powerchair:
+Instead of going up when the player is not in the elevator and the player is wearing a wheelchair:
 	say "That's fairly challenging since your wheels won't make it up the stairs." 
-Instead of going down when the player is not in the elevator and the player is wearing the powerchair:
-	say "It would be a short and brutal trip for you and your powerchair. Best not." 
+Instead of going down when the player is not in the elevator and the player is wearing a wheelchair:
+	say "It would be a short and brutal trip for you and your wheelchair. Best not." 
 
 
 Section 6 - Ticket reader
 
 [the reader itself]
-A ticket reader is a thing. It is fixed in place. "A ticket reader machine is here in a little kiosk, softly humming." 
-The description of the ticket reader is "Its labels are somewhat worn by time. A sign on the machine says 'Swipe *ART card for entry and exit." 
 
-[A ticket reader is scenery. It is in every concourse. "A ticket reader machine is here, softly humming."]
-Understand "machine" as a ticket reader.   
+A ticket reader is a thing.  "A ticket reader machine is here in a little kiosk[if player is hearing], softly humming[end if]."
+A ticket reader is fixed in place.
+Understand "machine" as a ticket reader.  
+The description of the ticket reader is "Its labels, both printed and Braille, are somewhat worn by time. A sign on the machine says 'Swipe *ART card for entry and exit." 
 
-[Every turn when the location of the player is a concourse:
-	now a ticket reader is in the location of the player;]
+
+Every turn when the location of the player is a concourse:
+	now a ticket reader is in the location of the player;
 
 [the ticket]
 Instead of switching off the BART card when the BART card is switched off, silently try switching on the BART card.
@@ -842,9 +842,9 @@ A BART card, an ART card, a BAT card, a BAR card, a CART card, and a WART card a
 
 The description of a BART card is "A blue and white card with a magnetic stripe. It says 'BART' in big black letters that look oddly like scribbly handwriting. "
 
-The description of an ART card is "A blue and white card with a stripe. It says 'ART' in big black letters. The letters blur and seem to move."
+The description of an ART card is "A blue and white card with a magnetic stripe. It says 'ART' in big black letters. The letters blur and seem to move."
 
-The description of a BAT card is "A blue and white card with a stripe. It says 'BAT' in big black letters. The letters blur and seem to move."
+The description of a BAT card is "A blue and white card with a magnetic stripe. It says 'BAT' in big black letters. The letters blur and seem to move."
 
 The player is carrying a magic marker and a BART card.
 
