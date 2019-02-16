@@ -16,12 +16,11 @@ When play begins:
 
 [temporary start of game location for testing]
 
-Home Base is west of Circle Plaza. "A bare room. There's a wardrobe against one wall. "
+Home Base is west of Circle Plaza. "A bare room."
 
 In Home Base is an opaque, closed, openable container called a wardrobe. The wardrobe is scenery. 
 The wraparound mirrorshades, headphones, a thick woolly hat, the cruel shoes, and earplugs are in the wardrobe.
 A powerchair is in Home Base.
-
 
 
 Section 1 - Multisensory
@@ -461,7 +460,7 @@ A room can be a platform.
 A room can be a concourse.
 
 Liftlandia is a region.  [everywhere an elevator might appear]
-Mission 24th Concourse, and Calle 24 Plaza are in Liftlandia.
+Mission 24th Concourse and Calle 24 Plaza are in Liftlandia.
 
 Platforms is a region in Liftlandia.  [everywhere that is a train stop]
 
@@ -589,9 +588,9 @@ Chapter 35 - Mission 24th St
 
 The description of Mission 24th St is "You are underground, on a BART platform. [if the player is hearing]The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. [end if][if the player is sighted]On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset.[end if]" 
 
-Mission 24th Concourse is up from Mission 24th St. Mission 24th Concourse is a concourse. "[if the player is sighted]Enormous concrete buttresses soar overhead, like a futuristic 70s airplane hangar.[end if] [if the player is hearing]Music echoes hauntingly from a monumental stairwell rising up to the plaza, combining with the wild harmonics of trains below.[end if] [if the player is sighted]Abstract cement shapes are sculpted in relief along the oddly corrugated sides of the stairwell, open to the sky.[end if]" 
+Mission 24th Concourse is up from Mission 24th St. Mission 24th Concourse  is a concourse. "[if the player is sighted]Enormous concrete buttresses soar overhead, like a futuristic 70s airplane hangar.[end if] [if the player is hearing]Music echoes hauntingly from a monumental stairwell rising up to the plaza, combining with the wild harmonics of trains below.[end if] [if the player is sighted]Abstract cement shapes are sculpted in relief along the oddly corrugated sides of the stairwell, open to the sky.[end if]" 
 
-Calle 24 Plaza is up from Mission 24th Concourse. "All around you are little shops and restaurants, people talking, buses pulling up to the stops on Mission and on 24th Street, music booming from cars going by. [if the player is sighted]Palm trees sway high overhead. Thick metal rails surround the enormous open stairwell that goes down to the station concourse. A huge mural of a train runs across the wall of the taqueria bordering the plaza to the north.[end if]"
+Calle 24 Plaza is up from Mission 24th Concourse.  "All around you are little shops and restaurants, people talking, buses pulling up to the stops on Mission and on 24th Street, music booming from cars going by. [if the player is sighted]Palm trees sway high overhead. Thick metal rails surround the enormous open stairwell that goes down to the station concourse. A huge mural of a train runs across the wall of the taqueria bordering the plaza to the north.[end if]"
 
 The train mural is scenery in Calle 24 Plaza. "A mural of a gleaming BART train carried on the backs of determined workers amid a geometric cityscape."  
 
@@ -648,16 +647,39 @@ Instead of taking the basket:
 Calle 24 Southeast Corner is east of Circle Plaza. "This busy street corner by the McDonalds is grimy. It's basically a crowded spot where people wait to cross the street. Across Mission to the west, there's a nice plaza with a busy market. Across 24th Street to the north, another lovely plaza with musicians, preachers, and some places to sit."
 Calle 24 Southeast Corner is south of Calle 24 Plaza. 
 A raccoon is a kind of animal.  In Calle 24 Southeast Corner is a raccoon. The description of the raccoon is "A greasy looking plump raccoon. It's battered, but unbowed."  
-Every turn when the player can see a raccoon: 
+Every turn when the player can see a raccoon and the turn count is even: 
     say "A raccoon [one of]hauls itsef out of a concrete trash bin[or]skulks into a nearby alleyway[or]hides in a little nook, eating some discarded fries[or]has a little nap in a pile of trash[as decreasingly likely outcomes]."
-
 
 
 Brutalist Plaza is a room. "You pick your way through paths around enormous, rough-hewn blocks of concrete and stone. They tower overhead like the tufa mounds of Mono Lake or a cityscape in a dream."
 
 Times Circle is southwest of Brutalist Plaza. "You are standing in a dreamlike plaza, an enormous circle split into sections set into the stones underfoot. Each section has a hollowed out shape and shimmering glyphs. You wish you could read them." 
 
-The calendar is scenery in Times Circle. "An enormous Central American calendar circle. You've seen them before. Around the edges of the circle are 20 divisions, each containing a different hollowed out space in elaborate shapes. "
+The calendar is a fixed in place container in Times Circle. "An enormous Central American calendar circle. You've heard of them before -- the most famous is the Aztec sun stone of Mexico City. Around the edges of the innermost or first ring are 20 divisions, each containing a different hollowed out space in elaborate shapes." 
+
+The first ring is scenery in Times Circle. "The hollow glyphs in the first circle draw your attention from the top, around the ring counterclockwise. Dreamlike, you understand what they represent. [paragraph break]
+Cipactli, the Caiman.[line break]
+Ehēcatl, Wind.[line break]
+Calli, House.[line break]
+Cuetzpalin, the Lizard.[line break]
+Cõātl, the Serpent.[line break]
+Miquiztli, Death.[line break]
+Mazātl, the Deer.[line break]
+Tōchtli, the Rabbit.[line break]
+Ātl, Water.[line break]
+Izcuīntli, the Dog.[line break]
+Ozomahtli, the Monkey.[line break]
+Malīnalli, Grass.[line break]
+Ācatl, Reed.[line break]
+Ocēlōtl, Jaguar. [line break]
+Cuāuhtli, Eagle. [line break]
+Cōzcacuāuhtli, Vulture. [line break]
+Ōlīn, Earthquake.[line break]
+Tecpatl, Obsidian Knife.[line break]
+Quiyahuitl, Rain.[line break]
+Xōchitl, Flower."
+
+
 
 Understand "calendar" and "circle" as the calendar.
 
@@ -671,7 +693,7 @@ After switching off the ART card:
 	now Mission 24th Concourse is mapped down of Calle 24 Plaza;
 	
 After writing on the ART card:
-	now Calle 24 Plaza is mapped up of Mission 24th Concourse. 
+	now Calle 24 Plaza is mapped up of Mission 24th Concourse.  
 	
 
 Chapter 36 - Montgomery
@@ -1086,7 +1108,7 @@ transit time	destination	relative position
 1 minute	Daly City	0
 1 minute	Balboa Park	1
 1 minute	Glen Park	2
-1 minute	Mission 24th	3
+1 minute	Mission 24th St	3
 1 minute	Mission 16th St	4
 1 minute	Civic Center	5
 1 minute	Powell	6
@@ -1134,7 +1156,7 @@ transit time	destination	relative position
 1 minute	Daly City	0
 1 minute	Balboa Park	1
 1 minute	Glen Park	2
-1 minute	Mission 24th	3
+1 minute	Mission 24th St	3
 1 minute	Mission 16th St	4
 1 minute	Civic Center	5
 1 minute	Powell	6
