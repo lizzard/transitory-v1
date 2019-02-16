@@ -8,6 +8,22 @@ Include Exit Lister by Eric Eve.
 Use scoring.
 
 
+Section 4 - Some beginning stuff
+
+When play begins: 
+	now the command prompt is "[time of day] >" ;
+	now right hand status line is "[number of visited rooms]/[number of rooms] locations";
+
+[temporary start of game location for testing]
+
+Home Base is west of Circle Plaza. "A bare room. There's a wardrobe against one wall. "
+
+In Home Base is an opaque, closed, openable container called a wardrobe. The wardrobe is scenery. 
+The wraparound mirrorshades, headphones, a thick woolly hat, the cruel shoes, and earplugs are in the wardrobe.
+A powerchair is in Home Base.
+
+
+
 Section 1 - Multisensory
 [Written to include and extend Touchy Feely]
 [Touchy Feely by Quantum Games begins here. Extended by Liz Henry 2019]
@@ -203,12 +219,12 @@ A person has a sightedness. The sightedness of a person is usually sighted. The 
 wraparound mirrorshades are a wearable object. "Shiny reflecting glasses." 
 The description of wraparound mirrorshades is "Astonishingly dorky metallic glasses."
 Understand "glasses" or "shades" as wraparound mirrorshades.
-The player is carrying wraparound mirrorshades.  
+  
 
 blue goggles are a wearable object. "Thick blue goggles." 
 The description of blue goggles is "Large, thick-lensed, coke-bottle tinted goggles."
 Understand "goggles" as blue goggles.
-The player is carrying blue goggles.
+
 
 A white cane is an object. "A long white cane."
 The description of the white cane is "A long, thin, white cane, used for navigation by people who don't see well or who are blind"
@@ -250,7 +266,7 @@ sticker-covered headphones are a wearable object. "Headphones covered with stick
 The description is "These big, fashionable headphones are slathered in Deaf culture and Deaf Pride stickers." 
 The sound is "These are headphones that block out sound. So it would be weird if you could hear them."
 The feel is "Slick headphones with cushiony, soft, breathable earpieces."
-The player is carrying sticker-covered headphones.
+
 
 Before wearing the headphones:
 	now the player is Deaf;
@@ -262,7 +278,6 @@ A thick woolly hat is a wearable object. "A thick woolly knit hat."
 The description is "An attractive woollen hat knitted from thick yarn. It comes down well over your ears."
 The sound is "It makes a scrunchy sort of yarn noise if you get up real close and squeeze it."
 The feel is "Cozy, warm, soft and comfortable. It's a knit hat. It loves you."
-The player is carrying a thick woolly hat. 
 
 Before wearing the thick woolly hat:
 	now the player is HoH;
@@ -274,7 +289,7 @@ earplugs are a wearable object. "Little orange foam earplugs."
 The description is "Foam earplugs, useful for when you don't want to be bothered by noise." 
 The sound is "They don't have a sound. That's the whole point."
 The feel is "Squashy little bits of foam."
-The player is carrying earplugs.
+
 
 Before wearing the earplugs:
 	now the player is Deaf;  [this is meant to be little-d deaf but i havent figured out differentiation]
@@ -293,7 +308,7 @@ Ambulation is a kind of value. The ambulations are wheeling, walking, limping, a
 A person has an ambulation. The ambulation of a person is usually walking. 
 The ambulation of the player is walking.
 
-The cruel shoes are a wearable object. The player is carrying the cruel shoes. 
+The cruel shoes are a wearable object. 
 Before wearing the cruel shoes:
 	now the player is wheeling;
 	
@@ -306,7 +321,7 @@ After taking off the cruel shoes:
 
 A wheelchair is a kind of wearable thing. A powerchair is a wheelchair. A manual chair is a wheelchair. A scooter is a wheelchair. 
 
-The player is carrying a powerchair. 
+
 The description of a powerchair is "It's shiny black, it's powerful, and it's from the future."
 
 
@@ -348,6 +363,9 @@ A property-aggregation rule for an open container which contains nothing (this i
 
 A property-aggregation rule for a lit thing (this is the mention lit objects rule):
         add "providing light" to the tagline. 
+
+A property-aggregation rule for a switched on device (this is the mention devices rule):
+        add "switched on" to the tagline. 
 
 A property-aggregation rule for a wheelchair worn by the player (this is the mention worn wheelchairs rule):
 	add "sitting in it" to the tagline;
@@ -393,19 +411,6 @@ Understand "tap" or "explore" as studying the vicinity.
 
 
 
-Section 4 - Some beginning stuff
-
-When play begins: 
-	now the command prompt is "[time of day] >" ;
-	now right hand status line is "[number of visited rooms]/[number of rooms] locations";
-
-[temporary start of game location for testing]
-Calle 24 Southwest Plaza is a room.
-
-A room can be a platform.
-A room can be a concourse.
-
-Mission 24th St is a room.
 	
 
 Section 8 - Money stuff
@@ -447,11 +452,16 @@ Instead of buying the money:
 	say "The money belongs to you; you buy things with it." 
 
 
-Section 9 - Regions
+Part 5 - All the places
+
+Section 1 - Regions
 [Regions]
 
+A room can be a platform.
+A room can be a concourse.
+
 Liftlandia is a region.  [everywhere an elevator might appear]
-Mission 24th Concourse, and Calle 24 Northeast Plaza are in Liftlandia.
+Mission 24th Concourse, and Calle 24 Plaza are in Liftlandia.
 
 Platforms is a region in Liftlandia.  [everywhere that is a train stop]
 
@@ -471,7 +481,7 @@ South Bay is a region in Platforms. Hayward, South Hayward, Union City, Fremont,
 
 Blue Line is a region in Platforms. Castro Valley, West Dublin/Pleasanton, and Dublin/Pleasanton are in Blue Line. 
 
-Section 10 - Locations, organized by train stops
+Section 2 - Locations, organized by train stops
 
 [train stops, alphabetically with descriptions]
 
@@ -577,57 +587,92 @@ Mission 16th Concourse is up from Mission 16th St. Mission 16th Concourse is a c
 
 Chapter 35 - Mission 24th St
 
-The description of Mission 24th St is "You are underground, on a BART platform. The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset." 
+The description of Mission 24th St is "You are underground, on a BART platform. [if the player is hearing]The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. [end if][if the player is sighted]On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset.[end if]" 
 
-Mission 24th Concourse is up from Mission 24th St. Mission 24th Concourse is a concourse. "Enormous concrete buttresses soar overhead, like a futuristic 70s airplane hangar. Music echoes hauntingly from a monumental stairwell rising up to the plaza, combining with the wild harmonics of trains below. Abstract cement shapes are sculpted in relief along the oddly corrugated sides of the stairwell, open to the sky." 
+Mission 24th Concourse is up from Mission 24th St. Mission 24th Concourse is a concourse. "[if the player is sighted]Enormous concrete buttresses soar overhead, like a futuristic 70s airplane hangar.[end if] [if the player is hearing]Music echoes hauntingly from a monumental stairwell rising up to the plaza, combining with the wild harmonics of trains below.[end if] [if the player is sighted]Abstract cement shapes are sculpted in relief along the oddly corrugated sides of the stairwell, open to the sky.[end if]" 
 
-Calle 24 Northeast Plaza is up from Mission 24th Concourse. "Palm trees sway high overhead. Delicate metal rails surround the enormous circular stairwell that goes down to the station concourse. All around you are little shops, restaurants, taquerias, people talking, buses pulling up to the stops on Mission and on 24th Street, music blasting from cars going by. A huge mural runs across the wall of the taqueria bordering the plaza to the north, of a gleaming BART train carried on the backs of determined workers amid a geometric cityscape." 
+Calle 24 Plaza is up from Mission 24th Concourse. "All around you are little shops and restaurants, people talking, buses pulling up to the stops on Mission and on 24th Street, music booming from cars going by. [if the player is sighted]Palm trees sway high overhead. Thick metal rails surround the enormous open stairwell that goes down to the station concourse. A huge mural of a train runs across the wall of the taqueria bordering the plaza to the north.[end if]"
 
-[Every turn:
-	if Calle 24 Northeast Plaza is visited and Calle 24 Northeast Plaza was not visited:
-		say "If you look around past the crowds you might find the elevator.".]
+The train mural is scenery in Calle 24 Plaza. "A mural of a gleaming BART train carried on the backs of determined workers amid a geometric cityscape."  
 
-A tamale lady is a person. In Calle 24 Northeast Plaza is a tamale lady. The description of a tamale lady is "A short, smiling woman in jeans and an army jacket stands next to a cooler on wheels." 
-Every turn when the player can see a tamale lady: 
-    say "A tamale lady [one of]watches the people passing by[or]says 'Tamales!'[or]shifts her weight from one foot to the other[or]says 'Tamales de pollo!'[or]smiles at you[or]says 'Tamales de carne!'[as decreasingly likely outcomes]."
 
-A cooler on wheels is an openable container. It is in Calle 24 Northeast Plaza. The description is "A red and white cooler with a hinged lid." The sound of the cooler is "As the tamale seller handles the cooler, opening and closing the lid, you can hear that it's made of hollow plastic."
+A tamale lady is a person. In Calle 24 Plaza is a tamale lady. The description of a tamale lady is "A short, smiling woman in jeans and an army jacket stands next to a cooler on wheels." 
+Every turn when the player can see a tamale lady and the turn count is even: 
+    say "A tamale lady [one of]watches the people passing by[or]says 'Tamales!'[or]shifts her weight from one foot to the other[or]says 'Tamales de pollo!'[or]smiles at you[or]says 'Tamales de carne!'[as decreasingly likely outcomes]"
+
+A cooler on wheels is an openable container. It is in Calle 24 Plaza. The description is "A red and white cooler with a hinged lid." The sound of the cooler is "As the tamale seller handles the cooler, opening and closing the lid, you can hear that it's made of hollow plastic."
 
 The tamal is an edible thing in the cooler on wheels. The price of the tamal is $3.00. The description is "A delicious-smelling tamal wrapped in paper and foil." 
 
 Instead of taking the cooler on wheels:
 	say "But that belongs to the nice tamale lady!";
 
-A yelling preacher is a person. In Calle 24 Northeast Plaza is a yelling preacher. The description of the preacher is "A short man yells fervently in Spanish into a microphone. You recognize some things from the Bible, though it's hard to understand him from the low quality amp at his feet."
+A yelling preacher is a person. In Calle 24 Plaza is a yelling preacher. The description of the preacher is "A short man yells fervently in Spanish into a microphone. You recognize some things from the Bible, though it's hard to understand him from the low quality amp at his feet."
 
-Calle 24 Northwest Corner is west of Calle 24 Northeast Plaza. "Just outside the Chinese Food and Donuts shop, this lively streetcorner has buses pulling up along 24th Street, many cars going by, people crossing the street and just standing around, music blaring from passing cars and from the shops all around. Along Mission, high overhead, washingtonia palms stretch into the sky. To the east, there's another BART plaza with an elevator."
+Calle 24 Northwest Corner is west of Calle 24 Plaza. "Just outside the Chinese Food and Donuts shop, this lively streetcorner has buses pulling up along 24th Street, many cars going by, people crossing the street and just standing around, music blaring from passing cars and from the shops all around. Along Mission, high overhead, washingtonia palms stretch into the sky. To the east, there's another BART plaza with an elevator."
 
-Every turn when the player can see a flower seller: 
+
+Circle Plaza is south of Calle 24 Northwest Corner.
+The description of Circle Plaza is "
+[if player is sighted]You head into the crowds of this busy space built around a circular wall. People are selling stuff from tables and little booths. Across 24th street to the north, there's a donut shop. You notice a mural that says something about coffee.[end if]
+[if player is hearing]Many kinds of music are playing here. Norteño blasts its cheerful accordions from a booth, saxophone notes float up from the huge, round stairwell which goes down to the station, songs blare from passing cars.[end if]
+[if player is not hearing or player is not sighted]This is a typical, busy, open space on Mission Street.[end if]"
+
+The gadget table is scenery in Circle Plaza. "Phone cases, cables, chargers, and headphones are laid out on this cheap folding table."
+The jewelry table is scenery in Circle Plaza. "You are overwhelmed by the array of cheap rings with big semi-precious stones, earrings made of tiny feathers, and chunky silver bracelets in neat rows."
+The textiles booth is scenery in Circle Plaza. "Hanging from the racks set up around the booth are embroidered huipil blouses, woolen ponchos from Peru, Guatemalan woven pants, striped wool shoulder bags, and colorful scarves."
+The souvenirs booth is scenery in Circle Plaza. "A rack to the side of this tiny booth is festooned with Mexican flags, belt buckles with the eagle and serpent, 49-ers hats and tshirts, and pink woven plastic shopping bags printed with Frida Kahlo's face."
+
+
+The stairwell is scenery in Circle Plaza. Understand "wall" as the stairwell. "Burnt red bricks smoothly curve up around the edges of the wall around the big stairwell. There are a few people sitting with their backs against it. A couple of medium-sized trees grow out of a planter in a space at the top of the wall. As you study the unusual structure you notice metal gratings set into the plaza, one long strip near the edge where the plaza turns to sidewalk, and gratings around small, spindly saplings. The metal gratings have a circular pattern."
+
+The metal gratings are scenery in Circle Plaza. "Overlapping concentric circles make an unusual and beautiful pattern in the dark metal of these iron gratings."
+
+The coffee mural is scenery in Circle Plaza. "A huge mural in bright colors splashes across the building to the west of the plaza. Two wide eyed, child-like cartoon characters in Aztec regalia look out from the mural. Above them is a cartoon street sign that reads COFFEE and across it, MISSION. Below the mural is a sloping area and a few steps that make a sort of stage." 
+
+The stage is scenery in Circle Plaza. 
+
+A flower seller is a person. In Circle Plaza is a flower seller. The description of a flower seller is "A short, smiling woman in a baseball hat and a red checked scarf pushes  her wheely cart full of roses and carnations. Her jacket has a ladybug pin. [if player is blind]You can hear a short woman just next to you, fussing over a metal cart.[end if]".
+
+Every turn when the turn count is even and the player can see a flower seller: 
     say "A flower seller [one of]beams at you with a huge happy grin[or]calles out, 'Flores!'[or]offers you a little bunch of carnations tied with string[or]shares a coffee with a friend[or]fusses over her bunches of flowers, arranging them nicely[or]watches the people passing by[or]smiles as she stops to talk with a friend[as decreasingly likely outcomes]."
 
-A shopping basket is an openable container. It is in Calle 24 Southwest Plaza. The description of the shopping basket is "A metal folding shopping basket on wheels. "
+A shopping basket is an openable container. It is scenery. It is in Circle Plaza. The description of the shopping basket is "A metal folding shopping basket on wheels. "
 
 The little bunch of carnations is a thing in the shopping basket. The price of the carnations is $1.00. The description is "A bunch of red carnations, stems wrapped in paper and tied with green twine." 
 
 Instead of taking the basket:
 	say "But that belongs to Mariquita! And she's so nice.";
 
-Calle 24 Southwest Plaza is south of Calle 24 Northwest Corner. "
-[if player is sighted]Little tables and tent-covered booths are scattered throughout this busy plaza, with people selling souvenirs from Mexico and Guatemala, shopping bags, embroidered huipil blouses, woolen ponchos, phone chargers and cases, jewelry, and flowers. There is a sloping area useful as a stage underneath the Coffee and Mission mural. Across 24th street to the north, there's a donut shop. [end if]
-[if player is hearing]Many kinds of music are playing here – norteño blasts its cheerful accordions from speakers at a booth, saxophone notes float up from the huge, round stairwell which goes down to the station, songs blare from passing cars.[end if]
-[if player is not hearing and player is not sighted]A busy open space on Mission Street.[end if]"
 
-
-
-A flower seller is a person. In Calle 24 Northwest Corner is a flower seller. The description of a flower seller is "A short, smiling woman in a baseball hat and a red checked scarf pushes  her wheely cart full of roses and carnations. Her jacket has a ladybug pin. [if player is blind]You can hear a short woman just next to you, fussing over a metal cart.[end if]".
-
-
-
-Calle 24 Southeast Corner is east of Calle 24 Southwest Plaza. "This busy street corner by the McDonalds is grimy. It's basically a crowded spot where people wait to cross the street. Across Mission to the west, there's a nice plaza with a busy market. Across 24th Street to the north, another lovely plaza with musicians, preachers, and some places to sit."
-Calle 24 Southeast Corner is south of Calle 24 Northeast Plaza. 
+Calle 24 Southeast Corner is east of Circle Plaza. "This busy street corner by the McDonalds is grimy. It's basically a crowded spot where people wait to cross the street. Across Mission to the west, there's a nice plaza with a busy market. Across 24th Street to the north, another lovely plaza with musicians, preachers, and some places to sit."
+Calle 24 Southeast Corner is south of Calle 24 Plaza. 
 A raccoon is a kind of animal.  In Calle 24 Southeast Corner is a raccoon. The description of the raccoon is "A greasy looking plump raccoon. It's battered, but unbowed."  
 Every turn when the player can see a raccoon: 
     say "A raccoon [one of]hauls itsef out of a concrete trash bin[or]skulks into a nearby alleyway[or]hides in a little nook, eating some discarded fries[or]has a little nap in a pile of trash[as decreasingly likely outcomes]."
+
+
+
+Brutalist Plaza is a room. "You pick your way through paths around enormous, rough-hewn blocks of concrete and stone. They tower overhead like the tufa mounds of Mono Lake or a cityscape in a dream."
+
+Times Circle is southwest of Brutalist Plaza. "You are standing in a dreamlike plaza, an enormous circle split into sections set into the stones underfoot. Each section has a hollowed out shape and shimmering glyphs. You wish you could read them." 
+
+The calendar is scenery in Times Circle. "An enormous Central American calendar circle. You've seen them before. Around the edges of the circle are 20 divisions, each containing a different hollowed out space in elaborate shapes. "
+
+Understand "calendar" and "circle" as the calendar.
+
+
+After switching on the ART card:
+	now Brutalist Plaza is mapped up of Mission 24th Concourse;
+	now Mission 24th Concourse is mapped down of Brutalist Plaza;
+	
+After switching off the ART card:
+	now Calle 24 Plaza is mapped up of Mission 24th Concourse;
+	now Mission 24th Concourse is mapped down of Calle 24 Plaza;
+	
+After writing on the ART card:
+	now Calle 24 Plaza is mapped up of Mission 24th Concourse. 
+	
 
 Chapter 36 - Montgomery
 
@@ -735,12 +780,13 @@ The top of shaft is a room that varies.
 The middle of shaft is a room that varies.
 The bottom of shaft is a room that varies.
 
-The Elevator is a room. The description of the Elevator is "A grimy elevator that smells like pee. You take a deep sniff and regret it as the stale urine smell mixes horribly with mildew, dusty heating ducts, and old machine oil which the vestiges of industrial strength floor cleaner do nothing to erase. There is a panel in the wall studded with buttons."
+The Elevator is a room. The description of the Elevator is "A grimy elevator that smells like pee. You take a deep sniff and regret it as the stale urine smell mixes horribly with mildew, dusty heating ducts, and old machine oil which the vestiges of industrial strength floor cleaner do nothing to erase. There is a panel in the wall studded with buttons." Understand "elevator" as The Elevator.
 
 [this is a hack because putting the elevator inside another room doesn't work correctly with exiting]
-Every turn when the elevator does not enclose the player and the player is in Liftlandia:
-	say "There is an elevator in the north wall.";
+Every turn when the player is in Liftlandia:
 	now the elevator is mapped north of the location of the player;
+	say "There is an elevator in the north wall.";
+	continue the action.
 
 
 A panel in the wall is in the elevator. It is scenery. The description is "There are three buttons on the wall: S, C, and P."
@@ -774,7 +820,7 @@ Instead of pushing the S button:
 	if the former location is top of shaft:
 		say "You're already at street level.";
 	otherwise:
-		say "You push the S button. [if player is not blind]It lights up.[end if]";
+		say "You push the S button. [if player is not blind]It lights ufp.[end if]";
 		say "The elevator creaks and slowly goes up.";
 		say "Time passes. You smell a lot of things, wishing you couldn't.";
 		now the top of shaft is mapped south of the elevator;	
@@ -820,21 +866,25 @@ A ticket reader is fixed in place.
 Understand "machine" as a ticket reader.  
 The description of the ticket reader is "Its labels, both printed and Braille, are somewhat worn by time. A sign on the machine says 'Swipe *ART card for entry and exit." 
 
-
-Every turn when the location of the player is a concourse:
+After going to a concourse:
 	now a ticket reader is in the location of the player;
-
+	continue the action.
+	
 [the ticket]
-Instead of switching off the BART card when the BART card is switched off, silently try switching on the BART card.
+[Instead of switching off the BART card when the BART card is switched off, silently try switching on the BART card.
 
-Instead of switching on the BART card when the BART card is switched on, try switching off the BART card.
+Instead of switching on the BART card when the BART card is switched on, try switching off the BART card.]
+
 	
 Instead of switching on a card when the location of the player is not a concourse:
 	say "You need to do that by swiping it on a ticket reader.";
 Instead of switching off a card when the location of the player is not a concourse:
 	say "You need to do that by swiping it on a ticket reader.";		
 	
-Understand "swipe [something]" as switching on. 
+Understand "swipe [something switched off]" as switching on.
+Understand "swipe [something switched on]" as switching off. 
+[Understand "swipe [something]" as switching on.]
+
 
 A writing utensil is a kind of thing. A magic marker is a writing utensil.
 A card is a kind of device.  
@@ -849,7 +899,6 @@ The description of a BAT card is "A blue and white card with a magnetic stripe. 
 The player is carrying a magic marker and a BART card.
 
 A magic marker is an object. The description of a magic marker is "A magic marker. It fizzes and tingles with energy as if it were eager to make its mark."
-
 
 
 Writing on is an action applying to one visible thing. Understand "write on [something]" as writing on. 
