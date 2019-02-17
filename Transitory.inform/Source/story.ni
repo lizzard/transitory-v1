@@ -1,9 +1,8 @@
 "Transitory" by lizzard
 
 Include Transit System by Emily Short.
-[Include Rideable Vehicles by Graham Nelson.]
-
-Include Exit Lister by Eric Eve.
+Include Basic Screen Effects by Emily Short.
+[Include Exit Lister by Eric Eve.]
 
 Use scoring.
 
@@ -11,16 +10,24 @@ Use scoring.
 Section 4 - Some beginning stuff
 
 When play begins: 
+	deepen status line to 2 rows;
 	now the command prompt is "[time of day] >" ;
-	now right hand status line is "[number of visited rooms]/[number of rooms] locations";
+	now right hand status line is "Score:[score] | [number of visited rooms]/[number of rooms] locations";
+	now right alignment depth is 26;
 
 [temporary start of game location for testing]
 
 Home Base is west of Circle Plaza. "A bare room."
 
+A stone flower is an object. "A stylized flower sculpted in carnelian, smooth and polished." The description of the stone flower is "It shimmers, slipping in time. You think of sacrifice and the blood of captive warriors."
+
 In Home Base is an opaque, closed, openable container called a wardrobe. The wardrobe is scenery. 
-The wraparound mirrorshades, headphones, a thick woolly hat, the cruel shoes, and earplugs are in the wardrobe.
+The stone flower, wraparound mirrorshades, headphones, a thick woolly hat, the cruel shoes, and earplugs are in the wardrobe.
 A powerchair is in Home Base.
+
+Report taking the stone flower:
+	increase the score by 5;
+
 
 
 Section 1 - Multisensory
@@ -608,47 +615,98 @@ The description of MacArthur is "You are on a BART platform."
 
 Chapter 33 - Millbrae
 
-The description of Millbrae is "You are on a BART platform outside. Many people and trains are all around. There are weird looking cement statues of commuters in awkward positions on the platform."
+The description of Millbrae is "You are on a BART platform outside. Many people and trains are all around. There are cement statues of commuters in awkward positions on the platform."
 
 Chapter 34 - Mission 16th St
 
-The description of Mission 16th St is "You are underground, on a BART platform. The haunting sound of train wheels on the rails echoes all around. The platform floor is covered with long brick-red tiles, while the median walls are tiled in light and dark blue, green, gold, and brown tiles like the colors of a tropical beach on a sunny day."
+The description of Mission 16th St is "You are underground, on a BART platform. [if player is not deaf]The haunting sound of train wheels on the rails echoes all around[end if]. [if player is not blind]The platform floor is covered with long brick-red tiles, while the median walls are tiled in light and dark blue, green, gold, and brown tiles like the colors of a tropical beach on a sunny day.[end if]"
 
-Mission 16th Concourse is up from Mission 16th St. Mission 16th is a concourse. "Low but nicely curved arches made of smooth concrete form the ceiling of this long, busy station. Music echoes from the stairwells. The acoustics are great!"
+Mission 16th Concourse is up from Mission 16th St. Mission 16th is a concourse. "[if player is not blind]Low but nicely curved arches made of smooth concrete form the ceiling of this long, busy station. Abstract cement sculptures molded in relief march up the sides of the enormous stairwell, open to the sky. [end if] [if player is not deaf]Music echoes from the stairwells. The acoustics are great![end if] Crowds of people swirl around the concourse."
 
+The concrete shapes are scenery in Mission 16th Concourse. "Big blocky shapes, rectangles, circles, half circles, are scuplted in relief along the rough sides of the enormous open stairwell to the plaza. They're reminiscent of brutalist skyscrapers, stoplights, a pleasing jumble of forms decorating the space. You feel more aware of the secret life of buildings. Their bones, their roots. The way they take up space against the sky.[if the player is carrying an ART card]The secretive shapes beckon like doors. You itch to climb them. [end if]"
+
+Understand "shapes", "abstract", "cement", "relief", "concrete", "sculptures", and "stairwell" as the concrete shapes.
+  
+Instead of climbing when the player is in Mission 16th Concourse and the ART card is switched on:
+	say "You grip the cement, rough and cool under your hands. It seems to pull you forward.";
+	say "Solid, yet somehow fluid. Building-ness infuses your very soul.";
+	say "Creation. Making things. Artifice AS NATURE.";
+	say "You snap out of your weird obsession with concrete and look around. Wild!";
+	now Noisebridge is mapped up of Mission 16th Concourse;
+	now the player is in Noisebridge;
+	stop the action.
+	
+Instead of climbing when the player is in Mission 16th Concourse and the ART card is not switched on:
+	say "You plot your route mentally but decide not to climb. Maybe if you were in more of an artistic mood.";
+	stop the action.
+
+Noisebridge is a room. "You are in a large hackerspace. People are messing around with laptops in the Hackitorium, poking at electronic gadgets, reading in the library area, and playing video games over by the windows. There are piles of junk up against one wall."
+
+The workbench is a supporter in Noisebridge. It is fixed in place.
+
+The 3-D printer is a device in Noisebridge. It is fixed in place. "A weird, boxy gadget on a workbench. It has a big label that says '3-D Printer' [if the player is not blind]in smudgy black letters[end if]."
+
+The 4-D printer is a device. "A weird, boxy gadget on a workbench. It has a big label that says '4-D Printer' [if the player is not blind]in smudgy black letters[end if]. It has a tangible aura of weirdness surrounding it for a few feet in every direction."
+
+The beer opener shaped like a Dalek is an object.
+
+The 4-D Timelock is a device.
+
+Instead of switching on the 3-D printer:
+	say "The 3-D printer clatters and shakes.";
+	say "Plastic from a reel above feeds into the machine.";
+	say "A little nozzle slowly zigzags its way up and down, across and back.";
+	say "An object appears very slowly and then is ejected onto the workbench.";
+	now the beer opener is on the workbench.
+	
+Instead of switching on the 4-D printer:
+	say "The 4-D printer clatters and shakes.";
+	say "Little nozzles zip around in multiple directions all at once, going so fast you can barely tell what's happening.";
+	say "Spools of ethereal metals and light itself feed into the machine.";
+	say "An object appears gradually and then is ejected onto the workbench.";
+	now the 4-D timelock is on the workbench.
+
+	
 																								
 
 Chapter 35 - Mission 24th St
 
-The description of Mission 24th St is "You are underground, on a BART platform. [if the player is hearing]The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. [end if][if the player is sighted]On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset.[end if]" 
+The description of Mission 24th St is "You are underground, on a BART platform. [if the player is not deaf]The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. [end if][if the player is not blind]On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset.[end if]" 
 
-Mission 24th Concourse is up from Mission 24th St. Mission 24th Concourse  is a concourse. "[if the player is sighted]Enormous concrete buttresses soar overhead, like a futuristic 70s airplane hangar.[end if] [if the player is hearing]Music echoes hauntingly from a monumental stairwell rising up to the plaza, combining with the wild harmonics of trains below.[end if] [if the player is sighted]Abstract cement shapes are sculpted in relief along the oddly corrugated sides of the stairwell, open to the sky.[end if]" 
+Mission 24th Concourse is up from Mission 24th St. Mission 24th Concourse is a concourse. "[if the player is not blind]Enormous concrete buttresses soar overhead, like a futuristic 70s airplane hangar.[end if] [if the player is not deaf]Music echoes hauntingly from a monumental stairwell rising up to the plaza, combining with the wild harmonics of trains below.[end if] [if the player is not blind]Abstract cement shapes are sculpted in relief along the oddly corrugated sides of the stairwell, open to the sky.[end if][if the player is blind and the player is deaf]A big open space, full of people walking around, mostly underground but you feel the air and light from an enormous, deep, open stairwell to the plaza above.[end if]" 
 
-Calle 24 Plaza is up from Mission 24th Concourse.  "All around you are little shops and restaurants, people talking, buses pulling up to the stops on Mission and on 24th Street, music booming from cars going by. [if the player is sighted]Palm trees sway high overhead. Thick metal rails surround the enormous open stairwell that goes down to the station concourse. A huge mural of a train runs across the wall of the taqueria bordering the plaza to the north.[end if]"
+The abstract reliefs are scenery in Mission 24th Concourse. "Big blocky shapes, rectangles, circles, half circles, are scuplted in relief along the rough sides of the enormous open stairwell to the plaza. They're reminiscent of brutalist skyscrapers, stoplights, a pleasing jumble of forms decorating the space. You feel more aware of the secret life of buildings. Their bones, their roots. The way they take up space against the sky.[if the player is carrying an ART card]The secretive shapes beckon like doors. You itch to climb them. [end if]"
+
+Understand "shapes", "abstract", "cement", "relief", "concrete", "sculptures", and "stairwell" as the abstract reliefs. 
+
+
+
+Calle 24 Plaza is up from Mission 24th Concourse.  "All around you are little shops and restaurants, people talking, buses pulling up to the stops on Mission and on 24th Street, music booming from cars going by. [if the player is not blind]Palm trees sway high overhead. Thick metal rails surround the enormous open stairwell that goes down to the station concourse. A huge mural of a train runs across the wall of the taqueria bordering the plaza to the north.[end if]"
 
 The train mural is scenery in Calle 24 Plaza. "A mural of a gleaming BART train carried on the backs of determined workers amid a geometric cityscape."  
 
 
+
 A tamale lady is a person. In Calle 24 Plaza is a tamale lady. The description of a tamale lady is "A short, smiling woman in jeans and an army jacket stands next to a cooler on wheels." 
 Every turn when the player can see a tamale lady and the turn count is even: 
-    say "A tamale lady [one of]watches the people passing by[or]says 'Tamales!'[or]shifts her weight from one foot to the other[or]says 'Tamales de pollo!'[or]smiles at you[or]says 'Tamales de carne!'[as decreasingly likely outcomes]"
+    say "A tamale lady [one of]watches the people passing by.[or]smiles at you.[or]shifts her weight from one foot to the other. [as decreasingly likely outcomes][if player is not deaf][one of]says 'Tamales de pollo!'[or]says 'Tamales!'[or]says 'Tamales de carne!'[as decreasingly likely outcomes][end if]"
 
-A cooler on wheels is an openable container. It is in Calle 24 Plaza. The description is "A red and white cooler with a hinged lid." The sound of the cooler is "As the tamale seller handles the cooler, opening and closing the lid, you can hear that it's made of hollow plastic."
+A cooler on wheels is an openable container. It is in Calle 24 Plaza. It is scenery. The description is "A red and white cooler with a hinged lid." The sound of the cooler is "As the tamale seller handles the cooler, opening and closing the lid, you can hear that it's made of hollow plastic."
 
 The tamal is an edible thing in the cooler on wheels. The price of the tamal is $3.00. The description is "A delicious-smelling tamal wrapped in paper and foil." 
 
 Instead of taking the cooler on wheels:
 	say "But that belongs to the nice tamale lady!";
 
-A yelling preacher is a person. In Calle 24 Plaza is a yelling preacher. The description of the preacher is "A short man yells fervently in Spanish into a microphone. You recognize some things from the Bible, though it's hard to understand him from the low quality amp at his feet."
+A yelling preacher is a person. In Calle 24 Plaza is a yelling preacher. The description of the preacher is "A short man yells fervently in Spanish into a microphone. You recognize some things from the Bible[if player is not deaf], though it's hard to understand him from the low quality amp at his feet[end if]".
 
-Calle 24 Northwest Corner is west of Calle 24 Plaza. "Just outside the Chinese Food and Donuts shop, this lively streetcorner has buses pulling up along 24th Street, many cars going by, people crossing the street and just standing around, music blaring from passing cars and from the shops all around. Along Mission, high overhead, washingtonia palms stretch into the sky. To the east, there's another BART plaza with an elevator."
+Calle 24 Northwest Corner is west of Calle 24 Plaza. "Just outside the Chinese Food and Donuts shop, this lively streetcorner has buses pulling up along 24th Street, many cars going by, people crossing the street or standing around[if player is not deaf], music blaring from passing cars and from the shops[end if]. [if player is not blind]Along Mission, high overhead, washingtonia palms stretch into the sky.[end if] To the east, there's another plaza."
 
 
 Circle Plaza is south of Calle 24 Northwest Corner.
 The description of Circle Plaza is "
-[if player is sighted]You head into the crowds of this busy space built around a circular wall. People are selling stuff from tables and little booths. Across 24th street to the north, there's a donut shop. You notice a mural that says something about coffee.[end if]
-[if player is hearing]Many kinds of music are playing here. Norteño blasts its cheerful accordions from a booth, saxophone notes float up from the huge, round stairwell which goes down to the station, songs blare from passing cars.[end if]
+[if player is not blind]You head into the crowds of this busy space built around a circular wall. People are selling stuff from tables and little booths. Across 24th street to the north, there's a donut shop. You notice a mural that says something about coffee.[end if]
+[if player is not deaf]Many kinds of music are playing here. Norteño blasts its cheerful accordions from a booth, saxophone notes float up from the huge, round stairwell which goes down to the station, songs blare from passing cars.[end if]
 [if player is not hearing or player is not sighted]This is a typical, busy, open space on Mission Street.[end if]"
 
 The gadget table is scenery in Circle Plaza. "Phone cases, cables, chargers, and headphones are laid out on this cheap folding table."
@@ -656,19 +714,20 @@ The jewelry table is scenery in Circle Plaza. "You are overwhelmed by the array 
 The textiles booth is scenery in Circle Plaza. "Hanging from the racks set up around the booth are embroidered huipil blouses, woolen ponchos from Peru, Guatemalan woven pants, striped wool shoulder bags, and colorful scarves."
 The souvenirs booth is scenery in Circle Plaza. "A rack to the side of this tiny booth is festooned with Mexican flags, belt buckles with the eagle and serpent, 49-ers hats and tshirts, and pink woven plastic shopping bags printed with Frida Kahlo's face."
 
+The stairwell is scenery in Circle Plaza. Understand "wall" as the stairwell. "Burnt red bricks smoothly curve up around the edges of the wall around the big stairwell. There are a few people sitting with their backs against the curve. A couple of medium-sized trees grow out of a planter in a space at the top of the wall. As you study the unusual structure you notice metal gratings set into the plaza, one long strip near the edge where the plaza turns to sidewalk, and gratings around small, spindly saplings. The metal gratings have a circular pattern."
 
-The stairwell is scenery in Circle Plaza. Understand "wall" as the stairwell. "Burnt red bricks smoothly curve up around the edges of the wall around the big stairwell. There are a few people sitting with their backs against it. A couple of medium-sized trees grow out of a planter in a space at the top of the wall. As you study the unusual structure you notice metal gratings set into the plaza, one long strip near the edge where the plaza turns to sidewalk, and gratings around small, spindly saplings. The metal gratings have a circular pattern."
+The metal gratings are scenery in Circle Plaza. "Overlapping concentric circles make an unusual and beautiful pattern in the dark metal of these iron gratings. You think of raindrops, clocks, gears interlocking."
 
-The metal gratings are scenery in Circle Plaza. "Overlapping concentric circles make an unusual and beautiful pattern in the dark metal of these iron gratings."
+The trees are scenery in Circle Plaza. 
 
-The coffee mural is scenery in Circle Plaza. "A huge mural in bright colors splashes across the building to the west of the plaza. Two wide eyed, child-like cartoon characters in Aztec regalia look out from the mural. Above them is a cartoon street sign that reads COFFEE and across it, MISSION. Below the mural is a sloping area and a few steps that make a sort of stage." 
+The coffee mural is scenery in Circle Plaza. "A huge mural in bright colors splashes across the building to the west of the plaza. Two wide eyed, child-like cartoon characters in Aztec regalia look out from the mural. Above them is a cartoon street sign that reads COFFEE and across it, MISSION. Below the mural is a sloping area and a few steps that make a sort of stage. [if the player is blind]A young guy next to you suddenly speaks up. 'Oh, you're curious about the mural? I know some guys who worked on that with Mel Waters, he's got stuff all over the Mission. The cafe people, Coffee and Mission, they like it, and the characters, they're like, I dunno, chibi Aztec king and queen or something. You ever see Danza Azteca? Xitlalli, they come to the pow-wows. Big feathers, these sort of shell things on their ankles.[end if]" 
 
 The stage is scenery in Circle Plaza. 
 
-A flower seller is a person. In Circle Plaza is a flower seller. The description of a flower seller is "A short, smiling woman in a baseball hat and a red checked scarf pushes  her wheely cart full of roses and carnations. Her jacket has a ladybug pin. [if player is blind]You can hear a short woman just next to you, fussing over a metal cart.[end if]".
+A flower seller is a person. In Circle Plaza is a flower seller. The description of a flower seller is "[if the player is not blind]A short, smiling woman in a baseball hat and a red checked scarf pushes her wheely cart full of roses and carnations. Her jacket has a ladybug pin. [end if][if player is blind]There's a short woman just next to you, fussing over a metal cart.[end if]".
 
-Every turn when the turn count is even and the player can see a flower seller: 
-    say "A flower seller [one of]beams at you with a huge happy grin[or]calles out, 'Flores!'[or]offers you a little bunch of carnations tied with string[or]shares a coffee with a friend[or]fusses over her bunches of flowers, arranging them nicely[or]watches the people passing by[or]smiles as she stops to talk with a friend[as decreasingly likely outcomes]."
+Every turn when the turn count is even and the player can see a flower seller and the player is not blind: 
+    say "A flower seller [one of]beams at you with a big happy grin[or]calls out, 'Flores!'[or]offers you a little bunch of carnations tied with string[or]shares a coffee with a friend[or]fusses over her bunches of flowers, arranging them nicely[or]watches the people passing by[or]smiles as she stops to talk with a friend[as decreasingly likely outcomes]."
 
 A shopping basket is an openable container. It is scenery. It is in Circle Plaza. The description of the shopping basket is "A metal folding shopping basket on wheels. "
 
@@ -687,12 +746,12 @@ Every turn when the player can see a raccoon and the turn count is even:
 
 Brutalist Plaza is a room. "You pick your way through paths around enormous, rough-hewn blocks of concrete and stone. They tower overhead like the tufa mounds of Mono Lake or a cityscape in a dream."
 
-Times Circle is southwest of Brutalist Plaza. "You are standing in a dreamlike plaza, an enormous circle split into sections set into the stones underfoot. Each section has a hollowed out shape and shimmering glyphs. You wish you could read them." 
+Times Circle is southwest of Brutalist Plaza. "You are standing in a plaza, a dream echo of the circular plaza of the world you know best. Underfoot, an enormous circle split into sections is set into the stones." 
 
-The calendar is a fixed in place container in Times Circle. "An enormous Central American calendar circle. You've heard of them before -- the most famous is the Aztec sun stone of Mexico City. Around the edges of the innermost or first ring are 20 divisions, each containing a different hollowed out space in elaborate shapes. The first ring is oddly compelling." 
+The calendar is a fixed in place container in Times Circle. "An enormous Central American calendar circle. You've heard of them before -- the most famous is the Aztec sun stone of Mexico City. Around the edges of the innermost or first ring are 20 divisions, each containing a different hollowed out space in elaborate shapes. The first ring is oddly compelling. You wish you could read the glyphs." 
 
-Understand "calendar" and "circle" as the calendar.
-Understand "ring" or "divisions" or "shapes" as the first ring.  
+Understand "calendar" and "circle" and "stones" and "ground" as the calendar.
+Understand "ring" or "divisions" or "shapes"  or "glyphs" as the first ring.  
 
 The first ring is scenery in Times Circle. "The hollow glyphs in the first circle draw your attention from the top, around the ring counterclockwise. Dreamlike, you understand what they represent. [paragraph break]
 Cipactli, the Caiman.[line break]
@@ -968,22 +1027,31 @@ A magic marker is an object. The description of a magic marker is "A magic marke
 Writing on is an action applying to one visible thing. Understand "write on [something]" as writing on. 
 
 Check writing on:
-	if the noun is not a card, say "You decide not to scribble on that." instead.
+	unless the noun is a card or the noun is a printer, say "You decide not to scribble on that." instead.
 
 Carry out writing on:
-	now the noun is nowhere;
-	if a random chance of 1 in 4 succeeds:
-		now the player is carrying a BART card;
-	otherwise:
+	if the noun is a card:
+		now the noun is nowhere;
 		if a random chance of 1 in 2 succeeds:
-			say "You scribble on the card. It fizzes and tingles.";
-			now the player is carrying an ART card;
+			now the player is carrying a BART card;
 		otherwise:
-			say "You feel very strange.";
-			now the player is carrying a BAT card;
-			now the description of the player is "You are a huge bat, clutching your possessions in your claws as you flap around in the air.";
-			now the player is flying;
-		
+			if a random chance of 1 in 2 succeeds:
+				say "You scribble on the card. It fizzes and tingles.";
+				now the player is carrying an ART card;
+			otherwise:
+				say "You feel very strange.";
+				now the player is carrying a BAT card;
+				now the description of the player is "You are a huge bat, clutching your possessions in your claws as you flap around in the air.";
+				now the player is flying;
+	if the noun is a 3-D printer:
+		say "Everything contracts to a tiny point, then expands.";
+		now the noun is nowhere;
+		now a 4-D printer is in the location of the player;
+	if the noun is a 4-D printer:
+		say "Time seems to stop, then start again.";
+		now the noun is nowhere;
+		now the 3-D printer is in the location of the player;
+
 
 
 
