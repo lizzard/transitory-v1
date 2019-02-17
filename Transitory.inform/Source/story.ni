@@ -489,7 +489,10 @@ Richmond is a north endpoint.
 Millbrae is a south endpoint.
 
 Liftlandia is a region.  [everywhere an elevator might appear]
-Mission 24th Concourse and Calle 24 Plaza are in Liftlandia.
+Mission 24th Concourse is in Liftlandia.
+
+Street Level is a region in Liftlandia. 
+Calle 24 Plaza is in Street Level. 
 
 Platforms is a region in Liftlandia.  [everywhere that is a train stop]
 
@@ -609,7 +612,7 @@ Chapter 34 - Mission 16th St
 
 The description of Mission 16th St is "You are underground, on a BART platform. The haunting sound of train wheels on the rails echoes all around. The platform floor is covered with long brick-red tiles, while the median walls are tiled in light and dark blue, green, gold, and brown tiles like the colors of a tropical beach on a sunny day."
 
-Mission 16th Concourse is up from Mission 16th St. Mission 16th Concourse is a concourse. "Low but nicely curved arches made of smooth concrete form the ceiling of this long, busy station. Music echoes from the stairwells. The acoustics are great!"
+Mission 16th Concourse is up from Mission 16th St. Mission 16th is a concourse. "Low but nicely curved arches made of smooth concrete form the ceiling of this long, busy station. Music echoes from the stairwells. The acoustics are great!"
 
 																								
 
@@ -909,6 +912,17 @@ Instead of going up when the player is not in the elevator and the player is wea
 Instead of going down when the player is not in the elevator and the player is wearing a wheelchair:
 	say "It would be a short and brutal trip for you and your wheelchair. Best not." 
 
+Check going to Street Level:
+	if the player is in a concourse:
+		if the player is carrying a BART card:
+			if the BART card is switched on:
+				say "You should tag off from the ticket reader in the concourse first! Otherwise you have to pay the maximum fare." instead;
+				stop the action;
+		otherwise:
+			say "You'll need to find your BART card so you can tag off." instead;
+			stop the action.
+		
+
 
 Section 6 - Ticket reader
 
@@ -923,12 +937,7 @@ After going to a concourse:
 	now a ticket reader is in the location of the player;
 	continue the action.
 	
-[the ticket]
-[Instead of switching off the BART card when the BART card is switched off, silently try switching on the BART card.
 
-Instead of switching on the BART card when the BART card is switched on, try switching off the BART card.]
-
-	
 Instead of switching on a card when the location of the player is not a concourse:
 	say "You need to do that by swiping it on a ticket reader.";
 Instead of switching off a card when the location of the player is not a concourse:
@@ -936,18 +945,18 @@ Instead of switching off a card when the location of the player is not a concour
 	
 Understand "swipe [something switched off]" as switching on.
 Understand "swipe [something switched on]" as switching off. 
-[Understand "swipe [something]" as switching on.]
+
 
 
 A writing utensil is a kind of thing. A magic marker is a writing utensil.
 A card is a kind of device.  
 A BART card, an ART card, a BAT card, a BAR card, a CART card, and a WART card are cards.
 
-The description of a BART card is "A blue and white card with a magnetic stripe. It says 'BART' in big black letters that look oddly like scribbly handwriting. "
+The description of a BART card is "A [if player is not blind]blue and white card[end if] with a magnetic stripe. It says 'BART' in big [if player is not blind] black[end if] letters that seem oddly like scribbly handwriting."
 
-The description of an ART card is "A blue and white card with a magnetic stripe. It says 'ART' in big black letters. The letters blur and seem to move."
+The description of an ART card is "A [if player is not blind]blue and white card[end if] with a magnetic stripe. It says 'ART' in big [if player is not blind] black[end if] letters that seem oddly like scribbly handwriting. The letters blur and seem to move."
 
-The description of a BAT card is "A blue and white card with a magnetic stripe. It says 'BAT' in big black letters. The letters blur and seem to move."
+The description of a BAT card is "A [if player is not blind]blue and white card[end if] with a magnetic stripe. It says 'BAT' in big [if player is not blind] black[end if] letters that seem oddly like scribbly handwriting. The letters blur and seem to move."
 
 The player is carrying a magic marker and a BART card.
 

@@ -16,4 +16,3 @@ Note: This also uses a modified version of Touchy Feely by Quantum Games, tempor
 Download from: 
 http://inform7.com/extensions/Emily%20Short/Transit%20System/index.html
 http://inform7.com/extensions/Eric%20Eve/Exit%20Lister/index.html
-Rideable Vehicles by Graham Nelson should already be included in Inform7 but if it isn't you can download and install it.
