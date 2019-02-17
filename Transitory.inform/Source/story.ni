@@ -459,6 +459,14 @@ Section 1 - Regions
 A room can be a platform.
 A room can be a concourse.
 
+A room can be a north endpoint.
+A room can be a south endpoint. 
+A room can be an east endpoint.
+A room can be a west endpoint.
+
+Richmond is a north endpoint.
+Millbrae is a south endpoint.
+
 Liftlandia is a region.  [everywhere an elevator might appear]
 Mission 24th Concourse and Calle 24 Plaza are in Liftlandia.
 
@@ -655,7 +663,10 @@ Brutalist Plaza is a room. "You pick your way through paths around enormous, rou
 
 Times Circle is southwest of Brutalist Plaza. "You are standing in a dreamlike plaza, an enormous circle split into sections set into the stones underfoot. Each section has a hollowed out shape and shimmering glyphs. You wish you could read them." 
 
-The calendar is a fixed in place container in Times Circle. "An enormous Central American calendar circle. You've heard of them before -- the most famous is the Aztec sun stone of Mexico City. Around the edges of the innermost or first ring are 20 divisions, each containing a different hollowed out space in elaborate shapes." 
+The calendar is a fixed in place container in Times Circle. "An enormous Central American calendar circle. You've heard of them before -- the most famous is the Aztec sun stone of Mexico City. Around the edges of the innermost or first ring are 20 divisions, each containing a different hollowed out space in elaborate shapes. The first ring is oddly compelling." 
+
+Understand "calendar" and "circle" as the calendar.
+Understand "ring" or "divisions" or "shapes" as the first ring.  
 
 The first ring is scenery in Times Circle. "The hollow glyphs in the first circle draw your attention from the top, around the ring counterclockwise. Dreamlike, you understand what they represent. [paragraph break]
 Cipactli, the Caiman.[line break]
@@ -681,9 +692,6 @@ Xōchitl, Flower."
 
 
 
-Understand "calendar" and "circle" as the calendar.
-
-
 After switching on the ART card:
 	now Brutalist Plaza is mapped up of Mission 24th Concourse;
 	now Mission 24th Concourse is mapped down of Brutalist Plaza;
@@ -695,6 +703,7 @@ After switching off the ART card:
 After writing on the ART card:
 	now Calle 24 Plaza is mapped up of Mission 24th Concourse.  
 	
+
 
 Chapter 36 - Montgomery
 
@@ -948,7 +957,13 @@ Section 7 - Train rules
 Time-till-yellow is a number that varies.
 Yellow-relative-position is a number that varies.
 
+
+
 Every turn: 
+	if the location of the Yellow Line Train is Antioch:
+		now the Yellow Line Train is southbound;
+	if the location of the Yellow Line Train is Millbrae:
+		now the Yellow Line Train is northbound;
 	if the location of the player is in SFO Extension or the location of the player is in Westside or the location of the player is in Oakland Central or the location of the player is in Yellow Line:	
 		let yellow-now be the location of the Yellow Line Train;
 		let here-relative-position be the relative position corresponding to the destination of location in the Table of Yellow Line Schedule;
@@ -963,12 +978,17 @@ Every turn:
 			let yellow-position-difference be the absolute value of here-relative-position - yellow-relative-position;
 			now the time-till-yellow is yellow-position-difference * 2 to the nearest whole number;
 		Unless time-till-yellow is 0:
-			say "Next Yellow Line train in [time-till-yellow] minutes."
+			say "Next Yellow Line train to [if the Yellow Line Train is southbound]Millbrae[otherwise]Antioch[end if] in [time-till-yellow] minutes."
 
 Time-till-red is a number that varies.
 red-relative-position is a number that varies.
 
+
 Every turn: 
+	if the location of the Red Line Train is Richmond:
+		now the Red Line Train is southbound;
+	if the location of the Red Line Train is Millbrae:
+		now the Red Line Train is northbound;
 	if the location of the player is in SFO Extension or the location of the player is in Westside or the location of the player is in Oakland Central or the location of the player is in North Bay:	
 		let red-now be the location of the Red Line Train;
 		let here-relative-position be the relative position corresponding to the destination of location in the Table of Red Line Schedule;
@@ -983,7 +1003,8 @@ Every turn:
 			let red-position-difference be the absolute value of here-relative-position - red-relative-position;
 			now the time-till-red is red-position-difference * 2 to the nearest whole number;
 		Unless time-till-red is 0:
-			say "Next Red Line train in [time-till-red] minutes."
+			say "Next Red Line train to [if the Red Line Train is southbound]Millbrae[otherwise]Richmond[end if] in [time-till-red] minutes."
+
 	
 Time-till-green is a number that varies.
 green-relative-position is a number that varies.
@@ -1049,7 +1070,10 @@ Every turn:
 
 A train-car can be northbound or southbound. 
 
-The Red Line train is a relatively-scheduled train-car. The Red Line Train is in El Cerrito del Norte. The waiting duration of the Red Line train is 1 minute. The t-schedule of the Red Line train is the Table of Red Line Schedule.  The description is "A 9 car train."
+The Red Line train is a relatively-scheduled train-car. The Red Line Train is in El Cerrito del Norte. The waiting duration of the Red Line train is 1 minute. The t-schedule of the Red Line train is the Table of Red Line Schedule.  The description is "A 9 car train." 
+
+[Every turn when a train-car is in a north endpoint:
+	now the train-car is southbound;]
 
 The Yellow Line train is a relatively-scheduled train-car. The Yellow Line Train is in Millbrae. The waiting duration of the Yellow Line train is 1 minute. The t-schedule of the Yellow Line train is the Table of Yellow Line Schedule. The description is "A 5 car train."
 
