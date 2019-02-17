@@ -414,16 +414,18 @@ Waiting more is an action applying to one number.
 
 Understand "wait [a time period]" or "wait for [a time period]" or "wait for a/an [a time period]" or "wait a/an [a time period]" as waiting more.
 
+A person can be alert or distracted. A person is usually alert.
 
 Carry out waiting more: 
+	now the player is distracted;
 	if the minutes part of the time understood is odd:
 		decrease the time understood by one minute; [make it even to avoid train limbo]
-	say "You think of a million things, and nothing.";
+	say "[line break]You think of a million things, and nothing.";
 	let the target time be the time of day plus the time understood; 
 	decrease the target time by one minute; 
 	while the time of day is not the target time: 
 		follow the turn sequence rules;
-
+	now the player is alert;
 	
 Report waiting more: 
 	say "You snap out of your reverie."
@@ -835,8 +837,9 @@ The Elevator is a room. The description of the Elevator is "A grimy elevator tha
 [this is a hack because putting the elevator inside another room doesn't work correctly with exiting]
 Every turn when the player is in Liftlandia:
 	now the elevator is mapped north of the location of the player;
-	say "There is an elevator in the north wall.";
-	continue the action.
+	unless the player is distracted:
+		say "There is an elevator in the north wall.";
+		continue the action.
 
 
 A panel in the wall is in the elevator. It is scenery. The description is "There are three buttons on the wall: S, C, and P."
@@ -996,8 +999,8 @@ Every turn:
 			now yellow-relative-position is the relative position corresponding to the destination of yellow-now in the Table of Yellow Line Schedule;
 			let yellow-position-difference be the absolute value of here-relative-position - yellow-relative-position;
 			now the time-till-yellow is yellow-position-difference * 2 to the nearest whole number;
-		Unless time-till-yellow is 0:
-			say "Next Yellow Line train to [if the Yellow Line Train is southbound]Millbrae[otherwise]Antioch[end if] in [time-till-yellow] minutes."
+		Unless time-till-yellow is 0 or the player is distracted:
+			say "Next Yellow Line train to [if the Yellow Line Train is southbound]Millbrae[otherwise]Antioch[end if] in [time-till-yellow] minutes. [run paragraph on][line break]"
 
 Time-till-red is a number that varies.
 red-relative-position is a number that varies.
@@ -1021,8 +1024,8 @@ Every turn:
 			now red-relative-position is the relative position corresponding to the destination of red-now in the Table of Red Line Schedule;
 			let red-position-difference be the absolute value of here-relative-position - red-relative-position;
 			now the time-till-red is red-position-difference * 2 to the nearest whole number;
-		Unless time-till-red is 0:
-			say "Next Red Line train to [if the Red Line Train is southbound]Millbrae[otherwise]Richmond[end if] in [time-till-red] minutes."
+		Unless time-till-red is 0 or the player is distracted:
+			say "Next Red Line train to [if the Red Line Train is southbound]Millbrae[otherwise]Richmond[end if] in [time-till-red] minutes. [run paragraph on][line break]"
 
 	
 Time-till-green is a number that varies.
@@ -1042,8 +1045,8 @@ Every turn:
 			now green-relative-position is the relative position corresponding to the destination of green-now in the Table of Green Line Schedule;
 			let green-position-difference be the absolute value of here-relative-position - green-relative-position;
 			now the time-till-green is green-position-difference * 2 to the nearest whole number;
-		Unless time-till-green is 0:
-			say "Next Green Line train in [time-till-green] minutes."
+		Unless time-till-green is 0 or the player is distracted:
+			say "Next Green Line train in [time-till-green] minutes. [run paragraph on][line break]"
 			
 Time-till-blue is a number that varies.
 blue-relative-position is a number that varies.
@@ -1062,7 +1065,7 @@ Every turn:
 			now blue-relative-position is the relative position corresponding to the destination of blue-now in the Table of Blue Line Schedule;
 			let blue-position-difference be the absolute value of here-relative-position - blue-relative-position;
 			now the time-till-blue is blue-position-difference * 2 to the nearest whole number;
-		Unless time-till-blue is 0:
+		Unless time-till-blue is 0 or the player is distracted:
 			say "Next Blue Line train in [time-till-blue] minutes."
 			
 Time-till-orange is a number that varies.
@@ -1082,8 +1085,8 @@ Every turn:
 			now orange-relative-position is the relative position corresponding to the destination of orange-now in the Table of Orange Line Schedule;
 			let orange-position-difference be the absolute value of here-relative-position - orange-relative-position;
 			now the time-till-orange is orange-position-difference * 2 to the nearest whole number;
-		Unless time-till-orange is 0:
-			say "Next Orange Line train in [time-till-orange] minutes."
+		Unless time-till-orange is 0 or the player is distracted:
+			say "Next Orange Line train in [time-till-orange] minutes. [run paragraph on][line break]"
 			
 [train rules]
 
@@ -1107,6 +1110,22 @@ Check entering the train-car:
 	otherwise:
 		say "You'll need a BART card to ride the train." instead;
 		stop the action.
+		
+Rule for describing departure when the player is distracted:
+	do nothing;
+
+Rule for describing arrival when the player is distracted:
+	do nothing;
+	
+Rule for describing opening when the player is distracted:
+	do nothing;
+	
+Rule for describing closure when the player is distracted:
+	do nothing;
+	
+Rule for mentioning final stop when the player is distracted:
+	do nothing;
+
 	
 [train schedules]
 
