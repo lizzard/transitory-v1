@@ -302,7 +302,7 @@ Instead of listening when the player is Deaf:
 
 Part 3 - Mobility
 
-Ambulation is a kind of value. The ambulations are wheeling, walking, limping, and hopping. Understand “wheeled” as wheeling. Understand “walking” as walking. Understand "limping" as limping. Understand "hopping" as hopping.
+Ambulation is a kind of value. The ambulations are wheeling, walking, limping, flying, and hopping. Understand “wheeled” as wheeling. Understand “walking” as walking. Understand "limping" as limping. Understand "hopping" as hopping.
  
 A person has an ambulation. The ambulation of a person is usually walking. 
 The ambulation of the player is walking.
@@ -325,6 +325,8 @@ The description of a powerchair is "It's shiny black, it's powerful, and it's fr
 
 
 Before going to any room:
+	if the ambulation of the player is flying:
+		say "You flap your wings vigorously.";
 	if the ambulation of the player is wheeling:
 		unless the player is wearing a wheelchair:
 			say "You have some trouble getting around.";
@@ -969,15 +971,19 @@ Check writing on:
 	if the noun is not a card, say "You decide not to scribble on that." instead.
 
 Carry out writing on:
-	say "You scribble on the card. It fizzes and tingles.";
-	if the player is carrying the BART card:
-		now the BART card is nowhere;
-		now the player is carrying an ART card;
+	now the noun is nowhere;
+	if a random chance of 1 in 4 succeeds:
+		now the player is carrying a BART card;
 	otherwise:
-		if the player is carrying the ART card:
-			now the ART card is nowhere;
-			now the player is carrying a BART card.
-
+		if a random chance of 1 in 2 succeeds:
+			say "You scribble on the card. It fizzes and tingles.";
+			now the player is carrying an ART card;
+		otherwise:
+			say "You feel very strange.";
+			now the player is carrying a BAT card;
+			now the description of the player is "You are a huge bat, clutching your possessions in your claws as you flap around in the air.";
+			now the player is flying;
+		
 
 
 
