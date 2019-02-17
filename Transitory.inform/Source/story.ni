@@ -410,7 +410,26 @@ Understand "tap" or "explore" as studying the vicinity.
 
 
 
+Waiting more is an action applying to one number.
+
+Understand "wait [a time period]" or "wait for [a time period]" or "wait for a/an [a time period]" or "wait a/an [a time period]" as waiting more.
+
+
+Carry out waiting more: 
+	if the minutes part of the time understood is odd:
+		decrease the time understood by one minute; [make it even to avoid train limbo]
+	say "You think of a million things, and nothing.";
+	let the target time be the time of day plus the time understood; 
+	decrease the target time by one minute; 
+	while the time of day is not the target time: 
+		follow the turn sequence rules;
+
 	
+Report waiting more: 
+	say "You snap out of your reverie."
+
+Check waiting more: 
+    if the time understood is greater than 10 minutes, say "That seems so boring. Maybe looking around or exploring would be better." instead.	
 
 Section 8 - Money stuff
 
@@ -1070,18 +1089,15 @@ Every turn:
 
 A train-car can be northbound or southbound. 
 
-The Red Line train is a relatively-scheduled train-car. The Red Line Train is in El Cerrito del Norte. The waiting duration of the Red Line train is 1 minute. The t-schedule of the Red Line train is the Table of Red Line Schedule.  The description is "A 9 car train." 
+The Red Line train is a relatively-scheduled train-car. The Red Line Train is in Millbrae. The t-schedule of the Red Line train is the Table of Red Line Schedule.  The waiting duration of the Red Line train is 0 minutes. The description is "A 9 car train." 
 
-[Every turn when a train-car is in a north endpoint:
-	now the train-car is southbound;]
+The Yellow Line train is a relatively-scheduled train-car. The Yellow Line Train is in Colma.  The t-schedule of the Yellow Line train is the Table of Yellow Line Schedule. The waiting duration of the Yellow Line train is 0 minutes. The description is "A 5 car train."
 
-The Yellow Line train is a relatively-scheduled train-car. The Yellow Line Train is in Millbrae. The waiting duration of the Yellow Line train is 1 minute. The t-schedule of the Yellow Line train is the Table of Yellow Line Schedule. The description is "A 5 car train."
+The Blue Line train is a relatively-scheduled train-car. The Blue Line Train is in Daly City. The waiting duration of the Blue Line train is 0 minutes. The t-schedule of the Blue Line train is the Table of Blue Line Schedule. The description is "Some train cars, you aren't sure how many."
 
-The Blue Line train is a relatively-scheduled train-car. The Blue Line Train is in Daly City. The waiting duration of the Blue Line train is 1 minute. The t-schedule of the Blue Line train is the Table of Blue Line Schedule. The description is "Some train cars, you aren't sure how many."
+The Green Line train is a relatively-scheduled train-car. The Green Line Train is in Fremont. The waiting duration of the Green Line train is 0 minutes. The t-schedule of the Green Line train is the Table of Green Line Schedule. The description is "A 5 car train."
 
-The Green Line train is a relatively-scheduled train-car. The Green Line Train is in Daly City. The waiting duration of the Green Line train is 1 minute. The t-schedule of the Green Line train is the Table of Green Line Schedule. The description is "A 5 car train."
-
-The Orange Line train is a relatively-scheduled train-car. The Orange Line Train is in Richmond. The waiting duration of the Orange Line train is 1 minute. The t-schedule of the Orange Line train is the Table of Orange Line Schedule. The description is "A 10-car train."
+The Orange Line train is a relatively-scheduled train-car. The Orange Line Train is in Richmond. The waiting duration of the Orange Line train is 0 minutes. The t-schedule of the Orange Line train is the Table of Orange Line Schedule. The description is "A 10-car train."
 
 Check entering the train-car:
 	if the player is carrying a BART card:
@@ -1115,7 +1131,9 @@ transit time	destination	relative position
 1 minute	Glen Park	16
 1 minute	Balboa Park	17
 1 minute	Daly City	18
-1 minute	Millbrae	19
+1 minute	Colma	19
+1 minute	Millbrae	20
+1 minute	Colma	19
 1 minute	Daly City	18
 1 minute	Balboa Park	17
 1 minute	Glen Park	16
@@ -1137,50 +1155,59 @@ transit time	destination	relative position
 
 Table of Yellow Line Schedule
 transit time	destination	relative position
-1 minute	Daly City	0
-1 minute	Balboa Park	1
-1 minute	Glen Park	2
-1 minute	Mission 24th St	3
-1 minute	Mission 16th St	4
-1 minute	Civic Center	5
-1 minute	Powell	6
-1 minute	Montgomery	7
-1 minute	Embarcadero	8
-1 minute	West Oakland	9
-1 minute	Oakland 12th St	10
-1 minute	Oakland 19th St	11
-1 minute	MacArthur	12
-1 minute	Rockridge	13
-1 minute	Orinda	14
-1 minute	Lafayette	15
-1 minute	Walnut Creek	16
-1 minute	Pleasant Hill	17
-1 minute	Concord	18
-1 minute	North Concord/Martinez	19
-1 minute	Pittsburg/Bay Point	20
-1 minute	Pittsburg Center	21
-1 minute	Antioch	22
-1 minute	Pittsburg Center	21
-1 minute	Pittsburg/Bay Point	20
-1 minute	North Concord/Martinez	19
-1 minute	Concord	18
-1 minute	Pleasant Hill	17	
-1 minute	Walnut Creek	16
-1 minute	Lafayette	15
-1 minute	Orinda	14
-1 minute	Rockridge	13
-1 minute	MacArthur	12
-1 minute	Oakland 19th St	11
-1 minute	Oakland 12th St	10
-1 minute	West Oakland	9
-1 minute	Embarcadero	8
-1 minute	Montgomery	7
-1 minute	Powell	6
-1 minute	Civic Center	5
-1 minute	Mission 16th St	4
-1 minute	Mission 24th St	3
-1 minute	Glen Park	2
-1 minute	Balboa Park	1
+1 minute	Millbrae	0
+1 minute	San Bruno	1
+1 minute	South San Francisco	2
+1 minute	Colma	3
+1 minute	Daly City	4
+1 minute	Balboa Park	5
+1 minute	Glen Park	6
+1 minute	Mission 24th St	7
+1 minute	Mission 16th St	8
+1 minute	Civic Center	9
+1 minute	Powell	10
+1 minute	Montgomery	11
+1 minute	Embarcadero	12
+1 minute	West Oakland	13
+1 minute	Oakland 12th St	14
+1 minute	Oakland 19th St	15
+1 minute	MacArthur	16
+1 minute	Rockridge	17
+1 minute	Orinda	18
+1 minute	Lafayette	19
+1 minute	Walnut Creek	20
+1 minute	Pleasant Hill	21
+1 minute	Concord	22
+1 minute	North Concord/Martinez	23
+1 minute	Pittsburg/Bay Point	24
+1 minute	Pittsburg Center	25
+1 minute	Antioch	26
+1 minute	Pittsburg Center	25
+1 minute	Pittsburg/Bay Point	24
+1 minute	North Concord/Martinez	23
+1 minute	Concord	22
+1 minute	Pleasant Hill	21	
+1 minute	Walnut Creek	20
+1 minute	Lafayette	19
+1 minute	Orinda	18
+1 minute	Rockridge	17
+1 minute	MacArthur	16
+1 minute	Oakland 19th St	15
+1 minute	Oakland 12th St	14
+1 minute	West Oakland	13
+1 minute	Embarcadero	12
+1 minute	Montgomery	11
+1 minute	Powell	10
+1 minute	Civic Center	9
+1 minute	Mission 16th St	8
+1 minute	Mission 24th St	7
+1 minute	Glen Park	6
+1 minute	Balboa Park	5
+1 minute	Daly City	4
+1 minute	Colma	3
+1 minute	South San Francisco	2
+1 minute	San Bruno	1
+
 	
 
 Table of Blue Line Schedule
