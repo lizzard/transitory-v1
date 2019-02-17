@@ -851,7 +851,7 @@ Instead of pushing the S button:
 	if the former location is top of shaft:
 		say "You're already at street level.";
 	otherwise:
-		say "You push the S button. [if player is not blind]It lights ufp.[end if]";
+		say "You push the S button. [if player is not blind]It lights up.[end if]";
 		say "The elevator creaks and slowly goes up.";
 		say "Time passes. You smell a lot of things, wishing you couldn't.";
 		now the top of shaft is mapped south of the elevator;	
@@ -1083,7 +1083,15 @@ The Green Line train is a relatively-scheduled train-car. The Green Line Train i
 
 The Orange Line train is a relatively-scheduled train-car. The Orange Line Train is in Richmond. The waiting duration of the Orange Line train is 1 minute. The t-schedule of the Orange Line train is the Table of Orange Line Schedule. The description is "A 10-car train."
 
-
+Check entering the train-car:
+	if the player is carrying a BART card:
+		if the BART card is switched off:
+			say "You'll have to tag on from the ticket reader in the concourse first." instead;
+			stop the action;
+	otherwise:
+		say "You'll need a BART card to ride the train." instead;
+		stop the action.
+	
 [train schedules]
 
 Table of Red Line Schedule
