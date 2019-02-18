@@ -662,7 +662,7 @@ Instead of switching on the 3-D printer:
 Instead of switching on the 4-D printer:
 	say "The 4-D printer clatters and shakes.";
 	say "Little nozzles zip around in multiple directions all at once, going so fast you can barely tell what's happening.";
-	say "Spools of ethereal metals and light itself feed into the machine.";
+	say "Spools of ethereal metals and strands of light feed into the machine.";
 	say "An object appears gradually and then is ejected onto the workbench.";
 	now the 4-D timelock is on the workbench.
 
@@ -675,7 +675,7 @@ The description of Mission 24th St is "You are underground, on a BART platform. 
 
 Mission 24th Concourse is up from Mission 24th St. Mission 24th Concourse is a concourse. "[if the player is not blind]Enormous concrete buttresses soar overhead, like a futuristic 70s airplane hangar.[end if] [if the player is not deaf]Music echoes hauntingly from a monumental stairwell rising up to the plaza, combining with the wild harmonics of trains below.[end if] [if the player is not blind]Abstract cement shapes are sculpted in relief along the oddly corrugated sides of the stairwell, open to the sky.[end if][if the player is blind and the player is deaf]A big open space, full of people walking around, mostly underground but you feel the air and light from an enormous, deep, open stairwell to the plaza above.[end if]" 
 
-The abstract reliefs are scenery in Mission 24th Concourse. "Big blocky shapes, rectangles, circles, half circles, are scuplted in relief along the rough sides of the enormous open stairwell to the plaza. They're reminiscent of brutalist skyscrapers, stoplights, a pleasing jumble of forms decorating the space. You feel more aware of the secret life of buildings. Their bones, their roots. The way they take up space against the sky.[if the player is carrying an ART card]The secretive shapes beckon like doors. You itch to climb them. [end if]"
+The abstract reliefs are scenery in Mission 24th Concourse. "Big blocky shapes, rectangles, circles, half circles, are scuplted in relief along the rough sides of the enormous open stairwell to the plaza. They're reminiscent of brutalist skyscrapers, stoplights, a pleasing jumble of forms decorating the space. You feel more aware of the secret life of buildings. Their bones, their roots. The way they take up space against the sky."
 
 Understand "shapes", "abstract", "cement", "relief", "concrete", "sculptures", and "stairwell" as the abstract reliefs. 
 
@@ -1061,116 +1061,197 @@ Section 7 - Train rules
 
 Time-till-yellow is a number that varies.
 Yellow-relative-position is a number that varies.
-
+player-relative-position is a number that varies. 
+yellow-endpoint-relpos is a number that varies. 
+yellow-lookup is a room that varies.
+yellow-next-endpoint is a room that varies.
 
 
 Every turn: 
 	if the location of the Yellow Line Train is Antioch:
-		now the Yellow Line Train is southbound;
+		now the Yellow Line Train is southbound;	
+		now yellow-endpoint-relpos is 0;
 	if the location of the Yellow Line Train is Millbrae:
 		now the Yellow Line Train is northbound;
+		now yellow-endpoint-relpos is 26;
 	if the location of the player is in SFO Extension or the location of the player is in Westside or the location of the player is in Oakland Central or the location of the player is in Yellow Line:	
-		let yellow-now be the location of the Yellow Line Train;
-		let here-relative-position be the relative position corresponding to the destination of location in the Table of Yellow Line Schedule;
+		let player-relative-position be the relative position corresponding to the destination of location in the Table of yellow Line Schedule;
 		if the location of the Yellow Line Train is Transitional Location:
-			let yellow-next be next stop of Yellow Line Train;
-			now yellow-relative-position is the relative position corresponding to the destination of yellow-next in the Table of Yellow Line Schedule;
-			let yellow-position-difference be the absolute value of here-relative-position - yellow-relative-position;
-			now the time-till-yellow is yellow-position-difference * 2 to the nearest whole number;
-			now the time-till-yellow is time-till-yellow + 1;
+			now yellow-lookup is next stop of Yellow Line Train;
 		otherwise:
-			now yellow-relative-position is the relative position corresponding to the destination of yellow-now in the Table of Yellow Line Schedule;
-			let yellow-position-difference be the absolute value of here-relative-position - yellow-relative-position;
-			now the time-till-yellow is yellow-position-difference * 2 to the nearest whole number;
+			now yellow-lookup is the location of the Yellow Line Train;
+		let yellow-relative-position be the relative position corresponding to the destination of yellow-lookup in the Table of yellow Line Schedule;
+		if the Yellow Line Train is southbound:
+			if yellow-relative-position is less than player-relative-position:
+				now time-till-yellow is yellow-endpoint-relpos - yellow-relative-position + yellow-endpoint-relpos - player-relative-position;
+				now yellow-next-endpoint is Antioch;
+			otherwise:
+				now time-till-yellow is yellow-relative-position - player-relative-position;
+				now the yellow-next-endpoint is Millbrae;
+		if the Yellow Line Train is northbound:
+			If yellow-relative-position is greater than player-relative-position:
+				now time-till-yellow is yellow-relative-position - yellow-endpoint-relpos  + player-relative-position - yellow-endpoint-relpos ;
+				now yellow-next-endpoint is Millbrae;			
+			otherwise:
+				now time-till-yellow is 2 * (player-relative-position - yellow-relative-position);
+				now yellow-next-endpoint is Antioch;
 		Unless time-till-yellow is 0 or the player is distracted:
-			say "Next Yellow Line train to [if the Yellow Line Train is southbound]Millbrae[otherwise]Antioch[end if] in [time-till-yellow] minutes. [run paragraph on][line break]"
+			say "Next Yellow Line Train to [yellow-next-endpoint] in [time-till-yellow] minutes. [run paragraph on][line break][line break]"
 
 Time-till-red is a number that varies.
 red-relative-position is a number that varies.
+red-endpoint-relpos is a number that varies. 
+red-lookup is a room that varies.
+red-next-endpoint is a room that varies.
+
 
 
 Every turn: 
 	if the location of the Red Line Train is Richmond:
-		now the Red Line Train is southbound;
+		now the Red Line Train is southbound;	
+		now red-endpoint-relpos is 20;
 	if the location of the Red Line Train is Millbrae:
 		now the Red Line Train is northbound;
+		now red-endpoint-relpos is 0;
 	if the location of the player is in SFO Extension or the location of the player is in Westside or the location of the player is in Oakland Central or the location of the player is in North Bay:	
-		let red-now be the location of the Red Line Train;
-		let here-relative-position be the relative position corresponding to the destination of location in the Table of Red Line Schedule;
+		let player-relative-position be the relative position corresponding to the destination of location in the Table of Red Line Schedule;
 		if the location of the Red Line Train is Transitional Location:
-			let red-next be next stop of Red Line Train;
-			now red-relative-position is the relative position corresponding to the destination of red-next in the Table of Red Line Schedule;
-			let red-position-difference be the absolute value of here-relative-position - red-relative-position;
-			now the time-till-red is red-position-difference * 2 to the nearest whole number;
-			now the time-till-red is time-till-red + 1;
+			now red-lookup is next stop of Red Line Train;
 		otherwise:
-			now red-relative-position is the relative position corresponding to the destination of red-now in the Table of Red Line Schedule;
-			let red-position-difference be the absolute value of here-relative-position - red-relative-position;
-			now the time-till-red is red-position-difference * 2 to the nearest whole number;
+			now red-lookup is the location of the Red Line Train;
+		let red-relative-position be the relative position corresponding to the destination of red-lookup in the Table of Red Line Schedule;
+		if the Red Line Train is southbound:
+			if red-relative-position is greater than player-relative-position:
+				now time-till-red is red-endpoint-relpos - red-relative-position + red-endpoint-relpos - player-relative-position;
+				now red-next-endpoint is Richmond;
+			otherwise:
+				now time-till-red is player-relative-position - red-relative-position;
+				now the red-next-endpoint is Millbrae;
+		if the Red Line Train is northbound:
+			If red-relative-position is less than player-relative-position:
+				now time-till-red is red-relative-position - red-endpoint-relpos  + player-relative-position - red-endpoint-relpos ;
+				now red-next-endpoint is Millbrae;			
+			otherwise:
+				now time-till-red is 2 * (red-relative-position - player-relative-position);
+				now red-next-endpoint is Richmond;
 		Unless time-till-red is 0 or the player is distracted:
-			say "Next Red Line train to [if the Red Line Train is southbound]Millbrae[otherwise]Richmond[end if] in [time-till-red] minutes. [run paragraph on][line break]"
+			say "Next Red Line train to [red-next-endpoint] in [time-till-red] minutes. [run paragraph on][line break]"
 
 	
 Time-till-green is a number that varies.
 green-relative-position is a number that varies.
+green-endpoint-relpos is a number that varies. 
+green-lookup is a room that varies.
+green-next-endpoint is a room that varies.
+
 
 Every turn: 
+	if the location of the Green Line Train is Warm Springs/South Fremont:
+		now the Green Line Train is southbound;	
+		now green-endpoint-relpos is 0;
+	if the location of the Green Line Train is Daly City:
+		now the Green Line Train is northbound;
+		now green-endpoint-relpos is 19;
 	if the location of the player is in Westside or the location of the player is in Oakland South or the location of the player is in South Bay:	
-		let green-now be the location of the Green Line Train;
-		let here-relative-position be the relative position corresponding to the destination of location in the Table of Green Line Schedule;
+		let player-relative-position be the relative position corresponding to the destination of location in the Table of Green Line Schedule;
 		if the location of the Green Line Train is Transitional Location:
-			let green-next be next stop of Green Line Train;
-			now green-relative-position is the relative position corresponding to the destination of green-next in the Table of Green Line Schedule;
-			let green-position-difference be the absolute value of here-relative-position - green-relative-position;
-			now the time-till-green is green-position-difference * 2 to the nearest whole number;
-			now the time-till-green is time-till-green + 1;
+			now green-lookup is next stop of Green Line Train;
 		otherwise:
-			now green-relative-position is the relative position corresponding to the destination of green-now in the Table of Green Line Schedule;
-			let green-position-difference be the absolute value of here-relative-position - green-relative-position;
-			now the time-till-green is green-position-difference * 2 to the nearest whole number;
+			now green-lookup is the location of the Green Line Train;
+		let green-relative-position be the relative position corresponding to the destination of green-lookup in the Table of Green Line Schedule;
+		if the Green Line Train is southbound:
+			if green-relative-position is less than player-relative-position:
+				now time-till-green is green-relative-position - green-endpoint-relpos + player-relative-position - green-endpoint-relpos;
+				now green-next-endpoint is Warm Springs/South Fremont;
+			otherwise:
+				now time-till-green is green-relative-position - player-relative-position;
+				now the green-next-endpoint is Daly City;
+		if the Green Line Train is northbound:
+			If green-relative-position is greater than player-relative-position:
+				now time-till-green is green-endpoint-relpos - green-relative-position + green-endpoint-relpos - player-relative-position;
+				now green-next-endpoint is Daly City;			
+			otherwise:
+				now time-till-green is 2 * (player-relative-position - green-relative-position);
+				now green-next-endpoint is Warm Springs/South Fremont;
 		Unless time-till-green is 0 or the player is distracted:
-			say "Next Green Line train in [time-till-green] minutes. [run paragraph on][line break]"
-			
+			say "Next Green Line Train to [green-next-endpoint] in [time-till-green] minutes. [run paragraph on][line break][line break]"
+
+
 Time-till-blue is a number that varies.
 blue-relative-position is a number that varies.
+blue-endpoint-relpos is a number that varies. 
+blue-lookup is a room that varies.
+blue-next-endpoint is a room that varies.
+
 
 Every turn: 
-	if the location of the player is in Westside or the location of the player is in Oakland South or the location of the player is in Blue Line:	
-		let blue-now be the location of the Blue Line Train;
-		let here-relative-position be the relative position corresponding to the destination of location in the Table of Blue Line Schedule;
+	if the location of the Blue Line Train is Dublin/Pleasanton:
+		now the Blue Line Train is southbound;	
+		now blue-endpoint-relpos is 0;
+	if the location of the Blue Line Train is Daly City:
+		now the Blue Line Train is northbound;
+		now blue-endpoint-relpos is 17;
+	if the location of the player is in SFO Extension or the location of the player is in Westside or the location of the player is in Oakland South or the location of the player is in Blue Line:	
+		let player-relative-position be the relative position corresponding to the destination of location in the Table of Blue Line Schedule;
 		if the location of the Blue Line Train is Transitional Location:
-			let blue-next be next stop of Blue Line Train;
-			now blue-relative-position is the relative position corresponding to the destination of blue-next in the Table of Blue Line Schedule;
-			let blue-position-difference be the absolute value of here-relative-position - blue-relative-position;
-			now the time-till-blue is blue-position-difference * 2 to the nearest whole number;
-			now the time-till-blue is time-till-blue + 1;
+			now blue-lookup is next stop of Blue Line Train;
 		otherwise:
-			now blue-relative-position is the relative position corresponding to the destination of blue-now in the Table of Blue Line Schedule;
-			let blue-position-difference be the absolute value of here-relative-position - blue-relative-position;
-			now the time-till-blue is blue-position-difference * 2 to the nearest whole number;
+			now blue-lookup is the location of the Blue Line Train;
+		let blue-relative-position be the relative position corresponding to the destination of blue-lookup in the Table of Blue Line Schedule;
+		if the Blue Line Train is southbound:
+			if blue-relative-position is less than player-relative-position:
+				now time-till-blue is blue-relative-position - blue-endpoint-relpos + player-relative-position - blue-endpoint-relpos;
+				now blue-next-endpoint is Dublin/Pleasanton;
+			otherwise:
+				now time-till-blue is blue-relative-position - player-relative-position;
+				now the blue-next-endpoint is Daly City;
+		if the Blue Line Train is northbound:
+			If blue-relative-position is greater than player-relative-position:
+				now time-till-blue is blue-endpoint-relpos - blue-relative-position + blue-endpoint-relpos - player-relative-position;
+				now blue-next-endpoint is Daly City;			
+			otherwise:
+				now time-till-blue is 2 * (player-relative-position - blue-relative-position);
+				now blue-next-endpoint is Dublin/Pleasanton;
 		Unless time-till-blue is 0 or the player is distracted:
-			say "Next Blue Line train in [time-till-blue] minutes."
+			say "Next Blue Line Train to [blue-next-endpoint] in [time-till-blue] minutes. [run paragraph on][line break][line break]"
 			
 Time-till-orange is a number that varies.
 orange-relative-position is a number that varies.
+orange-endpoint-relpos is a number that varies. 
+orange-lookup is a room that varies.
+orange-next-endpoint is a room that varies.
 
 Every turn: 
-	if the location of the player is in North Bay or the location of the player is in Oakland Central or the location of the player is in Oakland South or the location of the player is in  South Bay:	
-		let orange-now be the location of the Orange Line Train;
-		let here-relative-position be the relative position corresponding to the destination of location in the Table of Orange Line Schedule;
+	if the location of the Orange Line Train is Richmond:
+		now the Orange Line Train is southbound;	
+		now orange-endpoint-relpos is 18;
+	if the location of the Orange Line Train is Warm Springs/South Fremont:
+		now the Orange Line Train is northbound;
+		now orange-endpoint-relpos is 0;
+	if the location of the player is in North Bay or the location of the player is in Oakland Central or the location of the player is in Oakland South or the location of the player is in South Bay:	
+		let player-relative-position be the relative position corresponding to the destination of location in the Table of Orange Line Schedule;
 		if the location of the Orange Line Train is Transitional Location:
-			let orange-next be next stop of Orange Line Train;
-			now orange-relative-position is the relative position corresponding to the destination of orange-next in the Table of Orange Line Schedule;
-			let orange-position-difference be the absolute value of here-relative-position - orange-relative-position;
-			now the time-till-orange is orange-position-difference * 2 to the nearest whole number;
-			now the time-till-orange is time-till-orange + 1;
+			now orange-lookup is next stop of Orange Line Train;
 		otherwise:
-			now orange-relative-position is the relative position corresponding to the destination of orange-now in the Table of Orange Line Schedule;
-			let orange-position-difference be the absolute value of here-relative-position - orange-relative-position;
-			now the time-till-orange is orange-position-difference * 2 to the nearest whole number;
+			now orange-lookup is the location of the Orange Line Train;
+		let orange-relative-position be the relative position corresponding to the destination of orange-lookup in the Table of Orange Line Schedule;
+		if the Orange Line Train is southbound:
+			if orange-relative-position is greater than player-relative-position:
+				now time-till-orange is orange-endpoint-relpos - orange-relative-position + orange-endpoint-relpos - player-relative-position;
+				now orange-next-endpoint is Richmond;
+			otherwise:
+				now time-till-orange is player-relative-position - orange-relative-position;
+				now the orange-next-endpoint is Warm Springs/South Fremont;
+		if the Orange Line Train is northbound:
+			If orange-relative-position is less than player-relative-position:
+				now time-till-orange is orange-relative-position - orange-endpoint-relpos  + player-relative-position - orange-endpoint-relpos ;
+				now orange-next-endpoint is Warm Springs/South Fremont;			
+			otherwise:
+				now time-till-orange is 2 * (orange-relative-position - player-relative-position);
+				now orange-next-endpoint is Richmond;
 		Unless time-till-orange is 0 or the player is distracted:
-			say "Next Orange Line train in [time-till-orange] minutes. [run paragraph on][line break]"
-			
+			say "Next Orange Line train to [orange-next-endpoint] in [time-till-orange] minutes. [run paragraph on][line break]"
+	
 [train rules]
 
 A train-car can be northbound or southbound. 
@@ -1331,7 +1412,7 @@ transit time	destination	relative position
 1 minute	Bay Fair	14
 1 minute	Castro Valley	15
 1 minute	West Dublin/Pleasanton	16
-1 minute	Dublin/Pleasanton	4
+1 minute	Dublin/Pleasanton	17
 1 minute	West Dublin/Pleasanton	16
 1 minute	Castro Valley	15
 1 minute	Bay Fair	14
