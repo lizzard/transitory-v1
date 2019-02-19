@@ -10,23 +10,29 @@ Use scoring.
 Section 4 - Some beginning stuff
 
 When play begins: 
-	deepen status line to 2 rows;
 	now the command prompt is "[time of day] >" ;
-	now right hand status line is "Score:[score] | [number of visited rooms]/[number of rooms] locations";
-	now right alignment depth is 26;
+
+	
+Table of Fancy Status
+left 	central 	right 
+" [location]"	"[number of visited rooms]/[number of rooms] locations"	"Score: [score]"
+
+Rule for constructing the status line:
+	fill status bar with Table of Fancy Status; 
+	rule succeeds.
 
 [temporary start of game location for testing]
 
 Home Base is west of Circle Plaza. "A bare room."
 
-A stone flower is an object. "A stylized flower sculpted in carnelian, smooth and polished." The description of the stone flower is "It shimmers, slipping in time. You think of sacrifice and the blood of captive warriors."
+A carnelian flower is an object. "A stylized flower sculpted in carnelian, smooth and polished." The description of the carnelian flower is "It shimmers, slipping in time. You think of sacrifice and the blood of captive warriors."
 
 In Home Base is an opaque, closed, openable container called a wardrobe. The wardrobe is scenery. 
-The stone flower, wraparound mirrorshades, headphones, a thick woolly hat, the cruel shoes, and earplugs are in the wardrobe.
+The carnelian flower, wraparound mirrorshades, headphones, a thick woolly hat, the cruel shoes, and earplugs are in the wardrobe.
 A powerchair is in Home Base.
 
-Report taking the stone flower:
-	increase the score by 5;
+[Report taking the stone flower:
+	increase the score by 5;]
 
 
 
@@ -744,37 +750,86 @@ Every turn when the player can see a raccoon and the turn count is even:
     say "A raccoon [one of]hauls itsef out of a concrete trash bin[or]skulks into a nearby alleyway[or]hides in a little nook, eating some discarded fries[or]has a little nap in a pile of trash[as decreasingly likely outcomes]."
 
 
-Brutalist Plaza is a room. "You pick your way through paths around enormous, rough-hewn blocks of concrete and stone. They tower overhead like the tufa mounds of Mono Lake or a cityscape in a dream."
+Brutalist Plaza is a room. "You pick your way through paths around enormous, rough-hewn blocks of concrete and stone. They tower overhead like the tufa mounds of Mono Lake or a cityscape in a dream. A little to the southwest, the path broadens."
 
 Times Circle is southwest of Brutalist Plaza. "You are standing in a plaza, a dream echo of the circular plaza of the world you know best. Underfoot, an enormous circle split into sections is set into the stones." 
 
-The calendar is a fixed in place container in Times Circle. "An enormous Central American calendar circle. You've heard of them before -- the most famous is the Aztec sun stone of Mexico City. Around the edges of the innermost or first ring are 20 divisions, each containing a different hollowed out space in elaborate shapes. The first ring is oddly compelling. You wish you could read the glyphs." 
+An artifact is a kind of thing.
+The greenstone caiman, the malachite hurricane, the moonstone house, the serpentinite lizard, the chrysoprase serpent, the quartz skull, the aventurine deer, the quartzite rabbit, the azurite wave, the tourmaline dog, the bloodstone monkey, the stone tuft of grass, the jasper reed, the fire opal jaguar, the granite eagle, the obsidian vulture, the sardonyx volcano, the obsidian knife, the amethyst cloud, and the carnelian flower are artifacts.
 
-Understand "calendar" and "circle" and "stones" and "ground" as the calendar.
+The calendar is a fixed in place container in Times Circle. The calendar is scenery. The description of the calendar is "An enormous Central American calendar circle. You've heard of them before -- the most famous is the Aztec sun stone of Mexico City. Around the edges of the innermost or first ring are 20 divisions, each containing a different hollowed out space in elaborate shapes. The first ring is oddly compelling. [if the calendar does not contain an artifact]You wish you could read the glyphs. [end if][if the calendar contains an artifact][paragraph break]The calendar glyphs are glowing with strange energy! [end if][if the calendar contains 20 artifacts]The sun circle begins to shake. It floats up into the air![end if]" 
+
+
+
+Understand "calendar", "circle", "stones", "ground" and "sun stone" as the calendar.
 Understand "ring" or "divisions" or "shapes"  or "glyphs" as the first ring.  
 
 The first ring is scenery in Times Circle. "The hollow glyphs in the first circle draw your attention from the top, around the ring counterclockwise. Dreamlike, you understand what they represent. [paragraph break]
-Cipactli, the Caiman.[line break]
-Ehēcatl, Wind.[line break]
-Calli, House.[line break]
-Cuetzpalin, the Lizard.[line break]
-Cõātl, the Serpent.[line break]
-Miquiztli, Death.[line break]
-Mazātl, the Deer.[line break]
-Tōchtli, the Rabbit.[line break]
-Ātl, Water.[line break]
-Izcuīntli, the Dog.[line break]
-Ozomahtli, the Monkey.[line break]
-Malīnalli, Grass.[line break]
-Ācatl, Reed.[line break]
-Ocēlōtl, Jaguar. [line break]
-Cuāuhtli, Eagle. [line break]
-Cōzcacuāuhtli, Vulture. [line break]
-Ōlīn, Earthquake.[line break]
-Tecpatl, Obsidian Knife.[line break]
-Quiyahuitl, Rain.[line break]
-Xōchitl, Flower."
+Cipactli, the Caiman[if the greenstone caiman is in the calendar] (filled with the greenstone caiman) (glowing)[end if].[line break]
+Ehēcatl, Wind[if the malachite hurricane is in the calendar] (filled with the malachite hurricane)(glowing)[end if].[line break]
+Calli, House[if the moonstone house is in the calendar] (filled with the moonstone house) (glowing)[end if].[line break]
+Cuetzpalin, the Lizard[if the serpentinite lizard is in the calendar] (filled with the serpentinite lizard) (glowing)[end if].[line break]
+Cõātl, the Serpent[if the chrysoprase serpent is in the calendar] (filled with the chrysoprase serpent) (glowing)[end if].[line break]
+Miquiztli, Death[if the quartz skull is in the calendar] (filled with the quartz skull) (glowing)[end if].[line break]
+Mazātl, the Deer[if the aventurine deer is in the calendar] (filled with the aventurine deer) (glowing)[end if].[line break]
+Tōchtli, the Rabbit[if the quartzite rabbit is in the calendar] (filled with the quartzite rabbit) (glowing)[end if].[line break]
+Ātl, Water[if the azurite wave is in the calendar] (filled with the azurite wave) (glowing)[end if].[line break]
+Izcuīntli, the Dog[if the tourmaline dog is in the calendar] (filled with the tourmaline dog) (glowing)[end if].[line break]
+Ozomahtli, the Monkey[if the bloodstone monkey is in the calendar] (filled with the bloodstone monkey) (glowing)[end if].[line break]
+Malīnalli, Grass[if the stone tuft of grass is in the calendar] (filled with the stone tuft of grass) (glowing)[end if].[line break]
+Ācatl, Reed[if the jasper reed is in the calendar] (filled with the jasper reed) (glowing) [end if].[line break]
+Ocēlōtl, Jaguar[if the fire opal jaguar is in the calendar] (filled with the fire opal jaguar) (glowing)[end if]. [line break]
+Cuāuhtli, Eagle[if the granite eagle is in the calendar] (filled with the granite eagle) (glowing)[end if]. [line break]
+Cōzcacuāuhtli, Vulture[if the obsidian vulture is in the calendar] (filled with the obsidian vulture)  (glowing)[end if]. [line break]
+Ōlīn, Earthquake[if the sardonyx volcano is in the calendar] (filled with the sardonyx volcano) (glowing)[end if].[line break]
+Tecpatl, Obsidian Knife[if the obsidian knife is in the calendar] (filled with the obsidian knife) (glowing)[end if].[line break]
+Quiyahuitl, Rain[if the amethyst cloud is in the calendar] (filled with the amethyst cloud) (glowing)[end if].[line break]
+Xōchitl, Flower[if the carnelian flower is in the calendar]  (filled with the carnelian flower) (glowing)[end if]."
 
+
+
+
+Before taking an artifact, record the noun as found.
+
+Before inserting an artifact into:
+	if the second noun is the calendar:
+		record the noun as placed;
+	continue the action.
+
+To record (T - artifact) as found: 
+	choose row with a citation of T in Table of Artifacts Achieved; 
+	if there is no found entry: 
+		now found entry is the time of day; 
+		increase the score by the points entry.
+
+To record (T - artifact) as placed: 
+	choose row with a citation of T in Table of Artifacts Achieved; 
+	if there is no placed entry:
+		now placed entry is the time of day;
+		increase the score by the points entry.
+
+Table of Artifacts Achieved
+Points	Citation	Found (a time)	Placed (a time)
+5	caiman	
+5	hurricane
+5	House
+5	Lizard
+5	Serpent
+5	skull
+5	Deer
+5	Rabbit
+5	Wave
+5	Dog
+5	Monkey
+5	Grass
+5	Reed
+5	Jaguar
+5	Eagle
+5	Vulture
+5	volcano
+5	Knife
+5	cloud
+5	carnelian flower
 
 
 After switching on the ART card:
@@ -1034,6 +1089,7 @@ Carry out writing on:
 		now the noun is nowhere;
 		if a random chance of 1 in 2 succeeds:
 			now the player is carrying a BART card;
+			say "You feel ordinary again.";
 		otherwise:
 			if a random chance of 1 in 2 succeeds:
 				say "You scribble on the card. It fizzes and tingles.";
