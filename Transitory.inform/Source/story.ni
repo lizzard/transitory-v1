@@ -485,22 +485,27 @@ Part 5 - All the places
 Section 1 - Regions
 [Regions]
 
-A room can be a platform.
-A room can be a concourse.
+A room can be smooth, bumpy, sidewalky, bricks, cracked, uneven, gravel, sandy, grassy, or muddy. A room is usually smooth.
+
+A room can be a platform. 
+A room can be a concourse. 
+A room can be a street level station. 
 
 A room can be a north endpoint.
 A room can be a south endpoint. 
 A room can be an east endpoint.
 A room can be a west endpoint.
+	
+
 
 Richmond is a north endpoint.
 Millbrae is a south endpoint.
 
 Liftlandia is a region.  [everywhere an elevator might appear]
-Mission 24th Concourse is in Liftlandia.
+Mission 24th Concourse is in Liftlandia.  Mission 24th Concourse is a street level station.
 
 Street Level is a region in Liftlandia. 
-Calle 24 Plaza is in Street Level. 
+Calle 24 Plaza is in Street Level. Calle 24 Plaza is a street level station.
 
 Platforms is a region in Liftlandia.  [everywhere that is a train stop]
 
@@ -547,6 +552,8 @@ The description of Downtown Berkeley is "You are on a BART platform."
 Chapter 16 - Castro Valley
 
 The description of Castro Valley is "You are on a BART platform."
+		
+Jalquin is a room.
 
 Chapter 17 - Civic Center
 
@@ -571,6 +578,8 @@ The description of Daly City is "You are on a BART platform. Fog drifts in from 
 Chapter 22 - Dublin/Pleasanton
 
 The description of Dublin/Pleasanton is "You are on a BART platform. The mysterious suburban world of Dublin/Pleasanton surrounds you."
+
+Pelnen is a room.
 
 Chapter 23 - El Cerrito del Norte
 
@@ -599,6 +608,8 @@ The description of Glen Park is "You are on a BART platform."
 Chapter 29 - Hayward
 
 The description of Hayward is "You are on a BART platform."
+
+Tuibun is a room.
 
 Chapter 30 - Lafayette
 
@@ -636,8 +647,32 @@ Instead of climbing when the player is in Mission 16th Concourse and the ART car
 	stop the action.
 	
 Instead of climbing when the player is in Mission 16th Concourse and the ART card is not switched on:
-	say "You plot your route mentally but decide not to climb. Maybe if you were in more of an artistic mood.";
+	say "You plot your route mentally, but decide not to climb. Maybe if you were in more of an artistic mood.";
 	stop the action.
+		
+Mission 16th Street Plaza is a street level station. Mission 16th Street Plaza is up from Mission 16th Concourse. 
+		
+Old Bank Corner is south of Mission 16th Street Plaza. 
+		
+Papel Picado Plaza is west of Old Bank Corner. 
+
+Rainglass Plaza is a room.	
+		
+Colibrí Plaza is a room. 	
+
+Hummingbird Station is a room. [write secret room accessible from ART card]
+
+Laguna de Manantial is a room.  
+
+Ojo de Agua is a room.
+
+Mission Dolores is a room.  
+
+Chutchui is a room.
+
+		
+California Savings Corner is north of Papel Picado Plaza. It is west of Mission 16th Street Plaza.
+		
 
 Noisebridge is a room. "You are in a large hackerspace. People are messing around with laptops in the Hackitorium, poking at electronic gadgets, reading in the library area, and playing video games over by the windows. There are piles of junk up against one wall."
 
@@ -850,6 +885,8 @@ Chapter 38 - North Concord/Martinez
 
 The description of North Concord/Martinez is "You are on a BART platform."
 
+Karkin is a room.
+
 Chapter 39 - Oakland 12th St
 
 The description of Oakland 12th St is "You are on a BART platform."
@@ -857,6 +894,8 @@ The description of Oakland 12th St is "You are on a BART platform."
 Chapter 40 - Oakland 19th St
 
 The description of Oakland 19th St is "You are on a BART platform."
+
+Saclan is a room.
 
 Chapter 41 - Oakland International Airport
 
@@ -869,6 +908,8 @@ The description of Orinda is "You are on a BART platform."
 Chapter 43 - Pittsburg/Bay Point
 
 The description of Pittsburg/Bay Point is "You are on a BART platform."
+
+Huchiun-Aguasto is a room.
 
 Chapter 44 - Pittsburg Center
 
@@ -886,6 +927,8 @@ Chapter 47 - Richmond
 
 The description of Richmond is "You are on a BART platform."
 
+Huchian is a room.
+
 Chapter 48 - Rockridge
 
 The description of Rockridge is "You are on a BART platform."
@@ -893,6 +936,9 @@ The description of Rockridge is "You are on a BART platform."
 Chapter 49 - San Bruno
 
 The description of San Bruno is "You are on a BART platform."
+
+Urebure is a room.
+
 
 Chapter 50 - San Francisco International Airport
 
@@ -947,12 +993,11 @@ The bottom of shaft is a room that varies.
 The Elevator is a room. The description of the Elevator is "A grimy elevator that smells like pee. You take a deep sniff and regret it as the stale urine smell mixes horribly with mildew, dusty heating ducts, and old machine oil which the vestiges of industrial strength floor cleaner do nothing to erase. There is a panel in the wall studded with buttons." Understand "elevator" as The Elevator.
 
 [this is a hack because putting the elevator inside another room doesn't work correctly with exiting]
-Every turn when the player is in Liftlandia:
+Every turn when the player is in Liftlandia or the player is in a concourse or the player is in a street level station:
 	now the elevator is mapped north of the location of the player;
 	unless the player is distracted:
 		say "There is an elevator in the north wall.";
 		continue the action.
-
 
 A panel in the wall is in the elevator. It is scenery. The description is "There are three buttons on the wall: S, C, and P."
 The S button, the C button, and the P button are parts of the panel in the wall. 
