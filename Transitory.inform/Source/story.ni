@@ -7,19 +7,19 @@ Include Basic Screen Effects by Emily Short.
 Use scoring.
 
 
-Section 4 - Some beginning stuff
+Part 1 - Some beginning stuff
 
 When play begins: 
 	now the command prompt is "[time of day] >" ;
 
+Rule for constructing the status line:
+	fill status bar with Table of Fancy Status; 
+	rule succeeds.
 	
 Table of Fancy Status
 left 	central 	right 
 " [location]"	"[number of visited rooms]/[number of rooms] locations"	"Score: [score]"
 
-Rule for constructing the status line:
-	fill status bar with Table of Fancy Status; 
-	rule succeeds.
 
 [temporary start of game location for testing]
 
@@ -27,16 +27,13 @@ Home Base is west of Circle Plaza. "A bare room."
 
 A carnelian flower is an object. "A stylized flower sculpted in carnelian, smooth and polished." The description of the carnelian flower is "It shimmers, slipping in time. You think of sacrifice and the blood of captive warriors."
 
-In Home Base is an opaque, closed, openable container called a wardrobe. The wardrobe is scenery. 
-The carnelian flower, wraparound mirrorshades, headphones, a thick woolly hat, the cruel shoes, and earplugs are in the wardrobe.
+In Home Base is an opaque, closed, openable container called a closet. The closet is scenery. 
+The carnelian flower, wraparound mirrorshades, headphones, a thick woolly hat, the cruel shoes, and earplugs are in the closet.
 A powerchair is in Home Base.
 
-[Report taking the stone flower:
-	increase the score by 5;]
 
+Part 2 - Multisensory
 
-
-Section 1 - Multisensory
 [Written to include and extend Touchy Feely]
 [Touchy Feely by Quantum Games begins here. Extended by Liz Henry 2019]
 
@@ -45,7 +42,7 @@ Section 1 - Multisensory
 [2019-01-15 Fixed some report rules that didn't work right]
 [2019-02-02 Putting more possible default sensory descriptions]
 
-Part I - Feels
+Section 1 - Feels
 
 Understand "touch" as touching the room. Touching the room is an action applying to nothing.
 
@@ -73,7 +70,7 @@ Report touching the room (this is the Touchy Feely report touching the room rule
 
 The thing without feel value is a text variable. The thing without feel value is "[one of]Feels okay.[or]Feels like [a noun].[or]You feel nothing unexpected.[or]Yeah, that's [a noun] alright.[or]Feels pretty much like you'd think it would.[purely at random]"
 
-Part II - Scents
+Section 2 - Scents
 
 A thing has some text called the scent. The scent of a thing is usually "".
 
@@ -97,7 +94,7 @@ Report smelling (this is the Touchy Feely report smelling rule):
 
 The thing without scent value is a text variable. The thing without scent value is "[one of]It doesn't have much of a scent.[or]Smells okay.[or]Not much to report about how it smells.[or]Your nose doesn't detect much in this case.[or]Someday you may regret going around sniffing random objects. But not today.[as decreasingly likely outcomes]"
 
-Part III - Tastes
+Section 3 - Tastes
 
 Understand "taste" as tasting the room. Tasting the room is an action applying to nothing.
 
@@ -123,7 +120,7 @@ Report tasting the room (this is the Touchy Feely report tasting the room rule):
 
 The thing without taste value is a text variable. The thing without taste value is "[one of]You give the [noun] a quick experimental lick. Hmm.[or]You go to taste the [noun], then decide not to.[or]Tastes like you'd expect any [noun] to taste.[purely at random]"
 
-Part IV - Sounds
+Section 4 - Sounds
 
 Understand "hear" as listening.
 
@@ -149,16 +146,14 @@ Report listening to (this is the Touchy Feely report listening rule):
 
 The thing without sound value is a text variable. The thing without sound value is "[one of]It's silent.[or]You hear nothing unexpected.[or]The [noun] doesn't make any noise.[or]The sound of silence.[or]It's quiet. Too quiet.[as decreasingly likely outcomes]"
 
-Part V - Descriptions
+Section 5 - Descriptions
 
 Understand "see" as looking.
 
 Understand "see [something]" as examining.
 
 
-
-
-Part VI - Special testing commands - Not for release
+Section 6 - Special testing commands - Not for release
 
 Understand "testfeel" as testing the feel of things. Testing the feel of things is an action out of world, applying to nothing.
 
@@ -219,10 +214,10 @@ Report testing the sound of things (this is the Touchy Feely sound testing rule)
 [Touchy Feely Extended ends here.]
 
 
-Section 3 - Disabilities
+Part 3 - Disabilities
 
 
-Part 1 - Sightedness
+Section 1 - Sightedness
 
 Sightedness is a kind of value. The sightednesses are blind, sighted, low-vision, and unknown. Understand “blind” as blind. Understand “sighted” as sighted. Understand "low vision" as low-vision.
  
@@ -268,7 +263,7 @@ Every turn when the player is sighted:
 	
 [right now, this depends on rooms and other things having carefully written descriptions with sections for sound, visual, and other senses]
 
-Part 2 - Deafness
+Section 2 - Deafness
 
 Deafness is a kind of value. The deafnesses are Deaf, HoH, hearing, and not known. Understand “Deaf” as Deaf. Understand "hard of hearing" as HoH. 
 
@@ -313,7 +308,7 @@ Instead of listening when the player is Deaf:
 	say "Good luck with that one. You can't hear a thing!"
 	[weird, this causes a compiler error]
 
-Part 3 - Mobility
+Section 3 - Mobility
 
 Ambulation is a kind of value. The ambulations are wheeling, walking, limping, flying, and hopping. Understand “wheeled” as wheeling. Understand “walking” as walking. Understand "limping" as limping. Understand "hopping" as hopping.
  
@@ -394,9 +389,7 @@ The last property-aggregation rule (this is the print aggregated properties rule
 	rule fails. 
 
 
-
-
-Part 4 - Some varied defaults for examining
+Section 4 - Some varied defaults for examining
 
 [replace the look description for examining objects, without assuming sightedness]
 
@@ -424,7 +417,6 @@ Report studying the vicinity:
 Understand "tap" or "explore" as studying the vicinity. 
 
 
-
 Waiting more is an action applying to one number.
 
 Understand "wait [a time period]" or "wait for [a time period]" or "wait for a/an [a time period]" or "wait a/an [a time period]" as waiting more.
@@ -448,7 +440,8 @@ Report waiting more:
 Check waiting more: 
     if the time understood is greater than 10 minutes, say "That seems so boring. Maybe looking around or exploring would be better." instead.	
 
-Section 8 - Money stuff
+
+Part 4 - Money stuff
 
 Price is a kind of value. $1.99 specifies a price. A thing has a price. The price of a thing is usually $0.00. After examining something for sale, say "It can be yours for [the price of the noun]." 
 
@@ -673,7 +666,7 @@ Instead of switching on the 4-D printer:
 	now the 4-D timelock is on the workbench.
 
 	
-																								
+																							
 
 Chapter 35 - Mission 24th St
 
@@ -939,7 +932,7 @@ The description of West Oakland is "You are on a BART platform."
 
 
 
-Section 5 - Elevator 
+Part 6 - Elevator 
 
 [a simple 3-level elevator appears in any train station location where it might be, if the player goes there]
 
@@ -1040,7 +1033,7 @@ Check going to Street Level:
 		
 
 
-Section 6 - Ticket reader
+Part 7 - Ticket reader
 
 [the reader itself]
 
@@ -1062,7 +1055,11 @@ Instead of switching off a card when the location of the player is not a concour
 Understand "swipe [something switched off]" as switching on.
 Understand "swipe [something switched on]" as switching off. 
 
-
+After switching on a card:
+	say "The card hums with energy.";
+	
+After switching off a card:
+	say "The card shuts off with a little thump."
 
 A writing utensil is a kind of thing. A magic marker is a writing utensil.
 A card is a kind of device.  
@@ -1111,7 +1108,7 @@ Carry out writing on:
 
 
 
-Section 7 - Train rules
+Part 8 - Train rules
 
 [train-display]
 
