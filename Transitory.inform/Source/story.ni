@@ -20,6 +20,7 @@ Table of Fancy Status
 left 	central 	right 
 " [location]"	"[number of visited rooms]/[number of rooms] locations"	"Score: [score]"
 
+A boy is a kind of man. A girl is a kind of woman.
 
 [temporary start of game location for testing]
 
@@ -485,7 +486,7 @@ Part 5 - All the places
 Section 1 - Regions
 [Regions]
 
-A room can be smooth, bumpy, sidewalky, bricks, cracked, uneven, gravel, sandy, grassy, or muddy. A room is usually smooth.
+A room can be smooth, bumpy, sidewalky, bricks, cracked, uneven, gravely, sandy, grassy, or muddy. A room is usually smooth.
 
 A room can be a platform. 
 A room can be a concourse. 
@@ -529,109 +530,194 @@ Section 2 - Locations, organized by train stops
 
 [train stops, alphabetically with descriptions]
 
-Chapter 11 - Antioch 
+Chapter 1 - Antioch 
 
 The description of Antioch is "You are on a BART platform. You hear the noise of cars on a nearby highway."
 
-Chapter 12 - Ashby
+Chapter 2 - Ashby
 
 The description of Ashby is "You are on a BART platform."
+		
+West Berkeley Shellmound is a room.		
 
-Chapter 13 - Balboa Park
+Chapter 3 - Balboa Park
 
-The description of Balboa Park is "You are on a BART platform."
+The description of Balboa Park is "You are on a BART platform withsmooth marble floors. It has the feel of being in a long, narrow canyon, shaded, but open to the sky above. People are going up and down stairways to the concourse above, another wide open space."  Balboa Park is smooth.
+		
+Balboa Park Concourse is up from Balboa Park. It is a concourse.
 
-Chapter 14 - Bay Fair
+Ocean Avenue is a room.
+	
+The Industrial School is a room.
+
+The House of Refuge is a room.
+
+The House of Correction is a room.
+
+Chapter 4 - Bay Fair
 
 The description of Bay Fair is "You are on a BART platform."
 
-Chapter 15 - Downtown Berkeley
+Chapter 5 - Downtown Berkeley
 
 The description of Downtown Berkeley is "You are on a BART platform."
 
-Chapter 16 - Castro Valley
+Chapter 6 - Castro Valley
 
 The description of Castro Valley is "You are on a BART platform."
 		
 Jalquin is a room.
 
-Chapter 17 - Civic Center
+Chapter 7 - Civic Center
 
 The description of Civic Center is "You are on a BART platform."
 
-Chapter 18 - Coliseum
+Chapter 8 - Coliseum
 
 The description of Coliseum is "You are on a BART platform."
 
-Chapter 19 - Colma
+Chapter 9 - Colma
 
 The description of Colma is "You are on a BART platform."
+			
+Siplichiquin is a room.
+			
+Colma Creek is a room. 
+			
+A woven basket is a container. It is in Siplichiquin.
+			
+Black seed tamales are an object. They are edible. They are in a woven basket.
+			
 
-Chapter 20 - Concord
+Chapter 10 - Concord
 
 The description of Concord is "You are on a BART platform."
 
-Chapter 21 - Daly City
+Chapter 11 - Daly City
 
 The description of Daly City is "You are on a BART platform. Fog drifts in from the nearby ocean."
+			
+Mitline is a room.
+			
+A tule reed canoe is a vehicle. It is in Mitline.
+			
 
-Chapter 22 - Dublin/Pleasanton
+Opurome is a room.
+
+A tule reed raft is a vehicle. It is in Oprurome. 
+
+
+Chapter 12 - Dublin/Pleasanton
 
 The description of Dublin/Pleasanton is "You are on a BART platform. The mysterious suburban world of Dublin/Pleasanton surrounds you."
 
 Pelnen is a room.
 
-Chapter 23 - El Cerrito del Norte
+Chapter 13 - El Cerrito del Norte
 
 The description of El Cerrito del Norte is "You are on a BART platform."
 
-Chapter 24 - El Cerrito Plaza
+Chapter 14 - El Cerrito Plaza
 
 The description of El Cerrito Plaza is "You are on a BART platform."
 
-Chapter 25 - Embarcadero
+Chapter 15 - Embarcadero
 
 The description of Embarcadero is "You are on a BART platform underground. Lots of people are around and there are muffled announcements over an intercom."
 
-Chapter 26 - Fremont
+Chapter 16 - Fremont
 
 The description of Fremont is "You are on a BART platform."
 
-Chapter 27 - Fruitvale
+Chapter 17 - Fruitvale
 
 The description of Fruitvale is "You are on a BART platform."
 
-Chapter 28 - Glen Park
+Chapter 18 - Glen Park
 
 The description of Glen Park is "You are on a BART platform."
+	
+Glen Park Concourse is up from Glen Park.
+	
+Glen Canyon is a room.
+		
+A dairy cow is an animal. It is in Glen Canyon.
 
-Chapter 29 - Hayward
+Islais Creek is a room.
+	
+The Giant Powder Company is a room. 
+		
+The dynamite is in The Giant Powder Company.
+	
+A hollyleaf cherry tree is in Glen Canyon. A bunch of islay cherries are on the tree.
+	
+The Mission Zoo is a room. 
+
+A hot-air balloon is a vehicle. It is in Mission Zoo.
+		
+Daniel Maloney is a person. He is in Mission Zoo.
+
+A parachute is in a hot-air balloon. It is wearable.
+
+Madame Schell is a person. She is in Mission Zoo.
+A trained lion is an animal. It is in Mission Zoo.
+A trained lioness is an animal. it is in Mission Zoo.
+
+Professor J Williams is a person. He is in Mission Zoo. The description of Professor J Williams is "The Intrepid Cliff House Bird-Man stands before you."
+
+A high wire is an object. It is a supporter. It is in Mission Zoo.
+
+Elsie St Leon is a person. She is in Mission Zoo.
+A white pony is an animal. It is in Mission Zoo.
+
+The monkey house is a closed, transparent, openable container. It is in Mission Zoo.
+
+An educated cockatoo is an animal. It is in Mission Zoo.
+Skyrocket the homing pigeon is an animal. It is in Mission Zoo.
+	
+Morro Castle is a room.
+
+
+Chapter 19 - Hayward
 
 The description of Hayward is "You are on a BART platform."
 
 Tuibun is a room.
 
-Chapter 30 - Lafayette
+Chapter 20 - Lafayette
 
 The description of Lafayette is "You are on a BART platform."
 
-Chapter 31 - Lake Merritt
+Chapter 21 - Lake Merritt
 
 The description of Lake Merritt is "You are on a BART platform."
+		
+Lake Merritt Concourse is up from Lake Merritt. It is a concourse. It is smooth.
 
-Chapter 32 - MacArthur
+Chapter 22 - MacArthur
 
 The description of MacArthur is "You are on a BART platform."
 
-Chapter 33 - Millbrae
+Chapter 23 - Millbrae
 
-The description of Millbrae is "You are on a BART platform outside. Many people and trains are all around. There are cement statues of commuters in awkward positions on the platform."
+The description of Millbrae is "You are on a big, busy, BART platform in the open air. Many people and trains are all around. There are cement statues of commuters in awkward positions on the platform."  Millbrae is smooth.
 
-Chapter 34 - Mission 16th St
+A powermom statue is an object. It is fixed in place. It is in Millbrae. It is scenery. The description of the powermom is "A cement statue of a woman in an 80s business suit, awkwardly contorted, carrying a briefcase and a diaper bag."
 
-The description of Mission 16th St is "You are underground, on a BART platform. [if player is not deaf]The haunting sound of train wheels on the rails echoes all around[end if]. [if player is not blind]The platform floor is covered with long brick-red tiles, while the median walls are tiled in light and dark blue, green, gold, and brown tiles like the colors of a tropical beach on a sunny day.[end if]"
 
-Mission 16th Concourse is up from Mission 16th St. Mission 16th is a concourse. "[if player is not blind]Low but nicely curved arches made of smooth concrete form the ceiling of this long, busy station. Abstract cement sculptures molded in relief march up the sides of the enormous stairwell, open to the sky. [end if] [if player is not deaf]Music echoes from the stairwells. The acoustics are great![end if] Crowds of people swirl around the concourse."
+
+Millbrae Concourse is up from Millbrae. It is a concourse.  It is smooth. The description of Millbrae Concourse is "A large platform high up in the air above the train platform and tracks. You can feel the floor vibrate slightly under your feet with the rush of passing BART and Caltrain cars."
+
+Millbrae Control Booth is a room. It is south of Millbrae Concourse. It is smooth. "This enormous funky shaped glass booth is full of mysterious control panels and blinking lights. "
+
+
+Chapter 24 - Mission 16th St
+
+The description of Mission 16th St is "You are underground, on a BART platform. [if player is not deaf]The haunting sound of train wheels on the rails echoes all around[end if]. [if player is not blind]The platform floor is covered with long brick-red tiles, while the median walls are tiled in light and dark blue, green, gold, and brown tiles like the colors of a tropical beach on a sunny day.[end if]"  
+		
+Mission 16th St is bumpy.
+
+Mission 16th Concourse is up from Mission 16th St. Mission 16th is a concourse. It is bumpy. "[if player is not blind]Low but nicely curved arches made of smooth concrete form the ceiling of this long, busy station. Abstract cement sculptures molded in relief march up the sides of the enormous stairwell, open to the sky. [end if] [if player is not deaf]Music echoes from the stairwells. The acoustics are great![end if] Crowds of people swirl around the concourse." 
 
 The concrete shapes are scenery in Mission 16th Concourse. "Big blocky shapes, rectangles, circles, half circles, are scuplted in relief along the rough sides of the enormous open stairwell to the plaza. They're reminiscent of brutalist skyscrapers, stoplights, a pleasing jumble of forms decorating the space. You feel more aware of the secret life of buildings. Their bones, their roots. The way they take up space against the sky.[if the player is carrying an ART card]The secretive shapes beckon like doors. You itch to climb them. [end if]"
 
@@ -650,31 +736,53 @@ Instead of climbing when the player is in Mission 16th Concourse and the ART car
 	say "You plot your route mentally, but decide not to climb. Maybe if you were in more of an artistic mood.";
 	stop the action.
 		
-Mission 16th Street Plaza is a street level station. Mission 16th Street Plaza is up from Mission 16th Concourse. 
+Mission 16th Street Plaza is a street level station. Mission 16th Street Plaza is up from Mission 16th Concourse.  It is bumpy.
 		
-Old Bank Corner is south of Mission 16th Street Plaza. 
+Old Bank Corner is south of Mission 16th Street Plaza. It is sidewalky.
 		
-Papel Picado Plaza is west of Old Bank Corner. 
+Papel Picado Plaza is west of Old Bank Corner. It is bumpy.
 
-Rainglass Plaza is a room.	
+Rainglass Plaza is a room.	It is smooth.
 		
-Colibrí Plaza is a room. 	
+Colibrí Plaza is a room. It is smooth.	
+Hummingbird Station is a room. It is smooth.
+		[write secret room accessible from ART card]
 
-Hummingbird Station is a room. [write secret room accessible from ART card]
+Laguna de Manantial is a room.  It is sandy.
 
-Laguna de Manantial is a room.  
+Ojo de Agua is a room. It is gravely.
 
-Ojo de Agua is a room.
+Mission Dolores is a room.  It is bumpy.
+Padre Palóu is a man. He is in Mission Dolores.
+Francisca is a girl. She is in Mission Dolores. [daughter of Alvarez, one of the soldiers]
 
-Mission Dolores is a room.  
 
-Chutchui is a room.
 
+Supitaxe is a man. He is in Mission Dolores. 
+Guilicse is a man. He is in Mission Dolores.
+Mutacxe is a man. He is in Mission Dolores.
+	 [these are some of the Huchiun men who first visited the vessel San Carlos in 1775]
+
+Chutchui is a room. It is grassy. 
+	
+A large roundhouse is an open enterable container in Chutchui. 
+A pine house is an open enterable container in Chutchui.
+A redwood house is an open enterable container in Chutchui.
+
+Chamis is a man. He is in Chutchui.
+Paszém is a girl. She is in Chutchui.  [they married]
+
+A tall red-colored staff is an object. Chamis carries the staff.
+
+Sitlintac is a room.  [manzanita, wild violets]
+
+Pilmo is a boy. He is in Sitlintac.
+Taulvo is a boy. He is in Sitlintac.
 		
-California Savings Corner is north of Papel Picado Plaza. It is west of Mission 16th Street Plaza.
+California Savings Corner is north of Papel Picado Plaza. It is west of Mission 16th Street Plaza. It is sidewalky.
 		
 
-Noisebridge is a room. "You are in a large hackerspace. People are messing around with laptops in the Hackitorium, poking at electronic gadgets, reading in the library area, and playing video games over by the windows. There are piles of junk up against one wall."
+Noisebridge is a room. It is smooth. "You are in a large hackerspace. People are messing around with laptops in the Hackitorium, poking at electronic gadgets, reading in the library area, and playing video games over by the windows. There are piles of junk up against one wall."
 
 The workbench is a supporter in Noisebridge. It is fixed in place.
 
@@ -703,7 +811,7 @@ Instead of switching on the 4-D printer:
 	
 																							
 
-Chapter 35 - Mission 24th St
+Chapter 25 - Mission 24th St
 
 The description of Mission 24th St is "You are underground, on a BART platform. [if the player is not deaf]The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. [end if][if the player is not blind]On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset.[end if]" 
 
@@ -715,7 +823,7 @@ Understand "shapes", "abstract", "cement", "relief", "concrete", "sculptures", a
 
 
 
-Calle 24 Plaza is up from Mission 24th Concourse.  "All around you are little shops and restaurants, people talking, buses pulling up to the stops on Mission and on 24th Street, music booming from cars going by. [if the player is not blind]Palm trees sway high overhead. Thick metal rails surround the enormous open stairwell that goes down to the station concourse. A huge mural of a train runs across the wall of the taqueria bordering the plaza to the north.[end if]"
+Calle 24 Plaza is up from Mission 24th Concourse. It is bumpy.  "All around you are little shops and restaurants, people talking, buses pulling up to the stops on Mission and on 24th Street, music booming from cars going by. [if the player is not blind]Palm trees sway high overhead. Thick metal rails surround the enormous open stairwell that goes down to the station concourse. A huge mural of a train runs across the wall of the taqueria bordering the plaza to the north.[end if]"
 
 The train mural is scenery in Calle 24 Plaza. "A mural of a gleaming BART train carried on the backs of determined workers amid a geometric cityscape."  
 
@@ -734,10 +842,10 @@ Instead of taking the cooler on wheels:
 
 A yelling preacher is a person. In Calle 24 Plaza is a yelling preacher. The description of the preacher is "A short man yells fervently in Spanish into a microphone. You recognize some things from the Bible[if player is not deaf], though it's hard to understand him from the low quality amp at his feet[end if]".
 
-Calle 24 Northwest Corner is west of Calle 24 Plaza. "Just outside the Chinese Food and Donuts shop, this lively streetcorner has buses pulling up along 24th Street, many cars going by, people crossing the street or standing around[if player is not deaf], music blaring from passing cars and from the shops[end if]. [if player is not blind]Along Mission, high overhead, washingtonia palms stretch into the sky.[end if] To the east, there's another plaza."
+Calle 24 Northwest Corner is west of Calle 24 Plaza. It is sidewalky. "Just outside the Chinese Food and Donuts shop, this lively streetcorner has buses pulling up along 24th Street, many cars going by, people crossing the street or standing around[if player is not deaf], music blaring from passing cars and from the shops[end if]. [if player is not blind]Along Mission, high overhead, washingtonia palms stretch into the sky.[end if] To the east, there's another plaza."
 
 
-Circle Plaza is south of Calle 24 Northwest Corner.
+Circle Plaza is south of Calle 24 Northwest Corner. It is bumpy.
 The description of Circle Plaza is "
 [if player is not blind]You head into the crowds of this busy space built around a circular wall. People are selling stuff from tables and little booths. Across 24th street to the north, there's a donut shop. You notice a mural that says something about coffee.[end if]
 [if player is not deaf]Many kinds of music are playing here. Norteño blasts its cheerful accordions from a booth, saxophone notes float up from the huge, round stairwell which goes down to the station, songs blare from passing cars.[end if]
@@ -771,16 +879,16 @@ Instead of taking the basket:
 	say "But that belongs to Mariquita! And she's so nice.";
 
 
-Calle 24 Southeast Corner is east of Circle Plaza. "This busy street corner by the McDonalds is grimy. It's basically a crowded spot where people wait to cross the street. Across Mission to the west, there's a nice plaza with a busy market. Across 24th Street to the north, another lovely plaza with musicians, preachers, and some places to sit."
+Calle 24 Southeast Corner is east of Circle Plaza. It is sidewalky. "This busy street corner by the McDonalds is grimy. It's basically a crowded spot where people wait to cross the street. Across Mission to the west, there's a nice plaza with a busy market. Across 24th Street to the north, another lovely plaza with musicians, preachers, and some places to sit."
 Calle 24 Southeast Corner is south of Calle 24 Plaza. 
 A raccoon is a kind of animal.  In Calle 24 Southeast Corner is a raccoon. The description of the raccoon is "A greasy looking plump raccoon. It's battered, but unbowed."  
 Every turn when the player can see a raccoon and the turn count is even: 
     say "A raccoon [one of]hauls itsef out of a concrete trash bin[or]skulks into a nearby alleyway[or]hides in a little nook, eating some discarded fries[or]has a little nap in a pile of trash[as decreasingly likely outcomes]."
 
 
-Brutalist Plaza is a room. "You pick your way through paths around enormous, rough-hewn blocks of concrete and stone. They tower overhead like the tufa mounds of Mono Lake or a cityscape in a dream. A little to the southwest, the path broadens."
+Brutalist Plaza is a room.  It is uneven. "You pick your way through paths around enormous, rough-hewn blocks of concrete and stone. They tower overhead like the tufa mounds of Mono Lake or a cityscape in a dream. A little to the southwest, the path broadens."
 
-Times Circle is southwest of Brutalist Plaza. "You are standing in a plaza, a dream echo of the circular plaza of the world you know best. Underfoot, an enormous circle split into sections is set into the stones." 
+Times Circle is southwest of Brutalist Plaza. It is bumpy. "You are standing in a plaza, a dream echo of the circular plaza of the world you know best. Underfoot, an enormous circle split into sections is set into the stones." 
 
 An artifact is a kind of thing.
 The greenstone caiman, the malachite hurricane, the moonstone house, the serpentinite lizard, the chrysoprase serpent, the quartz skull, the aventurine deer, the quartzite rabbit, the azurite wave, the tourmaline dog, the bloodstone monkey, the stone tuft of grass, the jasper reed, the fire opal jaguar, the granite eagle, the obsidian vulture, the sardonyx volcano, the obsidian knife, the amethyst cloud, and the carnelian flower are artifacts.
@@ -873,106 +981,145 @@ After writing on the ART card:
 	
 
 
-Chapter 36 - Montgomery
+Chapter 26 - Montgomery
 
 The description of Montgomery is "You are on a BART platform."
 
-Chapter 37 - North Berkeley
+Chapter 27 - North Berkeley
 
 The description of North Berkeley is "You are on a BART platform."
 
-Chapter 38 - North Concord/Martinez
+Chapter 28 - North Concord/Martinez
 
 The description of North Concord/Martinez is "You are on a BART platform."
 
 Karkin is a room.
 
-Chapter 39 - Oakland 12th St
+Chapter 29 - Oakland 12th St
 
 The description of Oakland 12th St is "You are on a BART platform."
 
-Chapter 40 - Oakland 19th St
+AIM Freedom and Survival School is a room.
+
+
+Chapter 30 - Oakland 19th St
 
 The description of Oakland 19th St is "You are on a BART platform."
 
 Saclan is a room.
 
-Chapter 41 - Oakland International Airport
+Chapter 31 - Oakland International Airport
 
 The description of Oakland International Airport is "You are on a BART platform."
 
-Chapter 42 - Orinda
+Chapter 32 - Orinda
 
 The description of Orinda is "You are on a BART platform."
 
-Chapter 43 - Pittsburg/Bay Point
+Chapter 33 - Pittsburg/Bay Point
 
 The description of Pittsburg/Bay Point is "You are on a BART platform."
 
 Huchiun-Aguasto is a room.
 
-Chapter 44 - Pittsburg Center
+Chapter 34 - Pittsburg Center
 
 The description of Pittsburg Center is "You are on a BART platform."
 
-Chapter 45 - Pleasant Hill
+Chapter 35 - Pleasant Hill
 
 The description of Pleasant Hill is "You are on a BART platform."
 
-Chapter 46 - Powell
+Chapter 36 - Powell
 
 The description of Powell is "You are on a BART platform."
 
-Chapter 47 - Richmond
+Chapter 37 - Richmond
 
 The description of Richmond is "You are on a BART platform."
 
-Huchian is a room.
+Garrity Creek is a room. [Huchiun]
+[tanbark, valley, coast and live oak trees,]
+[tule elk, pronghorn antelope and black tail deer]
 
-Chapter 48 - Rockridge
+A dome-shaped willow house is an enterable container. It is in Garrity Creek.
+A tumpline basket is a container. It is in Garrity Creek.
+A seed beater is an object. It is in Garrity Creek.
+A heap of redmaid seeds is an edible object. It is in a tumpline basket.
+
+Wildcat Canyon Creek is a room.
+[steelhead, salmon and sturgeon]
+
+Chapter 38 - Rockridge
 
 The description of Rockridge is "You are on a BART platform."
 
-Chapter 49 - San Bruno
+Chapter 39 - San Bruno
 
 The description of San Bruno is "You are on a BART platform."
+	
+San Bruno Concourse is up from San Bruno. The description of San Bruno Concourse is "An airy, light space like an airplane hangar. There is a huge glass mural across one wall of the concourse."
+	
+The glass mural is scenery. The description of the glass mural is "Red and blue squares in backlit glass have the words 'GO' and 'CONNECT' across the mural."
 
 Urebure is a room.
 
+Tanforan Racetrack is a room.
+	
+Tanforan Assembly Center is a room. The description of Tanforan Assembly Center is "A barbed wire fence surrounds the old racetrack. Thousands of Japanese-Americans are incarcerated inside, living in barracks and even in old horse stalls."
+	
+San Bruno Mountain is a room.
 
-Chapter 50 - San Francisco International Airport
+A tsektsel is a supporter. it is in San Bruno Mountain.
+	
+
+Chioischin is a room.
+
+Ramona is a woman. Alessandro is a man. Ramona and Alessandro are in Chioischin.
+Eyes of the Sky is a girl. She is in Chioischin.   [from the helen hunt jackson novel]
+
+Chagunte is a room.
+
+Chapter 40 - San Francisco International Airport
 
 The description of San Francisco International Airport is "You are on a BART platform."
 
-Chapter 51 - San Leandro
+Chapter 41 - San Leandro
 
 The description of San Leandro is "You are on a BART platform."
 
-Chapter 52 - South Hayward
+Sogorea Te Land Trust is a room.
+
+
+Chapter 42 - South Hayward
 
 The description of South Hayward is "You are on a BART platform."
 
-Chapter 53 - South San Francisco
+Chapter 43 - South San Francisco
 
 The description of South San Francisco is "You are on a BART platform."
 
-Chapter 54 - Union City
+Chapter 44 - Union City
 
 The description of Union City is "You are on a BART platform."
 
-Chapter 55 - Walnut Creek
+Chapter 45 - Walnut Creek
 
 The description of Walnut Creek is "You are on a BART platform."
 
-Chapter 56 - Warm Springs/South Fremont
+Chapter 46 - Warm Springs/South Fremont
 
 The description of Warm Springs/South Fremont is "You are on a BART platform."
+	
+Ritocsi is a room.
 
-Chapter 57 - West Dublin/Pleasanton
+Peli is a person. Peli is in Ritocsi.
+
+Chapter 47 - West Dublin/Pleasanton
 
 The description of West Dublin/Pleasanton is "You are on a BART platform."
 
-Chapter 58 - West Oakland
+Chapter 48 - West Oakland
 
 The description of West Oakland is "You are on a BART platform."
 
