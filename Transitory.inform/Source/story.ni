@@ -347,8 +347,7 @@ Before going to any room:
 		if the player is carrying a wheelchair:
 			say "You have some trouble going anywhere while carrying something that big. Maybe if you wear it.";
 			stop the action;
-			
-	
+				
 After wearing a wheelchair:
 	say "You sit in [the noun]. It's comfy.";
 	stop the action.
@@ -764,7 +763,19 @@ The description of Mission 16th St is "You are underground, on a BART platform. 
 		
 Mission 16th St is bumpy.
 
+A college student is a man in Mission 16th St. The description of a college student is "A young man wearing a SFSU hoodie and a backpack, headphones in. He is slumped on a bench, scrolling on his phone."
+
+A paint-covered workman is a man in Mission 16th St. The description of a workman is "A middle aged man in paint-spattered work pants and a 49-ers windbreaker. He is talking in Spanish to the guy next to him."
+
+A tired lady is a woman in Mission 16th St. The description of a tired lady is "A woman in a puffy vest sits on a bench. She looks up at the train schedule, sighs, and looks back at her feet."
+
 Mission 16th Concourse is up from Mission 16th St. Mission 16th is a concourse. It is bumpy. "[if player is not blind]Low but nicely curved arches made of smooth concrete form the ceiling of this long, busy station. Abstract cement sculptures molded in relief march up the sides of the enormous stairwell, open to the sky. [end if] [if player is not deaf]Music echoes from the stairwells. The acoustics are great![end if] Crowds of people swirl around the concourse." 
+
+A saxophone player is a man in Mission 16th Concourse. The description of a saxophone player is "A man sitting on a stool by the stairwell plays jazz on a saxophone. The instrument case is open in front of him, containing a scattering of change, dollar bills, and flyers for music shows."
+
+A security guard is a woman in Mission 16th Concourse. 
+
+A station agent is a woman in Mission 16th Concourse. 
 
 The concrete shapes are scenery in Mission 16th Concourse. "Big blocky shapes, rectangles, circles, half circles, are scuplted in relief along the rough sides of the enormous open stairwell to the plaza. They're reminiscent of brutalist skyscrapers, stoplights, a pleasing jumble of forms decorating the space. You feel more aware of the secret life of buildings. Their bones, their roots. The way they take up space against the sky.[if the player is carrying an ART card]The secretive shapes beckon like doors. You itch to climb them. [end if]"
 
@@ -783,11 +794,23 @@ Instead of climbing when the player is in Mission 16th Concourse and the ART car
 	say "You plot your route mentally, but decide not to climb. Maybe if you were in more of an artistic mood.";
 	stop the action.
 		
-Mission 16th Street Plaza is a street level station. Mission 16th Street Plaza is up from Mission 16th Concourse.  It is bumpy.
+Mission 16th Plaza is a street level station. Mission 16th Plaza is up from Mission 16th Concourse. It is bumpy.
+
+A harried shopper is a woman in Mission 16th Plaza. The description of a harried shopper is "This worried looking lady is clutching several grocery bags on one arm and muttering to herself. Her ankles are swollen."
+
+
+
+A grizzled veteran is a man in Mission 16th Plaza. The description of a veteran is "A grizzled veteran in a red Jazzy powerchair. He has some cardboard with writing on it tucked between his back and the seat."
 		
-Old Bank Corner is south of Mission 16th Street Plaza. It is sidewalky.
+Old Bank Corner is south of Mission 16th Plaza. It is sidewalky.
 		
 Papel Picado Plaza is west of Old Bank Corner. It is bumpy.
+
+
+A gothy teenager is a girl in Papel Picado Plaza. The description of a gothy teenager is "A girl in blue lipstick, dressed all in black, is hanging out with her friends."
+
+A skater is a girl in Papel Picado Plaza. The description of a skater is " A skater girl in cargo pants, eating a burrito while talking with friends. Her skateboard is covered with graffiti and stickers."
+
 
 Rainglass Plaza is a room.	It is smooth.
 		
@@ -886,13 +909,21 @@ The tamal is an edible thing in the cooler on wheels. The price of the tamal is 
 
 Instead of taking the cooler on wheels:
 	say "But that belongs to the nice tamale lady!";
+	
+A hipster dude on a motorized unicycle is a man in Calle 24 Plaza. The description of a hipster dude is "A guy in jeans, a hoodie, and a black helmet is standing an electric unicycle, tootling along."
 
 A yelling preacher is a person. In Calle 24 Plaza is a yelling preacher. The description of the preacher is "A short man yells fervently in Spanish into a microphone. You recognize some things from the Bible[if player is not deaf], though it's hard to understand him from the low quality amp at his feet[end if]".
 
-Calle 24 Northwest Corner is west of Calle 24 Plaza. It is sidewalky. "Just outside the Chinese Food and Donuts shop, this lively streetcorner has buses pulling up along 24th Street, many cars going by, people crossing the street or standing around[if player is not deaf], music blaring from passing cars and from the shops[end if]. [if player is not blind]Along Mission, high overhead, washingtonia palms stretch into the sky.[end if] To the east, there's another plaza."
+Donuts Corner is west of Calle 24 Plaza. It is sidewalky. "Just outside the Chinese Food and Donuts shop, this lively streetcorner has buses pulling up along 24th Street, many cars going by, people crossing the street or standing around[if player is not deaf], music blaring from passing cars and from the shops[end if]. [if player is not blind]Along Mission, high overhead, washingtonia palms stretch into the sky.[end if] To the east, there's another plaza."
+
+An old guy in a brokendown manual wheelchair is a man in Donuts Corner. The description of an old guy is "A guy slumped over in a rickety wheelchair with no footrests. He's moving slowly backwards, propelling the chair with his feet. The chair has 'SFGH' printed across the back." 
+
+A funky dude is a man in Donuts Corner. The description of a funky dude is "A guy with long dreads, an army jacket, striped sweatpants, and huge sneakers is playing music from a boombox in his backpack. He seems very much at home on this corner."
 
 
-Circle Plaza is south of Calle 24 Northwest Corner. It is bumpy.
+
+
+Circle Plaza is south of Donuts Corner. It is bumpy.
 The description of Circle Plaza is "
 [if player is not blind]You head into the crowds of this busy space built around a circular wall. People are selling stuff from tables and little booths. Across 24th street to the north, there's a donut shop. You notice a mural that says something about coffee.[end if]
 [if player is not deaf]Many kinds of music are playing here. Norteño blasts its cheerful accordions from a booth, saxophone notes float up from the huge, round stairwell which goes down to the station, songs blare from passing cars.[end if]
@@ -913,10 +944,14 @@ The coffee mural is scenery in Circle Plaza. "A huge mural in bright colors spla
 
 The stage is scenery in Circle Plaza. 
 
-A flower seller is a person. In Circle Plaza is a flower seller. The description of a flower seller is "[if the player is not blind]A short, smiling woman in a baseball hat and a red checked scarf pushes her wheely cart full of roses and carnations. Her jacket has a ladybug pin. [end if][if player is blind]There's a short woman just next to you, fussing over a metal cart.[end if]".
+A cheerful shopper is a woman in Circle Plaza. The description of a cheerful shopper is "A cheerful seeming woman laden with shopping bags. She has groceries, flowers, and all kinds of other stuff in re-usable bags. Somehow, she's also holding her kids' hand through all that stuff." 
+
+A wide-eyed child is a girl in Circle Plaza. The description of a wide-eyed child is "A little girl clutching a bottle of mexican coca-cola is staring at everything, holding her mom's hand."
+
+A flower seller is a person. In Circle Plaza is a flower seller. The description of a flower seller is "[if the player is not blind]A short, smiling woman in a baseball hat and a red checked scarf pushes her wheely cart full of roses and carnations. Her jacket has a ladybug pin. [end if][if player is blind]There's a short woman just next to you, fussing over a metal cart.[end if]"
 
 Every turn when the turn count is even and the player can see a flower seller and the player is not blind: 
-    say "A flower seller [one of]beams at you with a big happy grin[or]calls out, 'Flores!'[or]offers you a little bunch of carnations tied with string[or]shares a coffee with a friend[or]fusses over her bunches of flowers, arranging them nicely[or]watches the people passing by[or]smiles as she stops to talk with a friend[as decreasingly likely outcomes]."
+    say "A flower seller [one of]beams at you with a big happy grin.[or]calls out, 'Flores!'[or]offers you a little bunch of carnations tied with string.[or]shares a coffee with a friend.[or]fusses over her bunches of flowers, arranging them nicely.[or]watches the people passing by.[or]smiles as she stops to talk with a friend.[as decreasingly likely outcomes]"
 
 A shopping basket is an openable container. It is scenery. It is in Circle Plaza. The description of the shopping basket is "A metal folding shopping basket on wheels. "
 
@@ -925,13 +960,23 @@ The little bunch of carnations is a thing in the shopping basket. The price of t
 Instead of taking the basket:
 	say "But that belongs to Mariquita! And she's so nice.";
 
+A accordion player is a man in Circle Plaza. The description of an accordion player is "A man in full mariachi uniform covered in bright buttons is carrying an accordion."
 
-Calle 24 Southeast Corner is east of Circle Plaza. It is sidewalky. "This busy street corner by the McDonalds is grimy. It's basically a crowded spot where people wait to cross the street. Across Mission to the west, there's a nice plaza with a busy market. Across 24th Street to the north, another lovely plaza with musicians, preachers, and some places to sit."
-Calle 24 Southeast Corner is south of Calle 24 Plaza. 
-A raccoon is a kind of animal.  In Calle 24 Southeast Corner is a raccoon. The description of the raccoon is "A greasy looking plump raccoon. It's battered, but unbowed."  
+A guitar player is a man in Circle Plaza. The description of a guitar player is "A mariachi carring a big full bodied guitar and pulling a hand truck loaded with a little amp."
+
+Calle 24 Corner is east of Circle Plaza. It is sidewalky. "This busy street corner by the McDonalds is grimy. It's basically a crowded spot where people wait to cross the street. Across Mission to the west, there's a nice plaza with a busy market. Across 24th Street to the north, another lovely plaza with musicians, preachers, and some places to sit. [if player is not Deaf]Classical music is blasting from hidden speakers at an obnoxious level, meant to drive loiterers away.[end if]" 
+
+Calle 24 Corner is south of Calle 24 Plaza. 
+
+A raccoon is a kind of animal.  In Calle 24 Corner is a raccoon. The description of the raccoon is "A greasy looking plump raccoon. It's battered, but unbowed."  
 Every turn when the player can see a raccoon and the turn count is even: 
     say "A raccoon [one of]hauls itsef out of a concrete trash bin[or]skulks into a nearby alleyway[or]hides in a little nook, eating some discarded fries[or]has a little nap in a pile of trash[as decreasingly likely outcomes]."
 
+A woman called a woman with a stroller is in Calle 24 Corner. The description of the woman is "A woman in bright lipstick and a wig slightly askew, pushing a stroller. Wait . . . it's not a baby in there. It's a chihuahua in a sweater and the sweater matches its owner's sweater."
+
+A guy in a yellow vest is a man in Calle 24 Corner. The description of the guy is "A guy in a high visibility vest, sweeping up trash. He's carrying a dustpan on a long handle. He seems a bit careworn."
+
+A rough sleeper is a man in Calle 24 Corner. The description of a rough sleeper is "A scruffy man is passed out on the sidewalk next to a trash bag full of scavenged cans."
 
 Brutalist Plaza is a room.  It is uneven. "You pick your way through paths around enormous, rough-hewn blocks of concrete and stone. They tower overhead like the tufa mounds of Mono Lake or a cityscape in a dream. A little to the southwest, the path broadens."
 
