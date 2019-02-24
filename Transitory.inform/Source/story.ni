@@ -24,12 +24,13 @@ A boy is a kind of man. A girl is a kind of woman.
 
 [temporary start of game location for testing]
 
-Home Base is west of Circle Plaza. "A bare room."
+Home Base is west of Circle Plaza. "A bare room. The world outside seems to call to you. Why not explore?"
 
-A carnelian flower is an object. "A stylized flower sculpted in carnelian, smooth and polished." The description of the carnelian flower is "It shimmers, slipping in time. You think of sacrifice and the blood of captive warriors."
+A carnelian flower is an object. "This stylized flower is sculpted in carnelian, smooth and polished." The description of the carnelian flower is "It shimmers, slipping in time. You think of sacrifice and the blood of captive warriors."
 
 In Home Base is an opaque, closed, openable container called a closet. The closet is scenery. 
-The carnelian flower, wraparound mirrorshades, headphones, a thick woolly hat, the cruel shoes, and earplugs are in the closet.
+The wraparound mirrorshades, headphones, a thick woolly hat, the cruel shoes, a long cane, and earplugs are in the closet.
+A carnelian flower is in Home Base.
 A powerchair is in Home Base.
 
 
@@ -234,10 +235,11 @@ The description of blue goggles is "Large, thick-lensed, coke-bottle tinted gogg
 Understand "goggles" as blue goggles.
 
 
-A white cane is an object. "A long white cane."
-The description of the white cane is "A long, thin, white cane, used for navigation by people who don't see well or who are blind"
+A long cane is an object. "A long probing cane."
+The description of the white cane is "A long, thin, cane, used for navigation by people who don't see well or who are blind."
 
 Before wearing the mirrorshades:
+	say "You might want to pick up a long cane for navigation, too.";
 	now the player is blind;
 	
 After taking off the mirrorshades:
@@ -298,7 +300,6 @@ The description is "Foam earplugs, useful for when you don't want to be bothered
 The sound is "They don't have a sound. That's the whole point."
 The feel is "Squashy little bits of foam."
 
-
 Before wearing the earplugs:
 	now the player is Deaf;  [this is meant to be little-d deaf but i havent figured out differentiation]
 	
@@ -306,8 +307,8 @@ After taking off the earplugs:
 	now the player is hearing;
 
 Instead of listening when the player is Deaf: 
-	say "Good luck with that one. You can't hear a thing!"
-	[weird, this causes a compiler error]
+	say "You listen hard, but don't hear much that's useful."
+	
 
 Section 3 - Mobility
 
@@ -382,6 +383,9 @@ A property-aggregation rule for a wheelchair worn by the player (this is the men
 
 A property-aggregation rule for an object that is not a wheelchair worn by the player (this is the mention other worn objects rule):
 	add "being worn" to the tagline.
+	
+A property-aggregation rule for a long cane:
+	add "wielded" to the tagline.
 
 The last property-aggregation rule (this is the print aggregated properties rule):
 	if the number of entries in the tagline is greater than 0:
@@ -439,7 +443,7 @@ Report waiting more:
 	say "You snap out of your reverie."
 
 Check waiting more: 
-    if the time understood is greater than 10 minutes, say "That seems so boring. Maybe looking around or exploring would be better." instead.	
+    if the time understood is greater than 10 minutes, say "That seems so boring. Maybe looking around or exploring while you wait would be a better idea." instead.	
 
 
 Part 4 - Money stuff
@@ -572,6 +576,8 @@ Chapter 7 - Civic Center
 
 The description of Civic Center is "You are on a BART platform."
 
+Kotóla is a woman. The description of Kotóla is "Frog Woman, Coyote's wife. She lived in the river. Her bones someday will live here deep under the earth."
+
 Chapter 8 - Coliseum
 
 The description of Coliseum is "You are on a BART platform."
@@ -588,7 +594,13 @@ A woven basket is a container. It is in Siplichiquin.
 			
 Black seed tamales are an object. They are edible. They are in a woven basket.
 			
+The Land of the Dead is a room. 
 
+Kaknu is a person. Kaknu is in The Land of the Dead. The description of Kaknu is "A person who is also a falcon. He has a bow and arrows."
+
+Wiwe is a person. Wiwe is in The Land of the Dead. The description of Wiwe is "Lord of the Dead, Wiwe, his body made of stone."
+			
+			
 Chapter 10 - Concord
 
 The description of Concord is "You are on a BART platform."
@@ -628,6 +640,8 @@ The description of Embarcadero is "You are on a BART platform underground. Lots 
 Chapter 16 - Fremont
 
 The description of Fremont is "You are on a BART platform."
+
+Sierra de Gabilin is a room.
 
 Chapter 17 - Fruitvale
 
@@ -1046,6 +1060,9 @@ A dome-shaped willow house is an enterable container. It is in Garrity Creek.
 A tumpline basket is a container. It is in Garrity Creek.
 A seed beater is an object. It is in Garrity Creek.
 A heap of redmaid seeds is an edible object. It is in a tumpline basket.
+		
+A willowbark granary is an openable container. It is in Garrity Creek.
+A seed pestle is an object. It is in Garrity Creek.
 
 Wildcat Canyon Creek is a room.
 [steelhead, salmon and sturgeon]
