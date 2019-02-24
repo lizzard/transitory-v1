@@ -33,6 +33,13 @@ The wraparound mirrorshades, headphones, a thick woolly hat, the cruel shoes, a 
 A carnelian flower is in Home Base.
 A powerchair is in Home Base.
 
+Instead of dropping the magic marker:
+	say "Wouldn't want to lose it. You put it into your pocket, instead.";
+	stop the action.
+	
+Instead of dropping a card:
+	say "You think about dropping [the noun], but can't bring yourself to do it.";
+	stop the action.
 
 Part 2 - Multisensory
 
