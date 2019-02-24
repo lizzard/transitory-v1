@@ -332,7 +332,7 @@ A wheelchair is a kind of wearable thing. A powerchair is a wheelchair. A manual
 
 
 The description of a powerchair is "It's shiny black, it's powerful, and it's from the future."
-
+Understand "chair" as a wheelchair.
 
 Before going to any room:
 	if the ambulation of the player is flying:
@@ -347,6 +347,39 @@ Before going to any room:
 		if the player is carrying a wheelchair:
 			say "You have some trouble going anywhere while carrying something that big. Maybe if you wear it.";
 			stop the action;
+			
+	
+After wearing a wheelchair:
+	say "You sit in [the noun]. It's comfy.";
+	stop the action.
+	
+After taking off a wheelchair:
+	say "You get out of [the noun].";
+	stop the action.
+	
+Understand the command "sit" and "stand" as something new. 
+Understand "sit on [something]" as sitting in.
+Understand "sit in [something]" as sitting in.
+Understand "stand up" or "stand" as standing up.
+Sitting in is an action applying to one thing. 
+Standing up is an action applying to nothing.
+
+
+Carry out an actor sitting in a wheelchair:
+	if the noun is not worn by the actor:
+		silently try the actor taking the noun;
+		silently try the actor wearing the noun;
+	otherwise:
+		say "You're already in it.";
+
+Before standing up:
+	if the player is wearing a wheelchair (called the chair): 
+		silently try taking off the chair;
+		silently try dropping the chair;
+		stop the action;
+	otherwise:
+		continue the action.
+	
 	
 The print standard inventory rule is not listed in any rulebook. 		
 
