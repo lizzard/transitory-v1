@@ -20,17 +20,23 @@ Table of Fancy Status
 left 	central 	right 
 " [location]"	"[number of visited rooms]/[number of rooms] locations"	"Score: [score]"
 
+[some general rules, not sure where to put them yet]
+
 A boy is a kind of man. A girl is a kind of woman.
 
 [temporary start of game location for testing]
 
-Home Base is west of Circle Plaza. "A bare room. The world outside seems to call to you. Why not explore?"
+Home Base is west of Circle Plaza. "A bare room with a sign on the wall. [paragraph break]The world outside seems to call to you. Why not explore?"
 
-A carnelian flower is an object. "This stylized flower is sculpted in carnelian, smooth and polished." The description of the carnelian flower is "It shimmers, slipping in time. You think of sacrifice and the blood of captive warriors."
+A welcome sign is scenery in Home Base. "Welcome, traveler! [paragraph break] Thank you for playtesting. The most built-out areas are near 24th St and 16th St. [paragraph break] Further away, the trains should work correctly, but the world beyond the train platforms is only a skeleton. [paragraph break] The things in the closet are mostly for testing sightedness, hearing, and mobility. They aren't necessary for solving any puzzles." 
+
+A large box is an object in Home Base. It is a closed openable container. It is fixed in place.
+
+A carnelian flower is an object. It is in the large box. "This stylized flower is sculpted in carnelian, smooth and polished." The description of the carnelian flower is "It shimmers, slipping in time. You think of sacrifice and the blood of captive warriors."
 
 In Home Base is an opaque, closed, openable container called a closet. The closet is scenery. 
 The wraparound mirrorshades, headphones, a thick woolly hat, the cruel shoes, a long cane, and earplugs are in the closet.
-A carnelian flower is in Home Base.
+
 A powerchair is in Home Base.
 
 Instead of dropping the magic marker:
@@ -332,7 +338,6 @@ After taking off the cruel shoes:
 	now the player is walking;
 
 
-
 [experiment with wearing a wheelchair rather than using Rideable Vehicles]
 
 A wheelchair is a kind of wearable thing. A powerchair is a wheelchair. A manual chair is a wheelchair. A scooter is a wheelchair. 
@@ -354,6 +359,7 @@ Before going to any room:
 		if the player is carrying a wheelchair:
 			say "You have some trouble going anywhere while carrying something that big. Maybe if you wear it.";
 			stop the action;
+
 				
 After wearing a wheelchair:
 	say "You sit in [the noun]. It's comfy.";
@@ -380,10 +386,11 @@ Carry out an actor sitting in a wheelchair:
 
 Before standing up:
 	if the player is wearing a wheelchair (called the chair): 
-		silently try taking off the chair;
+		silently try taking off the chair;		
 		silently try dropping the chair;
-		stop the action;
+		continue the action;
 	otherwise:
+		say "You're already up.";
 		continue the action.
 	
 	
@@ -522,9 +529,28 @@ Instead of buying something free:
 
 Instead of buying the money:
 	say "The money belongs to you; you buy things with it." 
+	
 
 
-Part 5 - All the places
+Part 5 - Interactions
+
+Asking someone about something is speech. Telling someone about something is speech. Answering someone that something is speech. Asking someone for something is speech. 
+
+A person can be greeted or ungreeted. A person is usually ungreeted. The player is greeted.
+
+Smiling is an action applying to one thing.
+
+Understand the command "greet" as something new. Understand "greet [someone]" as greeting.
+Greeting is an action applying to one thing. 
+
+Carry out greeting:
+	say "You greet [the noun].";
+	now the noun is greeted;
+	continue the action.
+	
+Understand "talk to [someone]" as a mistake ("To start a conversation, try to GREET [the noun], ASK [the noun] ABOUT something or TELL [the noun] ABOUT something."). 
+
+Part 6 - All the places
 
 Section 1 - Regions
 [Regions]
@@ -917,6 +943,8 @@ The tamal is an edible thing in the cooler on wheels. The price of the tamal is 
 Instead of taking the cooler on wheels:
 	say "But that belongs to the nice tamale lady!";
 	
+A pink-jacketed girl is in Calle 24 Plaza. The description is "A little girl with long braids and a pink jacket. She has a bedazzled Dora the Explorer backpack."
+	
 A hipster dude on a motorized unicycle is a man in Calle 24 Plaza. The description of a hipster dude is "A guy in jeans, a hoodie, and a black helmet is standing an electric unicycle, tootling along."
 
 A yelling preacher is a person. In Calle 24 Plaza is a yelling preacher. The description of the preacher is "A short man yells fervently in Spanish into a microphone. You recognize some things from the Bible[if player is not deaf], though it's hard to understand him from the low quality amp at his feet[end if]".
@@ -951,14 +979,22 @@ The coffee mural is scenery in Circle Plaza. "A huge mural in bright colors spla
 
 The stage is scenery in Circle Plaza. 
 
-A cheerful shopper is a woman in Circle Plaza. The description of a cheerful shopper is "A cheerful seeming woman laden with shopping bags. She has groceries, flowers, and all kinds of other stuff in re-usable bags. Somehow, she's also holding her kids' hand through all that stuff." 
+A cheerful shopper is a woman in Circle Plaza. The description of a cheerful shopper is "A cheerful seeming woman laden with shopping bags. She has groceries, flowers, and all kinds of other stuff in re-usable bags. Somehow, she's also holding onto her daughter. [if greeted]She nods and says hello.[end if]" 
 
-A wide-eyed child is a girl in Circle Plaza. The description of a wide-eyed child is "A little girl clutching a bottle of mexican coca-cola is staring at everything, holding her mom's hand."
+A wide-eyed child is a girl in Circle Plaza. The description of a wide-eyed child is "A little girl clutching a bottle of mexican coca-cola is staring at everything, holding her mom's hand. [if greeted]She seems shy.[end if]"
 
-A flower seller is a person. In Circle Plaza is a flower seller. The description of a flower seller is "[if the player is not blind]A short, smiling woman in a baseball hat and a red checked scarf pushes her wheely cart full of roses and carnations. Her jacket has a ladybug pin. [end if][if player is blind]There's a short woman just next to you, fussing over a metal cart.[end if]"
+A flower seller is a person. In Circle Plaza is a flower seller. The description of a flower seller is "[if the player is not blind]A short, smiling woman in a baseball hat and a red checked scarf pushes her wheely cart full of roses and carnations. Her jacket has a ladybug pin. [end if][if player is blind]There's a short woman just next to you, fussing over a metal cart.[end if]" 
 
-Every turn when the turn count is even and the player can see a flower seller and the player is not blind: 
-    say "A flower seller [one of]beams at you with a big happy grin.[or]calls out, 'Flores!'[or]offers you a little bunch of carnations tied with string.[or]shares a coffee with a friend.[or]fusses over her bunches of flowers, arranging them nicely.[or]watches the people passing by.[or]smiles as she stops to talk with a friend.[as decreasingly likely outcomes]"
+Understand "Mariquita" as the flower seller when the flower seller is proper-named.
+
+Instead of examining the flower seller for the first time:
+	say "[if the player is not blind]A short, smiling woman in a baseball hat and a red checked scarf pushes her wheely cart full of roses and carnations. Her jacket has a ladybug pin. [end if][if player is blind]A short woman just next to you, fussing over a metal cart.[end if][line break]";
+	say "You stop and chat with her. She's very friendly. [line break]Her name is Mariquita.";
+	Now the printed name of the flower seller is "Mariquita";
+	now the flower seller is proper-named;
+	
+Every turn when the turn count is even and the flower seller is proper-named and the player can see a flower seller and the player is not blind: 
+    say "Mariquita [one of]beams at you with a big happy grin.[or]calls out, 'Flores!'[or]offers you a little bunch of carnations tied with string.[or]shares a coffee with a friend.[or]fusses over her bunches of flowers, arranging them nicely.[or]watches the people passing by.[or]smiles as she stops to talk with a friend.[as decreasingly likely outcomes]"
 
 A shopping basket is an openable container. It is scenery. It is in Circle Plaza. The description of the shopping basket is "A metal folding shopping basket on wheels. "
 
@@ -1227,7 +1263,7 @@ The description of West Oakland is "You are on a BART platform."
 
 
 
-Part 6 - Elevator 
+Part 7 - Elevator 
 
 [a simple 3-level elevator appears in any train station location where it might be, if the player goes there]
 
@@ -1327,7 +1363,7 @@ Check going to Street Level:
 		
 
 
-Part 7 - Ticket reader
+Part 8 - Ticket reader
 
 [the reader itself]
 
@@ -1402,7 +1438,7 @@ Carry out writing on:
 
 
 
-Part 8 - Train rules
+Part 9 - Train rules
 
 [train-display]
 
