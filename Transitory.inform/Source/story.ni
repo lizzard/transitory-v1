@@ -325,7 +325,7 @@ Instead of listening when the player is Deaf:
 
 Section 3 - Mobility
 
-Ambulation is a kind of value. The ambulations are wheeling, walking, limping, flying, and hopping. Understand “wheeled” as wheeling. Understand “walking” as walking. Understand "limping" as limping. Understand "hopping" as hopping.
+Ambulation is a kind of value. The ambulations are wheeling, walking, limping, flying, hopping, and mobile. Understand “wheeled” as wheeling. Understand “walking” as walking. Understand "limping" as limping. Understand "hopping" as hopping.
  
 A person has an ambulation. The ambulation of a person is usually walking. 
 The ambulation of the player is walking.
@@ -350,23 +350,40 @@ Before going to any room:
 	if the ambulation of the player is flying:
 		say "You flap your wings vigorously.";
 	if the ambulation of the player is wheeling:
-		unless the player is wearing a wheelchair:
+		if the player is not wearing a wheelchair:
 			say "You have some trouble getting around.";
 			stop the action;
 		otherwise:
-			say "[one of][or]You wheel across pleasantly flat ground.[or]You zoom on over.[or]This is such a nice, zippy chair.[or]There's a little bumpiness to the floor but no big deal.[or]Pirouetting a bit in place, you wheel on over.[as decreasingly likely outcomes]";
+			if the surface of the location is bumpy:
+				say "[one of]Bumpy ground, but still navigable.[or]Your joints ache with every bump you roll over.[or]The bumps jar your spine.[at random]";
+			if the surface of the location is uneven:
+				say "[one of]You bump and careen across the uneven ground.[or]You carefully pick your way across the uneven ground.[at random]";
+			if the surface of the location is brick:
+				say "[one of]Your wheels judder across the bumpy floor.[or]Every brick and tile jostles you a little.[or]You can feel the bricks bumping under your tires.[at random]";
+			if the surface of the location is grassy:
+				say "The ground is a little soft. Luckily, your wheels can handle it.";
+			if the surface of the location is mud:
+				say "You stick in the mud briefly, then wrench free.";
+			if the surface of the location is sand:
+				say "Your wheels sink into the sand. It's difficult to get across it.";
+			if the surface of the location is gravel:
+				say "[one of]Your wheels skid around in the gravel in the deep spots. Embarassing. [or]Ugh, gravel.[at random]";
+			if the surface of the location is smooth:
+				say "[one of] [or]You zoom on over.[or]You wheel across pleasantly flat ground.[or]Silently, with minimal effort, you traverse the smooth floor.[or]This is such a nice, zippy chair.[or]You glide over gracefully, feeling suave.[or]Pirouetting smoothly in place, you wheel on over.[as decreasingly likely outcomes]";
 	if the ambulation of the player is walking:
 		if the player is carrying a wheelchair:
-			say "You have some trouble going anywhere while carrying something that big. Maybe if you wear it.";
+			say "You have some trouble going anywhere while carrying something that big. Maybe if you put it down and sit in it, things will be easier.";
 			stop the action;
 
 				
 After wearing a wheelchair:
 	say "You sit in [the noun]. It's comfy.";
+	now the ambulation of the player is wheeling;
 	stop the action.
 	
 After taking off a wheelchair:
 	say "You get out of [the noun].";
+	now the ambulation of the player is mobile;
 	stop the action.
 	
 Understand the command "sit" and "stand" as something new. 
@@ -465,7 +482,7 @@ Report studying the vicinity:
 	otherwise:
 		say "You should try examining specific things with all available senses."
 
-Understand "tap" or "explore" as studying the vicinity. 
+Understand "tap", "sweep" or "explore" as studying the vicinity. 
 
 
 Waiting more is an action applying to one number.
@@ -555,7 +572,10 @@ Part 6 - All the places
 Section 1 - Regions
 [Regions]
 
-A room can be smooth, bumpy, sidewalky, bricks, cracked, uneven, gravely, sandy, grassy, or muddy. A room is usually smooth.
+
+
+A surface is a kind of value. A room has a surface. 
+The surfaces are smooth, bumpy, sidewalk, brick, cracked, uneven, gravel, sand, grassy, and mud. A room is usually smooth.
 
 A room can be a platform. 
 A room can be a concourse. 
@@ -611,7 +631,7 @@ West Berkeley Shellmound is a room.
 
 Chapter 3 - Balboa Park
 
-The description of Balboa Park is "You are on a BART platform withsmooth marble floors. It has the feel of being in a long, narrow canyon, shaded, but open to the sky above. People are going up and down stairways to the concourse above, another wide open space."  Balboa Park is smooth.
+The description of Balboa Park is "You are on a BART platform with smooth marble floors. It has the feel of being in a long, narrow canyon, shaded, but open to the sky above. People are going up and down stairways to the concourse above, another wide open space."  The surface of Balboa Park is smooth.
 		
 Balboa Park Concourse is up from Balboa Park. It is a concourse.
 
@@ -794,7 +814,7 @@ Chapter 24 - Mission 16th St
 
 The description of Mission 16th St is "You are underground, on a BART platform. [if player is not deaf]The haunting sound of train wheels on the rails echoes all around[end if]. [if player is not blind]The platform floor is covered with long brick-red tiles, while the median walls are tiled in light and dark blue, green, gold, and brown tiles like the colors of a tropical beach on a sunny day.[end if]"  
 		
-Mission 16th St is bumpy.
+The surface of Mission 16th St is brick.
 
 A college student is a man in Mission 16th St. The description of a college student is "A young man wearing a SFSU hoodie and a backpack, headphones in. He is slumped on a bench, scrolling on his phone."
 
@@ -802,7 +822,7 @@ A paint-covered workman is a man in Mission 16th St. The description of a workma
 
 A tired lady is a woman in Mission 16th St. The description of a tired lady is "A woman in a puffy vest sits on a bench. She looks up at the train schedule, sighs, and looks back at her feet."
 
-Mission 16th Concourse is up from Mission 16th St. Mission 16th is a concourse. It is bumpy. "[if player is not blind]Low but nicely curved arches made of smooth concrete form the ceiling of this long, busy station. Abstract cement sculptures molded in relief march up the sides of the enormous stairwell, open to the sky. [end if] [if player is not deaf]Music echoes from the stairwells. The acoustics are great![end if] Crowds of people swirl around the concourse." 
+Mission 16th Concourse is up from Mission 16th St. Mission 16th is a concourse. The surface of Mission 16th Concourse is brick. "[if player is not blind]Low but nicely curved arches made of smooth concrete form the ceiling of this long, busy station. Abstract cement sculptures molded in relief march up the sides of the enormous stairwell, open to the sky. [end if] [if player is not deaf]Music echoes from the stairwells. The acoustics are great![end if] Crowds of people swirl around the concourse." 
 
 A saxophone player is a man in Mission 16th Concourse. The description of a saxophone player is "A man sitting on a stool by the stairwell plays jazz on a saxophone. The instrument case is open in front of him, containing a scattering of change, dollar bills, and flyers for music shows."
 
@@ -827,7 +847,7 @@ Instead of climbing when the player is in Mission 16th Concourse and the ART car
 	say "You plot your route mentally, but decide not to climb. Maybe if you were in more of an artistic mood.";
 	stop the action.
 		
-Mission 16th Plaza is a street level station. Mission 16th Plaza is up from Mission 16th Concourse. It is bumpy.
+Mission 16th Plaza is a street level station. Mission 16th Plaza is up from Mission 16th Concourse. The surface of Mission 16th Plaza is brick.
 
 A harried shopper is a woman in Mission 16th Plaza. The description of a harried shopper is "This worried looking lady is clutching several grocery bags on one arm and muttering to herself. Her ankles are swollen."
 
@@ -835,9 +855,9 @@ A harried shopper is a woman in Mission 16th Plaza. The description of a harried
 
 A grizzled veteran is a man in Mission 16th Plaza. The description of a veteran is "A grizzled veteran in a red Jazzy powerchair. He has some cardboard with writing on it tucked between his back and the seat."
 		
-Old Bank Corner is south of Mission 16th Plaza. It is sidewalky.
+Old Bank Corner is south of Mission 16th Plaza. The surface of Old Bank Corner is sidewalk.
 		
-Papel Picado Plaza is west of Old Bank Corner. It is bumpy.
+Papel Picado Plaza is west of Old Bank Corner. The surface of Papel Picado Plaza is brick.
 
 
 A gothy teenager is a girl in Papel Picado Plaza. The description of a gothy teenager is "A girl in blue lipstick, dressed all in black, is hanging out with her friends."
@@ -845,28 +865,26 @@ A gothy teenager is a girl in Papel Picado Plaza. The description of a gothy tee
 A skater is a girl in Papel Picado Plaza. The description of a skater is " A skater girl in cargo pants, eating a burrito while talking with friends. Her skateboard is covered with graffiti and stickers."
 
 
-Rainglass Plaza is a room.	It is smooth.
+Rainglass Plaza is a room.	The surface of Rainglass Plaza is smooth.
 		
-Colibrí Plaza is a room. It is smooth.	
-Hummingbird Station is a room. It is smooth.
+Colibrí Plaza is a room. The surface of Colibrí Plaza is smooth.	
+Hummingbird Station is a room. The surface of Hummingbird Station is smooth.
 		[write secret room accessible from ART card]
 
-Laguna de Manantial is a room.  It is sandy.
+Laguna de Manantial is a room.  The surface of Laguna de Manantial is sand.
 
-Ojo de Agua is a room. It is gravely.
+Ojo de Agua is a room. The surface of Ojo de Agua is gravel.
 
-Mission Dolores is a room.  It is bumpy.
+Mission Dolores is a room.  The surface of Mission Dolores is bumpy.
 Padre Palóu is a man. He is in Mission Dolores.
 Francisca is a girl. She is in Mission Dolores. [daughter of Alvarez, one of the soldiers]
-
-
 
 Supitaxe is a man. He is in Mission Dolores. 
 Guilicse is a man. He is in Mission Dolores.
 Mutacxe is a man. He is in Mission Dolores.
 	 [these are some of the Huchiun men who first visited the vessel San Carlos in 1775]
 
-Chutchui is a room. It is grassy. 
+Chutchui is a room. The surface of Chutchui is grassy. 
 	
 A large roundhouse is an open enterable container in Chutchui. 
 A pine house is an open enterable container in Chutchui.
@@ -882,10 +900,10 @@ Sitlintac is a room.  [manzanita, wild violets]
 Pilmo is a boy. He is in Sitlintac.
 Taulvo is a boy. He is in Sitlintac.
 		
-California Savings Corner is north of Papel Picado Plaza. It is west of Mission 16th Street Plaza. It is sidewalky.
+California Savings Corner is north of Papel Picado Plaza. It is west of Mission 16th Street Plaza. The surface of California Savings Corner is sidewalk.
 		
 
-Noisebridge is a room. It is smooth. "You are in a large hackerspace. People are messing around with laptops in the Hackitorium, poking at electronic gadgets, reading in the library area, and playing video games over by the windows. There are piles of junk up against one wall."
+Noisebridge is a room. The surface of Noisebridge is smooth. "You are in a large hackerspace. People are messing around with laptops in the Hackitorium, poking at electronic gadgets, reading in the library area, and playing video games over by the windows. There are piles of junk up against one wall."
 
 The workbench is a supporter in Noisebridge. It is fixed in place.
 
@@ -926,7 +944,7 @@ Understand "shapes", "abstract", "cement", "relief", "concrete", "sculptures", a
 
 
 
-Calle 24 Plaza is up from Mission 24th Concourse. It is bumpy.  "All around you are little shops and restaurants, people talking, buses pulling up to the stops on Mission and on 24th Street, music booming from cars going by. [if the player is not blind]Palm trees sway high overhead. Thick metal rails surround the enormous open stairwell that goes down to the station concourse. A huge mural of a train runs across the wall of the taqueria bordering the plaza to the north.[end if]"
+Calle 24 Plaza is up from Mission 24th Concourse. The surface of Calle 24 Plaza is bumpy.  "All around you are little shops and restaurants, people talking, buses pulling up to the stops on Mission and on 24th Street, music booming from cars going by. [if the player is not blind]Palm trees sway high overhead. Thick metal rails surround the enormous open stairwell that goes down to the station concourse. A huge mural of a train runs across the wall of the taqueria bordering the plaza to the north.[end if]"
 
 The train mural is scenery in Calle 24 Plaza. "A mural of a gleaming BART train carried on the backs of determined workers amid a geometric cityscape."  
 
@@ -949,7 +967,7 @@ A hipster dude on a motorized unicycle is a man in Calle 24 Plaza. The descripti
 
 A yelling preacher is a person. In Calle 24 Plaza is a yelling preacher. The description of the preacher is "A short man yells fervently in Spanish into a microphone. You recognize some things from the Bible[if player is not deaf], though it's hard to understand him from the low quality amp at his feet[end if]".
 
-Donuts Corner is west of Calle 24 Plaza. It is sidewalky. "Just outside the Chinese Food and Donuts shop, this lively streetcorner has buses pulling up along 24th Street, many cars going by, people crossing the street or standing around[if player is not deaf], music blaring from passing cars and from the shops[end if]. [if player is not blind]Along Mission, high overhead, washingtonia palms stretch into the sky.[end if] To the east, there's another plaza."
+Donuts Corner is west of Calle 24 Plaza. The surface of Donuts Corner is sidewalk. "Just outside the Chinese Food and Donuts shop, this lively streetcorner has buses pulling up along 24th Street, many cars going by, people crossing the street or standing around[if player is not deaf], music blaring from passing cars and from the shops[end if]. [if player is not blind]Along Mission, high overhead, washingtonia palms stretch into the sky.[end if] To the east, there's another plaza."
 
 An old guy in a brokendown manual wheelchair is a man in Donuts Corner. The description of an old guy is "A guy slumped over in a rickety wheelchair with no footrests. He's moving slowly backwards, propelling the chair with his feet. The chair has 'SFGH' printed across the back." 
 
@@ -959,10 +977,9 @@ A funky dude is a man in Donuts Corner. The description of a funky dude is "A gu
 
 
 Circle Plaza is south of Donuts Corner. It is bumpy.
-The description of Circle Plaza is "
-[if player is not blind]You head into the crowds of this busy space built around a circular wall. People are selling stuff from tables and little booths. Across 24th street to the north, there's a donut shop. You notice a mural that says something about coffee.[end if]
-[if player is not deaf]Many kinds of music are playing here. Norteño blasts its cheerful accordions from a booth, saxophone notes float up from the huge, round stairwell which goes down to the station, songs blare from passing cars.[end if]
-[if player is not hearing or player is not sighted]This is a typical, busy, open space on Mission Street.[end if]"
+The description of Circle Plaza is "[if player is not blind]You head into the crowds of this busy space built around a circular wall. People are selling stuff from tables and little booths. Across 24th street to the north, there's a donut shop. You notice a mural that says something about coffee[end if][if player is not deaf]Many kinds of music are playing here[end if][if player is not hearing or player is not sighted]This is a typical, busy, open space on Mission Street[end if]".
+
+The sound of Circle Plaza is "Norteño blasts its cheerful accordions from a booth, saxophone notes float up from the huge, round stairwell which goes down to the station, songs blare from passing cars."
 
 The gadget table is scenery in Circle Plaza. "Phone cases, cables, chargers, and headphones are laid out on this cheap folding table."
 The jewelry table is scenery in Circle Plaza. "You are overwhelmed by the array of cheap rings with big semi-precious stones, earrings made of tiny feathers, and chunky silver bracelets in neat rows."
@@ -1007,9 +1024,9 @@ A accordion player is a man in Circle Plaza. The description of an accordion pla
 
 A guitar player is a man in Circle Plaza. The description of a guitar player is "A mariachi carring a big full bodied guitar and pulling a hand truck loaded with a little amp."
 
-Calle 24 Corner is east of Circle Plaza. It is sidewalky. "This busy street corner by the McDonalds is grimy. It's basically a crowded spot where people wait to cross the street. Across Mission to the west, there's a nice plaza with a busy market. Across 24th Street to the north, another lovely plaza with musicians, preachers, and some places to sit. [if player is not Deaf]Classical music is blasting from hidden speakers at an obnoxious level, meant to drive loiterers away.[end if]" 
+Calle 24 Corner is east of Circle Plaza. The surface of Calle 24 Corner is sidewalk. "This busy street corner by the McDonalds is grimy. It's basically a crowded spot where people wait to cross the street. Across Mission to the west, there's a nice plaza with a busy market. Across 24th Street to the north, another lovely plaza with musicians, preachers, and some places to sit. [if player is not Deaf]Classical music is blasting from hidden speakers at an obnoxious level, meant to drive loiterers away.[end if]" 
 
-Calle 24 Corner is south of Calle 24 Plaza. 
+Calle 24 Corner is south of Calle 24 Plaza. The surface of Calle 24 Corner is sidewalk.
 
 A raccoon is a kind of animal.  In Calle 24 Corner is a raccoon. The description of the raccoon is "A greasy looking plump raccoon. It's battered, but unbowed."  
 Every turn when the player can see a raccoon and the turn count is even: 
