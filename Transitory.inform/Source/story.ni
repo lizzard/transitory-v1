@@ -26,9 +26,9 @@ A boy is a kind of man. A girl is a kind of woman.
 
 [temporary start of game location for testing]
 
-Home Base is west of Circle Plaza. "A bare room with a sign on the wall. [paragraph break]The world outside seems to call to you. Why not explore?"
+Home Base is west of Circle Plaza. "A bare room with a sign on the wall.  It's in print and in braille.[paragraph break]The world outside seems to call to you. Why not explore?"
 
-A welcome sign is scenery in Home Base. "Welcome, traveler! [paragraph break] Thank you for playtesting. The most built-out areas are near 24th St and 16th St. [paragraph break] Further away, the trains should work correctly, but the world beyond the train platforms is only a skeleton. [paragraph break] The things in the closet are mostly for testing sightedness, hearing, and mobility. They aren't necessary for solving any puzzles." 
+A welcome sign is scenery in Home Base. "Welcome, traveler! [paragraph break] Thank you for playtesting. The most built-out areas are near 24th St and 16th St. [paragraph break] Further away, the trains should work correctly, but the world beyond the train platforms is only a skeleton. [paragraph break] The things in the closet, in this room, are mostly for testing sightedness, hearing, and mobility. They aren't necessary for solving any puzzles. If you want to test them, open the closet and take what you need." 
 
 A large box is an object in Home Base. It is a closed openable container. It is fixed in place.
 
@@ -253,6 +253,7 @@ The description of the white cane is "A long, thin, cane, used for navigation by
 
 Before wearing the mirrorshades:
 	say "You might want to pick up a long cane for navigation, too.";
+	say "You can use by tapping, sweeping, or exploring.";
 	now the player is blind;
 	
 After taking off the mirrorshades:
@@ -263,6 +264,56 @@ Before wearing the goggles:
 	
 After taking off the goggles:
 	now the player is sighted;
+	
+The you-can-also-sense rule substitutes for the you-can-also-see rule when the player is blind.
+
+For printing the locale description (this is the you-can-also-sense rule):
+	let the domain be the parameter-object;
+	let the mentionable count be 0;
+	repeat with item running through things:
+		now the item is not marked for listing;
+	repeat through the Table of Locale Priorities:
+		if the locale description priority entry is greater than 0,
+			now the notable-object entry is marked for listing;
+		increase the mentionable count by 1;
+	if the mentionable count is greater than 0:
+		repeat with item running through things:
+			if the item is mentioned:
+				now the item is not marked for listing;
+		begin the listing nondescript items activity with the domain;
+		if the number of marked for listing things is 0:
+			abandon the listing nondescript items activity with the domain;
+		otherwise:
+			if handling the listing nondescript items activity with the domain:
+				if the domain is the location:
+					say "[We] " (A);
+				otherwise if the domain is a supporter or the domain is an animal:
+					say "On [the domain] [we] " (B);
+				otherwise:
+					say "In [the domain] [we] " (C);
+				if the locale paragraph count is greater than 0:
+					say "[regarding the player]pay attention and explore for a bit. You figure out there is also " (D);
+				otherwise:
+					say "[one of][regarding the player]poke around. You [can] sense [or][regarding the player]pay attention and explore for a bit. You figure out there is [at random]" (E);
+				let the common holder be nothing;
+				let contents form of list be true;
+				repeat with list item running through marked for listing things:
+					if the holder of the list item is not the common holder:
+						if the common holder is nothing,
+							now the common holder is the holder of the list item;
+						otherwise now contents form of list is false;
+					if the list item is mentioned, now the list item is not marked for listing;
+				filter list recursion to unmentioned things;
+				if contents form of list is true and the common holder is not nothing,
+					list the contents of the common holder, as a sentence, including contents,
+						giving brief inventory information, tersely, not listing
+						concealed items, listing marked items only;
+				otherwise say "[a list of marked for listing things including contents]";
+				if the domain is the location, say " here" (F);
+				say ".[paragraph break]";
+				unfilter list recursion;
+			end the listing nondescript items activity with the domain;
+	continue the activity.
 
 [Instead of looking when the player is blind: 
 	say "It might be more useful to tap with your cane, since you're blind. You can also explore, or use other sensory actions like listening, feeling, smelling, or tasting."]
@@ -281,7 +332,7 @@ Every turn when the player is sighted:
 
 Section 2 - Deafness
 
-Deafness is a kind of value. The deafnesses are Deaf, HoH, hearing, and not known. Understand “Deaf” as Deaf. Understand "hard of hearing" as HoH. 
+Deafness is a kind of value. The deafnesses are Deaf, hard-of-hearing, hearing, and not known. Understand “Deaf” as Deaf. Understand "hard of hearing" as hard-of-hearing. 
 
 A person has a deafness. The deafness of the player is hearing.
 
@@ -303,7 +354,7 @@ The sound is "It makes a scrunchy sort of yarn noise if you get up real close an
 The feel is "Cozy, warm, soft and comfortable. It's a knit hat. It loves you."
 
 Before wearing the thick woolly hat:
-	now the player is HoH;
+	now the player is hard-of-hearing;
 	
 After taking off the thick woolly hat:
 	now the player is hearing;
@@ -314,7 +365,7 @@ The sound is "They don't have a sound. That's the whole point."
 The feel is "Squashy little bits of foam."
 
 Before wearing the earplugs:
-	now the player is Deaf;  [this is meant to be little-d deaf but i havent figured out differentiation]
+	now the player is hard-of-hearing;  [this is meant to be little-d deaf but i havent figured out how to differentiate based on lower or upper case and it may not be possible.]
 	
 After taking off the earplugs:
 	now the player is hearing;
@@ -467,7 +518,7 @@ Carry out examining (this is the multisensory examine undescribed things rule):
 	if examine text printed is false:
 		say "[one of]Nothing special about [the noun].[or]Ordinary enough.[or]Yeah, it's [a noun].[or]You note the presence of [a noun].[purely at random][run paragraph on]";
 
-The description of yourself is "As good-looking as ever. [line break] You are [sightedness], [deafness], and [ambulation]."	
+The description of yourself is "As fantabulous as ever. [line break] You are [sightedness], [deafness], and [ambulation]."	
 [todo: fix the paragraph breaks after objects with descriptions]	
 Studying the vicinity is an action applying to nothing. 
 
@@ -475,7 +526,7 @@ Report studying the vicinity:
 	if the player is blind or the player is low-vision:
 		say "You explore with your cane tip and free hand, navigating the area. [paragraph break]";
 		if the location does not contain something which is scenery:
-			say "There's little of interest in the [location]." instead;	
+			say "There's little of interest in [the location]." instead;	
 		repeat with point of interest running through scenery in the location:
 			say "[point of interest]: [run paragraph on]";
 			try examining the point of interest;			
@@ -977,7 +1028,7 @@ A funky dude is a man in Donuts Corner. The description of a funky dude is "A gu
 
 
 Circle Plaza is south of Donuts Corner. It is bumpy.
-The description of Circle Plaza is "[if player is not blind]You head into the crowds of this busy space built around a circular wall. People are selling stuff from tables and little booths. Across 24th street to the north, there's a donut shop. You notice a mural that says something about coffee[end if][if player is not deaf]Many kinds of music are playing here[end if][if player is not hearing or player is not sighted]This is a typical, busy, open space on Mission Street[end if]".
+The description of Circle Plaza is "[if player is not blind]You head into the crowds of this busy space built around a circular wall. People are selling stuff from tables and little booths. Across 24th street to the north, there's a donut shop. You notice a mural that says something about coffee. [end if][if player is not deaf]Many kinds of music are playing here. [end if][if player is not hearing or player is not sighted]This is a typical, busy, open space on Mission Street.[end if]".
 
 The sound of Circle Plaza is "Norteño blasts its cheerful accordions from a booth, saxophone notes float up from the huge, round stairwell which goes down to the station, songs blare from passing cars."
 
@@ -992,7 +1043,7 @@ The metal gratings are scenery in Circle Plaza. "Overlapping concentric circles 
 
 The trees are scenery in Circle Plaza. 
 
-The coffee mural is scenery in Circle Plaza. "A huge mural in bright colors splashes across the building to the west of the plaza. Two wide eyed, child-like cartoon characters in Aztec regalia look out from the mural. Above them is a cartoon street sign that reads COFFEE and across it, MISSION. Below the mural is a sloping area and a few steps that make a sort of stage. [if the player is blind]A young guy next to you suddenly speaks up. 'Oh, you're curious about the mural? I know some guys who worked on that with Mel Waters, he's got stuff all over the Mission. The cafe people, Coffee and Mission, they like it, and the characters, they're like, I dunno, chibi Aztec king and queen or something. You ever see Danza Azteca? Xitlalli, they come to the pow-wows. Big feathers, these sort of shell things on their ankles.[end if]" 
+The coffee mural is scenery in Circle Plaza. "[if the player is not blind]A huge mural in bright colors splashes across the building to the west of the plaza. Two wide eyed, child-like cartoon characters in Aztec regalia look out from the mural. Above them is a cartoon street sign that reads COFFEE and across it, MISSION. Below the mural is a sloping area and a few steps that make a sort of stage. [end if][if the player is blind]A young guy next to you suddenly speaks up. 'Oh, you're curious about the mural? I know some guys who worked on that with Mel Waters, he's got stuff all over the Mission. The cafe people, Coffee and Mission, they like it, and the characters, they're like, I dunno, chibi Aztec king and queen or something. You ever see Danza Azteca? Xitlalli, they come to the pow-wows. Big feathers, these sort of shell things on their ankles.[end if]" 
 
 The stage is scenery in Circle Plaza. 
 
