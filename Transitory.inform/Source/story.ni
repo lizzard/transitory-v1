@@ -26,7 +26,7 @@ A boy is a kind of man. A girl is a kind of woman.
 
 [temporary start of game location for testing]
 
-Home Base is west of Circle Plaza. "A bare room with a sign on the wall.  It's in print and in braille.[paragraph break]The world outside seems to call to you. Why not explore?"
+Home Base is west of Circle Plaza. "A bare room with a sign on the wall.  It's in print and in braille.[paragraph break]The world outside seems to call to you from the door to the east. Why not explore?"
 
 A welcome sign is scenery in Home Base. "Welcome, traveler! [paragraph break] Thank you for playtesting. The most built-out areas are near 24th St and 16th St. [paragraph break] Further away, the trains should work correctly, but the world beyond the train platforms is only a skeleton. [paragraph break] The things in the closet, in this room, are mostly for testing sightedness, hearing, and mobility. They aren't necessary for solving any puzzles. If you want to test them, open the closet and take what you need." 
 
@@ -1414,9 +1414,9 @@ Instead of pushing the C button:
 		say "The doors open and you look out to [middle of shaft] to the south.";
 
 
-Instead of going up when the player is not in the elevator and the player is wearing a wheelchair:
+Instead of going up when the player is not in the elevator and the player is wearing a wheelchair and anywhere is mapped up of the location:
 	say "That's fairly challenging since your wheels won't make it up the stairs." 
-Instead of going down when the player is not in the elevator and the player is wearing a wheelchair:
+Instead of going down when the player is not in the elevator and the player is wearing a wheelchair and anywhere is mapped down of the location:
 	say "It would be a short and brutal trip for you and your wheelchair. Best not." 
 
 Check going to Street Level:
