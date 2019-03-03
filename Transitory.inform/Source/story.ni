@@ -1563,15 +1563,21 @@ Carry out writing on:
 		now the noun is nowhere;
 		if a random chance of 1 in 2 succeeds:
 			now the player is carrying a BART card;
-			say "You feel ordinary again.";
+			say "You check yourself. Everything seems ordinary.";
+			now the player is mobile;
 		otherwise:
 			if a random chance of 1 in 2 succeeds:
 				say "You scribble on the card. It fizzes and tingles.";
 				now the player is carrying an ART card;
+				now the player is mobile;
 			otherwise:
 				say "You feel very strange.";
 				now the player is carrying a BAT card;
 				now the description of the player is "You are a huge bat, clutching your possessions in your claws as you flap around in the air.";
+				if the player is wearing a wheelchair:
+					silently try standing up;
+				repeat with the item running through carried things: 
+					silently try dropping the item;
 				now the player is flying;
 	if the noun is a 3-D printer:
 		say "Everything contracts to a tiny point, then expands.";
