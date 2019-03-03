@@ -2,6 +2,9 @@
 
 Include Transit System by Emily Short.
 Include Basic Screen Effects by Emily Short.
+
+Use MAX_STATIC_DATA of 250000.
+
 [Include Exit Lister by Eric Eve.]
 
 Use scoring.
@@ -32,10 +35,12 @@ A welcome sign is scenery in Home Base. "Welcome, traveler! [paragraph break] Th
 
 A large box is an object in Home Base. It is a closed openable container. It is fixed in place.
 
+A book is a kind of thing.  A SMARTmap is a book. A SMARTmap has a table name called the contents. The description of a SMARTmap is "An accessible map of the BART system with Braille entries. Use it like this: 'consult smartmap about red line' ";
+
 A carnelian flower is an object. It is in the large box. "This stylized flower is sculpted in carnelian, smooth and polished." The description of the carnelian flower is "It shimmers, slipping in time. You think of sacrifice and the blood of captive warriors."
 
 In Home Base is an opaque, closed, openable container called a closet. The closet is scenery. 
-The wraparound mirrorshades, headphones, a thick woolly hat, the cruel shoes, a long cane, and earplugs are in the closet.
+The wraparound mirrorshades, headphones, a thick woolly hat, the cruel shoes, a SMARTmap, a long cane, and earplugs are in the closet.
 
 A powerchair is in Home Base.
 
@@ -46,6 +51,29 @@ Instead of dropping the magic marker:
 Instead of dropping a card:
 	say "You think about dropping [the noun], but can't bring yourself to do it.";
 	stop the action.
+
+	
+Figure of BART map is the file "BART_map.png". 
+
+
+Instead of consulting a book about a topic listed in the contents of the noun: 
+    say "[reply entry][paragraph break]".
+
+Report consulting a book about: 
+    say "You flip through [the noun], but find no reference to [the topic understood]." instead.
+
+The contents of the SMARTmap is the Table of BART lines.
+
+Table of BART lines
+topic	reply
+"red line" or "red"	"The Red Line runs through Millbrae, San Bruno, South San Francisco, Colma, Daly City, Balboa Park, Glen Park, Mission 24th St, Mission 16th St, Civic Center, Powell, Montgomery, Embarcadero, West Oakland, Oakland 12th St, Oakland 19th St, MacArthur, Ashby, Downtown Berkeley, North Berkeley, El Cerrito Plaza, El Cerrito del Norte, Richmond."
+"yellow" or "yellow line"	"The Yellow Line runs through Millbrae, San Bruno, South San Francisco, Colma, Daly City, Balboa Park, Glen Park, Mission 24th St, Mission 16th St, Civic Center, Powell, Montgomery, Embarcadero, West Oakland, Oakland 12th St, Oakland 19th St, MacArthur, Rockridge, Orinda, Lafayette,  Walnut Creek, Pleasant Hill, Concord, North Concord/Martinez, Pittsburg/Bay Point, Pittsburg Center, and Antioch."
+"blue" or "blue line"	"The Blue Line runs through Daly City, Balboa Park, Glen Park, Mission 24th St, Mission 16th St, Civic Center, Powell, Montgomery, Embarcadero, West Oakland, Lake Merritt, Fruitvale, Coliseum, San Leandro, Bay Fair, Castro Valley, West Dublin/Pleasanton, and Dublin/Pleasanton."
+"green" or "green line"	"The Green Line runs through Daly City, Balboa Park, Glen Park, Mission 24th St, Mission 16th St, Civic Center, Powell, Montgomery, Embarcadero, West Oakland, Lake Merritt, Fruitvale, Coliseum, San Leandro, Bay Fair, Hayward, South Hayward, Union City, Fremont, and Warm Springs/South Fremont."
+"orange" or "orange line"	"The Orange Line runs through Richmond, El Cerrito del Norte, El Cerrito Plaza, North Berkeley, Downtown Berkeley, Ashby, MacArthur, Oakland 19th St, Oakland 12th St, Lake Merritt, Fruitvale, Coliseum, San Leandro, Bay Fair, Hayward, South Hayward, Union City, Fremont, and Warm Springs/South Fremont."
+"solar" or "solar line"	"The Solar Line runs through Embarcadero,  L1, L2, L4, L5, Moon Base Copernicus, Venus Orbital, Freyja Montes, Mercury Orbital, Mercury Rachmaninoff, Phobos, Utopia Planitia, Ceres, Europa, Saturn Orbital, Titan, Oberon, Triton, Kuiper Belt, Pluto, Eris, and Planet Nine."
+
+
 
 Part 2 - Multisensory
 
@@ -558,7 +586,7 @@ Report waiting more:
 
 Check waiting more: 
     if the time understood is greater than 10 minutes, say "That seems so boring. Maybe looking around or exploring while you wait would be a better idea." instead.	
-
+	
 
 Part 4 - Money stuff
 
@@ -665,6 +693,16 @@ Oakland South is a region in Platforms. Lake Merritt, Fruitvale, Coliseum, San L
 South Bay is a region in Platforms. Hayward, South Hayward, Union City, Fremont, and Warm Springs/South Fremont are in South Bay. 
 
 Blue Line is a region in Platforms. Castro Valley, West Dublin/Pleasanton, and Dublin/Pleasanton are in Blue Line. 
+
+Solar Line is a region in Platforms. L1, L2, L4, L5, Moon Base Copernicus, Venus Orbital, Freyja Montes, Mercury Orbital, Mercury Rachmaninoff, Phobos, Utopia Planitia, Ceres, Europa, Saturn Orbital, Titan, Oberon, Triton, Kuiper Belt, Pluto, Eris, and Planet Nine are in Platforms.
+
+The BART map is a backdrop. It is in Platforms. 
+
+Instead of examining the BART map:
+	display the Figure of BART map; 
+
+
+
 
 Section 2 - Locations, organized by train stops
 
@@ -1352,7 +1390,7 @@ Every turn when the player is in Liftlandia or the player is in a concourse or t
 		say "There is an elevator in the north wall.";
 		continue the action.
 
-A panel in the wall is in the elevator. It is scenery. The description is "There are three buttons on the wall: S, C, and P."
+A panel in the wall is in the elevator. It is scenery. Understand "buttons"  as A panel in the wall. The description is "There are three buttons on the wall: S, C, and P." 
 The S button, the C button, and the P button are parts of the panel in the wall. 
 The description of the S button is "A round button printed with a raised S."
 The description of the C button is "A round button printed with a raised C."

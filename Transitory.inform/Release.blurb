@@ -15,6 +15,7 @@ storyfile "/Users/ehenry/dev/inform7/transitory/Transitory.inform/Build/output.u
 ifiction "/Users/ehenry/dev/inform7/transitory/Transitory.inform/Metadata.iFiction" include
 cover "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/Cover.jpg"
 picture 1 "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/Cover.jpg"
+picture 3 "/Users/ehenry/dev/inform7/transitory/Transitory.materials/Figures/BART_map.png"
 
 ! Placeholder variables
 

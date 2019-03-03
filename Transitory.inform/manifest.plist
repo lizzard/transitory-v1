@@ -4,6 +4,8 @@
     <dict>
         <key>Graphics</key>
         <dict>
+            <key>3</key>
+            <string>Figures/BART_map.png</string>
         </dict>
     </dict>
 </plist>
