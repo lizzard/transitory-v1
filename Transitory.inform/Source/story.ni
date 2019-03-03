@@ -71,7 +71,7 @@ topic	reply
 "blue" or "blue line"	"The Blue Line runs through Daly City, Balboa Park, Glen Park, Mission 24th St, Mission 16th St, Civic Center, Powell, Montgomery, Embarcadero, West Oakland, Lake Merritt, Fruitvale, Coliseum, San Leandro, Bay Fair, Castro Valley, West Dublin/Pleasanton, and Dublin/Pleasanton."
 "green" or "green line"	"The Green Line runs through Daly City, Balboa Park, Glen Park, Mission 24th St, Mission 16th St, Civic Center, Powell, Montgomery, Embarcadero, West Oakland, Lake Merritt, Fruitvale, Coliseum, San Leandro, Bay Fair, Hayward, South Hayward, Union City, Fremont, and Warm Springs/South Fremont."
 "orange" or "orange line"	"The Orange Line runs through Richmond, El Cerrito del Norte, El Cerrito Plaza, North Berkeley, Downtown Berkeley, Ashby, MacArthur, Oakland 19th St, Oakland 12th St, Lake Merritt, Fruitvale, Coliseum, San Leandro, Bay Fair, Hayward, South Hayward, Union City, Fremont, and Warm Springs/South Fremont."
-"solar" or "solar line"	"The Solar Line runs through Embarcadero,  L1, L2, L4, L5, Moon Base Copernicus, Venus Orbital, Freyja Montes, Mercury Orbital, Mercury Rachmaninoff, Phobos, Utopia Planitia, Ceres, Europa, Saturn Orbital, Titan, Oberon, Triton, Kuiper Belt, Pluto, Eris, and Planet Nine."
+"solar" or "solar line"	"The Solar Line runs through Embarcadero, L1, L2, L4, L5, Moon Base Copernicus, Venus Orbital, Freyja Montes, Mercury Orbital, Mercury Rachmaninoff, Phobos, Utopia Planitia, Ceres, Europa, Saturn Orbital, Titan, Oberon, Triton, Kuiper Belt, Pluto, Eris, and Planet Nine."
 
 
 
@@ -646,7 +646,48 @@ Carry out greeting:
 	
 Understand "talk to [someone]" as a mistake ("To start a conversation, try to GREET [the noun], ASK [the noun] ABOUT something or TELL [the noun] ABOUT something."). 
 
-Part 6 - All the places
+Part 6 - Hint system
+
+A thing can be examined or unexamined. A thing is usually unexamined. Carry out examining something: now the noun is examined. 
+
+Taking inventory is acting confused. Looking is acting confused. Examining an examined thing is acting confused. 
+
+After acting confused for the sixth turn:
+        say "(If you are feeling lost, try typing 'help' for suggestions.)" 
+
+Understand "help [text]" or "help about [text]" as getting help about. Understand the commands "instructions" or "hint" or "hints" or "menu" or "info" or "about" as "help". 
+
+Getting help about is an action applying to one topic. 
+
+Carry out getting help about:
+	if the topic understood is a topic listed in the Table of Standard Help:
+		say "[explanation entry][paragraph break]";
+	otherwise:
+		say "You're out of ideas." 
+
+Understand "help" as summoning help. Summoning help is an action applying to nothing. 
+
+Carry out summoning help:
+	say "Help is available about the following topics. Typing HELP followed by the name of a topic will give further information.[paragraph break]";
+	repeat through the Table of Standard Help:
+		say " [title entry]: [summary entry][line break]". 
+
+Table of Standard Help
+topic	title	summary	explanation
+"map"	"map"	"Where to find a map"	"BART map images are on every train station platform. You can also pick up the SMARTmap in the closet in Home Base for a portable, text only option. For exploring the world, you may want to draw your own maps on paper as a guide to various areas."
+"marker"	"marker"	"Hints about the magic marker"	"Try writing on things that seem a little bit magical."
+"explore"	"explore"	"The explore command"	"If your character is blind or low vision, you can use the command 'explore' or 'tap' to explore a space with your long cane. The long cane and mirrorshades are in the closet in Home Base."
+"murals"	"murals"	"The art and murals"	"It's worth examining the local art. It may not have anything immediately useful but it provides context for the local puzzles and mysteries. There may be (obvious once you encounter them) times when you can interact more with the art."
+"score"	"score"	"Things that make your score go up"	"One point for each new room visited. 5 for each Artifact you pick up. 5 more points when you place the 20 Artifacts where they need to go (You'll know it when you see it.)"
+"card"	"card"	"Big hints about the (B)ART card"	"Take it to the concourse levels of the stations and swipe. Depending on the current state of your card, there may be different and perhaps unusual effects."
+"bugs"	"bugs"	"How to report bugs"	"Please report anything you think is wrong, or could use improvement, at https://github.com/lizzard/transitory/issues. You can also email lizhenry@gmail.com with 'TRANSITORY BUG' in the subject line."
+
+	
+
+
+
+
+Part 7 - All the places
 
 Section 1 - Regions
 [Regions]
@@ -996,7 +1037,7 @@ Noisebridge is a room. The surface of Noisebridge is smooth. "You are in a large
 
 The workbench is a supporter in Noisebridge. It is fixed in place.
 
-The 3-D printer is a device in Noisebridge. It is fixed in place. "A weird, boxy gadget on a workbench. It has a big label that says '3-D Printer' [if the player is not blind]in smudgy black letters[end if]."
+The 3-D printer is a device in Noisebridge. It is fixed in place. "A weird, boxy gadget on a workbench. It has a big label that says '3-D Printer' [if the player is not blind]in smudgy black letters[end if]. When you put your hand on it, you feel a strange, tingling energy."
 
 The 4-D printer is a device. "A weird, boxy gadget on a workbench. It has a big label that says '4-D Printer' [if the player is not blind]in smudgy black letters[end if]. It has a tangible aura of weirdness surrounding it for a few feet in every direction."
 
@@ -1369,7 +1410,7 @@ The description of West Oakland is "You are on a BART platform."
 
 
 
-Part 7 - Elevator 
+Part 8 - Elevator 
 
 [a simple 3-level elevator appears in any train station location where it might be, if the player goes there]
 
@@ -1469,7 +1510,7 @@ Check going to Street Level:
 		
 
 
-Part 8 - Ticket reader
+Part 9 - Ticket reader
 
 [the reader itself]
 
@@ -1501,7 +1542,7 @@ A writing utensil is a kind of thing. A magic marker is a writing utensil.
 A card is a kind of device.  
 A BART card, an ART card, a BAT card, a BAR card, a CART card, and a WART card are cards.
 
-The description of a BART card is "A [if player is not blind]blue and white card[end if] with a magnetic stripe. It says 'BART' in big [if player is not blind] black[end if] letters that seem oddly like scribbly handwriting."
+The description of a BART card is "A [if player is not blind]blue and white card[end if] with a magnetic stripe. It says 'BART' in big [if player is not blind] black[end if] letters that seem oddly like scribbly handwriting. It buzzes very faintly in your hand."
 
 The description of an ART card is "A [if player is not blind]blue and white card[end if] with a magnetic stripe. It says 'ART' in big [if player is not blind] black[end if] letters that seem oddly like scribbly handwriting. The letters blur and seem to move."
 
@@ -1512,10 +1553,10 @@ The player is carrying a magic marker and a BART card.
 A magic marker is an object. The description of a magic marker is "A magic marker. It fizzes and tingles with energy as if it were eager to make its mark."
 
 
-Writing on is an action applying to one visible thing. Understand "write on [something]" as writing on. 
+Writing on is an action applying to two visible things. Understand "write on [something] with [something]" as writing on. Understand "tag [something] with [something]" or "scribble on [something] with [something]" as writing on. 
 
 Check writing on:
-	unless the noun is a card or the noun is a printer, say "You decide not to scribble on that." instead.
+	unless the noun is a card or the noun is a printer, say "Weird. It doesn't work. Try something else to write on." instead.
 
 Carry out writing on:
 	if the noun is a card:
@@ -1544,7 +1585,7 @@ Carry out writing on:
 
 
 
-Part 9 - Train rules
+Part 10 - Train rules
 
 [train-display]
 
@@ -2000,5 +2041,12 @@ transit time	destination	relative position
 1 minute	North Berkeley	3
 1 minute	El Cerrito Plaza	2
 1 minute	El Cerrito del Norte	1
+
+Part 11 - Acknowledgements and References
+
+[Miliken book]
+[Thanks to Danny O'Brien, Milo Kim, Laura Henry, for playtesting.]
+[Thanks to Debbie Notkin for local history tips.]
+
 
 
