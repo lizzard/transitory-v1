@@ -29,23 +29,28 @@ A boy is a kind of man. A girl is a kind of woman.
 
 [temporary start of game location for testing]
 
-Home Base is west of Circle Plaza. "A bare room with a sign on the wall.  It's in print and in braille. 'Look at sign' or 'read sign' to read it. There is also a placard on the lid of the box with some instructions. [paragraph break]Here you are in your home base. The world outside seems to call to you from the door to the east. Why not explore?"
+Home Base is west of Circle Plaza. "Here you are in your home base.  It's a bare room with a sign on the wall. It's in print and in braille. 'Look at sign' or 'read sign' to read it. [paragraph break]The world outside seems to call to you from the door to the east. Why not explore?"
 
-A welcome sign is scenery in Home Base. "Welcome, traveler! [paragraph break] Thank you for playtesting. The most built-out areas are near 24th St and 16th St. [paragraph break] Further away, the trains should work correctly, but the world beyond the train platforms is only a skeleton. [paragraph break] The things in the closet, in this room, are mostly for testing sightedness, hearing, and mobility. They aren't necessary for solving any puzzles. If you want to test them, open the closet and take what you need." 
+A welcome sign is scenery in Home Base. "Welcome, traveler! [paragraph break] Thank you for playtesting. The most built-out areas are near 24th St and 16th St. [paragraph break] Further away, the trains should work correctly, but the world beyond the train platforms is only a skeleton. [paragraph break] The things in the closet, in this room, are mostly for testing sightedness, hearing, and mobility. They aren't necessary for solving any puzzles. If you want to test them, open the closet and take what you need.[paragraph break] For some beginning commands, read the cheat sheet you're holding." 
 
-A placard is scenery in Home Base. Understand "instructions" or "lid" as the placard. The description of the placard is "Some other commands: [line break]
-You can go in all 8 directions (north, northeast, etc) as well as up and down. [line break]
-Just typing 'n' is a convenient shorthand for 'go north' [line break]
-You can also take things, open things, sit on things, and stand up. [line break]
-'Look' will show you a room description (again). [line break]
+A cheat sheet is an object. The description of the cheat sheet is "Some other commands: [line break]
 Type 'i' to look at your inventory (what you are carrying).  [line break]
-'Help' will get you a small menu of hints. [line break]"
+'Look' will show you a room description (again). [line break]
+'Exits' will show you a list of possible exits from a room.[line break]
+You can 'go' in all 8 directions (north, northeast, etc) as well as up and down. [line break]
+'n' is a convenient shorthand for 'go north' [line break]
+You can also take things, open things, sit on things, and stand up. [line break]
+'examine' or 'look at' will let you examine an object. Or, sometimes, details in a room description.[line break]
+'Help' will get you a small menu of hints. [line break]
+There are many more commands to try![line break]"
 
-A large box is an object in Home Base. It is a closed openable container. It is fixed in place.
+The player is carrying a cheat sheet.
+
+A storage box is an object in Home Base. It is a closed openable container. It is fixed in place.
 
 A book is a kind of thing.  A SMARTmap is a book. A SMARTmap has a table name called the contents. The description of a SMARTmap is "An accessible map of the BART system with Braille entries. Use it like this: 'consult smartmap about red line' ";
 
-A carnelian flower is an object. It is in the large box. "This stylized flower is sculpted in carnelian, smooth and polished." The description of the carnelian flower is "It shimmers, slipping in time. You think of sacrifice and the blood of captive warriors."
+A carnelian flower is an object. It is in the storage box. "This stylized flower is sculpted in carnelian, smooth and polished." The description of the carnelian flower is "It shimmers, slipping in time. You think of sacrifice and the blood of captive warriors."
 
 In Home Base is an opaque, closed, openable container called a closet. The closet is scenery. 
 The wraparound mirrorshades, headphones, a thick woolly hat, the cruel shoes, a SMARTmap, a long cane, and earplugs are in the closet.
@@ -1653,21 +1658,21 @@ Every turn:
 				now the yellow-next-endpoint is Millbrae;
 		if the Yellow Line Train is northbound:
 			If yellow-relative-position is greater than player-relative-position:
-				now time-till-yellow is yellow-relative-position - yellow-endpoint-relpos  + player-relative-position - yellow-endpoint-relpos ;
+				now time-till-yellow is yellow-endpoint-relpos - yellow-relative-position  + yellow-endpoint-relpos - player-relative-position ;
 				now yellow-next-endpoint is Millbrae;			
 			otherwise:
 				now time-till-yellow is 2 * (player-relative-position - yellow-relative-position);
 				now yellow-next-endpoint is Antioch;
 		Unless time-till-yellow is 0 or the player is distracted:
-			say "Next Yellow Line Train to [yellow-next-endpoint] in [time-till-yellow] minutes. [run paragraph on][line break][line break]"
+			say "Next Yellow Line Train to [yellow-next-endpoint] in [time-till-yellow] minutes. [run paragraph on][line break]"	;	
+		[If time-till-yellow is 0:
+			say "Yellow Line train to [yellow-next-endpoint] now arriving. [run paragraph on][line break]";	]
 
 Time-till-red is a number that varies.
 red-relative-position is a number that varies.
 red-endpoint-relpos is a number that varies. 
 red-lookup is a room that varies.
 red-next-endpoint is a room that varies.
-
-
 
 Every turn: 
 	if the location of the Red Line Train is Richmond:
@@ -1737,7 +1742,7 @@ Every turn:
 				now time-till-green is 2 * (player-relative-position - green-relative-position);
 				now green-next-endpoint is Warm Springs/South Fremont;
 		Unless time-till-green is 0 or the player is distracted:
-			say "Next Green Line Train to [green-next-endpoint] in [time-till-green] minutes. [run paragraph on][line break][line break]"
+			say "Next Green Line Train to [green-next-endpoint] in [time-till-green] minutes. [run paragraph on][line break]"
 
 
 Time-till-blue is a number that varies.
