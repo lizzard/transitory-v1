@@ -1727,12 +1727,12 @@ green-next-endpoint is a room that varies.
 
 
 Every turn: 
-	if the location of the Green Line Train is Warm Springs/South Fremont:
+	if the location of the Green Line Train is Berryessa/North San José:
 		now the Green Line Train is southbound;	
 		now green-endpoint-relpos is 0;
 	if the location of the Green Line Train is Daly City:
 		now the Green Line Train is northbound;
-		now green-endpoint-relpos is 19;
+		now green-endpoint-relpos is 20;
 	if the location of the player is in Westside or the location of the player is in Oakland South or the location of the player is in South Bay:	
 		let player-relative-position be the relative position corresponding to the destination of location in the Table of Green Line Schedule;
 		if the location of the Green Line Train is Transitional Location:
@@ -1805,8 +1805,8 @@ orange-next-endpoint is a room that varies.
 Every turn: 
 	if the location of the Orange Line Train is Richmond:
 		now the Orange Line Train is southbound;	
-		now orange-endpoint-relpos is 18;
-	if the location of the Orange Line Train is Warm Springs/South Fremont:
+		now orange-endpoint-relpos is 20;
+	if the location of the Orange Line Train is Berryessa/North San José:
 		now the Orange Line Train is northbound;
 		now orange-endpoint-relpos is 0;
 	if the location of the player is in North Bay or the location of the player is in Oakland Central or the location of the player is in Oakland South or the location of the player is in South Bay:	
@@ -2034,6 +2034,10 @@ transit time	destination	relative position
 1 minute	Union City	17
 1 minute	Fremont	18
 1 minute	Warm Springs/South Fremont	19
+1 minute	Milpitas	20
+1 minute	Berryessa/North San José	19
+1 minute	Milpitas	20
+1 minute	Warm Springs/South Fremont	19
 1 minute	Fremont	18
 1 minute	Union City	17
 1 minute	South Hayward	16
@@ -2074,6 +2078,10 @@ transit time	destination	relative position
 1 minute	South Hayward	15
 1 minute	Union City	16
 1 minute	Fremont	17
+1 minute	Warm Springs/South Fremont	18
+1 minute	Milpitas	19
+1 minute	Berryessa/North San José	20
+1 minute	Milpitas	19
 1 minute	Warm Springs/South Fremont	18
 1 minute	Fremont	17
 1 minute	Union City	16
