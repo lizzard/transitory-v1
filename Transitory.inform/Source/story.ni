@@ -29,9 +29,17 @@ A boy is a kind of man. A girl is a kind of woman.
 
 [temporary start of game location for testing]
 
-Home Base is west of Circle Plaza. "A bare room with a sign on the wall.  It's in print and in braille.[paragraph break]The world outside seems to call to you from the door to the east. Why not explore?"
+Home Base is west of Circle Plaza. "A bare room with a sign on the wall.  It's in print and in braille. 'Look at sign' or 'read sign' to read it. There is also a placard on the lid of the box with some instructions. [paragraph break]Here you are in your home base. The world outside seems to call to you from the door to the east. Why not explore?"
 
 A welcome sign is scenery in Home Base. "Welcome, traveler! [paragraph break] Thank you for playtesting. The most built-out areas are near 24th St and 16th St. [paragraph break] Further away, the trains should work correctly, but the world beyond the train platforms is only a skeleton. [paragraph break] The things in the closet, in this room, are mostly for testing sightedness, hearing, and mobility. They aren't necessary for solving any puzzles. If you want to test them, open the closet and take what you need." 
+
+A placard is scenery in Home Base. Understand "instructions" or "lid" as the placard. The description of the placard is "Some other commands: [line break]
+You can go in all 8 directions (north, northeast, etc) as well as up and down. [line break]
+Just typing 'n' is a convenient shorthand for 'go north' [line break]
+You can also take things, open things, sit on things, and stand up. [line break]
+'Look' will show you a room description (again). [line break]
+Type 'i' to look at your inventory (what you are carrying).  [line break]
+'Help' will get you a small menu of hints. [line break]"
 
 A large box is an object in Home Base. It is a closed openable container. It is fixed in place.
 
@@ -674,8 +682,10 @@ Carry out summoning help:
 
 Table of Standard Help
 topic	title	summary	explanation
+"self"	"self"	"The point of view character"	"Keep in mind you can type 'examine self'. This might be useful or informative, sometimes."
 "map"	"map"	"Where to find a map"	"BART map images are on every train station platform. You can also pick up the SMARTmap in the closet in Home Base for a portable, text only option. For exploring the world, you may want to draw your own maps on paper as a guide to various areas."
 "marker"	"marker"	"Hints about the magic marker"	"Try writing on things that seem a little bit magical."
+"exits"	"exits"	"Using the EXITS command"	"Type 'exits' if you want a list of possible exits. It's a little cheaty, but so much less frustrating."
 "explore"	"explore"	"The explore command"	"If your character is blind or low vision, you can use the command 'explore' or 'tap' to explore a space with your long cane. The long cane and mirrorshades are in the closet in Home Base."
 "murals"	"murals"	"The art and murals"	"It's worth examining the local art. It may not have anything immediately useful but it provides context for the local puzzles and mysteries. There may be (obvious once you encounter them) times when you can interact more with the art."
 "score"	"score"	"Things that make your score go up"	"One point for each new room visited. 5 for each Artifact you pick up. 5 more points when you place the 20 Artifacts where they need to go (You'll know it when you see it.)"
@@ -684,6 +694,19 @@ topic	title	summary	explanation
 
 	
 
+Listing exits is an action applying to nothing.
+Understand "exits" as listing exits.
+
+Carry out listing exits: say "You can go [exit list] from here.".
+
+To say exit list:
+	let place be location;
+	let count be 0;
+	repeat with way running through directions:
+		let place be the room way from the location;
+		if place is a room:
+			increment count;
+			say "[if count is greater than 1] or[end if][bold type][way][roman type]". 
 
 
 
@@ -1427,8 +1450,13 @@ The Elevator is a room. The description of the Elevator is "A grimy elevator tha
 [this is a hack because putting the elevator inside another room doesn't work correctly with exiting]
 Every turn when the player is in Liftlandia or the player is in a concourse or the player is in a street level station:
 	now the elevator is mapped north of the location of the player;
-	unless the player is distracted:
+	[unless the player is distracted:]
+	
+After looking:
+	if the player is in Liftlandia or the player is in a concourse or the player is in a street level station:
 		say "There is an elevator in the north wall.";
+	if the player is in a concourse:
+		say "There is a ticket reader here.";
 		continue the action.
 
 A panel in the wall is in the elevator. It is scenery. Understand "buttons"  as A panel in the wall. The description is "There are three buttons on the wall: S, C, and P." 
