@@ -710,7 +710,7 @@ To say exit list:
 		let place be the room way from the location;
 		if place is a room:
 			increment count;
-			say "[if count is greater than 1] or[end if][bold type][way][roman type]". 
+			say "[if count is greater than 1] or [end if][bold type][way][roman type]". 
 
 
 
@@ -987,7 +987,7 @@ A security guard is a woman in Mission 16th Concourse.
 
 A station agent is a woman in Mission 16th Concourse. 
 
-The concrete shapes are scenery in Mission 16th Concourse. "Big blocky shapes, rectangles, circles, half circles, are scuplted in relief along the rough sides of the enormous open stairwell to the plaza. They're reminiscent of brutalist skyscrapers, stoplights, a pleasing jumble of forms decorating the space. You feel more aware of the secret life of buildings. Their bones, their roots. The way they take up space against the sky.[if the player is carrying an ART card]The secretive shapes beckon like doors. You itch to climb them. [end if]"
+The concrete shapes are scenery in Mission 16th Concourse. "Big blocky shapes, rectangles, circles, half circles, are scuplted in relief along the rough sides of the enormous open stairwell to the plaza. They're reminiscent of brutalist skyscrapers and stoplights, a pleasing jumble of forms decorating the space. You feel more aware of the secret life of buildings. Their bones, their roots. The way they take up space against the sky.[if the player is carrying an ART card]The secretive shapes beckon like doors. You itch to climb them. [end if]"
 
 Understand "shapes", "abstract", "cement", "relief", "concrete", "sculptures", and "stairwell" as the concrete shapes.
   
@@ -1095,7 +1095,7 @@ The description of Mission 24th St is "You are underground, on a BART platform. 
 
 Mission 24th Concourse is up from Mission 24th St. Mission 24th Concourse is a concourse. "[if the player is not blind]Enormous concrete buttresses soar overhead, like a futuristic 70s airplane hangar.[end if] [if the player is not deaf]Music echoes hauntingly from a monumental stairwell rising up to the plaza, combining with the wild harmonics of trains below.[end if] [if the player is not blind]Abstract cement shapes are sculpted in relief along the oddly corrugated sides of the stairwell, open to the sky.[end if][if the player is blind and the player is deaf]A big open space, full of people walking around, mostly underground but you feel the air and light from an enormous, deep, open stairwell to the plaza above. Another flight of stairs leads down to the train platform.[end if]" 
 
-The abstract reliefs are scenery in Mission 24th Concourse. "Big blocky shapes, rectangles, circles, half circles, are scuplted in relief along the rough sides of the enormous open stairwell to the plaza. They're reminiscent of brutalist skyscrapers, stoplights, a pleasing jumble of forms decorating the space. You feel more aware of the secret life of buildings. Their bones, their roots. The way they take up space against the sky."
+The abstract reliefs are scenery in Mission 24th Concourse. "Big blocky shapes, rectangles, circles, half circles, are scuplted in relief along the rough sides of the enormous open stairwell to the plaza. They're reminiscent of brutalist skyscrapers and stoplights, a pleasing jumble of forms decorating the space. You feel more aware of the secret life of buildings. Their bones, their roots. The way they take up space against the sky."
 
 Understand "shapes", "abstract", "cement", "relief", "concrete", "sculptures", and "stairwell" as the abstract reliefs. 
 
@@ -1137,6 +1137,8 @@ A funky dude is a man in Donuts Corner. The description of a funky dude is "A gu
 
 Circle Plaza is south of Donuts Corner. It is bumpy.
 The description of Circle Plaza is "[if player is not blind]You head into the crowds of this busy space built around a circular wall. People are selling stuff from tables and little booths. Across 24th street to the north, there's a donut shop. You notice a mural that says something about coffee. [end if][if player is not deaf]Many kinds of music are playing here. [end if][if player is not hearing or player is not sighted]This is a typical, busy, open space on Mission Street.[end if]".
+
+Down from Circle Plaza is Mission 24th Concourse. 
 
 The sound of Circle Plaza is "Norteño blasts its cheerful accordions from a booth, saxophone notes float up from the huge, round stairwell which goes down to the station, songs blare from passing cars."
 
@@ -2094,7 +2096,7 @@ transit time	destination	relative position
 Part 11 - Acknowledgements and References
 
 [Miliken book]
-[Thanks to Danny O'Brien, Milo Kim, Laura Henry, for playtesting.]
+[Thanks to Danny O'Brien, Milo Kim, Laura Henry, Ada Norton for playtesting.]
 [Thanks to Debbie Notkin for local history tips.]
 
 
