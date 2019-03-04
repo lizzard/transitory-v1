@@ -82,8 +82,8 @@ topic	reply
 "red line" or "red"	"The Red Line runs through Millbrae, San Bruno, South San Francisco, Colma, Daly City, Balboa Park, Glen Park, Mission 24th St, Mission 16th St, Civic Center, Powell, Montgomery, Embarcadero, West Oakland, Oakland 12th St, Oakland 19th St, MacArthur, Ashby, Downtown Berkeley, North Berkeley, El Cerrito Plaza, El Cerrito del Norte, Richmond."
 "yellow" or "yellow line"	"The Yellow Line runs through Millbrae, San Bruno, South San Francisco, Colma, Daly City, Balboa Park, Glen Park, Mission 24th St, Mission 16th St, Civic Center, Powell, Montgomery, Embarcadero, West Oakland, Oakland 12th St, Oakland 19th St, MacArthur, Rockridge, Orinda, Lafayette,  Walnut Creek, Pleasant Hill, Concord, North Concord/Martinez, Pittsburg/Bay Point, Pittsburg Center, and Antioch."
 "blue" or "blue line"	"The Blue Line runs through Daly City, Balboa Park, Glen Park, Mission 24th St, Mission 16th St, Civic Center, Powell, Montgomery, Embarcadero, West Oakland, Lake Merritt, Fruitvale, Coliseum, San Leandro, Bay Fair, Castro Valley, West Dublin/Pleasanton, and Dublin/Pleasanton."
-"green" or "green line"	"The Green Line runs through Daly City, Balboa Park, Glen Park, Mission 24th St, Mission 16th St, Civic Center, Powell, Montgomery, Embarcadero, West Oakland, Lake Merritt, Fruitvale, Coliseum, San Leandro, Bay Fair, Hayward, South Hayward, Union City, Fremont, and Warm Springs/South Fremont."
-"orange" or "orange line"	"The Orange Line runs through Richmond, El Cerrito del Norte, El Cerrito Plaza, North Berkeley, Downtown Berkeley, Ashby, MacArthur, Oakland 19th St, Oakland 12th St, Lake Merritt, Fruitvale, Coliseum, San Leandro, Bay Fair, Hayward, South Hayward, Union City, Fremont, and Warm Springs/South Fremont."
+"green" or "green line"	"The Green Line runs through Daly City, Balboa Park, Glen Park, Mission 24th St, Mission 16th St, Civic Center, Powell, Montgomery, Embarcadero, West Oakland, Lake Merritt, Fruitvale, Coliseum, San Leandro, Bay Fair, Hayward, South Hayward, Union City, Fremont, Warm Springs/South Fremont, Milpitas, and Berryessa/North San José."
+"orange" or "orange line"	"The Orange Line runs through Richmond, El Cerrito del Norte, El Cerrito Plaza, North Berkeley, Downtown Berkeley, Ashby, MacArthur, Oakland 19th St, Oakland 12th St, Lake Merritt, Fruitvale, Coliseum, San Leandro, Bay Fair, Hayward, South Hayward, Union City, Fremont, Warm Springs/South Fremont, Milpitas, and Berryessa/North San José.."
 "solar" or "solar line"	"The Solar Line runs through Embarcadero, L1, L2, L4, L5, Moon Base Copernicus, Venus Orbital, Freyja Montes, Mercury Orbital, Mercury Rachmaninoff, Phobos, Utopia Planitia, Ceres, Europa, Saturn Orbital, Titan, Oberon, Triton, Kuiper Belt, Pluto, Eris, and Planet Nine."
 
 
@@ -758,7 +758,7 @@ North Bay is a region in Platforms. Ashby, Downtown Berkeley, North Berkeley, El
 
 Oakland South is a region in Platforms. Lake Merritt, Fruitvale, Coliseum, San Leandro, and Bay Fair are in Oakland South.
 
-South Bay is a region in Platforms. Hayward, South Hayward, Union City, Fremont, and Warm Springs/South Fremont are in South Bay. 
+South Bay is a region in Platforms. Hayward, South Hayward, Union City, Fremont, Warm Springs/South Fremont, Milpitas, and Berryessa/North San José are in South Bay. 
 
 Blue Line is a region in Platforms. Castro Valley, West Dublin/Pleasanton, and Dublin/Pleasanton are in Blue Line. 
 
@@ -1743,7 +1743,7 @@ Every turn:
 		if the Green Line Train is southbound:
 			if green-relative-position is less than player-relative-position:
 				now time-till-green is green-relative-position - green-endpoint-relpos + player-relative-position - green-endpoint-relpos;
-				now green-next-endpoint is Warm Springs/South Fremont;
+				now green-next-endpoint is Berryessa/North San José;
 			otherwise:
 				now time-till-green is green-relative-position - player-relative-position;
 				now the green-next-endpoint is Daly City;
@@ -1753,7 +1753,7 @@ Every turn:
 				now green-next-endpoint is Daly City;			
 			otherwise:
 				now time-till-green is 2 * (player-relative-position - green-relative-position);
-				now green-next-endpoint is Warm Springs/South Fremont;
+				now green-next-endpoint is Berryessa/North San José;
 		Unless time-till-green is 0 or the player is distracted:
 			say "Next Green Line Train to [green-next-endpoint] in [time-till-green] minutes. [run paragraph on][line break]"
 
@@ -1822,11 +1822,11 @@ Every turn:
 				now orange-next-endpoint is Richmond;
 			otherwise:
 				now time-till-orange is player-relative-position - orange-relative-position;
-				now the orange-next-endpoint is Warm Springs/South Fremont;
+				now the orange-next-endpoint is Berryessa/North San José;
 		if the Orange Line Train is northbound:
 			If orange-relative-position is less than player-relative-position:
 				now time-till-orange is orange-relative-position - orange-endpoint-relpos  + player-relative-position - orange-endpoint-relpos ;
-				now orange-next-endpoint is Warm Springs/South Fremont;			
+				now orange-next-endpoint is Berryessa/North San José;			
 			otherwise:
 				now time-till-orange is 2 * (orange-relative-position - player-relative-position);
 				now orange-next-endpoint is Richmond;
