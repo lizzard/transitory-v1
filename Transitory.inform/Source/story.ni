@@ -664,7 +664,7 @@ A thing can be examined or unexamined. A thing is usually unexamined. Carry out 
 
 Taking inventory is acting confused. Looking is acting confused. Examining an examined thing is acting confused. 
 
-After acting confused for the sixth turn:
+After acting confused for six turns:
         say "(If you are feeling lost, try typing 'help' for suggestions.)" 
 
 Understand "help [text]" or "help about [text]" as getting help about. Understand the commands "instructions" or "hint" or "hints" or "menu" or "info" or "about" as "help". 
@@ -1563,11 +1563,20 @@ Instead of switching off a card when the location of the player is not a concour
 Understand "swipe [something switched off]" as switching on.
 Understand "swipe [something switched on]" as switching off. 
 
-After switching on a card:
+Carry out switching on a card:
 	say "The card hums with energy.";
+	if the player is carrying an ART card:
+		say "[The noun] makes you feel fizzy all over.";
+		say "You feel creative, perceptive, and more analytical than usual.";
+		say "The whole world feels different.";
+		say "Maybe you should explore it with this new level of awareness.";
 	
-After switching off a card:
-	say "The card shuts off with a little thump."
+Carry out switching off a card:
+	say "The card shuts off with a little thump.";
+	if the player is carrying an ART card:
+		say "The world looks ordinary again. It's kind of a relief.";
+
+		
 
 A writing utensil is a kind of thing. A magic marker is a writing utensil.
 A card is a kind of device.  
