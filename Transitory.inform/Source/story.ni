@@ -558,8 +558,7 @@ The examine undescribed things rule is not listed in any rulebook.
 Carry out examining (this is the multisensory examine undescribed things rule):
 	if examine text printed is false:
 		say "[one of]Nothing special about [the noun].[or]Ordinary enough.[or]Yeah, it's [a noun].[or]You note the presence of [a noun].[purely at random][run paragraph on]";
-
-The description of yourself is "As fantabulous as ever. [line break] You are [sightedness], [deafness], and [ambulation]."	
+	
 [todo: fix the paragraph breaks after objects with descriptions]	
 Studying the vicinity is an action applying to nothing. 
 
@@ -598,7 +597,7 @@ Report waiting more:
 	say "You snap out of your reverie."
 
 Check waiting more: 
-    if the time understood is greater than 10 minutes, say "That seems so boring. Maybe looking around or exploring while you wait would be a better idea." instead.	
+    if the time understood is greater than 10 minutes, say "That seems very boring. Maybe looking around or exploring while you wait would be a better idea." instead.	
 	
 
 Part 4 - Money stuff
@@ -1584,6 +1583,9 @@ The player is carrying a magic marker and a BART card.
 
 A magic marker is an object. The description of a magic marker is "A magic marker. It fizzes and tingles with energy as if it were eager to make its mark."
 
+After writing on: 
+	if the player is not carrying a BAT card:
+		now the description of yourself is "As fantabulous as ever. [line break] You are [sightedness], [deafness], and [ambulation].";
 
 Writing on is an action applying to two visible things. Understand "write on [something] with [something]" as writing on. Understand "tag [something] with [something]" or "scribble on [something] with [something]" as writing on. 
 
