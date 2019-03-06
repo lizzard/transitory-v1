@@ -1105,7 +1105,7 @@ Calle 24 Plaza is up from Mission 24th Concourse. The surface of Calle 24 Plaza 
 The train mural is scenery in Calle 24 Plaza. "A mural of a gleaming BART train carried on the backs of determined workers amid a geometric cityscape."  
 
 
-A tamale lady is a person. In Calle 24 Plaza is a tamale lady. The description of a tamale lady is "A short, smiling woman in jeans and an army jacket stands next to a cooler on wheels." 
+A woman called a tamale lady is in Calle 24 Plaza. The description of a tamale lady is "A short, smiling woman in jeans and an army jacket stands next to a cooler on wheels." 
 
 Every turn when the player can see a tamale lady and the turn count is even: 
     say "A tamale lady [one of]watches the people passing by.[or]smiles at you.[or]shifts her weight from one foot to the other. [as decreasingly likely outcomes]";
@@ -1116,6 +1116,12 @@ Every turn when the player can see a tamale lady and the turn count is odd and t
 A cooler on wheels is an openable container. It is in Calle 24 Plaza. It is scenery. The description is "A red and white cooler with a hinged lid." The sound of the cooler is "As the tamale seller handles the cooler, opening and closing the lid, you can hear that it's made of hollow plastic." 
 
 The tamal is an edible thing in the cooler on wheels. The price of the tamal is $3.00. The description is "A delicious-smelling tamal wrapped in paper and foil."  Understand "tamale" as a tamal.
+
+Does the player mean buying a tamal: it is very likely.
+
+[Carry out buying a tamale:
+	say "One tamal at a time, amigx! They're big.";
+	stop the action. ]
 
 Instead of taking the cooler on wheels:
 	say "But that belongs to the nice tamale lady!";
