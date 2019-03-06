@@ -50,7 +50,7 @@ A storage box is an object in Home Base. It is a closed openable container. It i
 
 A book is a kind of thing.  A SMARTmap is a book. A SMARTmap has a table name called the contents. The description of a SMARTmap is "An accessible map of the BART system with Braille entries. Use it like this: 'consult smartmap about red line' ";
 
-A carnelian flower is an object. It is in the storage box. "This stylized flower is sculpted in carnelian, smooth and polished." The description of the carnelian flower is "It shimmers, slipping in time. You think of sacrifice and the blood of captive warriors."
+A carnelian flower is an object. It is in the storage box. "This stylized flower is sculpted in carnelian, smooth and polished." The description of the carnelian flower is "It shimmers, slipping in time. You think of sacrifice and the blood of captive warriors." The scent of the carnelian flower is "Cold stone; ambergris; thyme."
 
 In Home Base is an opaque, closed, openable container called a closet. The closet is scenery. 
 The wraparound mirrorshades, headphones, a thick woolly hat, the cruel shoes, a SMARTmap, a long cane, and earplugs are in the closet.
@@ -983,9 +983,9 @@ Mission 16th Concourse is up from Mission 16th St. Mission 16th is a concourse. 
 
 A saxophone player is a man in Mission 16th Concourse. The description of a saxophone player is "A man sitting on a stool by the stairwell plays jazz on a saxophone. The instrument case is open in front of him, containing a scattering of change, dollar bills, and flyers for music shows."
 
-A security guard is a woman in Mission 16th Concourse. 
+A security guard is a woman in Mission 16th Concourse.  The description of a security guard is "The security guard looks bored."
 
-A station agent is a woman in Mission 16th Concourse. 
+A station agent is a woman in Mission 16th Concourse. The description of the station agent is "She's in a little plexiglass kiosk next to the ticket readers."
 
 The concrete shapes are scenery in Mission 16th Concourse. "Big blocky shapes, rectangles, circles, half circles, are scuplted in relief along the rough sides of the enormous open stairwell to the plaza. They're reminiscent of brutalist skyscrapers and stoplights, a pleasing jumble of forms decorating the space. You feel more aware of the secret life of buildings. Their bones, their roots. The way they take up space against the sky.[if the player is carrying an ART card]The secretive shapes beckon like doors. You itch to climb them. [end if]"
 
@@ -1193,7 +1193,7 @@ A raccoon is a kind of animal.  In Calle 24 Corner is a raccoon. The description
 Every turn when the player can see a raccoon and the turn count is even: 
     say "A raccoon [one of]hauls itsef out of a concrete trash bin[or]skulks into a nearby alleyway[or]hides in a little nook, eating some discarded fries[or]has a little nap in a pile of trash[as decreasingly likely outcomes]."
 
-A woman called a woman with a stroller is in Calle 24 Corner. The description of the woman is "A woman in bright lipstick and a wig slightly askew, pushing a stroller. Wait . . . it's not a baby in there. It's a chihuahua in a sweater and the sweater matches its owner's sweater."
+A woman called a stroller-pushing lady is in Calle 24 Corner. The description of the stroller-pushing lady  is "A lady in bright lipstick and a wig slightly askew, pushing a stroller. Wait . . . it's not a baby in there. It's a chihuahua in a sweater and the sweater matches its owner's sweater."
 
 A guy in a yellow vest is a man in Calle 24 Corner. The description of the guy is "A guy in a high visibility vest, sweeping up trash. He's carrying a dustpan on a long handle. He seems a bit careworn."
 
