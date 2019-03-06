@@ -1670,7 +1670,7 @@ Every turn:
 		let yellow-relative-position be the relative position corresponding to the destination of yellow-lookup in the Table of yellow Line Schedule;
 		if the Yellow Line Train is southbound:
 			if yellow-relative-position is less than player-relative-position:
-				now time-till-yellow is yellow-endpoint-relpos - yellow-relative-position + yellow-endpoint-relpos - player-relative-position;
+				now time-till-yellow is yellow-relative-position - yellow-endpoint-relpos + player-relative-position - yellow-endpoint-relpos;
 				now yellow-next-endpoint is Antioch;
 			otherwise:
 				now time-till-yellow is yellow-relative-position - player-relative-position;
