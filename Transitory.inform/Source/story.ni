@@ -1119,10 +1119,6 @@ The tamal is an edible thing in the cooler on wheels. The price of the tamal is 
 
 Does the player mean buying a tamal: it is very likely.
 
-[Carry out buying a tamale:
-	say "One tamal at a time, amigx! They're big.";
-	stop the action. ]
-
 Instead of taking the cooler on wheels:
 	say "But that belongs to the nice tamale lady!";
 	
@@ -1467,8 +1463,10 @@ After looking:
 	if the player is in Liftlandia or the player is in a concourse or the player is in a street level station:
 		say "There is an elevator in the north wall.";
 	if the player is in a concourse:
+		now a ticket reader is in the location of the player;
 		say "There is a ticket reader here.";
 		continue the action.
+
 
 A panel in the wall is in the elevator. It is scenery. Understand "buttons"  as A panel in the wall. The description is "There are three buttons on the wall: S, C, and P." 
 The S button, the C button, and the P button are parts of the panel in the wall. 
@@ -1525,6 +1523,7 @@ Instead of pushing the C button:
 		say "The elevator creaks and slowly goes down.";
 		now the middle of shaft is mapped south of the elevator;	
 		say "The doors open and you look out to [middle of shaft] to the south.";
+		stop the action;
 	if the former location is bottom of shaft:
 		say "You push the C button. It lights up. The elevator creaks and slowly goes up.";
 		say "The elevator almost imperceptibly moves up. Time passes. ";
@@ -1556,12 +1555,13 @@ Part 9 - Ticket reader
 A ticket reader is a thing.  "A ticket reader machine is here in a little kiosk[if player is hearing], softly humming[end if]."
 A ticket reader is fixed in place.
 Understand "machine" as a ticket reader.  
-The description of the ticket reader is "Its labels, both printed and Braille, are somewhat worn by time. A sign on the machine says 'Swipe *ART card for entry and exit." 
+The description of the ticket reader is "Its labels, both printed and Braille, are somewhat worn by time. A sign on the machine says 'Swipe *ART card for entry and exit."  The feel of the ticket reader is "Smooth metal, a little bit warm. The letters on its front panel are raised, as well as the Braille instructions. The ticket reader makes your fingers tingle as if powerful magnetic forces were swirling within the machine."  
 
 After going to a concourse:
 	now a ticket reader is in the location of the player;
 	continue the action.
 	
+[something is wack, here, because i also had to declare the ticket reader abover in the after looking statement]
 
 Instead of switching on a card when the location of the player is not a concourse:
 	say "You need to do that by swiping it on a ticket reader.";
