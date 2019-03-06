@@ -20,6 +20,9 @@ the clues findable for all of them. As I play with that it is also fun to put
 in the sly crip humor that is a key piece of our everyday resistance and 
 survival. 
 
+If you like the idea, please support me on Patreon: 
+https://www.patreon.com/lizhenry 
+
 INSTALLING THE GAME
 
 To playtest, install Inform7 and clone this repo.
