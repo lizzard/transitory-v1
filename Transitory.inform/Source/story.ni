@@ -648,7 +648,8 @@ A person can be greeted or ungreeted. A person is usually ungreeted. The player 
 
 Smiling is an action applying to one thing.
 
-Understand the command "greet" as something new. Understand "greet [someone]" as greeting.
+Understand the command "greet" as something new. Understand "greet [someone]" as greeting.  
+
 Greeting is an action applying to one thing. 
 
 Carry out greeting:
@@ -656,7 +657,23 @@ Carry out greeting:
 	now the noun is greeted;
 	continue the action.
 	
-Understand "talk to [someone]" as a mistake ("To start a conversation, try to GREET [the noun], ASK [the noun] ABOUT something or TELL [the noun] ABOUT something."). 
+[Understand "talk to [someone]" as a mistake ("To start a conversation, try to GREET [the noun], ASK [the noun] ABOUT something or TELL [the noun] ABOUT something."). ]
+
+Understand the commands "ask" and "tell" and "say" and "answer" as something new. 
+
+Understand "ask [text]" or "tell [text]" or "answer [text]" as a mistake ("[talk to instead]"). 
+
+Instead of asking someone to try doing something:
+	say "[talk to instead][paragraph break]". 
+
+Instead of answering someone that something:
+	say "[talk to instead][paragraph break]". 
+
+To say talk to instead:
+	say "(To communicate, TALK TO a character or GREET them.) " 
+
+Understand "talk to [someone]" as talking to. Understand "talk to [something]" as talking to. Talking to is an action applying to one visible thing. 
+
 
 Part 6 - Hint system
 
@@ -1009,13 +1026,16 @@ Mission 16th Plaza is a street level station. Mission 16th Plaza is up from Miss
 A harried shopper is a woman in Mission 16th Plaza. The description of a harried shopper is "This worried looking lady is clutching several grocery bags on one arm and muttering to herself. Her ankles are swollen."
 
 
-
 A grizzled veteran is a man in Mission 16th Plaza. The description of a veteran is "A grizzled veteran in a red Jazzy powerchair. He has some cardboard with writing on it tucked between his back and the seat."
 		
 Old Bank Corner is south of Mission 16th Plaza. The surface of Old Bank Corner is sidewalk.
-		
+	
+A rough sleeper is a man in Old Bank Corner. The description of a rough sleeper is "A scruffy man is passed out on the sidewalk next to a trash bag full of scavenged cans."
+
+
 Papel Picado Plaza is west of Old Bank Corner. The surface of Papel Picado Plaza is brick.
 
+An old guy in a brokendown manual wheelchair is a man in Papel Picado Plaza. The description of an old guy is "A guy slumped over in a rickety wheelchair with no footrests. He's moving slowly backwards, propelling the chair with his feet. The chair has 'SFGH' printed across the back." 
 
 A gothy teenager is a girl in Papel Picado Plaza. The description of a gothy teenager is "A girl in blue lipstick, dressed all in black, is hanging out with her friends."
 
@@ -1104,14 +1124,13 @@ Calle 24 Plaza is up from Mission 24th Concourse. The surface of Calle 24 Plaza 
 
 The train mural is scenery in Calle 24 Plaza. "A mural of a gleaming BART train carried on the backs of determined workers amid a geometric cityscape."  
 
-
 A woman called a tamale lady is in Calle 24 Plaza. The description of a tamale lady is "A short, smiling woman in jeans and an army jacket stands next to a cooler on wheels." 
 
 Every turn when the player can see a tamale lady and the turn count is even: 
     say "A tamale lady [one of]watches the people passing by.[or]smiles at you.[or]shifts her weight from one foot to the other. [as decreasingly likely outcomes]";
 
 Every turn when the player can see a tamale lady and the turn count is odd and the player is not deaf:
-	say "The tamale lady says [one of]'Tamales de pollo!'[or]'Tamales!'[or]'Tamales de carne!'[as decreasingly likely outcomes]";
+	say "The tamale lady says [one of] [or]'Tamales de pollo!'[or]'Tamales!'[or]'Tamales de carne!'[as decreasingly likely outcomes]";
 
 A cooler on wheels is an openable container. It is in Calle 24 Plaza. It is scenery. The description is "A red and white cooler with a hinged lid." The sound of the cooler is "As the tamale seller handles the cooler, opening and closing the lid, you can hear that it's made of hollow plastic." 
 
@@ -1121,20 +1140,22 @@ Does the player mean buying a tamal: it is very likely.
 
 Instead of taking the cooler on wheels:
 	say "But that belongs to the nice tamale lady!";
-	
-A pink-jacketed girl is in Calle 24 Plaza. The description is "A little girl with long braids and a pink jacket. She has a bedazzled Dora the Explorer backpack."
+
 	
 A hipster dude on a motorized unicycle is a man in Calle 24 Plaza. The description of a hipster dude is "A guy in jeans, a hoodie, and a black helmet is standing an electric unicycle, tootling along."
+
+A accordion player is a man in Calle 24 Plaza. The description of an accordion player is "A man in full mariachi uniform covered in bright buttons is carrying an accordion."
+
+A guitar player is a man in Calle 24 Plaza. The description of a guitar player is "A mariachi carring a big full bodied guitar and pulling a hand truck loaded with a little amp."
 
 A yelling preacher is a person. In Calle 24 Plaza is a yelling preacher. The description of the preacher is "A short man yells fervently in Spanish into a microphone. You recognize some things from the Bible[if player is not deaf], though it's hard to understand him from the low quality amp at his feet[end if]".
 
 Donuts Corner is west of Calle 24 Plaza. The surface of Donuts Corner is sidewalk. "Just outside the Chinese Food and Donuts shop, this lively streetcorner has buses pulling up along 24th Street, many cars going by, people crossing the street or standing around[if player is not deaf], music blaring from passing cars and from the shops[end if]. [if player is not blind]Along Mission, high overhead, washingtonia palms stretch into the sky.[end if] To the east, there's another plaza."
 
-An old guy in a brokendown manual wheelchair is a man in Donuts Corner. The description of an old guy is "A guy slumped over in a rickety wheelchair with no footrests. He's moving slowly backwards, propelling the chair with his feet. The chair has 'SFGH' printed across the back." 
 
 A funky dude is a man in Donuts Corner. The description of a funky dude is "A guy with long dreads, an army jacket, striped sweatpants, and huge sneakers is playing music from a boombox in his backpack. He seems very much at home on this corner."
 
-
+A pink-jacketed girl is in Donuts Corner. The description is "A little girl with long braids and a pink jacket. She has a bedazzled Dora the Explorer backpack."
 
 
 Circle Plaza is south of Donuts Corner. It is bumpy.
@@ -1148,6 +1169,10 @@ The gadget table is scenery in Circle Plaza. "Phone cases, cables, chargers, and
 The jewelry table is scenery in Circle Plaza. "You are overwhelmed by the array of cheap rings with big semi-precious stones, earrings made of tiny feathers, and chunky silver bracelets in neat rows."
 The textiles booth is scenery in Circle Plaza. "Hanging from the racks set up around the booth are embroidered huipil blouses, woolen ponchos from Peru, Guatemalan woven pants, striped wool shoulder bags, and colorful scarves."
 The souvenirs booth is scenery in Circle Plaza. "A rack to the side of this tiny booth is festooned with Mexican flags, belt buckles with the eagle and serpent, 49-ers hats and tshirts, and pink woven plastic shopping bags printed with Frida Kahlo's face."
+
+The textile seller is a person in Circle Plaza. "A very short, very old lady with a million wrinkles and a kind smile."
+
+The gadget seller is a person in Circle Plaza. "A weatherbeaten man in a 49-ers cap."
 
 The stairwell is scenery in Circle Plaza. Understand "wall" as the stairwell. "Burnt red bricks smoothly curve up around the edges of the wall around the big stairwell. There are a few people sitting with their backs against the curve. A couple of medium-sized trees grow out of a planter in a space at the top of the wall. As you study the unusual structure you notice metal gratings set into the plaza, one long strip near the edge where the plaza turns to sidewalk, and gratings around small, spindly saplings. The metal gratings have a circular pattern."
 
@@ -1163,29 +1188,54 @@ A cheerful shopper is a woman in Circle Plaza. The description of a cheerful sho
 
 A wide-eyed child is a girl in Circle Plaza. The description of a wide-eyed child is "A little girl clutching a bottle of mexican coca-cola is staring at everything, holding her mom's hand. [if greeted]She seems shy.[end if]"
 
-A flower seller is a person. In Circle Plaza is a flower seller. The description of a flower seller is "[if the player is not blind]A short, smiling woman in a baseball hat and a red checked scarf pushes her wheely cart full of roses and carnations. Her jacket has a ladybug pin. [end if][if player is blind]There's a short woman just next to you, fussing over a metal cart.[end if]" 
+A sidewalk artist is a man in Circle Plaza. The description of a sidewalk artist is "[if greeted]Buddy [otherwise] A scruffy man[end if] is lying on the sidewalk, drawing in a carefree way on a notepad with sharpie markers scattered all around him. A duffle bag and a bag of peanut butter cups are open next to him."
+
+A sidewalk artist carries a notepad. 
+
+After greeting a sidewalk artist for the first time:
+	say "The artist looks up at you. 'Oh hey.' He says. 'Happy Tuesday!'";
+	say "'Name's Buddy. I like to draw the days.'[line break]";
+	now the printed name of the sidewalk artist is "Buddy";
+	now the sidewalk artist is proper-named;
+
+
+
+After talking to the sidewalk artist:
+	unless sidewalk artist is greeted: 
+		say "He doesn't seem to want to pay attention to you.";
+	otherwise:
+		say "'You like my drawing? It's Tuesday.";
+		say "'That's because it's Tuesday today. It can be Tuesday other times too.'";
+		say "'Especially right here in the plaza.'";
+		say "Buddy thinks for a minute, considering you.";
+		say "'Time is what you make of it. What with that magic marker and all.'";
+		say "Buddy laughs and goes back to his notepad.";
+		now the magic marker is magical;
+		say "The magic marker seems to tingle for a moment in your pocket.";
+
+
+A flower seller is a person. In Donuts Corner is a flower seller. The description of a flower seller is "[if the player is not blind]A short, smiling woman in a baseball hat and a red checked scarf pushes her wheely cart full of roses and carnations. Her jacket has a ladybug pin. [end if][if player is blind]There's a short woman just next to you, fussing over a metal cart.[end if]" 
 
 Understand "Mariquita" as the flower seller when the flower seller is proper-named.
 
 Instead of examining the flower seller for the first time:
-	say "[if the player is not blind]A short, smiling woman in a baseball hat and a red checked scarf pushes her wheely cart full of roses and carnations. Her jacket has a ladybug pin. [end if][if player is blind]A short woman just next to you, fussing over a metal cart.[end if][line break]";
+	say "[if the player is not blind]A short, smiling woman in a baseball hat and a red checked scarf pushes her shopping cart full of roses and carnations. Her jacket has a ladybug pin. [end if][if player is blind]A short woman just next to you, fussing over a metal cart.[end if][line break]";
 	say "You stop and chat with her. She's very friendly. [line break]Her name is Mariquita.";
 	Now the printed name of the flower seller is "Mariquita";
 	now the flower seller is proper-named;
+	now the flower seller is greeted;
 	
 Every turn when the turn count is even and the flower seller is proper-named and the player can see a flower seller and the player is not blind: 
-    say "Mariquita [one of]beams at you with a big happy grin.[or]calls out, 'Flores!'[or]offers you a little bunch of carnations tied with string.[or]shares a coffee with a friend.[or]fusses over her bunches of flowers, arranging them nicely.[or]watches the people passing by.[or]smiles as she stops to talk with a friend.[as decreasingly likely outcomes]"
+    say "Mariquita [one of] [or]beams at you with a big happy grin.[or]calls out, 'Flores!'[or]offers you a little bunch of carnations tied with string.[or]shares a coffee with a friend.[or]fusses over her bunches of flowers, arranging them nicely.[or]watches the people passing by.[or]smiles as she stops to talk with a friend.[as decreasingly likely outcomes]"
 
-A shopping basket is an openable container. It is scenery. It is in Circle Plaza. The description of the shopping basket is "A metal folding shopping basket on wheels. "
+A shopping cart is an open transparent container. It is scenery. It is in Donuts Corner. The description of the shopping cart is "A metal folding shopping cart on wheels. "
 
-The little bunch of carnations is a thing in the shopping basket. The price of the carnations is $1.00. The description is "A bunch of red carnations, stems wrapped in paper and tied with green twine." 
+The little bunch of carnations is a thing in the shopping cart. The price of the carnations is $1.00. The description is "A bunch of red carnations, stems wrapped in paper and tied with green twine." 
 
 Instead of taking the basket:
 	say "But that belongs to Mariquita! And she's so nice.";
 
-A accordion player is a man in Circle Plaza. The description of an accordion player is "A man in full mariachi uniform covered in bright buttons is carrying an accordion."
 
-A guitar player is a man in Circle Plaza. The description of a guitar player is "A mariachi carring a big full bodied guitar and pulling a hand truck loaded with a little amp."
 
 Calle 24 Corner is east of Circle Plaza. The surface of Calle 24 Corner is sidewalk. "This busy street corner by the McDonalds is grimy. It's basically a crowded spot where people wait to cross the street. Across Mission to the west, there's a nice plaza with a busy market. Across 24th Street to the north, another lovely plaza with musicians, preachers, and some places to sit. [if player is not Deaf]Classical music is blasting from hidden speakers at an obnoxious level, meant to drive loiterers away.[end if]" 
 
@@ -1199,7 +1249,7 @@ A woman called a stroller-pushing lady is in Calle 24 Corner. The description of
 
 A guy in a yellow vest is a man in Calle 24 Corner. The description of the guy is "A guy in a high visibility vest, sweeping up trash. He's carrying a dustpan on a long handle. He seems a bit careworn."
 
-A rough sleeper is a man in Calle 24 Corner. The description of a rough sleeper is "A scruffy man is passed out on the sidewalk next to a trash bag full of scavenged cans."
+
 
 Brutalist Plaza is a room.  It is uneven. "You pick your way through paths around enormous, rough-hewn blocks of concrete and stone. They tower overhead like the tufa mounds of Mono Lake or a cityscape in a dream. A little to the southwest, the path broadens."
 
@@ -1377,6 +1427,8 @@ San Bruno Concourse is up from San Bruno. The description of San Bruno Concourse
 	
 The glass mural is scenery. The description of the glass mural is "Red and blue squares in backlit glass have the words 'GO' and 'CONNECT' across the mural."
 
+Buri-Buri Center is a room. "A big old strip mall and big box shopping center is here."
+
 Urebure is a room.
 
 Tanforan Racetrack is a room.
@@ -1385,9 +1437,10 @@ Tanforan Assembly Center is a room. The description of Tanforan Assembly Center 
 	
 San Bruno Mountain is a room.
 
-A tsektsel is a supporter. it is in San Bruno Mountain.
-	
+A tsektsel is a supporter. it is in San Bruno Mountain. The description of a tsektsel is "A small circle of stones, inviting you to come and sit within."
 
+[if you sit there you get some nice text about looking out over the bay]
+	
 Chioischin is a room.
 
 Ramona is a woman. Alessandro is a man. Ramona and Alessandro are in Chioischin.
@@ -1586,19 +1639,22 @@ Carry out switching off a card:
 
 		
 
-A writing utensil is a kind of thing. A magic marker is a writing utensil.
+A writing utensil is a kind of thing. A magic marker is a writing utensil. 
+A writing utensil can be magical or mundane. A writing utensil is usually mundane.
+
 A card is a kind of device.  
 A BART card, an ART card, a BAT card, a BAR card, a CART card, and a WART card are cards.
+ 
 
 The description of a BART card is "A [if player is not blind]blue and white card[end if] with a magnetic stripe. It says 'BART' in big [if player is not blind] black[end if] letters that seem oddly like scribbly handwriting. It buzzes very faintly in your hand."
 
-The description of an ART card is "A [if player is not blind]blue and white card[end if] with a magnetic stripe. It says 'ART' in big [if player is not blind] black[end if] letters that seem oddly like scribbly handwriting. The letters blur and seem to move."
+The description of an ART card is "A [if player is not blind]blue and white card[end if] with a magnetic stripe. It says 'ART' in big [if player is not blind] black[end if] letters that seem oddly like scribbly handwriting. The letters blur and seem to move." 
 
 The description of a BAT card is "A [if player is not blind]blue and white card[end if] with a magnetic stripe. It says 'BAT' in big [if player is not blind] black[end if] letters that seem oddly like scribbly handwriting. The letters blur and seem to move."
 
 The player is carrying a magic marker and a BART card.
 
-A magic marker is an object. The description of a magic marker is "A magic marker. It fizzes and tingles with energy as if it were eager to make its mark."
+A magic marker is an object. The description of a magic marker is "A magic marker. [if the marker is magical]It fizzes and tingles with energy as if it were eager to make its mark.[end if]"
 
 After writing on: 
 	if the player is not carrying a BAT card:
@@ -1607,6 +1663,9 @@ After writing on:
 Writing on is an action applying to two visible things. Understand "write on [something] with [something]" as writing on. Understand "tag [something] with [something]" or "scribble on [something] with [something]" as writing on. 
 
 Check writing on:
+	unless the magic marker is magical:
+		say "You can't think of anything to write, just yet.";
+		stop the action;
 	unless the noun is a card or the noun is a printer, say "Weird. It doesn't work. Try something else to write on." instead.
 
 Carry out writing on:
