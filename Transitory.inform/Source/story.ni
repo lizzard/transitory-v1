@@ -1673,7 +1673,7 @@ Instead of pushing the S button:
 		say "The elevator creaks and slowly goes up.";
 		say "Time passes. You smell a lot of things, wishing you couldn't.";
 		now the top of shaft is mapped south of the elevator;	
-		say "The doors open and you look out to [top of shaft] to the south.";
+		say "The doors open out onto [top of shaft] to the south.";
 	
 Instead of pushing the P button:
 	if the former location is bottom of shaft:
@@ -1683,7 +1683,7 @@ Instead of pushing the P button:
 		say "The elevator creaks and slowly goes down.";
 		say "Time passes. You smell a lot of things, wishing you couldn't.";
 		now the bottom of shaft is mapped south of the elevator;	
-		say "There is a horrible jolt. The doors open and you look out to [bottom of shaft] to the south.";
+		say "There is a horrible jolt. The doors open out onto [bottom of shaft] to the south.";
 		
 Instead of pushing the C button:
 	if the former location is middle of shaft:
@@ -1692,17 +1692,17 @@ Instead of pushing the C button:
 		say "You push the C button. [if player is not blind]It lights up.[end if]" ;
 		say "The elevator creaks and slowly goes down.";
 		now the middle of shaft is mapped south of the elevator;	
-		say "The doors open and you look out to [middle of shaft] to the south.";
+		say "The doors open onto [middle of shaft] to the south.";
 		stop the action;
 	if the former location is bottom of shaft:
 		say "You push the C button. It lights up. The elevator creaks and slowly goes up.";
 		say "The elevator almost imperceptibly moves up. Time passes. ";
 		now the middle of shaft is mapped south of the elevator;	
-		say "The doors open and you look out to [middle of shaft] to the south.";
+		say "The doors open out to [middle of shaft] to the south.";
 		
 Instead of pushing the M button:
 	say "Nothing happens.";
-	say "You notice a little sign taped to the elevator doors, saying 'MUNI is out of order till further notice.'";
+	say "Oh yeah. MUNI's down for system-wide repairs.";
 
 
 Instead of going up when the player is not in the elevator and the player is wearing a wheelchair and anywhere is mapped up of the location:
