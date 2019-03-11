@@ -553,6 +553,8 @@ Section 4 - Some varied defaults for examining
 
 [replace the look description for examining objects, without assuming sightedness]
 
+The description of yourself is "As fantabulous as ever. [line break] You are [sightedness], [deafness], and [ambulation].";
+
 The examine undescribed things rule is not listed in any rulebook.
 
 Carry out examining (this is the multisensory examine undescribed things rule):
@@ -1157,6 +1159,19 @@ A funky dude is a man in Donuts Corner. The description of a funky dude is "A gu
 
 A pink-jacketed girl is in Donuts Corner. The description is "A little girl with long braids and a pink jacket. She has a bedazzled Dora the Explorer backpack."
 
+West of Donuts Corner is a room called Chinese Food and Donuts. 
+
+The description of Chinese Food is "The donut shop is warm and bright. It smells like tasty food and baked goods.[if the player is not blind] One display case holds rows of donuts. Another has steam trays full of hot food.[end if]" 
+
+An impatient lady is in Chinese Food. "Behind the counter, a lady is waiting impatiently for you to make up your mind what you want." The description of an impatient lady is "She says, 'Next! You want a donut? Coconut donut? Plain? You want eggrolls?'"  
+
+The display case is scenery in Chinese Food. It is a container. The description is "A glass-fronted food display running along the length of the counter, with donuts on one side and steam trays of egg rolls and other hot food on the other." 
+
+An eggroll is an edible thing in the display case. The price of the eggroll is $1.00. The description is "A greasy eggroll in a waxed paper jacket."  Understand "eggrolls" as an eggroll.
+
+A plain donut is an edible thing in the display case. The price of the plain donut is $1.00. The description is "A donut, simultanously dry and greasy, in a waxed paper jacket."
+
+A coconut donut is an edible thing in the display case. The price of the coconut donut is $1.00. The description is "A donut, simultanously dry and greasy, in a waxed paper jacket. Little bits of coconut are falling off it onto your hands."
 
 Circle Plaza is south of Donuts Corner. It is bumpy.
 The description of Circle Plaza is "[if player is not blind]You head into the crowds of this busy space built around a circular wall. People are selling stuff from tables and little booths. Across 24th street to the north, there's a donut shop. You notice a mural that says something about coffee. [end if][if player is not deaf]Many kinds of music are playing here. [end if][if player is not hearing or player is not sighted]This is a typical, busy, open space on Mission Street.[end if]".
