@@ -41,6 +41,7 @@ You can 'go' in all 8 directions (north, northeast, etc) as well as up and down.
 'n' is a convenient shorthand for 'go north' [line break]
 You can also take things, open things, sit on things, and stand up. [line break]
 'examine' or 'look at' will let you examine an object. Or, sometimes, details in a room description.[line break]
+'Wait X minutes' may be handy when waiting for trains. [line break]
 'Help' will get you a small menu of hints. [line break]
 There are many more commands to try![line break]"
 
@@ -729,7 +730,7 @@ To say exit list:
 		let place be the room way from the location;
 		if place is a room:
 			increment count;
-			say "[if count is greater than 1] or [end if][bold type][way][roman type]". 
+			say "[if count is greater than 1] or [end if][bold type][way][roman type] ([place])". 
 
 
 
