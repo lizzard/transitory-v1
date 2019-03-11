@@ -755,6 +755,8 @@ A room can be a platform.
 A room can be a concourse. 
 A room can be a street level station. 
 
+A room can be near MUNI or independent. A room is usually independent. 
+
 A room can be a north endpoint.
 A room can be a south endpoint. 
 A room can be an east endpoint.
@@ -848,13 +850,13 @@ Chapter 7 - Civic Center
 
 The description of Civic Center is "You are on a BART platform underground. It's busy, in fact, busy to the point of chaos, here. It's cold and somehow, even the air feels grimy.[if player is not deaf] Suitcases and wheeled carts trundle loudly as people rush around the station.[end if][if player is not blind] Wide black pillars fronted with square marble tiles dot the platform in between stairs to the concourse.[end if]"
 
-Civic Center Concourse is up from Civic Center. It is a concourse.  The description of Civic Center Concourse is "A bustling underground concourse above the train platforms. [if player is not blind] As you pause to get your bearings, you notice a man in ill-fitting sweat pants kneeling on the ground over an open backpack. He's fumbling around with a little glass pipe.[end if]"
+Civic Center Concourse is up from Civic Center. It is a concourse. Civic Center Concourse is near MUNI.  The description of Civic Center Concourse is "A bustling underground concourse above the train platforms. [if player is not blind] As you pause to get your bearings, you notice a man in ill-fitting sweat pants kneeling on the ground over an open backpack. He's fumbling around with a little glass pipe.[end if]"
 
 A kneeling man is in Civic Center Concourse.
 
 A ticket agent is in Civic Center Concourse. 
 
-United Nations Plaza is up from Civic Center Concourse. It is a street level station.
+United Nations Plaza is up from Civic Center Concourse. It is a street level station. It is near MUNI. 
 
 A statue of Ashurbanipal is in United Nations Plaza. It is fixed in place. The description of the statue of Ashurbanipal is "An enormous bronze statue of a Mesopotamian-looking king holding a writhing lion in one arm and a cuneiform tablet in the other. It's on a tall base with quite a lot of information on it." 
 
@@ -971,7 +973,12 @@ The description of El Cerrito Plaza is "You are on a BART platform."
 
 Chapter 15 - Embarcadero
 
-The description of Embarcadero is "You are on a BART platform underground. Lots of people are around and there are muffled announcements over an intercom."
+The description of Embarcadero is "You are on a BART platform underground. Lots of people are around and there are muffled announcements over an intercom."  Embarcadero is a platform. Embarcadero is near MUNI. 
+
+Embarcadero Concourse is up from Embarcadero. Embarcadero Concourse is a concourse. It is near MUNI.
+
+Embarcadero Plaza is up from Embarcadero Concourse.  It is a street level station. It is near MUNI. 
+
 
 Chapter 16 - Fremont
 
@@ -1435,7 +1442,12 @@ After writing on the ART card:
 
 Chapter 26 - Montgomery
 
-The description of Montgomery is "You are on a BART platform."
+The description of Montgomery is "You are on a BART platform underground. Lots of people are around and there are muffled announcements over an intercom."  Montgomery is a platform. Montgomery is near MUNI. 
+
+Montgomery Concourse is up from Montgomery. Montgomery Concourse is a concourse. It is near MUNI.
+
+Montgomery Plaza is up from Montgomery Concourse.  It is a street level station. It is near MUNI. 
+
 
 Chapter 27 - North Berkeley
 
@@ -1484,7 +1496,12 @@ The description of Pleasant Hill is "You are on a BART platform."
 
 Chapter 36 - Powell
 
-The description of Powell is "You are on a BART platform."
+The description of Powell is "You are on a BART platform underground. Lots of people are around and there are muffled announcements over an intercom."  Powell is a platform. It is near MUNI. 
+
+Powell Concourse is up from Powell. Powell Concourse is a concourse. It is near MUNI.
+
+Turnaround Plaza is up from Powell Concourse.  It is a street level station. It is near MUNI. 
+
 
 Chapter 37 - Richmond
 
@@ -1613,11 +1630,15 @@ After looking:
 		continue the action.
 
 
-A panel in the wall is in the elevator. It is scenery. Understand "buttons"  as A panel in the wall. The description is "There are three buttons on the wall: S, C, and P." 
+A panel in the wall is in the elevator. It is scenery. Understand "buttons"  as A panel in the wall. The description is "[if the former location is near MUNI]There are four buttons on the wall: S, C, M, and P.[otherwise]There are three buttons on the wall: S, C, and P." 
 The S button, the C button, and the P button are parts of the panel in the wall. 
 The description of the S button is "A round button printed with a raised S."
 The description of the C button is "A round button printed with a raised C."
 The description of the P button is "A round button printed with a raised P."
+The description of the M button is "A round button printed with a raised M."
+
+
+
 
 [figure out what level you're entering the elevator from relative to other levels]
 After going to the elevator:
@@ -1626,6 +1647,10 @@ After going to the elevator:
 	if the player is not wearing the powerchair:
 		say "You step into the elevator. The door closes.";
 	now the former location is mapped south of the elevator;
+	if the former location is near MUNI:
+		now the M button is a part of the panel in the wall;
+	if the former location is independent:
+		now the M button is nowhere;
 	if anywhere is mapped down of the former location and nowhere is mapped up of the former location:   [if you're at the top]
 		now the top of shaft is the former location; 
 		now the middle of shaft is the room down of the former location;
@@ -1674,6 +1699,10 @@ Instead of pushing the C button:
 		say "The elevator almost imperceptibly moves up. Time passes. ";
 		now the middle of shaft is mapped south of the elevator;	
 		say "The doors open and you look out to [middle of shaft] to the south.";
+		
+Instead of pushing the M button:
+	say "Nothing happens.";
+	say "You notice a little sign taped to the elevator doors, saying 'MUNI is out of order till further notice.'";
 
 
 Instead of going up when the player is not in the elevator and the player is wearing a wheelchair and anywhere is mapped up of the location:
