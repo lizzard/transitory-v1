@@ -732,6 +732,13 @@ To say exit list:
 			increment count;
 			say "[if count is greater than 1] or [end if][bold type][way][roman type] ([place])". 
 
+Teleporting to is an action applying to one thing.
+Understand "go to [any room]" as teleporting to. 
+
+	
+Carry out teleporting to: 
+	say "You blink out of existence and zap yourself to [the noun]. [line break]";
+	move the player to the noun;
 
 
 Part 7 - All the places
@@ -753,7 +760,6 @@ A room can be a south endpoint.
 A room can be an east endpoint.
 A room can be a west endpoint.
 	
-
 
 Richmond is a north endpoint.
 Millbrae is a south endpoint.
@@ -789,7 +795,11 @@ The BART map is a backdrop. It is in Platforms.
 Instead of examining the BART map:
 	display the Figure of BART map; 
 
+Thirteenth Century is a region. 
 
+Eighteenth Century is a region.
+
+ 
 
 
 Section 2 - Locations, organized by train stops
@@ -836,9 +846,71 @@ Jalquin is a room.
 
 Chapter 7 - Civic Center
 
-The description of Civic Center is "You are on a BART platform."
+The description of Civic Center is "You are on a BART platform underground. It's busy, in fact, busy to the point of chaos, here. It's cold and somehow, even the air feels grimy.[if player is not deaf] Suitcases and wheeled carts trundle loudly as people rush around the station.[end if][if player is not blind] Wide black pillars fronted with square marble tiles dot the platform in between stairs to the concourse.[end if]"
 
-Kotóla is a woman. The description of Kotóla is "Frog Woman, Coyote's wife. She lived in the river. Her bones someday will live here deep under the earth."
+Civic Center Concourse is up from Civic Center. It is a concourse.  The description of Civic Center Concourse is "A bustling underground concourse above the train platforms. [if player is not blind] As you pause to get your bearings, you notice a man in ill-fitting sweat pants kneeling on the ground over an open backpack. He's fumbling around with a little glass pipe.[end if]"
+
+A kneeling man is in Civic Center Concourse.
+
+A ticket agent is in Civic Center Concourse. 
+
+United Nations Plaza is up from Civic Center Concourse. It is a street level station.
+
+A statue of Ashurbanipal is in United Nations Plaza. It is fixed in place. The description of the statue of Ashurbanipal is "An enormous bronze statue of a Mesopotamian-looking king holding a writhing lion in one arm and a cuneiform tablet in the other. It's on a tall base with quite a lot of information on it." 
+
+The tall base is scenery in United Nations Plaza. The description of the tall base is "A concrete base topped by a granite lotus blossom plinth. It has a long inscription carved into it, which you can just barely read if you get up close."
+
+The inscription is scenery in United Nations Plaza. The description of the inscription is "The Assyrians formed one of the earliest great empires in the world. Their civilization dates from 2700 B.C. with the important cultural centers at Ashur and Nineveh north of modern Baghdad. Beginning as a river civilization in Mesopotamia between the Tigris and Euphrates, the empire spread east and west to touch the lives of all Near Eastern people. 
+
+ A noted patron of the arts, he helped to build a culture that inspired nations from Persia to the Mediterranean Sea. The bas-reliefs in his palace are among the finest examples of ancient sculpture. Ashurbanipal ruled during the 7th century B.C. At a time when both Egypt and Babylon were under the Assyrian banner. Ashurbanipal had a personal love of learning which prompted him to collect existing knowledge of the known world in cuneiform tablets. His capital, Nineveh is distinguished for its vast collection, recorded as the world’s first great library. 
+
+The language of the Assyrians, Aramaic was spoken by Christ and widely used throughout the Near East by Israelites, Arabs, Persians and others for centuries. It remained the spoken and written language of the Assyrians down to the present time. Their empire lasted 1000 years until the fall of Nineveh in 612 B.C. 
+
+During the ensuing centuries of chaotic political struggle, first between the Persians and Romans, and later between Christians and Muslims, the Assyrians sought refuge in the difficult mountainous terrain of their ancient empire where succeeding governments and warring armies passed them by. 
+
+Among the first converts to Christianity, they preserved and transmitted the culture of classical Greece to the Moors who advanced it during the Dark Ages in Europe. Assyrians authored exquisite religious literature and spread Christianity to the Asiatic east as far as India and to China where their alphabet remained in use by the ruling houses until the early 20th century. 
+
+In the First World War two-thirds of the Assyrians perished in the fighting. Displacement cost them their homes, wealth and any hope for a secure homeland. Many survivors left to begin life again in other countries. Today there are Assyrians in Europe, Australia, South America, India and the United States. 
+
+Assyrians have kept their identity and language without political organization or any of the institutions of national security, passing their heritage on to new generations through the strength of family ties and a spirit of community which is deeply felt. Their rich cultural heritage binds Assyrians worldwide to each other. Their contribution to civilization will continue to enrich world culture. 
+
+This is the statue presented to the City of San Francisco by the Assyrian people in the 210th year of America’s sovereignty. "
+
+
+A statue of Simón Bolívar is in United Nations Plaza. It is fixed in place. 
+
+An obelisk is in United Nations Plaza.  An obelisk is fixed in place.  The description of an obelisk is "A huge black obelisk with the Preamble to the Universal Declaration of Human Rights carved in marble. [paragraph break]WHEREAS recognition of the inherent dignity and of the equal and inalienable rights of all members of the human family is the foundation of freedom, justice and peace in the world,
+[paragraph break]
+WHEREAS disregard and contempt for human rights have resulted in barbarous acts which have outraged the conscience of mankind, and the advent of a world in which human beings shall enjoy freedom of speech and belief and freedom from fear and want has been proclaimed as the highest aspiration of the common people,
+[paragraph break]
+WHEREAS it is essential, if man is not to be compelled to have recourse, as a last resort, to rebellion against tyranny and oppression, that human rights should be protected by the rule of law,
+[paragraph break]
+WHEREAS it is essential to promote the development of friendly relations between nations,
+[paragraph break]
+WHEREAS the peoples of the United Nations have in the Charter reaffirmed their faith in fundamental human rights, in the dignity and worth of the human person and in the equal rights of men and women and have determined to promote social progress and better standards of life in larger freedom,
+[paragraph break]
+WHEREAS Member States have pledged themselves to achieve, in co-operation with the United Nations, the promotion of universal respect for and observance of human rights and fundamental freedoms,
+[paragraph break]
+WHEREAS a common understanding of these rights and freedoms is of the greatest importance for the full realization of this pledge,
+[paragraph break]
+Now, Therefore THE GENERAL ASSEMBLY proclaims THIS UNIVERSAL DECLARATION OF HUMAN RIGHTS as a common standard of achievement for all peoples and all nations, to the end that every individual and every organ of society, keeping this Declaration constantly in mind, shall strive by teaching and education to promote respect for these rights and freedoms and by progressive measures, national and international, to secure their universal and effective recognition and observance, both among the peoples of Member States themselves and among the peoples of territories under their jurisdiction."
+
+A toothless man is in United Nations Plaza. The description of a toothless man is "A toothless man walks slowly in circles, screaming at the sky."
+
+A scruffy dude is in United Nations Plaza. The description of a scruffy dude is "A disheveled man with a duffel bag, a shopping cart, and a pit bull with a rope tied around its neck at his feet."
+
+A snarling pit bull is in United Nations Plaza.  The description of a snarling pit bull is "A rope is loosely tied around this pit bull's neck. It growls and barks at everyone who passes."
+
+A drunk woman is in United Nations Plaza. The description of a drunk woman is "She's rambling on about something, swigging booze out of a bottle in a brown paper bag, occasionally yelling at the pit bull nearby."
+
+A brisk librarian is in United Nations Plaza.
+
+A bureaucrat is in United Nations Plaza. 
+
+
+Waterfall Overlook is a room.
+
+Kotóla is a woman. The description of Kotóla is "Frog Woman, Coyote's wife. She lives in the river. Her bones someday will live here deep under the earth."   [to do: fix this to be not in the descrip but in conversation]
 
 Chapter 8 - Coliseum
 
@@ -886,6 +958,8 @@ Chapter 12 - Dublin/Pleasanton
 The description of Dublin/Pleasanton is "You are on a BART platform. The mysterious suburban world of Dublin/Pleasanton surrounds you."
 
 Pelnen is a room.
+
+
 
 Chapter 13 - El Cerrito del Norte
 
@@ -1502,6 +1576,8 @@ Peli is a person. Peli is in Ritocsi.
 Chapter 47 - West Dublin/Pleasanton
 
 The description of West Dublin/Pleasanton is "You are on a BART platform."
+
+Alisal is a room. 
 
 Chapter 48 - West Oakland
 
