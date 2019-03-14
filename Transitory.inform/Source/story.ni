@@ -53,17 +53,19 @@ A book is a kind of thing.  A SMARTmap is a book. A SMARTmap has a table name ca
 
 A carnelian flower is an object. It is in the storage box. "This stylized flower is sculpted in carnelian, smooth and polished." The description of the carnelian flower is "It shimmers, slipping in time. You think of sacrifice and the blood of captive warriors." The scent of the carnelian flower is "Cold stone; ambergris; thyme."
 
+A moonstone house is an object. It is in the storage box. "A blocky little stone house, made of shimmering moonstone." The description of the moonstone house is "You feel the breath of the night-house, the darkness; realm of the nocturnal jaguar-sun."
+
 In Home Base is an opaque, closed, openable container called a closet. The closet is scenery. 
 The wraparound mirrorshades, headphones, a thick woolly hat, the cruel shoes, a SMARTmap, a long cane, and earplugs are in the closet.
 
 A powerchair is in Home Base.
 
 Instead of dropping the magic marker:
-	say "Wouldn't want to lose it. You put it into your pocket, instead.";
+	say "Wouldn't want to lose it. You put it into your pocket, instead. [run paragraph on]";
 	stop the action.
 	
 Instead of dropping a card:
-	say "You think about dropping [the noun], but can't bring yourself to do it.";
+	say "You think about dropping [the noun], but can't bring yourself to do it [run paragraph on].";
 	stop the action.
 
 	
@@ -814,7 +816,11 @@ The description of Antioch is "You are on a BART platform. You hear the noise of
 
 Chapter 2 - Ashby
 
-The description of Ashby is "You are on a BART platform."
+The description of Ashby is "You are on a BART platform underground.  Brick tiles on the floor, concrete sides to the platform tunnel  It isn't pretty."  Ashby is a platform.
+
+Ashby Concourse is up from Ashby. It is a concourse.
+
+
 		
 West Berkeley Shellmound is a room.		
 
@@ -838,7 +844,13 @@ The description of Bay Fair is "You are on a BART platform."
 
 Chapter 5 - Downtown Berkeley
 
-The description of Downtown Berkeley is "You are on a BART platform."
+The description of Downtown Berkeley is "You are on a BART platform underground.  The sides of the medians are bricks and the floor is large smooth square slabs of mottled marble."  Downtown Berkeley is a platform.
+
+Downtown Berkeley Concourse is up from Downtown Berkeley. It is a concourse.
+
+Berkeley Plaza is up from Downtown Berkeley Concourse. It is a street level station.
+
+
 
 Chapter 6 - Castro Valley
 
@@ -973,7 +985,7 @@ The description of El Cerrito Plaza is "You are on a BART platform."
 
 Chapter 15 - Embarcadero
 
-The description of Embarcadero is "You are on a BART platform underground. Lots of people are around and there are muffled announcements over an intercom."  Embarcadero is a platform. Embarcadero is near MUNI. 
+The description of Embarcadero is "You are on a BART platform underground. The narrow platform is very crowded. The floors are a smooth, swirly white and grey marble."  Embarcadero is a platform. Embarcadero is near MUNI. 
 
 Embarcadero Concourse is up from Embarcadero. Embarcadero Concourse is a concourse. It is near MUNI.
 
@@ -1053,7 +1065,11 @@ Lake Merritt Concourse is up from Lake Merritt. It is a concourse. It is smooth.
 
 Chapter 22 - MacArthur
 
-The description of MacArthur is "You are on a BART platform."
+The description of MacArthur is "You are on a BART platform high in the open air next to a busy freeway. on either side of the station running parallel to the train tracks.  Elegant cement shapes and curves  soar above the main freeway level.  Dirty beige tile faces the platform medians and the floor is polished concrete lined with bumpy brick tiles. "
+
+[concourse below platform]
+
+
 
 Chapter 23 - Millbrae
 
@@ -1295,6 +1311,7 @@ After greeting a sidewalk artist for the first time:
 	now the printed name of the sidewalk artist is "Buddy";
 	now the sidewalk artist is proper-named;
 
+Understand "Buddy" as the sidewalk artist when the sidewalk artist is greeted.
 
 
 After talking to the sidewalk artist:
@@ -1307,6 +1324,7 @@ After talking to the sidewalk artist:
 		say "Buddy thinks for a minute, considering you.";
 		say "'Time is what you make of it. What with that magic marker and all.'";
 		say "Buddy laughs and goes back to his notepad.";
+		say "His teeth are disturbingly bad.";
 		now the magic marker is magical;
 		say "The magic marker seems to tingle for a moment in your pocket.";
 
@@ -1405,11 +1423,11 @@ To record (T - artifact) as placed:
 
 Table of Artifacts Achieved
 Points	Citation	Found (a time)	Placed (a time)
-5	caiman	
-5	hurricane
-5	House
-5	Lizard
-5	Serpent
+5	greenstone caiman	
+5	malachite hurricane
+5	moonstone house
+5	serpentinite lizard
+5	chrysoprase serpent
 5	skull
 5	Deer
 5	Rabbit
@@ -1442,7 +1460,7 @@ After writing on the ART card:
 
 Chapter 26 - Montgomery
 
-The description of Montgomery is "You are on a BART platform underground. Lots of people are around and there are muffled announcements over an intercom."  Montgomery is a platform. Montgomery is near MUNI. 
+The description of Montgomery is "You are on a BART platform underground. It's crowded! The walls are tiled with bumpy white hexagons, like a weird bubble wrap beehive. The floor is old looking bricks laid down in a zig-zag pattern."  Montgomery is a platform. Montgomery is near MUNI. 
 
 Montgomery Concourse is up from Montgomery. Montgomery Concourse is a concourse. It is near MUNI.
 
@@ -1451,7 +1469,13 @@ Montgomery Plaza is up from Montgomery Concourse.  It is a street level station.
 
 Chapter 27 - North Berkeley
 
-The description of North Berkeley is "You are on a BART platform."
+The description of North Berkeley is "You are on a BART platform, open to the concourse above. The floor is a varigated red brick. The station feels very empty."  North Berkeley is a platform. 
+
+North Berkeley Concourse is up from North Berkeley.  It is a concourse.
+
+
+
+
 
 Chapter 28 - North Concord/Martinez
 
@@ -1461,14 +1485,21 @@ Karkin is a room.
 
 Chapter 29 - Oakland 12th St
 
-The description of Oakland 12th St is "You are on a BART platform."
+The description of Oakland 12th St is "You are on a BART platform underground. Narrow, glazed red bricks line the platform median, giving it an old timey feeling. The floor is mottled marble or granite rectangles." Oakland 12th St is a platform.
+
+Oakland 12th St Concourse is up from Oakland 12th St. It is a concourse. 
+
+
 
 AIM Freedom and Survival School is a room.
 
 
 Chapter 30 - Oakland 19th St
 
-The description of Oakland 19th St is "You are on a BART platform."
+The description of Oakland 19th St is "You are on a BART platform. underground but open to the concourse level above. Narrow blue bricks line the platform median. The floor is the same dirty looking marble as 12th street."  Oakland 19th St is a platform. 
+
+Oakland 19th St Concourse is up from Oakland 19th St. It is a concourse.
+
 
 Saclan is a room.
 
@@ -1496,7 +1527,9 @@ The description of Pleasant Hill is "You are on a BART platform."
 
 Chapter 36 - Powell
 
-The description of Powell is "You are on a BART platform underground. Lots of people are around and there are muffled announcements over an intercom."  Powell is a platform. It is near MUNI. 
+The description of Powell is "You are on a BART platform underground. Lots of people are around. The walls on the platform median have a weird white bumpy surface."  
+
+Powell is a platform. It is near MUNI. 
 
 Powell Concourse is up from Powell. Powell Concourse is a concourse. It is near MUNI.
 
@@ -1598,7 +1631,15 @@ Alisal is a room.
 
 Chapter 48 - West Oakland
 
-The description of West Oakland is "You are on a BART platform."
+The description of West Oakland is "You are on a BART platform high in the open air. Raucous crowds seem to be making the most of their time as they wait for the right train to stop. There is a convivial atmosphere.  A tangle of freeways splits and gathers just to the east, before you get to downtown Oakland and the gentle, rolling hills beyond." West Oakland is a platform. 
+
+[ Industrial buildings are all around. Huge fields of boxcars and shipping containers brightly painted.  The Port and its weird metal skeleton ice walkers is just across the way   Put this in the description for arrival] 
+
+
+West Oakland Concourse is down from West Oakland.  West Oakland Concourse is a concourse.
+[this station has the concourse below the platform and no extra street level]
+
+
 
 
 
@@ -1752,14 +1793,31 @@ Carry out switching on a card:
 		say "You feel creative, perceptive, and more analytical than usual.";
 		say "The whole world feels different.";
 		say "Maybe you should explore it with this new level of awareness.";
+	if the player is carrying a BAT card:
+		now the description of the player is "You are a huge bat, clutching your possessions in your claws as you flap around in the air.";
+		if the player is wearing a wheelchair:
+			silently try standing up;
+		now the player is flying;	
+		say "Everything seems further away, and dimmer.";
+		say "You know what would hit the spot right now? A nice, juicy mosquito.";
+		repeat with the item running through carried things: 
+			silently try dropping the item;
+		
+			
+		
 	
 Carry out switching off a card:
 	say "The card shuts off with a little thump.";
 	if the player is carrying an ART card:
 		say "The world looks ordinary again. It's kind of a relief.";
-
+	if the player is carrying a BAT card:
+		now the player is mobile;
+		say "You feel like yourself again.";
+	if the player is not carrying a BAT card:
+		now the description of yourself is "As fantabulous as ever. [line break] You are [sightedness], [deafness], and [ambulation].";
 		
 
+		
 A writing utensil is a kind of thing. A magic marker is a writing utensil. 
 A writing utensil can be magical or mundane. A writing utensil is usually mundane.
 
@@ -1777,9 +1835,7 @@ The player is carrying a magic marker and a BART card.
 
 A magic marker is an object. The description of a magic marker is "A magic marker. [if the marker is magical]It fizzes and tingles with energy as if it were eager to make its mark.[end if]"
 
-After writing on: 
-	if the player is not carrying a BAT card:
-		now the description of yourself is "As fantabulous as ever. [line break] You are [sightedness], [deafness], and [ambulation].";
+
 
 Writing on is an action applying to two visible things. Understand "write on [something] with [something]" as writing on. Understand "tag [something] with [something]" or "scribble on [something] with [something]" as writing on. 
 
@@ -1794,22 +1850,14 @@ Carry out writing on:
 		now the noun is nowhere;
 		if a random chance of 1 in 2 succeeds:
 			now the player is carrying a BART card;
-			say "You check yourself. Everything seems ordinary.";
-			now the player is mobile;
+			say "The world shifts a little, then settles into its ordinary groove.";
 		otherwise:
 			if a random chance of 1 in 2 succeeds:
 				say "You scribble on the card. It fizzes and tingles.";
 				now the player is carrying an ART card;
-				now the player is mobile;
 			otherwise:
 				say "You feel very strange.";
-				now the player is carrying a BAT card;
-				now the description of the player is "You are a huge bat, clutching your possessions in your claws as you flap around in the air.";
-				if the player is wearing a wheelchair:
-					silently try standing up;
-				repeat with the item running through carried things: 
-					silently try dropping the item;
-				now the player is flying;
+				now the player is carrying a BAT card;			
 	if the noun is a 3-D printer:
 		say "Everything contracts to a tiny point, then expands.";
 		now the noun is nowhere;
@@ -1819,7 +1867,15 @@ Carry out writing on:
 		now the noun is nowhere;
 		now the 3-D printer is in the location of the player;
 
+Squeaking is an action applying to nothing. Understand "squeak" as squeaking. 
 
+Carry out squeaking:
+	unless the player is carrying a switched on BAT card: 
+		say "You make a funny little noise.";
+	otherwise:
+		say "You echolocate.";
+		say "OooOOOooo! Bugs!";
+		say "You catch a delicious gnat and crunch it up, savoring the juices.";
 
 
 Part 10 - Train rules
