@@ -90,7 +90,6 @@ topic	reply
 "solar" or "solar line"	"The Solar Line runs through Embarcadero, L1, L2, L4, L5, Moon Base Copernicus, Venus Orbital, Freyja Montes, Mercury Orbital, Mercury Rachmaninoff, Phobos, Utopia Planitia, Ceres, Europa, Saturn Orbital, Titan, Oberon, Triton, Kuiper Belt, Pluto, Eris, and Planet Nine."
 
 
-
 Part 2 - Multisensory
 
 [Written to include and extend Touchy Feely]
@@ -275,7 +274,6 @@ Report testing the sound of things (this is the Touchy Feely sound testing rule)
 
 Part 3 - Disabilities
 
-
 Section 1 - Sightedness
 
 Sightedness is a kind of value. The sightednesses are blind, sighted, low-vision, and unknown. Understand “blind” as blind. Understand “sighted” as sighted. Understand "low vision" as low-vision.
@@ -385,7 +383,6 @@ The description is "These big, fashionable headphones are slathered in Deaf cult
 The sound is "These are headphones that block out sound. So it would be weird if you could hear them."
 The feel is "Slick headphones with cushiony, soft, breathable earpieces."
 
-
 Before wearing the headphones:
 	now the player is Deaf;
 	
@@ -417,7 +414,6 @@ After taking off the earplugs:
 Instead of listening when the player is Deaf: 
 	say "You listen hard, but don't hear much that's useful."
 	
-
 Section 3 - Mobility
 
 Ambulation is a kind of value. The ambulations are wheeling, walking, limping, flying, hopping, and mobile. Understand “wheeled” as wheeling. Understand “walking” as walking. Understand "limping" as limping. Understand "hopping" as hopping.
@@ -432,11 +428,9 @@ Before wearing the cruel shoes:
 After taking off the cruel shoes:
 	now the player is walking;
 
-
 [experiment with wearing a wheelchair rather than using Rideable Vehicles]
 
 A wheelchair is a kind of wearable thing. A powerchair is a wheelchair. A manual chair is a wheelchair. A scooter is a wheelchair. 
-
 
 The description of a powerchair is "It's shiny black, it's powerful, and it's from the future."
 Understand "chair" as a wheelchair.
@@ -469,8 +463,7 @@ Before going to any room:
 		if the player is carrying a wheelchair:
 			say "You have some trouble going anywhere while carrying something that big. Maybe if you put it down and sit in it, things will be easier.";
 			stop the action;
-
-				
+		
 After wearing a wheelchair:
 	say "You sit in [the noun]. It's comfy.";
 	now the ambulation of the player is wheeling;
@@ -488,7 +481,6 @@ Understand "stand up" or "stand" as standing up.
 Sitting in is an action applying to one thing. 
 Standing up is an action applying to nothing.
 
-
 Carry out an actor sitting in a wheelchair:
 	if the noun is not worn by the actor:
 		silently try the actor taking the noun;
@@ -504,8 +496,7 @@ Before standing up:
 	otherwise:
 		say "You're already up.";
 		continue the action.
-	
-	
+		
 The print standard inventory rule is not listed in any rulebook. 		
 
 Carry out taking inventory (this is the new print inventory rule):
@@ -828,9 +819,13 @@ Chapter 3 - Balboa Park
 
 The description of Balboa Park is "You are on a BART platform with smooth marble floors. It has the feel of being in a long, narrow canyon, shaded, but open to the sky above. People are going up and down stairways to the concourse above, another wide open space."  The surface of Balboa Park is smooth.
 		
-Balboa Park Concourse is up from Balboa Park. It is a concourse.
+Balboa Park Concourse is up from Balboa Park. It is a concourse. "Half underground, half open to the railyard outside, this unusually shaped station has the feeling of a massive pile of boulders or a brutalist fortress with a greenhouse roof on top. Under a hulking concrete buttress, you can go into a tiny shop."
 
-Ocean Avenue is a room.
+A tiny shop is inside from Balboa Park Concourse. The description of a tiny shop is "Inside this friendly little shop you can buy flowers, soda, candy, magazines, coffee, and homemade lumpia." 
+
+
+
+Ocean Avenue is north of Balboa Park Concourse. "A lot of buses and MUNI trains go by here. The J and K trains turn around in Green Yard next to the station, sometimes going into long, low barns for maintenance. To the west there are pedestrian bridges over the highway. Everything feels wrong for humans. it is a landscape made for trains and cars, hulking, hurtling, unseeing. "
 	
 The Industrial School is a room.
 
@@ -864,9 +859,9 @@ The description of Civic Center is "You are on a BART platform underground. It's
 
 Civic Center Concourse is up from Civic Center. It is a concourse. Civic Center Concourse is near MUNI.  The description of Civic Center Concourse is "A bustling underground concourse above the train platforms. [if player is not blind] As you pause to get your bearings, you notice a man in ill-fitting sweat pants kneeling on the ground over an open backpack. He's fumbling around with a little glass pipe.[end if]"
 
-A kneeling man is in Civic Center Concourse.
+A kneeling man is in Civic Center Concourse. "A man is kneeling in a corner next to some duffel bags, crouched over a glass pipe."
 
-A ticket agent is in Civic Center Concourse. 
+A ticket agent is in Civic Center Concourse. "The ticket agent is barely visible in his high plexiglass kiosk. He doesn't seem very responsive."
 
 United Nations Plaza is up from Civic Center Concourse. It is a street level station. It is near MUNI. 
 
@@ -987,9 +982,36 @@ Chapter 15 - Embarcadero
 
 The description of Embarcadero is "You are on a BART platform underground. The narrow platform is very crowded. The floors are a smooth, swirly white and grey marble."  Embarcadero is a platform. Embarcadero is near MUNI. 
 
-Embarcadero Concourse is up from Embarcadero. Embarcadero Concourse is a concourse. It is near MUNI.
+Embarcadero Concourse is up from Embarcadero. Embarcadero Concourse is a concourse. It is near MUNI. The description of Embarcadero Concourse is "A big underground space, stretching for over a city block. The south wall is almost entirely taken up with bike storage behind a decorative metal grille. There is an inscription in granite on the north wall."
 
-Embarcadero Plaza is up from Embarcadero Concourse.  It is a street level station. It is near MUNI. 
+An inscription in granite is scenery in Embarcadero Concourse. "-------------------------------------------------------------------------------- [line break]San Francisco gratefully honors the memory of Adrien J Falk, native son, president of the San Francisco Area Rapid Transit District for eight years during the initial planning and development period. His sincerity and unselfish personal commitment to the people of this district engendered an unprecedented spirit of regional unity. A rare achievement by a rare man. [line break]--------------------------------------------------------------------------------"
+
+Market's End is up from Embarcadero Concourse.  It is a street level station. It is near MUNI.  "Market Street ends here into a complex of interconnected plazas. There is a marketplace here with booths and tents."
+
+An ice-cream eating lady is in Harry Bridges Plaza. 
+
+A gawking tourist is in Harry Bridges Plaza.
+
+
+Embarcadero Plaza is west of Market's End. "This sunken plaza is centered around a giant stone sculpture that may once have been a fountain. There are some pleasant grassy areas. Parrots flit among the sturdy palm trees and seagulls wheel overhead."
+
+Vallaincourt Fountain is an object in Embarcadero Plaza. It is fixed in place. It is a supporter.
+
+Harry Bridges Plaza is north of Market's End. "A concrete plaza betwen Market Street and the Ferry Building. "
+
+A scruffy skater is in Harry Bridges Plaza.
+
+A flannel-shirted skater is in Harry Bridges Plaza. 
+
+A smoking guy  is in Harry Bridges Plaza. 
+
+A dancing drag queen is in Harry Bridges Plaza.
+
+A foolish photographer is in Harry Bridges Plaza. 
+
+An astonished little boy is in Harry Bridges Plaza. 
+
+
 
 
 Chapter 16 - Fremont
@@ -1059,9 +1081,16 @@ The description of Lafayette is "You are on a BART platform."
 
 Chapter 21 - Lake Merritt
 
-The description of Lake Merritt is "You are on a BART platform."
+The description of Lake Merritt is "You are on a BART platform underground, but parts of the ceiling are open to the concourse above. The medians are tiled in irregular hexagons. The elevator is beautiful, made of glass and gleaming chrome. The floor is smooth slaps of red and black flecked granite."
 		
 Lake Merritt Concourse is up from Lake Merritt. It is a concourse. It is smooth.
+
+The Oakland Museum is west of Lake Merritt.
+
+The Lake Shore is north of the Oakland Museum. 
+
+Under the Lake is down from the Lake Shore.
+
 
 Chapter 22 - MacArthur
 
@@ -1121,30 +1150,73 @@ Instead of climbing when the player is in Mission 16th Concourse and the ART car
 	say "You plot your route mentally, but decide not to climb. Maybe if you were in more of an artistic mood.";
 	stop the action.
 		
-Mission 16th Plaza is a street level station. Mission 16th Plaza is up from Mission 16th Concourse. The surface of Mission 16th Plaza is brick.
+Papel Picado Plaza is a street level station. Papel Picado Plaza is up from Mission 16th Concourse. The surface of Papel Picado Plaza is brick. "A lively streetcorner plaza. Lots of people are hanging around just watching the world go by. The little kiosk holding the elevator is topped with a mosaic and panes of colored glass. To the east there's a mural that says SOCK. Colorful metal railings, blue, green, orange, and pink, line the stairwell down to the station. They're worked to look like Mexican paper cutout art,"
 
-A harried shopper is a woman in Mission 16th Plaza. The description of a harried shopper is "This worried looking lady is clutching several grocery bags on one arm and muttering to herself. Her ankles are swollen."
+The sock mural is scenery in Papel Picado Plaza. "A dynamic mural covers the east wall of the plaza, showing a cable car, the Bay and a view of Alcatraz; portraits of two men, and the words DUER, SOCK, and DEMON. Some of the Def Crown Villains, originally from Los Angeles, have collaborated here with Sock, a well known artist from France."
 
+A harried shopper is a woman in Papel Picado Plaza. The description of a harried shopper is "This worried looking lady is clutching several grocery bags on one arm and muttering to herself. Her ankles are swollen."
 
-A grizzled veteran is a man in Mission 16th Plaza. The description of a veteran is "A grizzled veteran in a red Jazzy powerchair. He has some cardboard with writing on it tucked between his back and the seat."
+A grizzled veteran is a man in Papel Picado Plaza. The description of a veteran is "A grizzled veteran in a red Jazzy powerchair. He has some cardboard with writing on it tucked between his back and the seat."
 		
-Old Bank Corner is south of Mission 16th Plaza. The surface of Old Bank Corner is sidewalk.
+Old Bank Corner is south of Papel Picado Plaza. The surface of Old Bank Corner is sidewalk. "A crowded street corner in front of an old bank building. People are intent on getting across the street. "
 	
 A rough sleeper is a man in Old Bank Corner. The description of a rough sleeper is "A scruffy man is passed out on the sidewalk next to a trash bag full of scavenged cans."
 
+Plaza del Colibrí is west of Old Bank Corner. The surface of Plaza del Colibrí is brick. "Around the stairwell down to the station, there are colorful metal railings that look like Mexican cut paper art, orange, pink, green, and blue hummingbirds and flowers. There are low benches around the edges of the stairwell for people to sit on. A low building in the corner has a hummingbird mural." 
 
-Papel Picado Plaza is west of Old Bank Corner. The surface of Papel Picado Plaza is brick.
+A hummingbird mural is scenery in Plaza del Colibrí. "These mosaic and metal murals show perky hummingbirds amid swirling flowers and branches. There is a bronze plaque under the murals."
 
-An old guy in a brokendown manual wheelchair is a man in Papel Picado Plaza. The description of an old guy is "A guy slumped over in a rickety wheelchair with no footrests. He's moving slowly backwards, propelling the chair with his feet. The chair has 'SFGH' printed across the back." 
+A bronze plaque is scenery in Plaza del Colibrí. "Dedicated to Victor Miller (1948-2002) Founder and publisher of the New Mission News, the voice of the Inner Mission for over 20 years. Victor was a tireless advocate and watchdog for the community whose vision and journalistic skills provided the most perceptive and trustworthy observations of the Mission Neighborhood. 'Comforting the Afflicted and Affecting the Comfortable since 1980'".
 
-A gothy teenager is a girl in Papel Picado Plaza. The description of a gothy teenager is "A girl in blue lipstick, dressed all in black, is hanging out with her friends."
+A concrete pillar is an object in Plaza del Colibrí. It is fixed in place. It is a supporter. The description of a concrete pillar is "A waist-high square pillar, just big enough to sit on."
 
-A skater is a girl in Papel Picado Plaza. The description of a skater is " A skater girl in cargo pants, eating a burrito while talking with friends. Her skateboard is covered with graffiti and stickers."
+An old guy in a brokendown manual wheelchair is a man in Plaza del Colibrí. The description of an old guy is "A guy slumped over in a rickety wheelchair with no footrests. He's moving slowly backwards, propelling the chair with his feet. The chair has 'SFGH' printed across the back." 
+
+After greeting an old guy for the first time:
+	say "'You're one of them, aren't you? It doesn't make any sense. What do you think you're looking at!'";
+	say "He seems angry.";
+	
+A cheerful ocarina player is a man in Plaza del Colibrí. The description of a cheerful man is "A lively, smiling man sitting on a bench, playing cheerful melodies on a little ocarina. He has long black hair and glasses and is wearing a broad brimmed hat."
+
+After greeting a cheerful ocarina player for the first time:
+	say "'Hey there music lover.'[line break]";
+	say "Name's Victor. Victor Zaballa.";
+	say "You shake hands with Victor.";
+	now the printed name of the cheerful ocarina player is "Victor";
+	now the cheerful ocarina player is proper-named;
+	
+Understand "Victor" or "ocarina player" as the cheerful ocarina player when the cheerful ocarina player is greeted.
+	
+After talking to a cheerful ocarina player:
+	say "'So, you've noticed my art... metalwork and tile.'[line break]";
+	say "'The hummingbird is sacred to Huitzilpochtli.'[line break]";
+	
+Understand "Victor" as the cheerful man when the cheerful man is greeted.
+	
+
+A gothy teenager is a girl in Plaza del Colibrí. The description of a gothy teenager is "A girl in blue lipstick, dressed all in black, is hanging out with her friends."
+
+A grungy skater is a girl in Plaza del Colibrí. The description of a skater is " A skater girl in cargo pants, eating a burrito while talking with friends. Her skateboard is covered with graffiti and stickers."
+
+A stencil artist is a woman in Plaza del Colibrí. The description of a graffiti artist is "A young woman with a big messenger bag over her shoulder, full of cans of spray paint and cardboard stencils. She has metallic lipstick on and at her feet is a designer purse with a chihuhua in it. The chihuahua is wearing a red glittery beret." 
+
+After greeting a stencil artist for the first time:
+	say "Her eyes dart around nervously. 'Got a cigarette?' she asks you.[line break] '";
+	say "'You've seen my work? E. Claire Bandersnatch. It's all over town.'[line break]";
+	now the printed name of the sidewalk artist is "E. Claire Bandersnatch";
+	now the sidewalk artist is proper-named;
+
+Understand "Claire" or "Bandersnatch" as the stencil artist when the stencil artist is greeted.
+
+After talking to the stencil artist:
+	say "[one of]Did you like my Chelsea Manning stencils?[or]The sidewalk is the biggest venue in the world![or]You can climb into Noisebridge, if you know the way. Helps to be in an altered state![or]Whether you think you can or you can’t, you’re right![purely at random] [line break]";
+
+
 
 
 Rainglass Plaza is a room.	The surface of Rainglass Plaza is smooth.
 		
-Colibrí Plaza is a room. The surface of Colibrí Plaza is smooth.	
+
 Hummingbird Station is a room. The surface of Hummingbird Station is smooth.
 		[write secret room accessible from ART card]
 
@@ -1177,10 +1249,9 @@ Sitlintac is a room.  [manzanita, wild violets]
 Pilmo is a boy. He is in Sitlintac.
 Taulvo is a boy. He is in Sitlintac.
 		
-California Savings Corner is north of Papel Picado Plaza. It is west of Mission 16th Street Plaza. The surface of California Savings Corner is sidewalk.
+California Savings Corner is north of Plaza del Colibrí. It is west of Mission 16th Street Plaza. The surface of California Savings Corner is sidewalk. "This neighborhood bank building is still impressive, but grimy and faded with the years. The real life of this street corner is in the plazas across the street."
 		
-
-Noisebridge is a room. The surface of Noisebridge is smooth. "You are in a large hackerspace. People are messing around with laptops in the Hackitorium, poking at electronic gadgets, reading in the library area, and playing video games over by the windows. There are piles of junk up against one wall."
+Noisebridge is a room. The surface of Noisebridge is smooth. The description of Noisebridge is "You are in a large hackerspace. People are messing around with laptops in the Hackitorium, poking at electronic gadgets, reading in the library area, and playing video games over by the windows. There are piles of junk up against one wall."
 
 The workbench is a supporter in Noisebridge. It is fixed in place.
 
@@ -1205,6 +1276,15 @@ Instead of switching on the 4-D printer:
 	say "Spools of ethereal metals and strands of light feed into the machine.";
 	say "An object appears gradually and then is ejected onto the workbench.";
 	now the 4-D timelock is on the workbench.
+	
+West of Noisebridge is the Hackitorium. The description of the Hackitorium is "A long open part of Noisebridge, where people are working on their projects at a big long central table. There's a huge structure with flashing lights to one side, and a pastel colored mural on the wall."
+
+A huge structure is scenery in the Hackitorium. The description of a huge structure is "Beer bottles filled with LEDs and electronics are packed into milk crates, stacked ten feet high. Colorful flashing lights ripple across the structure hypnotically. A sign to the side of it says 'FLASCHENTASCHEN.'"
+
+A pastel colored mural is scenery in the Hackitorium. The description of a pastel colored mural is "Swirling pastel paint fills one wall with scenes of Nikola Tesla and Margaret Hamilton."
+
+A robot is a kind of person. Consenso is a robot in the Hackitorium.
+
 
 	
 																							
@@ -1217,10 +1297,10 @@ Mission 24th Concourse is up from Mission 24th St. Mission 24th Concourse is a c
 
 The abstract reliefs are scenery in Mission 24th Concourse. "Big blocky shapes, rectangles, circles, half circles, are scuplted in relief along the rough sides of the enormous open stairwell to the plaza. They're reminiscent of brutalist skyscrapers and stoplights, a pleasing jumble of forms decorating the space. You feel more aware of the secret life of buildings. Their bones, their roots. The way they take up space against the sky."
 
-Understand "shapes", "abstract", "cement", "relief", "concrete", "sculptures", and "stairwell" as the abstract reliefs. 
+Understand "shapes", "abstract", "cement", "relief", "concrete", "sculpture", "sculptures", and "stairwell" as the abstract reliefs.  
 
 
-Calle 24 Plaza is up from Mission 24th Concourse. The surface of Calle 24 Plaza is bumpy.  "All around you are little shops and restaurants, people talking, buses pulling up to the stops on Mission and on 24th Street, music booming from cars going by. [if the player is not blind]Palm trees sway high overhead. Thick metal rails surround the enormous open stairwell that goes down to the station concourse. A huge mural of a train runs across the wall of the taqueria bordering the plaza to the north.[end if]"
+Calle 24 Plaza is up from Mission 24th Concourse. The surface of Calle 24 Plaza is bumpy.  "All around you are little shops and restaurants, people talking, buses pulling up to the stops on Mission and on 24th Street, music booming from cars going by. [if the player is not blind]Palm trees sway high overhead. Thick metal rails surround the enormous, square, open stairwell that goes down to the station concourse. A huge mural of a train runs across the wall of the taqueria bordering the plaza to the north.[end if]"
 
 The train mural is scenery in Calle 24 Plaza. "A mural of a gleaming BART train carried on the backs of determined workers amid a geometric cityscape."  
 
@@ -1230,12 +1310,11 @@ Every turn when the player can see a tamale lady and the turn count is even:
     say "A tamale lady [one of]watches the people passing by.[or]smiles at you.[or]shifts her weight from one foot to the other. [as decreasingly likely outcomes]";
 
 Every turn when the player can see a tamale lady and the turn count is odd and the player is not deaf:
-	say "The tamale lady says [one of] [or]'Tamales de pollo!'[or]'Tamales!'[or]'Tamales de carne!'[as decreasingly likely outcomes]";
+	say "The tamale lady says [one of] [or]'Tamales de pollo!'[or]'Tamales!'[or]'Tamales de carne!'[or]'I don’t know you but i love you so don’t do the chemicals honey!;[as decreasingly likely outcomes]";
 
 A cooler on wheels is an openable container. It is in Calle 24 Plaza. It is scenery. The description is "A red and white cooler with a hinged lid." The sound of the cooler is "As the tamale seller handles the cooler, opening and closing the lid, you can hear that it's made of hollow plastic." 
 
-The tamal is an edible thing in the cooler on wheels. The price of the tamal is $3.00. The description is "A delicious-smelling tamal wrapped in paper and foil."  Understand "tamale" as a tamal.
-
+A tamal is an edible thing. Understand "tamale" as a tamal. 20 tamales are in the cooler on wheels. The price of the tamal is $3.00. The description is "A delicious-smelling tamal wrapped in paper and foil."  
 Does the player mean buying a tamal: it is very likely.
 
 Instead of taking the cooler on wheels:
@@ -1283,9 +1362,11 @@ The jewelry table is scenery in Circle Plaza. "You are overwhelmed by the array 
 The textiles booth is scenery in Circle Plaza. "Hanging from the racks set up around the booth are embroidered huipil blouses, woolen ponchos from Peru, Guatemalan woven pants, striped wool shoulder bags, and colorful scarves."
 The souvenirs booth is scenery in Circle Plaza. "A rack to the side of this tiny booth is festooned with Mexican flags, belt buckles with the eagle and serpent, 49-ers hats and tshirts, and pink woven plastic shopping bags printed with Frida Kahlo's face."
 
-The textile seller is a person in Circle Plaza. "A very short, very old lady with a million wrinkles and a kind smile."
+The textile vendor is a person in Circle Plaza. The description of the textile seller is "A very short, very old lady with a million wrinkles and a kind smile."
 
-The gadget seller is a person in Circle Plaza. "A weatherbeaten man in a 49-ers cap."
+The gadget seller is a person in Circle Plaza. The description of the gadget seller is "A weatherbeaten man in a 49-ers cap."
+
+The souvenir vendor is a man in Circle Plaza. The description of the souvenir vendor is "He's watching carefully to make sure nothing gets stolen."
 
 The stairwell is scenery in Circle Plaza. Understand "wall" as the stairwell. "Burnt red bricks smoothly curve up around the edges of the wall around the big stairwell. There are a few people sitting with their backs against the curve. A couple of medium-sized trees grow out of a planter in a space at the top of the wall. As you study the unusual structure you notice metal gratings set into the plaza, one long strip near the edge where the plaza turns to sidewalk, and gratings around small, spindly saplings. The metal gratings have a circular pattern."
 
@@ -1293,7 +1374,7 @@ The metal gratings are scenery in Circle Plaza. "Overlapping concentric circles 
 
 The trees are scenery in Circle Plaza. 
 
-The coffee mural is scenery in Circle Plaza. "[if the player is not blind]A huge mural in bright colors splashes across the building to the west of the plaza. Two wide eyed, child-like cartoon characters in Aztec regalia look out from the mural. Above them is a cartoon street sign that reads COFFEE and across it, MISSION. Below the mural is a sloping area and a few steps that make a sort of stage. [end if][if the player is blind]A young guy next to you suddenly speaks up. 'Oh, you're curious about the mural? I know some guys who worked on that with Mel Waters, he's got stuff all over the Mission. The cafe people, Coffee and Mission, they like it, and the characters, they're like, I dunno, chibi Aztec king and queen or something. You ever see Danza Azteca? Xitlalli, they come to the pow-wows. Big feathers, these sort of shell things on their ankles.[end if]" 
+The coffee mural is scenery in Circle Plaza. "[if the player is not blind]A huge mural in bright colors splashes across the building to the west of the plaza. Two wide eyed, child-like cartoon characters in Aztec regalia look out from the mural. Above them is a cartoon street sign that reads COFFEE and across it, MISSION. Below the mural is a sloping area and a few steps that make a sort of stage. [end if][if the player is blind]A young guy next to you suddenly speaks up. 'Oh, you're curious about the mural? I know some guys who worked on that with Mel Waters, he's got stuff all over the Mission. The cafe people, Coffee and Mission, they like it, and the characters, they're like, I dunno, chibi Aztec king and queen or something. You ever see Danza Azteca? Xitlalli, they come to the pow-wows. Big feathers, these sort of shell things on their ankles. Oops, gotta run. Bye!.[end if]" 
 
 The stage is scenery in Circle Plaza. 
 
@@ -1301,32 +1382,30 @@ A cheerful shopper is a woman in Circle Plaza. The description of a cheerful sho
 
 A wide-eyed child is a girl in Circle Plaza. The description of a wide-eyed child is "A little girl clutching a bottle of mexican coca-cola is staring at everything, holding her mom's hand. [if greeted]She seems shy.[end if]"
 
-A sidewalk artist is a man in Circle Plaza. The description of a sidewalk artist is "[if greeted]Buddy [otherwise] A scruffy man[end if] is lying on the sidewalk, drawing in a carefree way on a notepad with sharpie markers scattered all around him. A duffle bag and a bag of peanut butter cups are open next to him."
+A sidewalk artist is a man in Circle Plaza. The description of a sidewalk artist is "[if greeted]Buddy [otherwise] A scruffy man[end if] is lying on the sidewalk, drawing in a carefree way on a sketchpad with sharpie markers scattered all around him."
 
-A sidewalk artist carries a notepad. 
+A sidewalk artist carries a sketchpad. The description of the sketchpad is "A cheap sketch pad with a drawing of the words 'Happy Tuesday' in rainbow marker."
 
-After greeting a sidewalk artist for the first time:
+After talking to a sidewalk artist for the first time:
 	say "The artist looks up at you. 'Oh hey.' He says. 'Happy Tuesday!'";
 	say "'Name's Buddy. I like to draw the days.'[line break]";
+	say "You seem pretty nice, I don't mind asking you, got any food?";
 	now the printed name of the sidewalk artist is "Buddy";
 	now the sidewalk artist is proper-named;
 
-Understand "Buddy" as the sidewalk artist when the sidewalk artist is greeted.
+Understand "Buddy" as the sidewalk artist.
 
-
-After talking to the sidewalk artist:
-	unless sidewalk artist is greeted: 
-		say "He doesn't seem to want to pay attention to you.";
-	otherwise:
-		say "'You like my drawing? It's Tuesday.";
-		say "'That's because it's Tuesday today. It can be Tuesday other times too.'";
-		say "'Especially right here in the plaza.'";
-		say "Buddy thinks for a minute, considering you.";
-		say "'Time is what you make of it. What with that magic marker and all.'";
-		say "Buddy laughs and goes back to his notepad.";
-		say "His teeth are disturbingly bad.";
-		now the magic marker is magical;
-		say "The magic marker seems to tingle for a moment in your pocket.";
+After giving an edible thing to the sidewalk artist:
+	say "Hey! Thanks!";
+	say "'You like my drawing? It's Tuesday.";
+	say "'That's because it's Tuesday today. It can be Tuesday other times too.'";
+	say "'Especially right here in the plaza.'";
+	say "Buddy thinks for a minute, considering you.";
+	say "'Time is what you make of it. What with that magic marker and all.'";
+	say "Buddy laughs and goes back to his notepad.";
+	say "His teeth are disturbingly bad.";
+	now the magic marker is magical;
+	say "The magic marker seems to tingle for a moment in your pocket.";
 
 
 A flower seller is a person. In Donuts Corner is a flower seller. The description of a flower seller is "[if the player is not blind]A short, smiling woman in a baseball hat and a red checked scarf pushes her wheely cart full of roses and carnations. Her jacket has a ladybug pin. [end if][if player is blind]There's a short woman just next to you, fussing over a metal cart.[end if]" 
@@ -1457,6 +1536,14 @@ After writing on the ART card:
 	now Calle 24 Plaza is mapped up of Mission 24th Concourse.  
 	
 
+Table of Works at Mission 24th St
+work	experienced (a time)
+coffee mural	
+train mural	
+abstract reliefs	
+sketchpad	
+	
+
 
 Chapter 26 - Montgomery
 
@@ -1464,7 +1551,11 @@ The description of Montgomery is "You are on a BART platform underground. It's c
 
 Montgomery Concourse is up from Montgomery. Montgomery Concourse is a concourse. It is near MUNI.
 
-Montgomery Plaza is up from Montgomery Concourse.  It is a street level station. It is near MUNI. 
+Montgomery Plaza is up from Montgomery Concourse.  It is a street level station. It is near MUNI.  
+
+An erhu player is a man in Montgomery Plaza.
+
+A slender erhu is carried by an erhu player.
 
 
 Chapter 27 - North Berkeley
@@ -1527,13 +1618,21 @@ The description of Pleasant Hill is "You are on a BART platform."
 
 Chapter 36 - Powell
 
-The description of Powell is "You are on a BART platform underground. Lots of people are around. The walls on the platform median have a weird white bumpy surface."  
 
-Powell is a platform. It is near MUNI. 
+Powell is a platform. It is near MUNI. The description of Powell is "You are on a BART platform underground. Lots of people are around. The walls on the platform median have a weird white bumpy surface. The floor is made of bricks laid in a zig-zag pattern. There are round pillars brightly painted with ads for tech companies."  
 
-Powell Concourse is up from Powell. Powell Concourse is a concourse. It is near MUNI.
+Powell Concourse is up from Powell. Powell Concourse is a concourse. It is near MUNI. The description of Powell Concourse is "An underground station concourse, long and echoing. Entrances to a mall are to the east. A sunken plaza is just to the west."
 
-Turnaround Plaza is up from Powell Concourse.  It is a street level station. It is near MUNI. 
+Hallidie Plaza is west of Powell Concourse. "A deeply sunken plaza with tall concrete walls. A few spindly trees, and scattered chairs and tables, attempt to make this cavernous station entrance friendly."
+
+Turnaround Plaza is up from Powell Concourse.  It is a street level station. It is near MUNI. "There's a big plaza here with a cable car turnaround. Tourists stand in a long line to board the cable cars, many of them clutching their rolling suitcases and children tightly as they gawk at the crowds and skyscrapers. Market Street runs northeast to southwest along the plaza."
+
+A huge signpole is in Turnaround Plaza. "A tall signpole bristling with labels pointing to the Sister Cities of San Francisco. The signs point to Abidjan, Amman Assisi, Bangalore, Barcelona, Cork, Haifa, Ho Chi Minh City, Kiel, Krakow, Manila, Osaka, Paris, Seoul, Shanghai, Sydney, Taipei, Thessaloniki, and Zürich. "
+
+The Flood Building is northeast of Turnaround Plaza. The description of the Flood Building is "Elegant marble and gilt trimmings line the walls of this historic building. "
+
+A glass display case is a fixed in place transparent closed openable object. It is in the Flood Building.
+The Maltese Falcon, a photo of the city on fire, and a bronze bust of James Flood are in the glass display case. 
 
 
 Chapter 37 - Richmond
@@ -1657,6 +1756,7 @@ The bottom of shaft is a room that varies.
 
 The Elevator is a room. The description of the Elevator is "A grimy elevator that smells like pee. You take a deep sniff and regret it as the stale urine smell mixes horribly with mildew, dusty heating ducts, and old machine oil which the vestiges of industrial strength floor cleaner do nothing to erase. There is a panel in the wall studded with buttons." Understand "elevator" as The Elevator.
 
+
 [this is a hack because putting the elevator inside another room doesn't work correctly with exiting]
 Every turn when the player is in Liftlandia or the player is in a concourse or the player is in a street level station:
 	now the elevator is mapped north of the location of the player;
@@ -1677,8 +1777,6 @@ The description of the S button is "A round button printed with a raised S."
 The description of the C button is "A round button printed with a raised C."
 The description of the P button is "A round button printed with a raised P."
 The description of the M button is "A round button printed with a raised M."
-
-
 
 
 [figure out what level you're entering the elevator from relative to other levels]
@@ -1821,6 +1919,8 @@ Carry out switching off a card:
 A writing utensil is a kind of thing. A magic marker is a writing utensil. 
 A writing utensil can be magical or mundane. A writing utensil is usually mundane.
 
+
+
 A card is a kind of device.  
 A BART card, an ART card, a BAT card, a BAR card, a CART card, and a WART card are cards.
  
@@ -1877,10 +1977,51 @@ Carry out squeaking:
 		say "OooOOOooo! Bugs!";
 		say "You catch a delicious gnat and crunch it up, savoring the juices.";
 
+Table of Card Modifications
+Modification	Effect
+"ART"	"Everything looks much more interesting."	
+"BAR"	"A juice bar cart appears in the station."
+"BARD"	"A strangely dressed person with a lute wanders by, singing aggressively."
+"BARE"	"You are bare-naked! Shocking!"
+"BAT"	"You turn into a huge, flying bat."
+"BARF"	"There is a nasty puddle on the floor. Careful not to step in it."
+"BARK"	"All the little dogs in strollers and pit bulls on rope leashes start barking at once."
+"BARM"	"Smells very strongly of fermenting beer in this station, all of a sudden."
+"BARN"	"You are standing in a giant pile of hay. Several people in the station start to sneeze."
+"BART"
+"BERT"
+"CART"
+"DART"
+"FART"
+"HART"
+"MART"
+"PART"
+"TART"
+"WART"
 
 Part 10 - Train rules
 
 [train-display]
+
+The container interior rule is listed after the room description body text rule in the carry out looking rules. 
+
+This is the container interior rule:
+	if the actor is the player and the player is in an enterable thing (called current cage), carry out the describing the interior activity with the current cage. 
+
+Describing the interior of something is an activity. 
+
+Rule for describing the interior of a train-car:
+	say "Inside the train, there are some open seats. [if player is not blind] There is a BART map on one wall.[end if][if the player is not deaf][one of]Someone coughs nearby.[or]The train rattles and clacks loudly.[or]You hear the rustle of other people's jackets as they move around the car.[or]Someone near you has their headphones up so loud you can hear the hip hop beat.[or]'We're going into a tunnel, I might get cut off' says a businessman importantly into his phone.[or]A toddler a couple of rows away from you is watching Baby Shark, over and over, without headphones.[purely at random][end if] [if the train-car contains more than one thing]Nearby, you can see [a list of other things in a train-car].[end if]" 
+
+[
+Rule for describing the interior of a train-car when a train-car contains more than one thing:
+	say "The train-car is transparent, but tints everything outside very faintly lavender. Beside you you can see [a list of other things in a train-car]." ]
+
+Definition: a thing is other if it is not the player. 
+
+Rule for listing nondescript items of a train-car when the player is in a train-car: do nothing. 
+
+
 
 Time-till-yellow is a number that varies.
 Yellow-relative-position is a number that varies.
@@ -2007,6 +2148,8 @@ blue-lookup is a room that varies.
 blue-next-endpoint is a room that varies.
 
 
+
+
 Every turn: 
 	if the location of the Blue Line Train is Dublin/Pleasanton:
 		now the Blue Line Train is southbound;	
@@ -2037,6 +2180,8 @@ Every turn:
 				now blue-next-endpoint is Dublin/Pleasanton;
 		Unless time-till-blue is 0 or the player is distracted:
 			say "Next Blue Line Train to [blue-next-endpoint] in [time-till-blue] minutes. [run paragraph on][line break][line break]"
+			
+
 			
 Time-till-orange is a number that varies.
 orange-relative-position is a number that varies.
@@ -2083,7 +2228,9 @@ The Red Line train is a relatively-scheduled train-car. The Red Line Train is in
 
 The Yellow Line train is a relatively-scheduled train-car. The Yellow Line Train is in Colma.  The t-schedule of the Yellow Line train is the Table of Yellow Line Schedule. The waiting duration of the Yellow Line train is 0 minutes. The description is "A 5 car train."
 
-The Blue Line train is a relatively-scheduled train-car. The Blue Line Train is in Daly City. The waiting duration of the Blue Line train is 0 minutes. The t-schedule of the Blue Line train is the Table of Blue Line Schedule. The description is "Some train cars, you aren't sure how many."
+The Blue Line train is a relatively-scheduled train-car. The Blue Line Train is in Daly City. The waiting duration of the Blue Line train is 0 minutes. The t-schedule of the Blue Line train is the Table of Blue Line Schedule. The description of the Blue Line train is "Some train cars, you aren't sure how many." 
+
+A chocolate bar wrapper is in the Blue Line train.
 
 The Green Line train is a relatively-scheduled train-car. The Green Line Train is in Fremont. The waiting duration of the Green Line train is 0 minutes. The t-schedule of the Green Line train is the Table of Green Line Schedule. The description is "A 5 car train."
 
@@ -2112,7 +2259,7 @@ Rule for describing closure when the player is distracted:
 	
 Rule for mentioning final stop when the player is distracted:
 	do nothing;
-
+	
 	
 [train schedules]
 
