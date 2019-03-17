@@ -863,7 +863,7 @@ A kneeling man is in Civic Center Concourse. "A man is kneeling in a corner next
 
 A ticket agent is in Civic Center Concourse. "The ticket agent is barely visible in his high plexiglass kiosk. He doesn't seem very responsive."
 
-United Nations Plaza is up from Civic Center Concourse. It is a street level station. It is near MUNI. 
+United Nations Plaza is up from Civic Center Concourse. It is a street level station. It is near MUNI. It is southwest of Turnaround Plaza. 
 
 A statue of Ashurbanipal is in United Nations Plaza. It is fixed in place. The description of the statue of Ashurbanipal is "An enormous bronze statue of a Mesopotamian-looking king holding a writhing lion in one arm and a cuneiform tablet in the other. It's on a tall base with quite a lot of information on it." 
 
@@ -915,6 +915,9 @@ A drunk woman is in United Nations Plaza. The description of a drunk woman is "S
 A brisk librarian is in United Nations Plaza.
 
 A bureaucrat is in United Nations Plaza. 
+
+Lighthouse for the Blind is southeast of United Nations Plaza. 
+
 
 
 Waterfall Overlook is a room.
@@ -986,11 +989,13 @@ Embarcadero Concourse is up from Embarcadero. Embarcadero Concourse is a concour
 
 An inscription in granite is scenery in Embarcadero Concourse. "-------------------------------------------------------------------------------- [line break]San Francisco gratefully honors the memory of Adrien J Falk, native son, president of the San Francisco Area Rapid Transit District for eight years during the initial planning and development period. His sincerity and unselfish personal commitment to the people of this district engendered an unprecedented spirit of regional unity. A rare achievement by a rare man. [line break]--------------------------------------------------------------------------------"
 
-Market's End is up from Embarcadero Concourse.  It is a street level station. It is near MUNI.  "Market Street ends here into a complex of interconnected plazas. There is a marketplace here with booths and tents."
+Market's End is up from Embarcadero Concourse. It is northeast of Mechanics Plaza.  It is a street level station. It is near MUNI.  "Market Street ends here into a complex of interconnected plazas. There is a marketplace here with booths and tents."
 
 An ice-cream eating lady is in Harry Bridges Plaza. 
 
 A gawking tourist is in Harry Bridges Plaza.
+
+
 
 
 Embarcadero Plaza is west of Market's End. "This sunken plaza is centered around a giant stone sculpture that may once have been a fountain. There are some pleasant grassy areas. Parrots flit among the sturdy palm trees and seagulls wheel overhead."
@@ -1557,6 +1562,20 @@ An erhu player is a man in Montgomery Plaza.
 
 A slender erhu is carried by an erhu player.
 
+The Transamerica Pyramid is northwest of Montgomery Plaza. 
+
+The Admission Day Monument is a fixed in place object in Montgomery Plaza. 
+
+Fountain Plaza is southwest of Montgomery Plaza.
+
+Lotta's Fountain is a fixed in place object in Fountain Plaza. 
+
+Mechanics Plaza is northeast of Montgomery Plaza. 
+
+The Mechanics Monument is a fixed in place object in Mechanics Plaza. It is a supporter. 
+
+
+
 
 Chapter 27 - North Berkeley
 
@@ -1629,7 +1648,7 @@ Turnaround Plaza is up from Powell Concourse.  It is a street level station. It 
 
 A huge signpole is in Turnaround Plaza. "A tall signpole bristling with labels pointing to the Sister Cities of San Francisco. The signs point to Abidjan, Amman Assisi, Bangalore, Barcelona, Cork, Haifa, Ho Chi Minh City, Kiel, Krakow, Manila, Osaka, Paris, Seoul, Shanghai, Sydney, Taipei, Thessaloniki, and Zürich. "
 
-The Flood Building is northeast of Turnaround Plaza. The description of the Flood Building is "Elegant marble and gilt trimmings line the walls of this historic building. "
+The Flood Building is northeast of Turnaround Plaza.  It is southwest of Fountain Plaza. The description of the Flood Building is "Elegant marble and gilt trimmings line the walls of this historic building. "
 
 A glass display case is a fixed in place transparent closed openable object. It is in the Flood Building.
 The Maltese Falcon, a photo of the city on fire, and a bronze bust of James Flood are in the glass display case. 
@@ -2493,7 +2512,7 @@ transit time	destination	relative position
 Part 11 - Acknowledgements and References
 
 [Miliken book]
-[Thanks to Danny O'Brien, Milo Kim, Laura Henry, Ada Norton for playtesting.]
+[Thanks to Danny O'Brien, Milo Kim, Laura Henry, Ada Norton, Seth Schoen for playtesting.]
 [Thanks to Debbie Notkin for local history tips.]
 
 
