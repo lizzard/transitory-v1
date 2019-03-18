@@ -3,7 +3,7 @@
 Include Transit System by Emily Short.
 Include Basic Screen Effects by Emily Short.
 
-Use MAX_STATIC_DATA of 250000.
+Use MAX_STATIC_DATA of 500000.
 
 [Include Exit Lister by Eric Eve.]
 
@@ -126,7 +126,7 @@ Report touching the room (this is the Touchy Feely report touching the room rule
 	otherwise:
 		say "[thing without feel value][line break]";
 
-The thing without feel value is a text variable. The thing without feel value is "[one of]Feels okay.[or]Feels like [a noun].[or]You feel nothing unexpected.[or]Yeah, that's [a noun] alright.[or]Feels pretty much like you'd think it would.[purely at random]"
+The thing without feel value is a text variable. The thing without feel value is "[one of]Feels okay.[or]Feels like [a noun].[or]You feel nothing unexpected.[or]Yeah, that's [a noun] alright.[or]Feels pretty much like you'd think it would.[at random]"
 
 Section 2 - Scents
 
@@ -176,7 +176,7 @@ Report tasting the room (this is the Touchy Feely report tasting the room rule):
 	otherwise:
 		say "[thing without taste value][line break]";
 
-The thing without taste value is a text variable. The thing without taste value is "[one of]You give the [noun] a quick experimental lick. Hmm.[or]You go to taste the [noun], then decide not to.[or]Tastes like you'd expect any [noun] to taste.[purely at random]"
+The thing without taste value is a text variable. The thing without taste value is "[one of]You give the [noun] a quick experimental lick. Hmm.[or]You go to taste the [noun], then decide not to.[or]Tastes like you'd expect any [noun] to taste.[at random]"
 
 Section 4 - Sounds
 
@@ -458,7 +458,7 @@ Before going to any room:
 			if the surface of the location is gravel:
 				say "[one of]Your wheels skid around in the gravel in the deep spots. Embarassing. [or]Ugh, gravel.[at random]";
 			if the surface of the location is smooth:
-				say "[one of] [or]You zoom on over.[or]You wheel across pleasantly flat ground.[or]Silently, with minimal effort, you traverse the smooth floor.[or]This is such a nice, zippy chair.[or]You glide over gracefully, feeling suave.[or]Pirouetting smoothly in place, you wheel on over.[as decreasingly likely outcomes]";
+				say "[one of] [or]You zoom on over.[or]You wheel across pleasantly flat ground.[or]Silently, with minimal effort, you traverse the smooth floor.[or]This is such a nice, zippy chair.[or]Swanlike, you sail across the smooth ground.[or]You glide over gracefully, feeling suave.[or]Pirouetting smoothly in place, you wheel on over.[then at random]";
 	if the ambulation of the player is walking:
 		if the player is carrying a wheelchair:
 			say "You have some trouble going anywhere while carrying something that big. Maybe if you put it down and sit in it, things will be easier.";
@@ -553,7 +553,7 @@ The examine undescribed things rule is not listed in any rulebook.
 
 Carry out examining (this is the multisensory examine undescribed things rule):
 	if examine text printed is false:
-		say "[one of]Nothing special about [the noun].[or]Ordinary enough.[or]Yeah, it's [a noun].[or]You note the presence of [a noun].[purely at random][run paragraph on]";
+		say "[one of]Nothing special about [the noun].[or]Ordinary enough.[or]Yeah, it's [a noun].[or]You note the presence of [a noun].[at random][run paragraph on]";
 	
 [todo: fix the paragraph breaks after objects with descriptions]	
 Studying the vicinity is an action applying to nothing. 
@@ -640,24 +640,16 @@ Part 5 - Interactions
 
 Asking someone about something is speech. Telling someone about something is speech. Answering someone that something is speech. Asking someone for something is speech. 
 
-A person can be greeted or ungreeted. A person is usually ungreeted. The player is greeted.
+To say (named character - a man) as pronoun: 
+	say "He"; 
 
-Smiling is an action applying to one thing.
+To say (named character - a woman) as pronoun: 
+	say "She"; 
 
-Understand the command "greet" as something new. Understand "greet [someone]" as greeting.  
 
-Greeting is an action applying to one thing. 
+[Understand the commands "ask" and "tell" and "say" and "answer" as something new. ]
 
-Carry out greeting:
-	say "You greet [the noun].";
-	now the noun is greeted;
-	continue the action.
-	
-[Understand "talk to [someone]" as a mistake ("To start a conversation, try to GREET [the noun], ASK [the noun] ABOUT something or TELL [the noun] ABOUT something."). ]
-
-Understand the commands "ask" and "tell" and "say" and "answer" as something new. 
-
-Understand "ask [text]" or "tell [text]" or "answer [text]" as a mistake ("[talk to instead]"). 
+[Understand "ask [text]" or "tell [text]" or "answer [text]" as a mistake ("[talk to instead]"). 
 
 Instead of asking someone to try doing something:
 	say "[talk to instead][paragraph break]". 
@@ -666,9 +658,12 @@ Instead of answering someone that something:
 	say "[talk to instead][paragraph break]". 
 
 To say talk to instead:
-	say "(To communicate, TALK TO a character or GREET them.) " 
+	say "(To communicate, TALK TO a character.) " ]
 
 Understand "talk to [someone]" as talking to. Understand "talk to [something]" as talking to. Talking to is an action applying to one visible thing. 
+
+After talking to someone:
+	say "[one of]There is no reply[or][the noun as pronoun] doesn't respond[or][the noun as pronoun] seems busy[or][the noun as pronoun] is too busy to talk[or][the noun as pronoun] doesn't seem interested in conversation[at random]".
 
 
 Part 6 - Hint system
@@ -918,6 +913,9 @@ A bureaucrat is in United Nations Plaza.
 
 Lighthouse for the Blind is southeast of United Nations Plaza. 
 
+SF Public Library is southwest of United Nations Plaza.
+
+The Asian Art Museum is northwest of United Nations Plaza. 
 
 
 Waterfall Overlook is a room.
@@ -1162,6 +1160,8 @@ The sock mural is scenery in Papel Picado Plaza. "A dynamic mural covers the eas
 A harried shopper is a woman in Papel Picado Plaza. The description of a harried shopper is "This worried looking lady is clutching several grocery bags on one arm and muttering to herself. Her ankles are swollen."
 
 A grizzled veteran is a man in Papel Picado Plaza. The description of a veteran is "A grizzled veteran in a red Jazzy powerchair. He has some cardboard with writing on it tucked between his back and the seat."
+
+The gadget seller is a person in Circle Plaza. The description of the gadget seller is "A weatherbeaten man in a 49-ers cap."
 		
 Old Bank Corner is south of Papel Picado Plaza. The surface of Old Bank Corner is sidewalk. "A crowded street corner in front of an old bank building. People are intent on getting across the street. "
 	
@@ -1177,26 +1177,26 @@ A concrete pillar is an object in Plaza del Colibrí. It is fixed in place. It i
 
 An old guy in a brokendown manual wheelchair is a man in Plaza del Colibrí. The description of an old guy is "A guy slumped over in a rickety wheelchair with no footrests. He's moving slowly backwards, propelling the chair with his feet. The chair has 'SFGH' printed across the back." 
 
-After greeting an old guy for the first time:
+After talking to an old guy for the first time:
 	say "'You're one of them, aren't you? It doesn't make any sense. What do you think you're looking at!'";
 	say "He seems angry.";
 	
 A cheerful ocarina player is a man in Plaza del Colibrí. The description of a cheerful man is "A lively, smiling man sitting on a bench, playing cheerful melodies on a little ocarina. He has long black hair and glasses and is wearing a broad brimmed hat."
 
-After greeting a cheerful ocarina player for the first time:
+After talking to a cheerful ocarina player for the first time:
 	say "'Hey there music lover.'[line break]";
 	say "Name's Victor. Victor Zaballa.";
 	say "You shake hands with Victor.";
 	now the printed name of the cheerful ocarina player is "Victor";
 	now the cheerful ocarina player is proper-named;
 	
-Understand "Victor" or "ocarina player" as the cheerful ocarina player when the cheerful ocarina player is greeted.
+Understand "Victor" or "ocarina player" as the cheerful ocarina player when the cheerful ocarina player is proper-named.
 	
 After talking to a cheerful ocarina player:
 	say "'So, you've noticed my art... metalwork and tile.'[line break]";
 	say "'The hummingbird is sacred to Huitzilpochtli.'[line break]";
 	
-Understand "Victor" as the cheerful man when the cheerful man is greeted.
+Understand "Victor" as the cheerful man when the cheerful man is proper-named.
 	
 
 A gothy teenager is a girl in Plaza del Colibrí. The description of a gothy teenager is "A girl in blue lipstick, dressed all in black, is hanging out with her friends."
@@ -1205,16 +1205,16 @@ A grungy skater is a girl in Plaza del Colibrí. The description of a skater is 
 
 A stencil artist is a woman in Plaza del Colibrí. The description of a graffiti artist is "A young woman with a big messenger bag over her shoulder, full of cans of spray paint and cardboard stencils. She has metallic lipstick on and at her feet is a designer purse with a chihuhua in it. The chihuahua is wearing a red glittery beret." 
 
-After greeting a stencil artist for the first time:
+After talking to a stencil artist for the first time:
 	say "Her eyes dart around nervously. 'Got a cigarette?' she asks you.[line break] '";
 	say "'You've seen my work? E. Claire Bandersnatch. It's all over town.'[line break]";
 	now the printed name of the sidewalk artist is "E. Claire Bandersnatch";
 	now the sidewalk artist is proper-named;
 
-Understand "Claire" or "Bandersnatch" as the stencil artist when the stencil artist is greeted.
+Understand "Claire" or "Bandersnatch" as the stencil artist when the stencil artist is proper-named.
 
 After talking to the stencil artist:
-	say "[one of]Did you like my Chelsea Manning stencils?[or]The sidewalk is the biggest venue in the world![or]You can climb into Noisebridge, if you know the way. Helps to be in an altered state![or]Whether you think you can or you can’t, you’re right![purely at random] [line break]";
+	say "[one of]Did you like my Chelsea Manning stencils?[or]The sidewalk is the biggest art gallery in the world![or]You can climb into Noisebridge, if you know the way. Helps to be in an altered state![or]Whether you think you can or you can’t, you’re right![then at random] [line break]";
 
 
 
@@ -1311,11 +1311,21 @@ The train mural is scenery in Calle 24 Plaza. "A mural of a gleaming BART train 
 
 A woman called a tamale lady is in Calle 24 Plaza. The description of a tamale lady is "A short, smiling woman in jeans and an army jacket stands next to a cooler on wheels." 
 
-Every turn when the player can see a tamale lady and the turn count is even: 
-    say "A tamale lady [one of]watches the people passing by.[or]smiles at you.[or]shifts her weight from one foot to the other. [as decreasingly likely outcomes]";
+Divisibility relates a number (called N) to a number (called M) when the remainder after dividing M by N is 0. The verb to divide means the divisibility relation. The verb to be a factor of means the divisibility relation. 
 
-Every turn when the player can see a tamale lady and the turn count is odd and the player is not deaf:
-	say "The tamale lady says [one of] [or]'Tamales de pollo!'[or]'Tamales!'[or]'Tamales de carne!'[or]'I don’t know you but i love you so don’t do the chemicals honey!;[as decreasingly likely outcomes]";
+After talking to the tamale lady for the first time:
+	say "'It's been a while since I've seen you, friend!";
+	say "Don't forget your pal Virginia now that you're back in town.";
+	now the sidewalk artist is proper-named;
+	
+Understand "Virginia" as the tamale lady.
+	
+After talking to the tamale lady:
+	say "[one of]She hugs you. 'Hey baby. Everything good?[or]What’s new?'[or]When you’re a baby, you have your mama to take care of you, but now that you’re grown up you have to take care of yourself.[or]I love to feed people, you know? Everybody's gotta eat.[then at random]";
+	
+
+Every turn when the player can see a tamale lady and five is a factor of the turn count and the player is not deaf:
+	say "The tamale lady says [one of]'Tamales de pollo!'[or]'Tamales!'[or]'Tamales de carne!'[or]'I don’t know you but i love you so don’t do the chemicals honey![or]When you’re a baby, you have your mama to take care of you, but now that you’re grown up you have to take care of yourself.[as decreasingly likely outcomes]";
 
 A cooler on wheels is an openable container. It is in Calle 24 Plaza. It is scenery. The description is "A red and white cooler with a hinged lid." The sound of the cooler is "As the tamale seller handles the cooler, opening and closing the lid, you can hear that it's made of hollow plastic." 
 
@@ -1325,7 +1335,6 @@ Does the player mean buying a tamal: it is very likely.
 Instead of taking the cooler on wheels:
 	say "But that belongs to the nice tamale lady!";
 
-	
 A hipster dude on a motorized unicycle is a man in Calle 24 Plaza. The description of a hipster dude is "A guy in jeans, a hoodie, and a black helmet is standing an electric unicycle, tootling along."
 
 A accordion player is a man in Calle 24 Plaza. The description of an accordion player is "A man in full mariachi uniform covered in bright buttons is carrying an accordion."
@@ -1334,16 +1343,50 @@ A guitar player is a man in Calle 24 Plaza. The description of a guitar player i
 
 A yelling preacher is a person. In Calle 24 Plaza is a yelling preacher. The description of the preacher is "A short man yells fervently in Spanish into a microphone. You recognize some things from the Bible[if player is not deaf], though it's hard to understand him from the low quality amp at his feet[end if]".
 
+The orquestra is a person. The description of the orquestra is "A little group of musicians, some sitting on milk crates or buckets with their instruments, some standing and dancing gently as they play."
+
+Baile is a scene. Baile begins when the player is in Calle 24 for three turns.
+
+When Baile begins: 
+now the orquestra is in Calle 24 Plaza;
+say "A group of musicians has settled under a portaable shade pavilion. They start grooving out, playing Cuban oldies."
+
+Every turn during Baile:	
+	repeat through Table of Baile Events:
+		say "[event entry][paragraph break]";
+		blank out the whole row;
+		rule succeeds. 
+
+Instead of talking to anyone during Baile:
+	say "You smile and bob your head a bit, grooving to the music with the people around you.";
+	
+Baile ends when the number of filled rows in the Table of Baile Events is 0.
+
+Table of Baile events
+event
+"[if player is not blind]A middle-aged Chicana lady in sweat pants and sneakers gets up to dance. She's in the groove![end if][if player is blind]Dancers are getting up and starting to jam.[end if]"
+"A guy wearing flip-flops puts down his shopping bag to dance. Fancy footwork!"
+"The lead singer of Orquestra La 24 croons fervently into his microphone. You can't stop noticing his hair."
+"A little group of older ladies is laughing and clapping from the benches, some of them with walkers."
+"The flute player steps forward and plays with his eyes closed. [if player is not deaf]The sweet piping of the charanga soars over the syncopated rhythms.[end if]"
+"Sun, a gentle breeze, the smell of delicious food from the nearby taqueria, everyone enjoying the music; you feel happiness sink into your bones."
+"The guys playing the timbales and maracas are getting super into it. Their rhythms intensify and get more complex!"
+"The city worker sweeping the plaza starts dancing a little with his broom and dustpan."
+"A tourist happily films the scene, turning to take in the crowd, the passers-by, and the musicians. "
+"The musicians stop, chatting companionably as they pack up."
+"The crowds are leaving now that Orquestra La 24 is done for the day."
+
+
+
 Donuts Corner is west of Calle 24 Plaza. The surface of Donuts Corner is sidewalk. "Just outside the Chinese Food and Donuts shop, this lively streetcorner has buses pulling up along 24th Street, many cars going by, people crossing the street or standing around[if player is not deaf], music blaring from passing cars and from the shops[end if]. [if player is not blind]Along Mission, high overhead, washingtonia palms stretch into the sky.[end if] To the east, there's another plaza."
 
 
-A funky dude is a man in Donuts Corner. The description of a funky dude is "A guy with long dreads, an army jacket, striped sweatpants, and huge sneakers is playing music from a boombox in his backpack. He seems very much at home on this corner."
-
-A pink-jacketed girl is in Donuts Corner. The description is "A little girl with long braids and a pink jacket. She has a bedazzled Dora the Explorer backpack."
 
 West of Donuts Corner is a room called Chinese Food and Donuts. 
 
 The description of Chinese Food is "The donut shop is warm and bright. It smells like tasty food and baked goods.[if the player is not blind] One display case holds rows of donuts. Another has steam trays full of hot food.[end if]" 
+
+A pink-jacketed girl is in Chinese Food. The description is "A little girl with long braids and a pink jacket. She has a bedazzled Dora the Explorer backpack."
 
 An impatient lady is in Chinese Food. "Behind the counter, a lady is waiting impatiently for you to make up your mind what you want." The description of an impatient lady is "She says, 'Next! You want a donut? Coconut donut? Plain? You want eggrolls?'"  
 
@@ -1367,11 +1410,9 @@ The jewelry table is scenery in Circle Plaza. "You are overwhelmed by the array 
 The textiles booth is scenery in Circle Plaza. "Hanging from the racks set up around the booth are embroidered huipil blouses, woolen ponchos from Peru, Guatemalan woven pants, striped wool shoulder bags, and colorful scarves."
 The souvenirs booth is scenery in Circle Plaza. "A rack to the side of this tiny booth is festooned with Mexican flags, belt buckles with the eagle and serpent, 49-ers hats and tshirts, and pink woven plastic shopping bags printed with Frida Kahlo's face."
 
-The textile vendor is a person in Circle Plaza. The description of the textile seller is "A very short, very old lady with a million wrinkles and a kind smile."
+The textile vendor is a person in Circle Plaza. The description of the textile vendor is "A very short, very old lady with a million wrinkles and a kind smile."
 
-The gadget seller is a person in Circle Plaza. The description of the gadget seller is "A weatherbeaten man in a 49-ers cap."
-
-The souvenir vendor is a man in Circle Plaza. The description of the souvenir vendor is "He's watching carefully to make sure nothing gets stolen."
+The souvenir dealer is a man in Circle Plaza. The description of the souvenir dealer is "He's watching carefully to make sure nothing gets stolen."
 
 The stairwell is scenery in Circle Plaza. Understand "wall" as the stairwell. "Burnt red bricks smoothly curve up around the edges of the wall around the big stairwell. There are a few people sitting with their backs against the curve. A couple of medium-sized trees grow out of a planter in a space at the top of the wall. As you study the unusual structure you notice metal gratings set into the plaza, one long strip near the edge where the plaza turns to sidewalk, and gratings around small, spindly saplings. The metal gratings have a circular pattern."
 
@@ -1383,11 +1424,11 @@ The coffee mural is scenery in Circle Plaza. "[if the player is not blind]A huge
 
 The stage is scenery in Circle Plaza. 
 
-A cheerful shopper is a woman in Circle Plaza. The description of a cheerful shopper is "A cheerful seeming woman laden with shopping bags. She has groceries, flowers, and all kinds of other stuff in re-usable bags. Somehow, she's also holding onto her daughter. [if greeted]She nods and says hello.[end if]" 
+A cheerful shopper is a woman in Circle Plaza. The description of a cheerful shopper is "A cheerful seeming woman laden with shopping bags. She has groceries, flowers, and all kinds of other stuff in re-usable bags. Somehow, she's also holding onto her daughter." 
 
-A wide-eyed child is a girl in Circle Plaza. The description of a wide-eyed child is "A little girl clutching a bottle of mexican coca-cola is staring at everything, holding her mom's hand. [if greeted]She seems shy.[end if]"
+A wide-eyed child is a girl in Circle Plaza. The description of a wide-eyed child is "A little girl clutching a bottle of mexican coca-cola is staring at everything, holding her mom's hand."
 
-A sidewalk artist is a man in Circle Plaza. The description of a sidewalk artist is "[if greeted]Buddy [otherwise] A scruffy man[end if] is lying on the sidewalk, drawing in a carefree way on a sketchpad with sharpie markers scattered all around him."
+A sidewalk artist is a man in Circle Plaza. The description of a sidewalk artist is "[if proper-named]Buddy [otherwise] A scruffy man[end if] is lying on the sidewalk, drawing in a carefree way on a sketchpad with sharpie markers scattered all around him."
 
 A sidewalk artist carries a sketchpad. The description of the sketchpad is "A cheap sketch pad with a drawing of the words 'Happy Tuesday' in rainbow marker."
 
@@ -1400,8 +1441,8 @@ After talking to a sidewalk artist for the first time:
 
 Understand "Buddy" as the sidewalk artist.
 
-After giving an edible thing to the sidewalk artist:
-	say "Hey! Thanks!";
+Instead of giving an edible thing to the artist for the first time:
+	say "Hey! Thanks for [the noun]!";
 	say "'You like my drawing? It's Tuesday.";
 	say "'That's because it's Tuesday today. It can be Tuesday other times too.'";
 	say "'Especially right here in the plaza.'";
@@ -1410,9 +1451,15 @@ After giving an edible thing to the sidewalk artist:
 	say "Buddy laughs and goes back to his notepad.";
 	say "His teeth are disturbingly bad.";
 	now the magic marker is magical;
+	now the artist is carrying the noun;
 	say "The magic marker seems to tingle for a moment in your pocket.";
+	stop the action;
 
 
+Instead of giving an edible thing to the artist:
+	now the artist is carrying the noun;
+	say "Hey! Thanks for [the noun]!"; 
+	
 A flower seller is a person. In Donuts Corner is a flower seller. The description of a flower seller is "[if the player is not blind]A short, smiling woman in a baseball hat and a red checked scarf pushes her wheely cart full of roses and carnations. Her jacket has a ladybug pin. [end if][if player is blind]There's a short woman just next to you, fussing over a metal cart.[end if]" 
 
 Understand "Mariquita" as the flower seller when the flower seller is proper-named.
@@ -1422,7 +1469,7 @@ Instead of examining the flower seller for the first time:
 	say "You stop and chat with her. She's very friendly. [line break]Her name is Mariquita.";
 	Now the printed name of the flower seller is "Mariquita";
 	now the flower seller is proper-named;
-	now the flower seller is greeted;
+
 	
 Every turn when the turn count is even and the flower seller is proper-named and the player can see a flower seller and the player is not blind: 
     say "Mariquita [one of] [or]beams at you with a big happy grin.[or]calls out, 'Flores!'[or]offers you a little bunch of carnations tied with string.[or]shares a coffee with a friend.[or]fusses over her bunches of flowers, arranging them nicely.[or]watches the people passing by.[or]smiles as she stops to talk with a friend.[as decreasingly likely outcomes]"
@@ -1442,7 +1489,7 @@ Calle 24 Corner is south of Calle 24 Plaza. The surface of Calle 24 Corner is si
 
 A raccoon is a kind of animal.  In Calle 24 Corner is a raccoon. The description of the raccoon is "A greasy looking plump raccoon. It's battered, but unbowed."  
 Every turn when the player can see a raccoon and the turn count is even: 
-    say "A raccoon [one of]hauls itsef out of a concrete trash bin[or]skulks into a nearby alleyway[or]hides in a little nook, eating some discarded fries[or]has a little nap in a pile of trash[as decreasingly likely outcomes]."
+    say "A raccoon [one of]hauls itsef out of a concrete trash bin[or]skulks into a nearby alleyway[or]hides in a little nook, eating some discarded fries[or]has a little nap in a pile of trash[then at random]."
 
 A woman called a stroller-pushing lady is in Calle 24 Corner. The description of the stroller-pushing lady  is "A lady in bright lipstick and a wig slightly askew, pushing a stroller. Wait . . . it's not a baby in there. It's a chihuahua in a sweater and the sweater matches its owner's sweater."
 
@@ -1512,20 +1559,20 @@ Points	Citation	Found (a time)	Placed (a time)
 5	moonstone house
 5	serpentinite lizard
 5	chrysoprase serpent
-5	skull
-5	Deer
-5	Rabbit
-5	Wave
-5	Dog
-5	Monkey
-5	Grass
-5	Reed
-5	Jaguar
-5	Eagle
-5	Vulture
-5	volcano
-5	Knife
-5	cloud
+5	quartz skull
+5	aventurine deer
+5	quartzite rabbit
+5	azurite wave
+5	tourmaline dog
+5	bloodstone monkey
+5	stone tuft of grass
+5	jasper reed
+5	fire opal jaguar
+5	granite eagle
+5	obsidian vulture
+5	sardonyx volcano
+5	obsidian knife
+5	amethyst cloud
 5	carnelian flower
 
 
@@ -1757,8 +1804,7 @@ The description of West Oakland is "You are on a BART platform high in the open 
 West Oakland Concourse is down from West Oakland.  West Oakland Concourse is a concourse.
 [this station has the concourse below the platform and no extra street level]
 
-
-
+A funky dude is a man in West Oakland Concourse. The description of a funky dude is "A guy with long dreads, an army jacket, striped sweatpants, and huge sneakers is playing music from a boombox in his backpack. He seems very much at home on this corner."
 
 
 Part 8 - Elevator 
@@ -2030,7 +2076,7 @@ This is the container interior rule:
 Describing the interior of something is an activity. 
 
 Rule for describing the interior of a train-car:
-	say "Inside the train, there are some open seats. [if player is not blind] There is a BART map on one wall.[end if][if the player is not deaf][one of]Someone coughs nearby.[or]The train rattles and clacks loudly.[or]You hear the rustle of other people's jackets as they move around the car.[or]Someone near you has their headphones up so loud you can hear the hip hop beat.[or]'We're going into a tunnel, I might get cut off' says a businessman importantly into his phone.[or]A toddler a couple of rows away from you is watching Baby Shark, over and over, without headphones.[purely at random][end if] [if the train-car contains more than one thing]Nearby, you can see [a list of other things in a train-car].[end if]" 
+	say "Inside the train, there are some open seats. [if player is not blind] There is a BART map on one wall.[end if][if the player is not deaf][one of]Someone coughs nearby.[or]The train rattles and clacks loudly.[or]You hear the rustle of other people's jackets as they move around the car.[or]Someone near you has their headphones up so loud you can hear the hip hop beat.[or]'We're going into a tunnel, I might get cut off' says a businessman importantly into his phone.[or]A toddler a couple of rows away from you is watching Baby Shark, over and over, without headphones.[then at random][end if] [if the train-car contains more than one thing]Nearby, you can see [a list of other things in a train-car].[end if]" 
 
 [
 Rule for describing the interior of a train-car when a train-car contains more than one thing:
