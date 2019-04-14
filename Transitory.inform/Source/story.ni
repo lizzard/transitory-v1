@@ -49,6 +49,20 @@ There are many more commands to try![line break]"
 
 The player is carrying a cheat sheet.
 
+A battered table is a supporter in Home Base. It is fixed in place. 
+
+A holo cube is an object. It is on a battered table. The description of a holo cube is "[if player is not blind]A cube with shifting images on its surfaces.[end if][if player is blind and player is not deaf]A smooth-faced cube whose surfaces move slightly under your hand, murmuring with voices.[end if]"
+
+Instead of taking the holo cube:
+	say "You turn the cold, smooth cube in your hands.";
+	if the player is not blind:
+		say "Faces of smiling people, a family - you can't quite remember, but they feel familar.";
+	if the player is blind:
+		say "Voices murmur and laugh from the holocube. Familiar voices - family? The memories surface, then slip away.";
+	say "You settle the cube back in its place. Best to keep it safe.";
+	
+
+
 A storage box is an object in Home Base. It is a closed openable container. It is fixed in place.
 
 A book is a kind of thing.  A SMARTmap is a book. A SMARTmap has a table name called the contents. The description of a SMARTmap is "An accessible map of the BART system with Braille entries. Use it like this: 'consult smartmap about red line' ";
