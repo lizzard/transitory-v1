@@ -53,9 +53,9 @@ A storage box is an object in Home Base. It is a closed openable container. It i
 
 A book is a kind of thing.  A SMARTmap is a book. A SMARTmap has a table name called the contents. The description of a SMARTmap is "An accessible map of the BART system with Braille entries. Use it like this: 'consult smartmap about red line' ";
 
-A carnelian flower is an object. It is in the storage box. "This stylized flower is sculpted in carnelian, smooth and polished." The description of the carnelian flower is "It shimmers, slipping in time. You think of sacrifice and the blood of captive warriors." The scent of the carnelian flower is "Cold stone; ambergris; thyme."
 
-A moonstone house is an object. It is in the storage box. "A blocky little stone house, made of shimmering moonstone." The description of the moonstone house is "You feel the breath of the night-house, the darkness; realm of the nocturnal jaguar-sun."
+
+
 
 In Home Base is an opaque, closed, openable container called a closet. The closet is scenery. 
 The wraparound mirrorshades, headphones, a thick woolly hat, the cruel shoes, a SMARTmap, a long cane, and earplugs are in the closet.
@@ -811,7 +811,7 @@ The description of Ashby is "You are on a BART platform underground.  Brick tile
 
 Ashby Concourse is up from Ashby. It is a concourse.
 
-
+The quartzite rabbit is in Ashby Concourse.
 		
 West Berkeley Shellmound is a room.		
 
@@ -831,6 +831,8 @@ The Industrial School is a room.
 
 The House of Refuge is a room.
 
+A moonstone house is an object. It is in the House of Refuge. "A blocky little stone house, made of shimmering moonstone." The description of the moonstone house is "You feel the breath of the night-house, the darkness; realm of the nocturnal jaguar-sun."
+
 The House of Correction is a room.
 
 Chapter 4 - Bay Fair
@@ -844,6 +846,9 @@ The description of Downtown Berkeley is "You are on a BART platform underground.
 Downtown Berkeley Concourse is up from Downtown Berkeley. It is a concourse.
 
 Berkeley Plaza is up from Downtown Berkeley Concourse. It is a street level station.
+
+The amethyst rain cloud is in Downtown Berkeley Concourse.
+
 
 
 
@@ -888,6 +893,10 @@ This is the statue presented to the City of San Francisco by the Assyrian people
 
 A statue of Simón Bolívar is in United Nations Plaza. It is fixed in place. 
 
+An obsidian knife is in United Nations Plaza. 
+
+
+
 An obelisk is in United Nations Plaza.  An obelisk is fixed in place.  The description of an obelisk is "A huge black obelisk with the Preamble to the Universal Declaration of Human Rights carved in marble. [paragraph break]WHEREAS recognition of the inherent dignity and of the equal and inalienable rights of all members of the human family is the foundation of freedom, justice and peace in the world,
 [paragraph break]
 WHEREAS disregard and contempt for human rights have resulted in barbarous acts which have outraged the conscience of mankind, and the advent of a world in which human beings shall enjoy freedom of speech and belief and freedom from fear and want has been proclaimed as the highest aspiration of the common people,
@@ -925,6 +934,7 @@ The Asian Art Museum is northwest of United Nations Plaza.
 
 Waterfall Overlook is a room.
 
+
 Kotóla is a woman. The description of Kotóla is "Frog Woman, Coyote's wife. She lives in the river. Her bones someday will live here deep under the earth."   [to do: fix this to be not in the descrip but in conversation]
 
 Chapter 8 - Coliseum
@@ -935,15 +945,17 @@ Chapter 9 - Colma
 
 The description of Colma is "You are on a BART platform."
 			
-Siplichiquin is a room.
-			
 Colma Creek is a room. 
+
+Siplichiquin is a room.
 			
 A woven basket is a container. It is in Siplichiquin.
 			
 Black seed tamales are an object. They are edible. They are in a woven basket.
 			
 The Land of the Dead is a room. 
+
+A quartz skull is in The Land of the Dead.
 
 Kaknu is a person. Kaknu is in The Land of the Dead. The description of Kaknu is "A person who is also a falcon. He has a bow and arrows."
 
@@ -961,6 +973,8 @@ The description of Daly City is "You are on a BART platform. Fog drifts in from 
 Mitline is a room.
 			
 A tule reed canoe is a vehicle. It is in Mitline.
+
+A jasper reed is in Mitline. 
 			
 
 Opurome is a room.
@@ -980,9 +994,14 @@ Chapter 13 - El Cerrito del Norte
 
 The description of El Cerrito del Norte is "You are on a BART platform."
 
+The fire opal jaguar is in El Cerrito del Norte.
+
+
 Chapter 14 - El Cerrito Plaza
 
 The description of El Cerrito Plaza is "You are on a BART platform."
+
+The sardonyx volcano is in El Cerrito Plaza. 
 
 Chapter 15 - Embarcadero
 
@@ -1001,11 +1020,11 @@ An ice-cream eating lady is in Harry Bridges Plaza.
 A gawking tourist is in Harry Bridges Plaza.
 
 
-
-
 Embarcadero Plaza is west of Market's End. "This sunken plaza is centered around a giant stone sculpture that may once have been a fountain. There are some pleasant grassy areas. Parrots flit among the sturdy palm trees and seagulls wheel overhead."
 
 Vallaincourt Fountain is an object in Embarcadero Plaza. It is fixed in place. It is a supporter.
+
+An azurite wave is in Embarcadero Plaza. 
 
 Harry Bridges Plaza is north of Market's End. "A concrete plaza betwen Market Street and the Ferry Building. "
 
@@ -1051,6 +1070,8 @@ The Giant Powder Company is a room.
 The dynamite is in The Giant Powder Company.
 	
 A hollyleaf cherry tree is in Glen Canyon. A bunch of islay cherries are on the tree.
+
+An obsidian vulture is in Glen Canyon.
 	
 The Mission Zoo is a room. 
 
@@ -1108,7 +1129,7 @@ The description of MacArthur is "You are on a BART platform high in the open air
 
 [concourse below platform]
 
-
+The tourmaline dog is in MacArthur.
 
 Chapter 23 - Millbrae
 
@@ -1116,6 +1137,7 @@ The description of Millbrae is "You are on a big, busy, BART platform in the ope
 
 A powermom statue is an object. It is fixed in place. It is in Millbrae. It is scenery. The description of the powermom is "A cement statue of a woman in an 80s business suit, awkwardly contorted, carrying a briefcase and a diaper bag."
 
+A malachite hurricane is in Millbrae.
 
 
 Millbrae Concourse is up from Millbrae. It is a concourse.  It is smooth. The description of Millbrae Concourse is "A large platform high up in the air above the train platform and tracks. You can feel the floor vibrate slightly under your feet with the rush of passing BART and Caltrain cars."
@@ -1160,7 +1182,7 @@ Instead of climbing when the player is in Mission 16th Concourse and the ART car
 	say "You plot your route mentally, but decide not to climb. Maybe if you were in more of an artistic mood.";
 	stop the action.
 		
-Papel Picado Plaza is a street level station. Papel Picado Plaza is up from Mission 16th Concourse. The surface of Papel Picado Plaza is brick. "A lively streetcorner plaza. Lots of people are hanging around just watching the world go by. The little kiosk holding the elevator is topped with a mosaic and panes of colored glass. To the east there's a mural that says SOCK. Colorful metal railings, blue, green, orange, and pink, line the stairwell down to the station. They're worked to look like Mexican paper cutout art,"
+Papel Picado Plaza is a street level station. Papel Picado Plaza is up from Mission 16th Concourse. The surface of Papel Picado Plaza is brick. "A lively streetcorner plaza. Lots of people are hanging around just watching the world go by. The little kiosk holding the elevator is topped with a mosaic and panes of colored glass. To the east there's a mural that says SOCK. Colorful metal railings, blue, green, orange, and pink, line the stairwell down to the station. They're worked to look like Mexican paper cutout art."
 
 The sock mural is scenery in Papel Picado Plaza. "A dynamic mural covers the east wall of the plaza, showing a cable car, the Bay and a view of Alcatraz; portraits of two men, and the words DUER, SOCK, and DEMON. Some of the Def Crown Villains, originally from Los Angeles, have collaborated here with Sock, a well known artist from France."
 
@@ -1177,6 +1199,8 @@ A rough sleeper is a man in Old Bank Corner. The description of a rough sleeper 
 Plaza del Colibrí is west of Old Bank Corner. The surface of Plaza del Colibrí is brick. "Around the stairwell down to the station, there are colorful metal railings that look like Mexican cut paper art, orange, pink, green, and blue hummingbirds and flowers. There are low benches around the edges of the stairwell for people to sit on. A low building in the corner has a hummingbird mural." 
 
 A hummingbird mural is scenery in Plaza del Colibrí. "These mosaic and metal murals show perky hummingbirds amid swirling flowers and branches. There is a bronze plaque under the murals."
+
+A carnelian flower is an object. It is in Plaza del Colibrí. "This stylized flower is sculpted in carnelian, smooth and polished." The description of the carnelian flower is "It shimmers, slipping in time. You think of sacrifice and the blood of captive warriors." The scent of the carnelian flower is "Cold stone; ambergris; thyme."
 
 A bronze plaque is scenery in Plaza del Colibrí. "Dedicated to Victor Miller (1948-2002) Founder and publisher of the New Mission News, the voice of the Inner Mission for over 20 years. Victor was a tireless advocate and watchdog for the community whose vision and journalistic skills provided the most perceptive and trustworthy observations of the Mission Neighborhood. 'Comforting the Afflicted and Affecting the Comfortable since 1980'".
 
@@ -1222,7 +1246,6 @@ Understand "Claire" or "Bandersnatch" as the stencil artist when the stencil art
 
 After talking to the stencil artist:
 	say "[one of]Did you like my Chelsea Manning stencils?[or]The sidewalk is the biggest art gallery in the world![or]You can climb into Noisebridge, if you know the way. Helps to be in an altered state![or]Whether you think you can or you can’t, you’re right![then at random] [line break]";
-
 
 
 
@@ -1627,6 +1650,8 @@ An erhu player is a man in Montgomery Plaza.
 
 A slender erhu is carried by an erhu player.
 
+The bloodstone monkey is in Montgomery Plaza. 
+
 The Transamerica Pyramid is northwest of Montgomery Plaza. 
 
 The Admission Day Monument is a fixed in place object in Montgomery Plaza. 
@@ -1664,7 +1689,7 @@ The description of Oakland 12th St is "You are on a BART platform underground. N
 
 Oakland 12th St Concourse is up from Oakland 12th St. It is a concourse. 
 
-
+The aventurine deer is in Oakland 12th St Concourse. 
 
 AIM Freedom and Survival School is a room.
 
@@ -1675,6 +1700,7 @@ The description of Oakland 19th St is "You are on a BART platform. underground b
 
 Oakland 19th St Concourse is up from Oakland 19th St. It is a concourse.
 
+The serpentinite lizard is in Oakland 19th St Concourse. 
 
 Saclan is a room.
 
@@ -1718,10 +1744,14 @@ The Flood Building is northeast of Turnaround Plaza.  It is southwest of Fountai
 A glass display case is a fixed in place transparent closed openable object. It is in the Flood Building.
 The Maltese Falcon, a photo of the city on fire, and a bronze bust of James Flood are in the glass display case. 
 
+The granite eagle is in the Flood Building. 
+
 
 Chapter 37 - Richmond
 
 The description of Richmond is "You are on a BART platform."
+
+The greenstone caiman is in Richmond.
 
 Garrity Creek is a room. [Huchiun]
 [tanbark, valley, coast and live oak trees,]
@@ -1753,6 +1783,8 @@ The glass mural is scenery. The description of the glass mural is "Red and blue 
 Buri-Buri Center is a room. "A big old strip mall and big box shopping center is here."
 
 Urebure is a room.
+
+A stone tuft of grass is in Urebure. 
 
 Tanforan Racetrack is a room.
 	
@@ -1823,6 +1855,9 @@ West Oakland Concourse is down from West Oakland.  West Oakland Concourse is a c
 [this station has the concourse below the platform and no extra street level]
 
 A funky dude is a man in West Oakland Concourse. The description of a funky dude is "A guy with long dreads, an army jacket, striped sweatpants, and huge sneakers is playing music from a boombox in his backpack. He seems very much at home on this corner."
+
+The chrysoprase serpent is in West Oakland Concourse. 
+
 
 
 Part 8 - Elevator 
