@@ -26,10 +26,12 @@ left 	central 	right
 [some general rules, not sure where to put them yet]
 
 A boy is a kind of man. A girl is a kind of woman.
+A person is usually neuter.
+An artwork is a kind of thing.
 
 [temporary start of game location for testing]
 
-Home Base is west of Circle Plaza. "Here you are in your home base.  It's a bare room with a sign on the wall. It's in print and in braille. 'Look at sign' or 'read sign' to read it. [paragraph break]The world outside seems to call to you from the door to the east. Why not explore?"
+Home Base is west of Circle Plaza. "A bare yet familiar room with a sign on the wall. It's in print and in braille. 'Look at sign' or 'read sign' to read it. [paragraph break]The world outside seems to call to you from the door to the east. Why not explore?"
 
 A welcome sign is scenery in Home Base. "Welcome, traveler! [paragraph break] Thank you for playtesting. The most built-out areas are near 24th St and 16th St. [paragraph break] Further away, the trains should work correctly, but the world beyond the train platforms is only a skeleton. [paragraph break] The things in the closet, in this room, are mostly for testing sightedness, hearing, and mobility. They aren't necessary for solving any puzzles. If you want to test them, open the closet and take what you need.[paragraph break] For some beginning commands, read the cheat sheet you're holding." 
 
@@ -150,7 +152,7 @@ Report smelling (this is the Touchy Feely report smelling rule):
 		otherwise:
 			say "[thing without scent value][line break]";
 
-The thing without scent value is a text variable. The thing without scent value is "[one of]It doesn't have much of a scent.[or]Smells okay.[or]Not much to report about how it smells.[or]Your nose doesn't detect much in this case.[or]Someday you may regret going around sniffing random objects. But not today.[as decreasingly likely outcomes]"
+The thing without scent value is a text variable. The thing without scent value is "[one of]It doesn't have much of a scent.[or]Smells okay.[or]Not much to report about how it smells.[or]Your nose doesn't detect much in this case.[or]Someday you may regret going around sniffing random objects. But not today.[then at random]"
 
 Section 3 - Tastes
 
@@ -645,6 +647,9 @@ To say (named character - a man) as pronoun:
 
 To say (named character - a woman) as pronoun: 
 	say "She"; 
+	
+To say (named character - neuter) as pronoun:
+	say "Zie";   [TODO fix this so that They sounds correct (don't instead of doesn't)]
 
 
 [Understand the commands "ask" and "tell" and "say" and "answer" as something new. ]
@@ -663,7 +668,7 @@ To say talk to instead:
 Understand "talk to [someone]" as talking to. Understand "talk to [something]" as talking to. Talking to is an action applying to one visible thing. 
 
 After talking to someone:
-	say "[one of]There is no reply[or][the noun as pronoun] doesn't respond[or][the noun as pronoun] seems busy[or][the noun as pronoun] is too busy to talk[or][the noun as pronoun] doesn't seem interested in conversation[at random]".
+	say "[one of]There is no reply[or][the noun as pronoun] doesn't respond[or][the noun as pronoun] seems busy[or][the noun as pronoun] is too busy to talk[or][the noun as pronoun] doesn't seem interested in conversation[at random]."
 
 
 Part 6 - Hint system
@@ -1161,7 +1166,7 @@ A harried shopper is a woman in Papel Picado Plaza. The description of a harried
 
 A grizzled veteran is a man in Papel Picado Plaza. The description of a veteran is "A grizzled veteran in a red Jazzy powerchair. He has some cardboard with writing on it tucked between his back and the seat."
 
-The gadget seller is a person in Circle Plaza. The description of the gadget seller is "A weatherbeaten man in a 49-ers cap."
+The gadget seller is a person in Circle Plaza. The description of the gadget seller is "A weatherbeaten person in a 49-ers cap."
 		
 Old Bank Corner is south of Papel Picado Plaza. The surface of Old Bank Corner is sidewalk. "A crowded street corner in front of an old bank building. People are intent on getting across the street. "
 	
@@ -1300,14 +1305,16 @@ The description of Mission 24th St is "You are underground, on a BART platform. 
 
 Mission 24th Concourse is up from Mission 24th St. Mission 24th Concourse is a concourse. "[if the player is not blind]Enormous concrete buttresses soar overhead, like a futuristic 70s airplane hangar.[end if] [if the player is not deaf]Music echoes hauntingly from a monumental stairwell rising up to the plaza, combining with the wild harmonics of trains below.[end if] [if the player is not blind]Abstract cement shapes are sculpted in relief along the oddly corrugated sides of the stairwell, open to the sky.[end if][if the player is blind and the player is deaf]A big open space, full of people walking around, mostly underground but you feel the air and light from an enormous, deep, open stairwell to the plaza above. Another flight of stairs leads down to the train platform.[end if]" 
 
-The abstract reliefs are scenery in Mission 24th Concourse. "Big blocky shapes, rectangles, circles, half circles, are scuplted in relief along the rough sides of the enormous open stairwell to the plaza. They're reminiscent of brutalist skyscrapers and stoplights, a pleasing jumble of forms decorating the space. You feel more aware of the secret life of buildings. Their bones, their roots. The way they take up space against the sky."
+
+
+The abstract reliefs are scenery in Mission 24th Concourse. The abstract reliefs are an artwork. "Big blocky shapes, rectangles, circles, half circles, are scuplted in relief along the rough sides of the enormous open stairwell to the plaza. They're reminiscent of brutalist skyscrapers and stoplights, a pleasing jumble of forms decorating the space. You feel more aware of the secret life of buildings. Their bones, their roots. The way they take up space against the sky."
 
 Understand "shapes", "abstract", "cement", "relief", "concrete", "sculpture", "sculptures", and "stairwell" as the abstract reliefs.  
 
 
 Calle 24 Plaza is up from Mission 24th Concourse. The surface of Calle 24 Plaza is bumpy.  "All around you are little shops and restaurants, people talking, buses pulling up to the stops on Mission and on 24th Street, music booming from cars going by. [if the player is not blind]Palm trees sway high overhead. Thick metal rails surround the enormous, square, open stairwell that goes down to the station concourse. A huge mural of a train runs across the wall of the taqueria bordering the plaza to the north.[end if]"
 
-The train mural is scenery in Calle 24 Plaza. "A mural of a gleaming BART train carried on the backs of determined workers amid a geometric cityscape."  
+The train mural is scenery in Calle 24 Plaza. It is an artwork. "A mural of a gleaming BART train carried on the backs of determined workers amid a geometric cityscape."  
 
 A woman called a tamale lady is in Calle 24 Plaza. The description of a tamale lady is "A short, smiling woman in jeans and an army jacket stands next to a cooler on wheels." 
 
@@ -1325,7 +1332,7 @@ After talking to the tamale lady:
 	
 
 Every turn when the player can see a tamale lady and five is a factor of the turn count and the player is not deaf:
-	say "The tamale lady says [one of]'Tamales de pollo!'[or]'Tamales!'[or]'Tamales de carne!'[or]'I don’t know you but i love you so don’t do the chemicals honey![or]When you’re a baby, you have your mama to take care of you, but now that you’re grown up you have to take care of yourself.[as decreasingly likely outcomes]";
+	say "The tamale lady says [one of]'Tamales de pollo!'[or]'Tamales!'[or]'Tamales de carne!'[or]'I don’t know you but i love you so don’t do the chemicals honey![or]When you’re a baby, you have your mama to take care of you, but now that you’re grown up you have to take care of yourself.[then at random]";
 
 A cooler on wheels is an openable container. It is in Calle 24 Plaza. It is scenery. The description is "A red and white cooler with a hinged lid." The sound of the cooler is "As the tamale seller handles the cooler, opening and closing the lid, you can hear that it's made of hollow plastic." 
 
@@ -1420,7 +1427,7 @@ The metal gratings are scenery in Circle Plaza. "Overlapping concentric circles 
 
 The trees are scenery in Circle Plaza. 
 
-The coffee mural is scenery in Circle Plaza. "[if the player is not blind]A huge mural in bright colors splashes across the building to the west of the plaza. Two wide eyed, child-like cartoon characters in Aztec regalia look out from the mural. Above them is a cartoon street sign that reads COFFEE and across it, MISSION. Below the mural is a sloping area and a few steps that make a sort of stage. [end if][if the player is blind]A young guy next to you suddenly speaks up. 'Oh, you're curious about the mural? I know some guys who worked on that with Mel Waters, he's got stuff all over the Mission. The cafe people, Coffee and Mission, they like it, and the characters, they're like, I dunno, chibi Aztec king and queen or something. You ever see Danza Azteca? Xitlalli, they come to the pow-wows. Big feathers, these sort of shell things on their ankles. Oops, gotta run. Bye!.[end if]" 
+The coffee mural is scenery in Circle Plaza. It is an artwork. "[if the player is not blind]A huge mural in bright colors splashes across the building to the west of the plaza. Two wide eyed cartoon characters in Aztec regalia look out from the mural. Above them is a cartoon street sign that reads COFFEE and across it, MISSION. Below the mural is a sloping area and a few steps that make a sort of stage. [end if][if the player is blind]A young guy next to you suddenly speaks up. 'Oh, you're curious about the mural? I know some guys who worked on that with Mel Waters, he's got stuff all over the Mission. The cafe people, Coffee and Mission, they like it, and the characters, they're like, I dunno, chibi Aztec king and queen or something. You ever see Danza Azteca? Xitlalli, they come to the pow-wows. Big feathers, these sort of shell things on their ankles. Oops, gotta run. Bye!.[end if]" 
 
 The stage is scenery in Circle Plaza. 
 
@@ -1455,7 +1462,6 @@ Instead of giving an edible thing to the artist for the first time:
 	say "The magic marker seems to tingle for a moment in your pocket.";
 	stop the action;
 
-
 Instead of giving an edible thing to the artist:
 	now the artist is carrying the noun;
 	say "Hey! Thanks for [the noun]!"; 
@@ -1470,7 +1476,6 @@ Instead of examining the flower seller for the first time:
 	Now the printed name of the flower seller is "Mariquita";
 	now the flower seller is proper-named;
 
-	
 Every turn when the turn count is even and the flower seller is proper-named and the player can see a flower seller and the player is not blind: 
     say "Mariquita [one of] [or]beams at you with a big happy grin.[or]calls out, 'Flores!'[or]offers you a little bunch of carnations tied with string.[or]shares a coffee with a friend.[or]fusses over her bunches of flowers, arranging them nicely.[or]watches the people passing by.[or]smiles as she stops to talk with a friend.[as decreasingly likely outcomes]"
 
@@ -1588,12 +1593,20 @@ After writing on the ART card:
 	now Calle 24 Plaza is mapped up of Mission 24th Concourse.  
 	
 
-Table of Works at Mission 24th St
-work	experienced (a time)
-coffee mural	
-train mural	
-abstract reliefs	
-sketchpad	
+
+Before examining an artwork, record the noun as experienced.
+
+To record (E - artwork) as experienced: 
+	choose row with a reference of E in Table of Works; 
+	if there is no experienced entry: 
+		now experienced entry is the time of day; 
+		
+Table of Works 
+reference	station	experienced (a time)
+coffee mural	"Mission 24th"
+train mural	"Mission 24th"
+abstract reliefs	"Mission 24th"
+	
 	
 
 
