@@ -994,6 +994,8 @@ An inscription in granite is scenery in Embarcadero Concourse. "----------------
 
 Market's End is up from Embarcadero Concourse. It is northeast of Mechanics Plaza.  It is a street level station. It is near MUNI.  "Market Street ends here into a complex of interconnected plazas. There is a marketplace here with booths and tents."
 
+The souvenir dealer is a man in Market's End. The description of the souvenir dealer is "He's watching carefully to make sure nothing gets stolen."
+
 An ice-cream eating lady is in Harry Bridges Plaza. 
 
 A gawking tourist is in Harry Bridges Plaza.
@@ -1166,7 +1168,7 @@ A harried shopper is a woman in Papel Picado Plaza. The description of a harried
 
 A grizzled veteran is a man in Papel Picado Plaza. The description of a veteran is "A grizzled veteran in a red Jazzy powerchair. He has some cardboard with writing on it tucked between his back and the seat."
 
-The gadget seller is a person in Circle Plaza. The description of the gadget seller is "A weatherbeaten person in a 49-ers cap."
+The gadget seller is a man in Papel Picado Plaza. The description of the gadget seller is "A weatherbeaten man in a 49-ers cap."
 		
 Old Bank Corner is south of Papel Picado Plaza. The surface of Old Bank Corner is sidewalk. "A crowded street corner in front of an old bank building. People are intent on getting across the street. "
 	
@@ -1321,7 +1323,7 @@ A woman called a tamale lady is in Calle 24 Plaza. The description of a tamale l
 Divisibility relates a number (called N) to a number (called M) when the remainder after dividing M by N is 0. The verb to divide means the divisibility relation. The verb to be a factor of means the divisibility relation. 
 
 After talking to the tamale lady for the first time:
-	say "'It's been a while since I've seen you, friend!";
+	say "It's been a while since I've seen you, friend!";
 	say "Don't forget your pal Virginia now that you're back in town.";
 	now the sidewalk artist is proper-named;
 	
@@ -1329,38 +1331,38 @@ Understand "Virginia" as the tamale lady.
 	
 After talking to the tamale lady:
 	say "[one of]She hugs you. 'Hey baby. Everything good?[or]What’s new?'[or]When you’re a baby, you have your mama to take care of you, but now that you’re grown up you have to take care of yourself.[or]I love to feed people, you know? Everybody's gotta eat.[then at random]";
-	
 
 Every turn when the player can see a tamale lady and five is a factor of the turn count and the player is not deaf:
 	say "The tamale lady says [one of]'Tamales de pollo!'[or]'Tamales!'[or]'Tamales de carne!'[or]'I don’t know you but i love you so don’t do the chemicals honey![or]When you’re a baby, you have your mama to take care of you, but now that you’re grown up you have to take care of yourself.[then at random]";
 
-A cooler on wheels is an openable container. It is in Calle 24 Plaza. It is scenery. The description is "A red and white cooler with a hinged lid." The sound of the cooler is "As the tamale seller handles the cooler, opening and closing the lid, you can hear that it's made of hollow plastic." 
+A cooler on wheels is an openable container. It is in Calle 24 Plaza. It is scenery. The description is "A [if player is not blind]red and white[end if] cooler with a hinged lid." The sound of the cooler is "As the tamale seller handles the cooler, opening and closing the lid, you can hear that it's made of hollow plastic." 
 
-A tamal is an edible thing. Understand "tamale" as a tamal. 20 tamales are in the cooler on wheels. The price of the tamal is $3.00. The description is "A delicious-smelling tamal wrapped in paper and foil."  
+A tamal is an edible thing. Understand "tamale" as a tamal. 20 tamales are in the cooler on wheels. The price of the tamal is $3.00. The description is "A delicious-smelling tamal wrapped in banana leaves, paper, and foil."  
 Does the player mean buying a tamal: it is very likely.
 
 Instead of taking the cooler on wheels:
 	say "But that belongs to the nice tamale lady!";
 
-A hipster dude on a motorized unicycle is a man in Calle 24 Plaza. The description of a hipster dude is "A guy in jeans, a hoodie, and a black helmet is standing an electric unicycle, tootling along."
+A hipster dude on a motorized unicycle is a man in Calle 24 Plaza. The description of a hipster dude is "A guy [if player is not blind]in jeans, a hoodie, and a black helmet[end if] is standing on an electric unicycle, tootling along."
 
-A accordion player is a man in Calle 24 Plaza. The description of an accordion player is "A man in full mariachi uniform covered in bright buttons is carrying an accordion."
+A accordion player is a man in Calle 24 Plaza. The description of an accordion player is "A man [if player is not blind]in full mariachi uniform covered in bright buttons [end if]is carrying an accordion."
 
 A guitar player is a man in Calle 24 Plaza. The description of a guitar player is "A mariachi carring a big full bodied guitar and pulling a hand truck loaded with a little amp."
 
-A yelling preacher is a person. In Calle 24 Plaza is a yelling preacher. The description of the preacher is "A short man yells fervently in Spanish into a microphone. You recognize some things from the Bible[if player is not deaf], though it's hard to understand him from the low quality amp at his feet[end if]".
+A yelling preacher is a person. In Calle 24 Plaza is a yelling preacher. The description of the preacher is "A short man yells fervently in Spanish into a microphone. You recognize some things from the Bible[if player is not deaf], though it's hard to understand him from the low quality amp at his feet[end if]."
 
-The orquestra is a person. The description of the orquestra is "A little group of musicians, some sitting on milk crates or buckets with their instruments, some standing and dancing gently as they play."
+The orquestra is a person. The description of the orquestra is "A little group of musicians, some sitting on milk crates or buckets with their instruments, some standing and swaying gently as they play."
 
 Baile is a scene. Baile begins when the player is in Calle 24 for three turns.
 
 When Baile begins: 
-now the orquestra is in Calle 24 Plaza;
-say "A group of musicians has settled under a portaable shade pavilion. They start grooving out, playing Cuban oldies."
+	now the orquestra is in Calle 24 Plaza;
+	say "A group of musicians has settled under a portable shade pavilion. They start grooving out, playing Cuban oldies."
 
 Every turn during Baile:	
 	repeat through Table of Baile Events:
-		say "[event entry][paragraph break]";
+		if player is in Calle 24 Plaza:
+			say "[event entry][paragraph break]";
 		blank out the whole row;
 		rule succeeds. 
 
@@ -1369,13 +1371,16 @@ Instead of talking to anyone during Baile:
 	
 Baile ends when the number of filled rows in the Table of Baile Events is 0.
 
+When Baile ends:
+	now the orquestra is nowhere;
+
 Table of Baile events
 event
 "[if player is not blind]A middle-aged Chicana lady in sweat pants and sneakers gets up to dance. She's in the groove![end if][if player is blind]Dancers are getting up and starting to jam.[end if]"
-"A guy wearing flip-flops puts down his shopping bag to dance. Fancy footwork!"
-"The lead singer of Orquestra La 24 croons fervently into his microphone. You can't stop noticing his hair."
-"A little group of older ladies is laughing and clapping from the benches, some of them with walkers."
-"The flute player steps forward and plays with his eyes closed. [if player is not deaf]The sweet piping of the charanga soars over the syncopated rhythms.[end if]"
+"A guy [if player is not blind]wearing flip-flops[end if] puts down his shopping bag to dance. Fancy footwork!"
+"The lead singer of Orquestra La 24 croons fervently into his microphone. [if player is not blind]You can't stop noticing his hair.[end if]"
+"A little group of older ladies is laughing and clapping from the benches[if player is not blind], some of them with walkers[end if]."
+"The flute player steps forward and plays[if player is not blind] with his eyes closed[end if]. [if player is not deaf]The sweet piping of the charanga soars over the syncopated rhythms.[end if]"
 "Sun, a gentle breeze, the smell of delicious food from the nearby taqueria, everyone enjoying the music; you feel happiness sink into your bones."
 "The guys playing the timbales and maracas are getting super into it. Their rhythms intensify and get more complex!"
 "The city worker sweeping the plaza starts dancing a little with his broom and dustpan."
@@ -1393,7 +1398,7 @@ West of Donuts Corner is a room called Chinese Food and Donuts.
 
 The description of Chinese Food is "The donut shop is warm and bright. It smells like tasty food and baked goods.[if the player is not blind] One display case holds rows of donuts. Another has steam trays full of hot food.[end if]" 
 
-A pink-jacketed girl is in Chinese Food. The description is "A little girl with long braids and a pink jacket. She has a bedazzled Dora the Explorer backpack."
+A pink-jacketed girl is in Chinese Food. The description is "A little girl[if player is not blind] with long braids and a pink jacket. She has a bedazzled Dora the Explorer backpack.[end if][if player is blind] trying to decide what kind of donut to get.[end if]"
 
 An impatient lady is in Chinese Food. "Behind the counter, a lady is waiting impatiently for you to make up your mind what you want." The description of an impatient lady is "She says, 'Next! You want a donut? Coconut donut? Plain? You want eggrolls?'"  
 
@@ -1419,7 +1424,7 @@ The souvenirs booth is scenery in Circle Plaza. "A rack to the side of this tiny
 
 The textile vendor is a person in Circle Plaza. The description of the textile vendor is "A very short, very old lady with a million wrinkles and a kind smile."
 
-The souvenir dealer is a man in Circle Plaza. The description of the souvenir dealer is "He's watching carefully to make sure nothing gets stolen."
+
 
 The stairwell is scenery in Circle Plaza. Understand "wall" as the stairwell. "Burnt red bricks smoothly curve up around the edges of the wall around the big stairwell. There are a few people sitting with their backs against the curve. A couple of medium-sized trees grow out of a planter in a space at the top of the wall. As you study the unusual structure you notice metal gratings set into the plaza, one long strip near the edge where the plaza turns to sidewalk, and gratings around small, spindly saplings. The metal gratings have a circular pattern."
 
