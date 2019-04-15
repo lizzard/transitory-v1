@@ -59,15 +59,12 @@ Instead of taking the holo cube:
 		say "Faces of smiling people, a family - you can't quite remember, but they feel familar.";
 	if the player is blind:
 		say "Voices murmur and laugh from the holocube. Familiar voices - family? The memories surface, then slip away.";
-	say "You settle the cube back in its place. Best to keep it safe.";
+	say "You settle the cube back in its place.";
 	
-
 
 A storage box is an object in Home Base. It is a closed openable container. It is fixed in place.
 
 A book is a kind of thing.  A SMARTmap is a book. A SMARTmap has a table name called the contents. The description of a SMARTmap is "An accessible map of the BART system with Braille entries. Use it like this: 'consult smartmap about red line' ";
-
-
 
 
 
@@ -77,11 +74,11 @@ The wraparound mirrorshades, headphones, a thick woolly hat, the cruel shoes, a 
 A powerchair is in Home Base.
 
 Instead of dropping the magic marker:
-	say "Wouldn't want to lose it. You put it into your pocket, instead. [run paragraph on]";
+	say "Wouldn't want to lose it. You put it into your pocket, instead.";
 	stop the action.
 	
 Instead of dropping a card:
-	say "You think about dropping [the noun], but can't bring yourself to do it [run paragraph on].";
+	say "You think about dropping [the noun], but can't bring yourself to do it.";
 	stop the action.
 
 	
@@ -1028,6 +1025,7 @@ An inscription in granite is scenery in Embarcadero Concourse. "----------------
 Market's End is up from Embarcadero Concourse. It is northeast of Mechanics Plaza.  It is a street level station. It is near MUNI.  "Market Street ends here into a complex of interconnected plazas. There is a marketplace here with booths and tents."
 
 The souvenir dealer is a man in Market's End. The description of the souvenir dealer is "He's watching carefully to make sure nothing gets stolen."
+The souvenirs booth is scenery in Market's End. "A rack to the side of this tiny booth is festooned with Mexican flags, belt buckles with the eagle and serpent, 49-ers hats and tshirts, and pink woven plastic shopping bags printed with Frida Kahlo's face."
 
 An ice-cream eating lady is in Harry Bridges Plaza. 
 
@@ -1205,6 +1203,7 @@ A harried shopper is a woman in Papel Picado Plaza. The description of a harried
 A grizzled veteran is a man in Papel Picado Plaza. The description of a veteran is "A grizzled veteran in a red Jazzy powerchair. He has some cardboard with writing on it tucked between his back and the seat."
 
 The gadget seller is a man in Papel Picado Plaza. The description of the gadget seller is "A weatherbeaten man in a 49-ers cap."
+The gadget table is scenery in Papel Picado Plaza. "Phone cases, cables, chargers, and headphones are laid out on this cheap folding table."
 		
 Old Bank Corner is south of Papel Picado Plaza. The surface of Old Bank Corner is sidewalk. "A crowded street corner in front of an old bank building. People are intent on getting across the street. "
 	
@@ -1345,7 +1344,6 @@ The description of Mission 24th St is "You are underground, on a BART platform. 
 Mission 24th Concourse is up from Mission 24th St. Mission 24th Concourse is a concourse. "[if the player is not blind]Enormous concrete buttresses soar overhead, like a futuristic 70s airplane hangar.[end if] [if the player is not deaf]Music echoes hauntingly from a monumental stairwell rising up to the plaza, combining with the wild harmonics of trains below.[end if] [if the player is not blind]Abstract cement shapes are sculpted in relief along the oddly corrugated sides of the stairwell, open to the sky.[end if][if the player is blind and the player is deaf]A big open space, full of people walking around, mostly underground but you feel the air and light from an enormous, deep, open stairwell to the plaza above. Another flight of stairs leads down to the train platform.[end if]" 
 
 
-
 The abstract reliefs are scenery in Mission 24th Concourse. The abstract reliefs are an artwork. "Big blocky shapes, rectangles, circles, half circles, are scuplted in relief along the rough sides of the enormous open stairwell to the plaza. They're reminiscent of brutalist skyscrapers and stoplights, a pleasing jumble of forms decorating the space. You feel more aware of the secret life of buildings. Their bones, their roots. The way they take up space against the sky."
 
 Understand "shapes", "abstract", "cement", "relief", "concrete", "sculpture", "sculptures", and "stairwell" as the abstract reliefs.  
@@ -1360,9 +1358,10 @@ A woman called a tamale lady is in Calle 24 Plaza. The description of a tamale l
 Divisibility relates a number (called N) to a number (called M) when the remainder after dividing M by N is 0. The verb to divide means the divisibility relation. The verb to be a factor of means the divisibility relation. 
 
 After talking to the tamale lady for the first time:
-	say "It's been a while since I've seen you, friend!";
-	say "Don't forget your pal Virginia now that you're back in town.";
-	now the sidewalk artist is proper-named;
+	say "She says, 'It's been a while since I've seen you, friend!'";
+	say "'Don't forget your pal Virginia now that you're back in town.'";
+	now the tamale lady is proper-named;
+	record the noun as connected;
 	
 Understand "Virginia" as the tamale lady.
 	
@@ -1454,13 +1453,12 @@ Down from Circle Plaza is Mission 24th Concourse.
 
 The sound of Circle Plaza is "Norteño blasts its cheerful accordions from a booth, saxophone notes float up from the huge, round stairwell which goes down to the station, songs blare from passing cars."
 
-The gadget table is scenery in Circle Plaza. "Phone cases, cables, chargers, and headphones are laid out on this cheap folding table."
+
 The jewelry table is scenery in Circle Plaza. "You are overwhelmed by the array of cheap rings with big semi-precious stones, earrings made of tiny feathers, and chunky silver bracelets in neat rows."
 The textiles booth is scenery in Circle Plaza. "Hanging from the racks set up around the booth are embroidered huipil blouses, woolen ponchos from Peru, Guatemalan woven pants, striped wool shoulder bags, and colorful scarves."
-The souvenirs booth is scenery in Circle Plaza. "A rack to the side of this tiny booth is festooned with Mexican flags, belt buckles with the eagle and serpent, 49-ers hats and tshirts, and pink woven plastic shopping bags printed with Frida Kahlo's face."
+
 
 The textile vendor is a person in Circle Plaza. The description of the textile vendor is "A very short, very old lady with a million wrinkles and a kind smile."
-
 
 
 The stairwell is scenery in Circle Plaza. Understand "wall" as the stairwell. "Burnt red bricks smoothly curve up around the edges of the wall around the big stairwell. There are a few people sitting with their backs against the curve. A couple of medium-sized trees grow out of a planter in a space at the top of the wall. As you study the unusual structure you notice metal gratings set into the plaza, one long strip near the edge where the plaza turns to sidewalk, and gratings around small, spindly saplings. The metal gratings have a circular pattern."
@@ -1488,6 +1486,8 @@ After talking to a sidewalk artist for the first time:
 	now the printed name of the sidewalk artist is "Buddy";
 	now the sidewalk artist is proper-named;
 
+
+	
 Understand "Buddy" as the sidewalk artist.
 
 Instead of giving an edible thing to the artist for the first time:
@@ -1499,9 +1499,7 @@ Instead of giving an edible thing to the artist for the first time:
 	say "'Time is what you make of it. What with that magic marker and all.'";
 	say "Buddy laughs and goes back to his notepad.";
 	say "His teeth are disturbingly bad.";
-	now the magic marker is magical;
 	now the artist is carrying the noun;
-	say "The magic marker seems to tingle for a moment in your pocket.";
 	stop the action;
 
 Instead of giving an edible thing to the artist:
@@ -1529,7 +1527,6 @@ Instead of taking the basket:
 	say "But that belongs to Mariquita! And she's so nice.";
 
 
-
 Calle 24 Corner is east of Circle Plaza. The surface of Calle 24 Corner is sidewalk. "This busy street corner by the McDonalds is grimy. It's basically a crowded spot where people wait to cross the street. Across Mission to the west, there's a nice plaza with a busy market. Across 24th Street to the north, another lovely plaza with musicians, preachers, and some places to sit. [if player is not Deaf]Classical music is blasting from hidden speakers at an obnoxious level, meant to drive loiterers away.[end if]" 
 
 Calle 24 Corner is south of Calle 24 Plaza. The surface of Calle 24 Corner is sidewalk.
@@ -1544,15 +1541,29 @@ A guy in a yellow vest is a man in Calle 24 Corner. The description of the guy i
 
 
 
+
+
 Brutalist Plaza is a room.  It is uneven. "You pick your way through paths around enormous, rough-hewn blocks of concrete and stone. They tower overhead like the tufa mounds of Mono Lake or a cityscape in a dream. A little to the southwest, the path broadens."
 
-Times Circle is southwest of Brutalist Plaza. It is bumpy. "You are standing in a plaza, a dream echo of the circular plaza of the world you know best. Underfoot, an enormous circle split into sections is set into the stones." 
+Times Circle is southwest of Brutalist Plaza. It is bumpy. "A plaza opens up before you, a dream echo of the circular plaza of the world you know best. Underfoot, an enormous circle split into sections is set into the stones." 
+
+Manastabal is a woman. 
+
+After examining the first ring:
+	say "A woman emerges from behind the massive granite steles.";
+	now Manastabal is in Times Circle;
+	say "'Welcome, traveler,' she says. 'I am Manastabal, your guide.'";
+	say "'There are sites of power, on the line of blood, of sacrifice.";
+	say "'On the red line, find the day-glyphs to complete the calendar.";
+	say "'The creations of this world lie before you.";
+	say "She thinks a moment, then adds, 'Compassion is the key to paradise.'";
+	say "Manastabal swirls her cloak and melts back into the shadows.";
+	now Manastabal is nowhere;
 
 An artifact is a kind of thing.
 The greenstone caiman, the malachite hurricane, the moonstone house, the serpentinite lizard, the chrysoprase serpent, the quartz skull, the aventurine deer, the quartzite rabbit, the azurite wave, the tourmaline dog, the bloodstone monkey, the stone tuft of grass, the jasper reed, the fire opal jaguar, the granite eagle, the obsidian vulture, the sardonyx volcano, the obsidian knife, the amethyst cloud, and the carnelian flower are artifacts.
 
 The calendar is a fixed in place container in Times Circle. The calendar is scenery. The description of the calendar is "An enormous Central American calendar circle. You've heard of them before -- the most famous is the Aztec sun stone of Mexico City. Around the edges of the innermost or first ring are 20 divisions, each containing a different hollowed out space in elaborate shapes. The first ring is oddly compelling. [if the calendar does not contain an artifact]You wish you could read the glyphs. [end if][if the calendar contains an artifact][paragraph break]The calendar glyphs are glowing with strange energy! [end if][if the calendar contains 20 artifacts]The sun circle begins to shake. It floats up into the air![end if]" 
-
 
 Understand "calendar", "circle", "stones", "ground" and "sun stone" as the calendar.
 Understand "ring" or "divisions" or "shapes"  or "glyphs" as the first ring.  
@@ -1635,6 +1646,15 @@ After writing on the ART card:
 	now Calle 24 Plaza is mapped up of Mission 24th Concourse.  
 	
 
+[
+After you've examined each artwork in mission 24th, an artist appears and talks with you
+and the magic marker activates
+
+	say "The magic marker seems to tingle for a moment in your pocket.";
+	now the magic marker is magical;
+	
+]
+
 
 Before examining an artwork, record the noun as experienced.
 
@@ -1649,7 +1669,18 @@ coffee mural	"Mission 24th"
 train mural	"Mission 24th"
 abstract reliefs	"Mission 24th"
 	
+
+To record (P - person) as connected:
+	choose row with a name of P in Table of Friendships;
+	now the connected entry is the connected entry plus one;
 	
+	
+Table of Friendships
+name	station	connected
+flower seller	"Mission 24th"	0
+sidewalk artist	"Mission 24th"	0	
+tamale lady	"Mission 24th"	0
+
 
 
 Chapter 26 - Montgomery
