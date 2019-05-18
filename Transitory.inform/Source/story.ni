@@ -23,55 +23,54 @@ Table of Fancy Status
 left 	central 	right 
 " [location]"	"[number of visited rooms]/[number of rooms] locations"	"Score: [score]"
 
+The maximum score is 200.
+
 [some general rules, not sure where to put them yet]
 
 A boy is a kind of man. A girl is a kind of woman.
 A person is usually neuter.
 An artwork is a kind of thing.
 
-[temporary start of game location for testing]
+[start of game locations - the traveller's house]
 
-Home Base is west of Circle Plaza. "A bare yet familiar room with a sign on the wall. It's in print and in braille. 'Look at sign' or 'read sign' to read it. [paragraph break]The world outside seems to call to you from the door to the east. Why not explore?"
+Home Base is north of Osage Alley. "A bare yet familiar room, with minimal furniture for sitting. There's a doorway to the north, to the rest of your home. A small sign is on the wall, in print and in braille. [paragraph break]The world outside seems to call to you from the door to the south. [line break]Why not explore?"
 
-A welcome sign is scenery in Home Base. "Welcome, traveler! [paragraph break] Thank you for playtesting. The most built-out areas are near 24th St and 16th St. [paragraph break] Further away, the trains should work correctly, but the world beyond the train platforms is only a skeleton. [paragraph break] The things in the closet, in this room, are mostly for testing sightedness, hearing, and mobility. They aren't necessary for solving any puzzles. If you want to test them, open the closet and take what you need.[paragraph break] For some beginning commands, read the cheat sheet you're holding." 
+A welcome sign is scenery in Home Base. "Welcome, traveller! Thank you for playtesting. [paragraph break]The most built-out areas are near 24th St and 16th St. [paragraph break]Further away, the trains should work correctly, but the world beyond the train platforms is only a skeleton. [paragraph break]Type 'help' for some basic commands and beginning hints." 
 
-A cheat sheet is an object. The description of the cheat sheet is "Some other commands: [line break]
-Type 'i' to look at your inventory (what you are carrying).  [line break]
-'Look' will show you a room description (again). [line break]
-'Exits' will show you a list of possible exits from a room.[line break]
-You can 'go' in all 8 directions (north, northeast, etc) as well as up and down. [line break]
-'n' is a convenient shorthand for 'go north' [line break]
-You can also take things, open things, sit on things, and stand up. [line break]
-'examine' or 'look at' will let you examine an object. Or, sometimes, details in a room description.[line break]
-'Wait X minutes' may be handy when waiting for trains. [line break]
-'Help' will get you a small menu of hints. [line break]
-There are many more commands to try![line break]"
 
-The player is carrying a cheat sheet.
+The Bedroom is north of Home Base. "A room meant for sleeping, next to a small bathroom. To the west, there's another, more spacious room. A pocket door opens south to a bare living room."
 
-A battered table is a supporter in Home Base. It is fixed in place. 
+A battered table is a supporter in The Bedroom. It is fixed in place. 
 
 A holo cube is an object. It is on a battered table. The description of a holo cube is "[if player is not blind]A cube with shifting images on its surfaces.[end if][if player is blind and player is not deaf]A smooth-faced cube whose surfaces move slightly under your hand, murmuring with voices.[end if]"
 
 Instead of taking the holo cube:
 	say "You turn the cold, smooth cube in your hands.";
 	if the player is not blind:
-		say "Faces of smiling people, a family - you can't quite remember, but they feel familar.";
+		say "Faces of smiling people, a family – [line break]";
+		say "You can't quite remember, but the knowledge runs deeper than memory.";
 	if the player is blind:
-		say "Voices murmur and laugh from the holocube. Familiar voices - family? The memories surface, then slip away.";
+		say "Voices murmur and laugh from the holocube.";
+		say "Familiar voices - family? The memories surface, then slip away.";
 	say "You settle the cube back in its place.";
-	
 
-A storage box is an object in Home Base. It is a closed openable container. It is fixed in place.
+
+Room of the Traveller is west of The Bedroom. "You feel at home here, in this room with a long shelf, desk, and sturdy workbenches. It's arranged just how you like it." 
+
+A desk, the shelf, and the workbenches are scenery in Room of the Traveller. 
+
+A storage box is an object in Room of the Traveller. It is a closed openable container. It is fixed in place. 
+
+A slip of paper is in a storage box. The description of a slip of paper is "The things in the closet in the Traveller's Room are mostly for testing sightedness, hearing, and mobility. They aren't necessary for solving any puzzles, but the puzzles should be solvable while using them. If you want to test them, open the closet and take what you need. For example, wear the mirrorshades, then check your inventory and examine yourself."
+
+In Room of the Traveller is an opaque, closed, openable container called a closet. The closet is scenery. 
+The wraparound mirrorshades, headphones, a thick woolly hat, the cruel shoes, a SMARTmap, a long cane, and earplugs are in the closet.
 
 A book is a kind of thing.  A SMARTmap is a book. A SMARTmap has a table name called the contents. The description of a SMARTmap is "An accessible map of the BART system with Braille entries. Use it like this: 'consult smartmap about red line' ";
 
+A powerchair is in Room of the Traveller.
 
-
-In Home Base is an opaque, closed, openable container called a closet. The closet is scenery. 
-The wraparound mirrorshades, headphones, a thick woolly hat, the cruel shoes, a SMARTmap, a long cane, and earplugs are in the closet.
-
-A powerchair is in Home Base.
+[some special rules for the beginning objects and actions]
 
 Instead of dropping the magic marker:
 	say "Wouldn't want to lose it. You put it into your pocket, instead.";
@@ -83,7 +82,6 @@ Instead of dropping a card:
 
 	
 Figure of BART map is the file "BART_map.png". 
-
 
 Instead of consulting a book about a topic listed in the contents of the noun: 
     say "[reply entry][paragraph break]".
@@ -347,9 +345,9 @@ For printing the locale description (this is the you-can-also-sense rule):
 				otherwise:
 					say "In [the domain] [we] " (C);
 				if the locale paragraph count is greater than 0:
-					say "[regarding the player]pay attention and explore for a bit. You figure out there is also " (D);
+					say "[regarding the player][one of]pay attention and explore for a bit. There's [or]figure out there is also [at random]" (D);
 				otherwise:
-					say "[one of][regarding the player]poke around. You [can] sense [or][regarding the player]pay attention and explore for a bit. You figure out there is [at random]" (E);
+					say "[regarding the player][one of]poke around. There's [or] can sense [or]pay attention and explore for a bit. There's [or]figure out there is [at random]" (E);
 				let the common holder be nothing;
 				let contents form of list be true;
 				repeat with list item running through marked for listing things:
@@ -457,7 +455,7 @@ Before going to any room:
 			stop the action;
 		otherwise:
 			if the surface of the location is bumpy:
-				say "[one of]Bumpy ground, but still navigable.[or]Your joints ache with every bump you roll over.[or]The bumps jar your spine.[at random]";
+				say "[one of]Bumpy ground, but still navigable.[or]Something on your chair is rattling as you go over this jolting surface.[or]Your joints ache with every bump you roll over.[or]The bumps jar your spine.[at random]";
 			if the surface of the location is uneven:
 				say "[one of]You bump and careen across the uneven ground.[or]You carefully pick your way across the uneven ground.[at random]";
 			if the surface of the location is brick:
@@ -710,11 +708,21 @@ Carry out summoning help:
 
 Table of Standard Help
 topic	title	summary	explanation
-"self"	"self"	"The point of view character"	"Keep in mind you can type 'examine self'. This might be useful or informative, sometimes."
-"map"	"map"	"Where to find a map"	"BART map images are on every train station platform. You can also pick up the SMARTmap in the closet in Home Base for a portable, text only option. For exploring the world, you may want to draw your own maps on paper as a guide to various areas."
+"self"	"self"	"The point of view character"	"Keep in mind you can type 'examine self' or 'x self'. This might be useful or informative, sometimes."
+"commands"	"commands"	"A list of basic commands in the game"	"Type 'i' to look at your inventory (what you are carrying).  [line break]
+'Look' will show you a room description (again). [line break]
+'Exits' will show you a list of possible exits from a room.[line break]
+You can 'go' in all 8 directions (north, northeast, etc) as well as up and down. [line break]
+'n' is a convenient shorthand for 'go north' [line break]
+You can also take things, open things, sit on things, and stand up. [line break]
+'examine' ('x') or 'look at' will let you examine an object. Or, sometimes, details in a room description.[line break]
+'Wait X minutes' may be handy when waiting for trains. [line break]
+'Help' will get you a small menu of hints. [line break]
+There are many more commands to try![line break]"
+"map"	"map"	"Where to find a map"	"BART map images are on every train station platform. You can also pick up the SMARTmap in the closet in Home Base for a portable, text only option (useful if you, the player, use a screen reader). For exploring the world, you may want to take notes, or draw your own maps on paper as a guide to various areas."
 "marker"	"marker"	"Hints about the magic marker"	"Try writing on things that seem a little bit magical."
 "exits"	"exits"	"Using the EXITS command"	"Type 'exits' if you want a list of possible exits. It's a little cheaty, but so much less frustrating."
-"explore"	"explore"	"The explore command"	"If your character is blind or low vision, you can use the command 'explore' or 'tap' to explore a space with your long cane. The long cane and mirrorshades are in the closet in Home Base."
+"explore"	"explore"	"The explore command"	"If your character is blind or low vision, you can use the command 'explore', 'tap', or 'sweep' to explore a space with your long cane. The long cane and mirrorshades are in the closet in Home Base."
 "murals"	"murals"	"The art and murals"	"It's worth examining the local art. It may not have anything immediately useful but it provides context for the local puzzles and mysteries. There may be (obvious once you encounter them) times when you can interact more with the art."
 "score"	"score"	"Things that make your score go up"	"One point for each new room visited. 5 for each Artifact you pick up. 5 more points when you place the 20 Artifacts where they need to go (You'll know it when you see it.)"
 "card"	"card"	"Big hints about the (B)ART card"	"Take it to the concourse levels of the stations and swipe. Depending on the current state of your card, there may be different and perhaps unusual effects."
@@ -1348,10 +1356,23 @@ The abstract reliefs are scenery in Mission 24th Concourse. The abstract reliefs
 
 Understand "shapes", "abstract", "cement", "relief", "concrete", "sculpture", "sculptures", and "stairwell" as the abstract reliefs.  
 
+After examining the abstract reliefs:
+	say "Your understanding of art deepens.";
+	say "The magic marker seems to tingle for a moment in your pocket.";
+	now the magic marker is magical;
+	
 
 Calle 24 Plaza is up from Mission 24th Concourse. The surface of Calle 24 Plaza is bumpy.  "All around you are little shops and restaurants, people talking, buses pulling up to the stops on Mission and on 24th Street, music booming from cars going by. [if the player is not blind]Palm trees sway high overhead. Thick metal rails surround the enormous, square, open stairwell that goes down to the station concourse. A huge mural of a train runs across the wall of the taqueria bordering the plaza to the north.[end if]"
 
 The train mural is scenery in Calle 24 Plaza. It is an artwork. "A mural of a gleaming BART train carried on the backs of determined workers amid a geometric cityscape."  
+
+After examining the train mural:
+	say "You think of the struggles of the neighborhood over time.";
+	say "When the train came, it changed things, forever.";
+	say "Tunnels through the earth, upheavals felt by the planet and its residents.";
+	say "People could move more freely through the city.";
+	say "Inevitably, something was lost.";
+	
 
 A woman called a tamale lady is in Calle 24 Plaza. The description of a tamale lady is "A short, smiling woman in jeans and an army jacket stands next to a cooler on wheels." 
 
@@ -1446,8 +1467,14 @@ A plain donut is an edible thing in the display case. The price of the plain don
 
 A coconut donut is an edible thing in the display case. The price of the coconut donut is $1.00. The description is "A donut, simultanously dry and greasy, in a waxed paper jacket. Little bits of coconut are falling off it onto your hands."
 
+
+Osage Alley is southwest of Circle Plaza. It is bumpy. The description of Osage Alley is "A narrow alley next to a streetcorner plaza which opens to the northeast.  [if the player is not blind]Walls and garage doors are covered in colorful paintings, swirls and wildstyle letters. Tattered posters, stickers, and hastily scribbled tagging, in layers built up over time, are on the walls and light poles.[end if][if the player is blind]It smells of fresh spray paint and car exhaust.[end if]"
+
+The paintings are scenery in Osage Alley. The description is "Vivid scrawls, mostly letters, hard for you to read as they're so intertwined and wildly shaped. In one exuberant splash of color to the north, there's the door to your home. "
+
+
 Circle Plaza is south of Donuts Corner. It is bumpy.
-The description of Circle Plaza is "[if player is not blind]You head into the crowds of this busy space built around a circular wall. People are selling stuff from tables and little booths. Across 24th street to the north, there's a donut shop. You notice a mural that says something about coffee. [end if][if player is not deaf]Many kinds of music are playing here. [end if][if player is not hearing or player is not sighted]This is a typical, busy, open space on Mission Street.[end if]".
+The description of Circle Plaza is "[if player is not blind]You head into the crowds of this busy space built around a circular wall. People are selling stuff from tables and little booths. Across 24th street to the north, there's a donut shop. You notice a mural that says something about coffee. [end if][if player is not deaf]Many kinds of music are playing here. [end if][if player is not hearing or player is not sighted]This is a typical, busy, open space on Mission Street. It's super familiar; the alley to your home is just to the southwest of this lively plaza.[end if]".
 
 Down from Circle Plaza is Mission 24th Concourse. 
 
@@ -1457,7 +1484,6 @@ The sound of Circle Plaza is "Norteño blasts its cheerful accordions from a boo
 The jewelry table is scenery in Circle Plaza. "You are overwhelmed by the array of cheap rings with big semi-precious stones, earrings made of tiny feathers, and chunky silver bracelets in neat rows."
 The textiles booth is scenery in Circle Plaza. "Hanging from the racks set up around the booth are embroidered huipil blouses, woolen ponchos from Peru, Guatemalan woven pants, striped wool shoulder bags, and colorful scarves."
 
-
 The textile vendor is a person in Circle Plaza. The description of the textile vendor is "A very short, very old lady with a million wrinkles and a kind smile."
 
 
@@ -1465,11 +1491,19 @@ The stairwell is scenery in Circle Plaza. Understand "wall" as the stairwell. "B
 
 The metal gratings are scenery in Circle Plaza. "Overlapping concentric circles make an unusual and beautiful pattern in the dark metal of these iron gratings. You think of raindrops, clocks, gears interlocking."
 
-The trees are scenery in Circle Plaza. 
+Trees are scenery in Circle Plaza. 
+The stage is scenery in Circle Plaza. 
 
 The coffee mural is scenery in Circle Plaza. It is an artwork. "[if the player is not blind]A huge mural in bright colors splashes across the building to the west of the plaza. Two wide eyed cartoon characters in Aztec regalia look out from the mural. Above them is a cartoon street sign that reads COFFEE and across it, MISSION. Below the mural is a sloping area and a few steps that make a sort of stage. [end if][if the player is blind]A young guy next to you suddenly speaks up. 'Oh, you're curious about the mural? I know some guys who worked on that with Mel Waters, he's got stuff all over the Mission. The cafe people, Coffee and Mission, they like it, and the characters, they're like, I dunno, chibi Aztec king and queen or something. You ever see Danza Azteca? Xitlalli, they come to the pow-wows. Big feathers, these sort of shell things on their ankles. Oops, gotta run. Bye!.[end if]" 
 
-The stage is scenery in Circle Plaza. 
+After examining the coffee mural:
+	say "You think about the roots of the neighborhood.";
+	say "The people who came from the south, with the padres from Spain.";
+	say "Vaqueros, cooks, grinding the corn, drawing the water.";
+	say "Feathers, stone, and shell, ornaments of their ancestors, met again in the Ohlone people.";
+	say "Your understanding of art deepens.";
+
+
 
 A cheerful shopper is a woman in Circle Plaza. The description of a cheerful shopper is "A cheerful seeming woman laden with shopping bags. She has groceries, flowers, and all kinds of other stuff in re-usable bags. Somehow, she's also holding onto her daughter." 
 
@@ -1552,16 +1586,18 @@ Manastabal is a woman.
 After examining the first ring:
 	say "A woman emerges from behind the massive granite steles.";
 	now Manastabal is in Times Circle;
-	say "'Welcome, traveler,' she says. 'I am Manastabal, your guide.'";
-	say "'There are sites of power, on the line of blood, of sacrifice.";
-	say "'On the red line, find the day-glyphs to complete the calendar.";
+	say "'Welcome, traveller,' she says. 'I am Manastabal, your guide.'";
+	say "'You will be drawn to the sites of power, on the line of blood, of sacrifice.";
+	say "'On this red line, find the day-glyphs to complete the calendar.";
 	say "'The creations of this world lie before you.";
+	say "'Deepen your connections to the land and its people.";
+	say "'Apologies. I'm out of time.";
 	say "She thinks a moment, then adds, 'Compassion is the key to paradise.'";
 	say "Manastabal swirls her cloak and melts back into the shadows.";
 	now Manastabal is nowhere;
 
 An artifact is a kind of thing.
-The greenstone caiman, the malachite hurricane, the moonstone house, the serpentinite lizard, the chrysoprase serpent, the quartz skull, the aventurine deer, the quartzite rabbit, the azurite wave, the tourmaline dog, the bloodstone monkey, the stone tuft of grass, the jasper reed, the fire opal jaguar, the granite eagle, the obsidian vulture, the sardonyx volcano, the obsidian knife, the amethyst cloud, and the carnelian flower are artifacts.
+The greenstone caiman, the malachite hurricane, the moonstone house, the serpentinite lizard, the turquoise serpent, the quartz skull, the aventurine deer, the quartzite rabbit, the azurite wave, the tourmaline dog, the bloodstone monkey, the stone tuft of grass, the jasper reed, the fire opal jaguar, the granite eagle, the obsidian vulture, the sardonyx volcano, the obsidian knife, the amethyst cloud, and the carnelian flower are artifacts.
 
 The calendar is a fixed in place container in Times Circle. The calendar is scenery. The description of the calendar is "An enormous Central American calendar circle. You've heard of them before -- the most famous is the Aztec sun stone of Mexico City. Around the edges of the innermost or first ring are 20 divisions, each containing a different hollowed out space in elaborate shapes. The first ring is oddly compelling. [if the calendar does not contain an artifact]You wish you could read the glyphs. [end if][if the calendar contains an artifact][paragraph break]The calendar glyphs are glowing with strange energy! [end if][if the calendar contains 20 artifacts]The sun circle begins to shake. It floats up into the air![end if]" 
 
@@ -1573,7 +1609,7 @@ Cipactli, the Caiman[if the greenstone caiman is in the calendar] (filled with t
 Ehēcatl, Wind[if the malachite hurricane is in the calendar] (filled with the malachite hurricane)(glowing)[end if].[line break]
 Calli, House[if the moonstone house is in the calendar] (filled with the moonstone house) (glowing)[end if].[line break]
 Cuetzpalin, the Lizard[if the serpentinite lizard is in the calendar] (filled with the serpentinite lizard) (glowing)[end if].[line break]
-Cõātl, the Serpent[if the chrysoprase serpent is in the calendar] (filled with the chrysoprase serpent) (glowing)[end if].[line break]
+Cõātl, the Serpent[if the turquoise serpent is in the calendar] (filled with the turquoise serpent) (glowing)[end if].[line break]
 Miquiztli, Death[if the quartz skull is in the calendar] (filled with the quartz skull) (glowing)[end if].[line break]
 Mazātl, the Deer[if the aventurine deer is in the calendar] (filled with the aventurine deer) (glowing)[end if].[line break]
 Tōchtli, the Rabbit[if the quartzite rabbit is in the calendar] (filled with the quartzite rabbit) (glowing)[end if].[line break]
@@ -1616,7 +1652,7 @@ Points	Citation	Found (a time)	Placed (a time)
 5	malachite hurricane
 5	moonstone house
 5	serpentinite lizard
-5	chrysoprase serpent
+5	turquoise serpent
 5	quartz skull
 5	aventurine deer
 5	quartzite rabbit
@@ -1648,15 +1684,16 @@ After writing on the ART card:
 
 [
 After you've examined each artwork in mission 24th, an artist appears and talks with you
-and the magic marker activates
-
-	say "The magic marker seems to tingle for a moment in your pocket.";
-	now the magic marker is magical;
+and the magic marker activates.  check in the table? or...?
 	
 ]
 
 
+
+
 Before examining an artwork, record the noun as experienced.
+
+
 
 To record (E - artwork) as experienced: 
 	choose row with a reference of E in Table of Works; 
@@ -1901,7 +1938,7 @@ West Oakland Concourse is down from West Oakland.  West Oakland Concourse is a c
 
 A funky dude is a man in West Oakland Concourse. The description of a funky dude is "A guy with long dreads, an army jacket, striped sweatpants, and huge sneakers is playing music from a boombox in his backpack. He seems very much at home on this corner."
 
-The chrysoprase serpent is in West Oakland Concourse. 
+The turquoise serpent is in West Oakland Concourse. 
 
 
 
@@ -2065,7 +2102,6 @@ Carry out switching on a card:
 			silently try dropping the item;
 		
 			
-		
 	
 Carry out switching off a card:
 	say "The card shuts off with a little thump.";
@@ -2139,6 +2175,8 @@ Carry out squeaking:
 		say "You echolocate.";
 		say "OooOOOooo! Bugs!";
 		say "You catch a delicious gnat and crunch it up, savoring the juices.";
+		
+
 
 Table of Card Modifications
 Modification	Effect
