@@ -566,6 +566,9 @@ Carry out examining (this is the multisensory examine undescribed things rule):
 	if examine text printed is false:
 		say "[one of]Nothing special about [the noun].[or]Ordinary enough.[or]Yeah, it's [a noun].[or]You note the presence of [a noun].[at random][run paragraph on]";
 	
+
+	
+	
 [todo: fix the paragraph breaks after objects with descriptions]	
 Studying the vicinity is an action applying to nothing. 
 
@@ -1379,6 +1382,8 @@ After examining the train mural:
 	say "People could move more freely through the city.";
 	say "Inevitably, something was lost.";
 	say "Your understanding of art deepens.";
+	say "The magic marker seems to tingle for a moment in your pocket.";
+	now the magic marker is magical;
 
 
 A woman called a tamale lady is in Calle 24 Plaza. The description of a tamale lady is "A short, smiling woman in jeans and an army jacket stands next to a cooler on wheels." 
@@ -1388,6 +1393,7 @@ Divisibility relates a number (called N) to a number (called M) when the remaind
 After talking to the tamale lady for the first time:
 	say "She says, 'It's been a while since I've seen you, friend!'";
 	say "'Don't forget your pal Virginia now that you're back in town.'";
+	say "She radiates warmth and kindness.";
 	now the tamale lady is proper-named;
 	record the noun as connected;
 	
@@ -1503,8 +1509,8 @@ After examining the coffee mural:
 	say "Vaqueros, cooks, grinding the corn, drawing the water.";
 	say "Feathers, stone, and shell, ornaments of their ancestors, met again in the Ohlone people.";
 	say "Your understanding of art deepens.";
-
-
+	say "The magic marker seems to tingle for a moment in your pocket.";
+	now the magic marker is magical;
 
 A sidewalk artist is a man in Circle Plaza. The description of a sidewalk artist is "[if proper-named]Buddy [otherwise] A scruffy man[end if] is lying on the sidewalk, drawing in a carefree way on a sketchpad with sharpie markers scattered all around him."
 
@@ -1531,25 +1537,24 @@ Instead of giving an edible thing to the artist for the first time:
 	say "Buddy laughs and goes back to his notepad.";
 	say "His teeth are disturbingly bad.";
 	now the artist is carrying the noun;
-	record the noun as connected;
+	record the artist as connected;
 	stop the action;
 
 Instead of giving an edible thing to the artist:
 	now the artist is carrying the noun;
 	say "Hey! Thanks for [the noun]!"; 
 	
-A flower seller is a person. In Donuts Corner is a flower seller. The description of a flower seller is "[if the player is not blind]A short, smiling woman in a baseball hat and a red checked scarf pushes her wheely cart full of roses and carnations. Her jacket has a ladybug pin. [end if][if player is blind]There's a short woman just next to you, fussing over a metal cart.[end if]" 
+A flower seller is a woman. In Donuts Corner is a flower seller. The description of a flower seller is "[if the player is not blind]A short, smiling woman in a baseball hat and a red checked scarf pushes her wheely cart full of roses and carnations. Her jacket has a ladybug pin. [end if][if player is blind]There's a short woman just next to you, fussing over a metal cart.[end if]" 
 
 Understand "Mariquita" as the flower seller when the flower seller is proper-named.
 
-Instead of examining the flower seller for the first time:
-	say "[if the player is not blind]A short, smiling woman in a baseball hat and a red checked scarf pushes her shopping cart full of roses and carnations. Her jacket has a ladybug pin. [end if][if player is blind]A short woman just next to you, fussing over a metal cart.[end if][line break]";
-	say "You stop and chat with her. She's very friendly. [line break]Her name is Mariquita.";
-	Now the printed name of the flower seller is "Mariquita";
+Instead of talking to the flower seller for the first time:
+	say "You stop and chat with her. She's very friendly. [line break]Her name is Mariquita.[line break]Oh my. Did she just say what you think she said?![line break]Outrageous. You burst out laughing.";
+	Now the printed name of the flower seller is "Mariquita the flower seller";
 	now the flower seller is proper-named;
-	record the noun as connected;
+	record the flower seller as connected;
 
-Every turn when the turn count is even and the flower seller is proper-named and the player can see a flower seller and the player is not blind: 
+Every turn when five is a factor of the turn count and the flower seller is proper-named and the player can see a flower seller and the player is not blind: 
     say "Mariquita [one of] [or]beams at you with a big happy grin.[or]calls out, 'Flores!'[or]offers you a little bunch of carnations tied with string.[or]shares a coffee with a friend.[or]fusses over her bunches of flowers, arranging them nicely.[or]watches the people passing by.[or]smiles as she stops to talk with a friend.[as decreasingly likely outcomes]"
 
 A shopping cart is an open transparent container. It is scenery. It is in Donuts Corner. The description of the shopping cart is "A metal folding shopping cart on wheels. "
@@ -1710,8 +1715,6 @@ To record (P - person) as connected:
 	now the connected entry is the connected entry plus one;
 	say "You feel connected to the people of this place and time.";
 
-
-	
 	
 Table of Friendships
 name	station	connected
@@ -1719,6 +1722,17 @@ flower seller	"Mission 24th"	0
 sidewalk artist	"Mission 24th"	0	
 tamale lady	"Mission 24th"	0
 
+
+Listing friends is an action applying to nothing.
+
+Understand "friends" as listing friends.
+
+Report listing friends:
+	say "Friends you've made recently: [line break]";
+	repeat with N running from 1 to the number of rows in the Table of Friendships:
+		choose row N in the Table of Friendships;
+		if the connected entry is greater than 0: 
+			say "[name entry], at [station entry]." 
 
 
 Chapter 26 - Montgomery
