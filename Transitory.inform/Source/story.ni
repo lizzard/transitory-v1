@@ -1366,7 +1366,10 @@ The abstract reliefs are scenery in Mission 24th Concourse. The abstract reliefs
 
 Understand "shapes", "abstract", "cement", "relief", "concrete", "sculpture", "sculptures", and "stairwell" as the abstract reliefs.  
 
+Figure of abstract reliefs is the file "abstract_reliefs_24.jpg". 
+
 After examining the abstract reliefs:
+	display Figure of abstract reliefs;
 	say "Your understanding of art deepens.";
 	say "The magic marker seems to tingle for a moment in your pocket.";
 	now the magic marker is magical;
@@ -1374,9 +1377,12 @@ After examining the abstract reliefs:
 
 Calle 24 Plaza is up from Mission 24th Concourse. The surface of Calle 24 Plaza is bumpy.  "All around you are little shops and restaurants, people talking, buses pulling up to the stops on Mission and on 24th Street, music booming from cars going by. [if the player is not blind]Palm trees sway high overhead. Thick metal rails surround the enormous, square, open stairwell that goes down to the station concourse. A huge mural of a train runs across the wall of the taqueria bordering the plaza to the north.[end if]"
 
-The train mural is scenery in Calle 24 Plaza. It is an artwork. "A mural of a gleaming BART train carried on the backs of determined workers amid a geometric cityscape."  
+The train mural is scenery in Calle 24 Plaza. It is an artwork. "A mural of a gleaming BART train carried on the backs of determined workers amid a geometric cityscape. Their faces, barely sketched in, are brown, with broad high cheekbones."  
+
+Figure of train mural is the file "train_mural.jpg". 
 
 After examining the train mural:
+	display Figure of train mural;	
 	say "You think of the struggles of the neighborhood over time.";
 	say "When the train came, it changed things, forever.";
 	say "Tunnels through the earth, upheavals felt by the planet and its residents.";
@@ -1498,13 +1504,13 @@ After examining the coffee mural:
 
 
 Circle Plaza is south of Donuts Corner. It is bumpy.
-The description of Circle Plaza is "[if player is not blind]You head into the crowds of this busy space built around a circular wall. People are selling stuff from tables and little booths. Across 24th street to the north, there's a donut shop. [end if][if player is not deaf]Many kinds of music are playing at once. [end if][if player is not hearing or player is not sighted]This is a typical, busy, open space on Mission Street. It's super familiar; the alley to your home is just to the southwest of this lively plaza.[end if]".
+The description of Circle Plaza is "[if player is not blind]You head into the crowds of this busy space built around an unusual circular wall, like a giant well made of bricks. People are selling stuff from tables and little booths. Across 24th street to the north, there's a donut shop. [end if][if player is not deaf]Many kinds of music are playing at once. [end if][if player is not hearing or player is not sighted]This is a typical, busy, open space on Mission Street. It's super familiar; the alley to your home is just to the southwest of this lively plaza.[end if]".
 
 Down from Circle Plaza is Mission 24th Concourse. 
 
 The sound of Circle Plaza is "Norteño blasts its cheerful accordions from a booth, saxophone notes float up from the huge, round stairwell which goes down to the station, songs blare from passing cars."
 
-The stairwell is scenery in Circle Plaza. Understand "wall" as the stairwell. "Burnt red bricks smoothly curve up around the edges of the wall around the big stairwell. There are a few people sitting with their backs against the curve. As you study the unusual structure, you notice metal gratings set into the plaza, one long strip near the edge where the plaza turns to sidewalk, and gratings around small, spindly saplings. The metal gratings have a circular pattern."
+The stairwell is scenery in Circle Plaza. Understand "wall" and "well" and "bricks" as the stairwell. "Burnt red bricks smoothly curve up around the edges of the wall around the big stairwell. There are a few people sitting with their backs against the curve. As you study the unusual structure, you notice metal gratings set into the plaza, one long strip near the edge where the plaza turns to sidewalk, and gratings around small, spindly saplings. The metal gratings have a circular pattern."
 
 [   A couple of medium-sized trees grow out of a planter in a space at the top of the wall.  ]
 
@@ -1705,10 +1711,10 @@ To record (E - artwork) as experienced:
 		now experienced entry is the time of day; 
 		
 Table of Works 
-reference	station	experienced (a time)
-coffee mural	"Mission 24th"
-train mural	"Mission 24th"
-abstract reliefs	"Mission 24th"
+reference	station	artist	year (a number)	experienced (a time)
+coffee mural	"Mission 24th"	"Mark Bode, Mel Waters, Nite Owl, Dagon, Dino and Free"	2016
+train mural	"Mission 24th"	"Michael Rios with Anthony Machado and Richard Montez"	1975
+abstract reliefs	"Mission 24th"	"William George Mitchell"	1965
 
 Listing works is an action applying to nothing.
 
@@ -1719,7 +1725,7 @@ Report listing works:
 	repeat with N running from 1 to the number of rows in the Table of Works:
 		choose row N in the Table of Works;
 		if there is an experienced entry : 
-			say "[reference entry], at [station entry]." 	
+			say "[reference entry], by [artist entry], at [station entry]." 	
 			
 
 
