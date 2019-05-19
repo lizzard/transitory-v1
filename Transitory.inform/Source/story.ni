@@ -721,6 +721,7 @@ You can also take things, open things, sit on things, and stand up. [line break]
 'examine' ('x') or 'look at' will let you examine an object. Or, sometimes, details in a room description.[line break]
 'tap' if your character is blind, will efficiently examine an entire area and its significant objects.[line break]
 'Wait X minutes' may be handy when waiting for trains. [line break]
+'Friends' will list the people you know in the game.[line break]
 'Help' will get you a small menu of hints. [line break]
 There are many more commands to try![line break]"
 "map"	"map"	"Where to find a map"	"BART map images are on every train station platform. You can also pick up the SMARTmap in the closet in Home Base for a portable, text only option (useful if you, the player, use a screen reader). For exploring the world, you may want to take notes, or draw your own maps on paper as a guide to various areas."
@@ -1480,28 +1481,11 @@ A plain donut is an edible thing in the display case. The price of the plain don
 A coconut donut is an edible thing in the display case. The price of the coconut donut is $1.00. The description is "A donut, simultanously dry and greasy, in a waxed paper jacket. Little bits of coconut are falling off it onto your hands."
 
 
-Osage Alley is southwest of Circle Plaza. It is bumpy. The description of Osage Alley is "This narrow alley leads to a streetcorner plaza opening out to the northeast. [if the player is not blind]Walls and garage doors are covered in colorful paintings, swirls and wildstyle letters. Tattered posters, stickers, and hastily scribbled tagging, in layers built up over time, are on the walls and light poles.[end if][if the player is blind]It smells of fresh spray paint and car exhaust.[end if]"
+Osage Alley is southwest of Circle Plaza. It is bumpy. The description of Osage Alley is "This narrow alley leads to a streetcorner plaza opening out to the northeast. [if the player is not blind]Walls and garage doors are covered in colorful paintings, murals, swirls and wildstyle letters. You notice a large mural that says something about coffee. Tattered posters, stickers, and hastily scribbled tagging, in layers built up over time, are on the walls and light poles.[end if][if the player is blind]It smells of fresh spray paint and car exhaust.[end if]"
 
-The paintings are scenery in Osage Alley. The description is "[if the player is not blind]Vivid scrawls, mostly letters, hard for you to read as they're so intertwined and wildly shaped. In one exuberant splash of color to the north, there's the door to your home.[end if][if the player is blind]Trash and old spray paint cans litter the alley. The door to your home is in a stone wall to the north.[end if]"
+[The paintings are scenery in Osage Alley. The description is "[if the player is not blind]Vivid scrawls, mostly letters, hard for you to read as they're so intertwined and wildly shaped. In one exuberant splash of color to the north, there's the door to your home.[end if][if the player is blind]Trash and old spray paint cans litter the alley. The door to your home is in a stone wall to the north.[end if]"]
 
-
-Circle Plaza is south of Donuts Corner. It is bumpy.
-The description of Circle Plaza is "[if player is not blind]You head into the crowds of this busy space built around a circular wall. People are selling stuff from tables and little booths. Across 24th street to the north, there's a donut shop. You notice a mural that says something about coffee. [end if][if player is not deaf]Many kinds of music are playing at once. [end if][if player is not hearing or player is not sighted]This is a typical, busy, open space on Mission Street. It's super familiar; the alley to your home is just to the southwest of this lively plaza.[end if]".
-
-Down from Circle Plaza is Mission 24th Concourse. 
-
-The sound of Circle Plaza is "Norteño blasts its cheerful accordions from a booth, saxophone notes float up from the huge, round stairwell which goes down to the station, songs blare from passing cars."
-
-The stairwell is scenery in Circle Plaza. Understand "wall"  as the stairwell. "Burnt red bricks smoothly curve up around the edges of the wall around the big stairwell. There are a few people sitting with their backs against the curve. As you study the unusual structure, you notice metal gratings set into the plaza, one long strip near the edge where the plaza turns to sidewalk, and gratings around small, spindly saplings. The metal gratings have a circular pattern."
-
-[   A couple of medium-sized trees grow out of a planter in a space at the top of the wall.  ]
-
-The metal gratings are scenery in Circle Plaza. "Overlapping concentric circles make an unusual and beautiful pattern in the dark metal of these iron gratings. You think of raindrops in water, clocks, gears interlocking."
-
-Trees are scenery in Circle Plaza. 
-The stage is scenery in Circle Plaza. 
-
-The coffee mural is scenery in Circle Plaza. It is an artwork. "[if the player is not blind]A huge mural in bright colors splashes across the building to the west of the plaza. Two wide eyed cartoon characters in Aztec regalia look out from the mural. Above them is a cartoon street sign that reads COFFEE and across it, MISSION. Below the mural is a sloping area and a few steps that make a sort of stage. [end if][if the player is blind]A young guy next to you suddenly speaks up. 'Oh, you're curious about the mural? I know some guys who worked on that with Mel Waters, he's got stuff all over the Mission. The cafe people, Coffee and Mission, they like it, and the characters, they're like, I dunno, chibi Aztec king and queen or something. You ever see Danza Azteca? They come to the pow-wows. Big feathers, these sort of shell things on their ankles. I'm an artist too, you know!.[end if]" 
+The coffee mural is scenery in Osage Alley. It is an artwork. Understand "paintings", "mural", and "coffee" as the coffee mural. The description is "[if the player is not blind]A huge mural in bright colors splashes across the building to the west of the plaza. Two wide eyed cartoon characters in Aztec regalia look out from the mural. Above them is a cartoon street sign that reads COFFEE and across it, MISSION. Below the mural is a sloping area and a few steps that make a sort of stage. [end if][if the player is blind]A young guy next to you suddenly speaks up. 'Oh, you're curious about the mural? I know some guys who worked on that with Mel Waters, he's got stuff all over the Mission. The cafe people, Coffee and Mission, they like it, and the characters, they're like, I dunno, chibi Aztec king and queen or something. You ever see Danza Azteca? They come to the pow-wows. Big feathers, these sort of shell things on their ankles. [line break]He goes back to shaking his can of spray paint.[end if]" 
 
 After examining the coffee mural:
 	say "You think about the roots of the neighborhood.";
@@ -1511,6 +1495,25 @@ After examining the coffee mural:
 	say "Your understanding of art deepens.";
 	say "The magic marker seems to tingle for a moment in your pocket.";
 	now the magic marker is magical;
+
+
+Circle Plaza is south of Donuts Corner. It is bumpy.
+The description of Circle Plaza is "[if player is not blind]You head into the crowds of this busy space built around a circular wall. People are selling stuff from tables and little booths. Across 24th street to the north, there's a donut shop. [end if][if player is not deaf]Many kinds of music are playing at once. [end if][if player is not hearing or player is not sighted]This is a typical, busy, open space on Mission Street. It's super familiar; the alley to your home is just to the southwest of this lively plaza.[end if]".
+
+Down from Circle Plaza is Mission 24th Concourse. 
+
+The sound of Circle Plaza is "Norteño blasts its cheerful accordions from a booth, saxophone notes float up from the huge, round stairwell which goes down to the station, songs blare from passing cars."
+
+The stairwell is scenery in Circle Plaza. Understand "wall" as the stairwell. "Burnt red bricks smoothly curve up around the edges of the wall around the big stairwell. There are a few people sitting with their backs against the curve. As you study the unusual structure, you notice metal gratings set into the plaza, one long strip near the edge where the plaza turns to sidewalk, and gratings around small, spindly saplings. The metal gratings have a circular pattern."
+
+[   A couple of medium-sized trees grow out of a planter in a space at the top of the wall.  ]
+
+The metal gratings are scenery in Circle Plaza. "Overlapping concentric circles make an unusual and beautiful pattern in the dark metal of these iron gratings. You think of raindrops in water, clocks, gears interlocking."
+
+Trees are scenery in Circle Plaza. 
+The stage is scenery in Circle Plaza. 
+
+
 
 A sidewalk artist is a man in Circle Plaza. The description of a sidewalk artist is "[if proper-named]Buddy [otherwise] A scruffy man[end if] is lying on the sidewalk, drawing in a carefree way on a sketchpad with sharpie markers scattered all around him."
 
@@ -1696,8 +1699,6 @@ and the magic marker activates.  check in the table? or...?
 
 Before examining an artwork, record the noun as experienced.
 
-
-
 To record (E - artwork) as experienced: 
 	choose row with a reference of E in Table of Works; 
 	if there is no experienced entry: 
@@ -1708,7 +1709,19 @@ reference	station	experienced (a time)
 coffee mural	"Mission 24th"
 train mural	"Mission 24th"
 abstract reliefs	"Mission 24th"
-	
+
+Listing works is an action applying to nothing.
+
+Understand "works" or "artworks" as listing works.
+
+Report listing works:
+	say "Artworks you've considered recently: [line break]";
+	repeat with N running from 1 to the number of rows in the Table of Works:
+		choose row N in the Table of Works;
+		if there is an experienced entry : 
+			say "[reference entry], at [station entry]." 	
+			
+
 
 To record (P - person) as connected:
 	choose row with a name of P in Table of Friendships;
@@ -1983,6 +1996,9 @@ The Elevator is a room. The description of the Elevator is "A grimy elevator tha
 Every turn when the player is in Liftlandia or the player is in a concourse or the player is in a street level station:
 	now the elevator is mapped north of the location of the player;
 	[unless the player is distracted:]
+	
+Instead of examining the elevator when the player is in Liftlandia or the player is in a concourse or the player is in a street level station:
+	say "A battered, grimy elevator.";
 	
 After looking:
 	if the player is in Liftlandia or the player is in a concourse or the player is in a street level station:
