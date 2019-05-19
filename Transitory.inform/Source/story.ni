@@ -347,7 +347,7 @@ For printing the locale description (this is the you-can-also-sense rule):
 				if the locale paragraph count is greater than 0:
 					say "[regarding the player][one of]pay attention and explore for a bit. There's [or]figure out there is also [at random]" (D);
 				otherwise:
-					say "[regarding the player][one of]poke around. There's [or] can sense [or]pay attention and explore for a bit. There's [or]figure out there is [at random]" (E);
+					say "[regarding the player][one of]poke around. There's [or]can sense [or]pay attention and explore for a bit. There's [or]figure out there is [at random]" (E);
 				let the common holder be nothing;
 				let contents form of list be true;
 				repeat with list item running through marked for listing things:
@@ -716,6 +716,7 @@ You can 'go' in all 8 directions (north, northeast, etc) as well as up and down.
 'n' is a convenient shorthand for 'go north' [line break]
 You can also take things, open things, sit on things, and stand up. [line break]
 'examine' ('x') or 'look at' will let you examine an object. Or, sometimes, details in a room description.[line break]
+'tap' if your character is blind, will efficiently examine an entire area and its significant objects.[line break]
 'Wait X minutes' may be handy when waiting for trains. [line break]
 'Help' will get you a small menu of hints. [line break]
 There are many more commands to try![line break]"
@@ -1035,6 +1036,12 @@ Market's End is up from Embarcadero Concourse. It is northeast of Mechanics Plaz
 The souvenir dealer is a man in Market's End. The description of the souvenir dealer is "He's watching carefully to make sure nothing gets stolen."
 The souvenirs booth is scenery in Market's End. "A rack to the side of this tiny booth is festooned with Mexican flags, belt buckles with the eagle and serpent, 49-ers hats and tshirts, and pink woven plastic shopping bags printed with Frida Kahlo's face."
 
+
+A cheerful shopper is a woman in Market's End. The description of a cheerful shopper is "A cheerful seeming woman laden with shopping bags. She has groceries, flowers, and all kinds of other stuff in re-usable bags. Somehow, she's also holding onto her daughter." 
+
+A wide-eyed child is a girl in Market's End. The description of a wide-eyed child is "A little girl clutching a bottle of Mexican Coca-Cola is staring at everything, holding her mom's hand."
+
+
 An ice-cream eating lady is in Harry Bridges Plaza. 
 
 A gawking tourist is in Harry Bridges Plaza.
@@ -1351,8 +1358,7 @@ The description of Mission 24th St is "You are underground, on a BART platform. 
 
 Mission 24th Concourse is up from Mission 24th St. Mission 24th Concourse is a concourse. "[if the player is not blind]Enormous concrete buttresses soar overhead, like a futuristic 70s airplane hangar.[end if] [if the player is not deaf]Music echoes hauntingly from a monumental stairwell rising up to the plaza, combining with the wild harmonics of trains below.[end if] [if the player is not blind]Abstract cement shapes are sculpted in relief along the oddly corrugated sides of the stairwell, open to the sky.[end if][if the player is blind and the player is deaf]A big open space, full of people walking around, mostly underground but you feel the air and light from an enormous, deep, open stairwell to the plaza above. Another flight of stairs leads down to the train platform.[end if]" 
 
-
-The abstract reliefs are scenery in Mission 24th Concourse. The abstract reliefs are an artwork. "Big blocky shapes, rectangles, circles, half circles, are scuplted in relief along the rough sides of the enormous open stairwell to the plaza. They're reminiscent of brutalist skyscrapers and stoplights, a pleasing jumble of forms decorating the space. You feel more aware of the secret life of buildings. Their bones, their roots. The way they take up space against the sky."
+The abstract reliefs are scenery in Mission 24th Concourse. The abstract reliefs are an artwork. "[if the player is blind]In the stairwell, you feel along the wall. [end if]Big blocky shapes, rectangles, circles, half circles, are scuplted in relief along the rough sides of the enormous open stairwell to the plaza. They're reminiscent of brutalist skyscrapers and stoplights, a pleasing jumble of forms decorating the space. You feel more aware of the secret life of buildings. Their bones, their roots. The way they take up space against the sky."
 
 Understand "shapes", "abstract", "cement", "relief", "concrete", "sculpture", "sculptures", and "stairwell" as the abstract reliefs.  
 
@@ -1372,7 +1378,8 @@ After examining the train mural:
 	say "Tunnels through the earth, upheavals felt by the planet and its residents.";
 	say "People could move more freely through the city.";
 	say "Inevitably, something was lost.";
-	
+	say "Your understanding of art deepens.";
+
 
 A woman called a tamale lady is in Calle 24 Plaza. The description of a tamale lady is "A short, smiling woman in jeans and an army jacket stands next to a cooler on wheels." 
 
@@ -1414,7 +1421,7 @@ Baile is a scene. Baile begins when the player is in Calle 24 for three turns.
 
 When Baile begins: 
 	now the orquestra is in Calle 24 Plaza;
-	say "A group of musicians has settled under a portable shade pavilion. They start grooving out, playing Cuban oldies."
+	say "A group of musicians has settled under a portable shade pavilion in the plaza. They start grooving out, playing Cuban oldies."
 
 Every turn during Baile:	
 	repeat through Table of Baile Events:
@@ -1450,7 +1457,6 @@ event
 Donuts Corner is west of Calle 24 Plaza. The surface of Donuts Corner is sidewalk. "Just outside the Chinese Food and Donuts shop, this lively streetcorner has buses pulling up along 24th Street, many cars going by, people crossing the street or standing around[if player is not deaf], music blaring from passing cars and from the shops[end if]. [if player is not blind]Along Mission, high overhead, washingtonia palms stretch into the sky.[end if] To the east, there's another plaza."
 
 
-
 West of Donuts Corner is a room called Chinese Food and Donuts. 
 
 The description of Chinese Food is "The donut shop is warm and bright. It smells like tasty food and baked goods.[if the player is not blind] One display case holds rows of donuts. Another has steam trays full of hot food.[end if]" 
@@ -1468,33 +1474,28 @@ A plain donut is an edible thing in the display case. The price of the plain don
 A coconut donut is an edible thing in the display case. The price of the coconut donut is $1.00. The description is "A donut, simultanously dry and greasy, in a waxed paper jacket. Little bits of coconut are falling off it onto your hands."
 
 
-Osage Alley is southwest of Circle Plaza. It is bumpy. The description of Osage Alley is "A narrow alley next to a streetcorner plaza which opens to the northeast.  [if the player is not blind]Walls and garage doors are covered in colorful paintings, swirls and wildstyle letters. Tattered posters, stickers, and hastily scribbled tagging, in layers built up over time, are on the walls and light poles.[end if][if the player is blind]It smells of fresh spray paint and car exhaust.[end if]"
+Osage Alley is southwest of Circle Plaza. It is bumpy. The description of Osage Alley is "This narrow alley leads to a streetcorner plaza opening out to the northeast. [if the player is not blind]Walls and garage doors are covered in colorful paintings, swirls and wildstyle letters. Tattered posters, stickers, and hastily scribbled tagging, in layers built up over time, are on the walls and light poles.[end if][if the player is blind]It smells of fresh spray paint and car exhaust.[end if]"
 
-The paintings are scenery in Osage Alley. The description is "Vivid scrawls, mostly letters, hard for you to read as they're so intertwined and wildly shaped. In one exuberant splash of color to the north, there's the door to your home. "
+The paintings are scenery in Osage Alley. The description is "[if the player is not blind]Vivid scrawls, mostly letters, hard for you to read as they're so intertwined and wildly shaped. In one exuberant splash of color to the north, there's the door to your home.[end if][if the player is blind]Trash and old spray paint cans litter the alley. The door to your home is in a stone wall to the north.[end if]"
 
 
 Circle Plaza is south of Donuts Corner. It is bumpy.
-The description of Circle Plaza is "[if player is not blind]You head into the crowds of this busy space built around a circular wall. People are selling stuff from tables and little booths. Across 24th street to the north, there's a donut shop. You notice a mural that says something about coffee. [end if][if player is not deaf]Many kinds of music are playing here. [end if][if player is not hearing or player is not sighted]This is a typical, busy, open space on Mission Street. It's super familiar; the alley to your home is just to the southwest of this lively plaza.[end if]".
+The description of Circle Plaza is "[if player is not blind]You head into the crowds of this busy space built around a circular wall. People are selling stuff from tables and little booths. Across 24th street to the north, there's a donut shop. You notice a mural that says something about coffee. [end if][if player is not deaf]Many kinds of music are playing at once. [end if][if player is not hearing or player is not sighted]This is a typical, busy, open space on Mission Street. It's super familiar; the alley to your home is just to the southwest of this lively plaza.[end if]".
 
 Down from Circle Plaza is Mission 24th Concourse. 
 
 The sound of Circle Plaza is "Norteño blasts its cheerful accordions from a booth, saxophone notes float up from the huge, round stairwell which goes down to the station, songs blare from passing cars."
 
+The stairwell is scenery in Circle Plaza. Understand "wall"  as the stairwell. "Burnt red bricks smoothly curve up around the edges of the wall around the big stairwell. There are a few people sitting with their backs against the curve. As you study the unusual structure, you notice metal gratings set into the plaza, one long strip near the edge where the plaza turns to sidewalk, and gratings around small, spindly saplings. The metal gratings have a circular pattern."
 
-The jewelry table is scenery in Circle Plaza. "You are overwhelmed by the array of cheap rings with big semi-precious stones, earrings made of tiny feathers, and chunky silver bracelets in neat rows."
-The textiles booth is scenery in Circle Plaza. "Hanging from the racks set up around the booth are embroidered huipil blouses, woolen ponchos from Peru, Guatemalan woven pants, striped wool shoulder bags, and colorful scarves."
+[   A couple of medium-sized trees grow out of a planter in a space at the top of the wall.  ]
 
-The textile vendor is a person in Circle Plaza. The description of the textile vendor is "A very short, very old lady with a million wrinkles and a kind smile."
-
-
-The stairwell is scenery in Circle Plaza. Understand "wall" as the stairwell. "Burnt red bricks smoothly curve up around the edges of the wall around the big stairwell. There are a few people sitting with their backs against the curve. A couple of medium-sized trees grow out of a planter in a space at the top of the wall. As you study the unusual structure you notice metal gratings set into the plaza, one long strip near the edge where the plaza turns to sidewalk, and gratings around small, spindly saplings. The metal gratings have a circular pattern."
-
-The metal gratings are scenery in Circle Plaza. "Overlapping concentric circles make an unusual and beautiful pattern in the dark metal of these iron gratings. You think of raindrops, clocks, gears interlocking."
+The metal gratings are scenery in Circle Plaza. "Overlapping concentric circles make an unusual and beautiful pattern in the dark metal of these iron gratings. You think of raindrops in water, clocks, gears interlocking."
 
 Trees are scenery in Circle Plaza. 
 The stage is scenery in Circle Plaza. 
 
-The coffee mural is scenery in Circle Plaza. It is an artwork. "[if the player is not blind]A huge mural in bright colors splashes across the building to the west of the plaza. Two wide eyed cartoon characters in Aztec regalia look out from the mural. Above them is a cartoon street sign that reads COFFEE and across it, MISSION. Below the mural is a sloping area and a few steps that make a sort of stage. [end if][if the player is blind]A young guy next to you suddenly speaks up. 'Oh, you're curious about the mural? I know some guys who worked on that with Mel Waters, he's got stuff all over the Mission. The cafe people, Coffee and Mission, they like it, and the characters, they're like, I dunno, chibi Aztec king and queen or something. You ever see Danza Azteca? Xitlalli, they come to the pow-wows. Big feathers, these sort of shell things on their ankles. Oops, gotta run. Bye!.[end if]" 
+The coffee mural is scenery in Circle Plaza. It is an artwork. "[if the player is not blind]A huge mural in bright colors splashes across the building to the west of the plaza. Two wide eyed cartoon characters in Aztec regalia look out from the mural. Above them is a cartoon street sign that reads COFFEE and across it, MISSION. Below the mural is a sloping area and a few steps that make a sort of stage. [end if][if the player is blind]A young guy next to you suddenly speaks up. 'Oh, you're curious about the mural? I know some guys who worked on that with Mel Waters, he's got stuff all over the Mission. The cafe people, Coffee and Mission, they like it, and the characters, they're like, I dunno, chibi Aztec king and queen or something. You ever see Danza Azteca? They come to the pow-wows. Big feathers, these sort of shell things on their ankles. I'm an artist too, you know!.[end if]" 
 
 After examining the coffee mural:
 	say "You think about the roots of the neighborhood.";
@@ -1505,19 +1506,15 @@ After examining the coffee mural:
 
 
 
-A cheerful shopper is a woman in Circle Plaza. The description of a cheerful shopper is "A cheerful seeming woman laden with shopping bags. She has groceries, flowers, and all kinds of other stuff in re-usable bags. Somehow, she's also holding onto her daughter." 
-
-A wide-eyed child is a girl in Circle Plaza. The description of a wide-eyed child is "A little girl clutching a bottle of mexican coca-cola is staring at everything, holding her mom's hand."
-
 A sidewalk artist is a man in Circle Plaza. The description of a sidewalk artist is "[if proper-named]Buddy [otherwise] A scruffy man[end if] is lying on the sidewalk, drawing in a carefree way on a sketchpad with sharpie markers scattered all around him."
 
-A sidewalk artist carries a sketchpad. The description of the sketchpad is "A cheap sketch pad with a drawing of the words 'Happy Tuesday' in rainbow marker."
+A sidewalk artist carries a sketchpad. The description of the sketchpad is "[if the player is blind]The artist says 'I love to draw, are you interested? I'm drawing Happy Tuesday!'[end if][if the player is not blind]A cheap sketch pad with a drawing of the words 'Happy Tuesday' in rainbow marker.[end if]"
 
 After talking to a sidewalk artist for the first time:
 	say "The artist looks up at you. 'Oh hey.' He says. 'Happy Tuesday!'";
 	say "'Name's Buddy. I like to draw the days.'[line break]";
 	say "You seem pretty nice, I don't mind asking you, got any food?";
-	now the printed name of the sidewalk artist is "Buddy";
+	now the printed name of the sidewalk artist is "Buddy the sidewalk artist";
 	now the sidewalk artist is proper-named;
 
 
@@ -1534,6 +1531,7 @@ Instead of giving an edible thing to the artist for the first time:
 	say "Buddy laughs and goes back to his notepad.";
 	say "His teeth are disturbingly bad.";
 	now the artist is carrying the noun;
+	record the noun as connected;
 	stop the action;
 
 Instead of giving an edible thing to the artist:
@@ -1549,15 +1547,16 @@ Instead of examining the flower seller for the first time:
 	say "You stop and chat with her. She's very friendly. [line break]Her name is Mariquita.";
 	Now the printed name of the flower seller is "Mariquita";
 	now the flower seller is proper-named;
+	record the noun as connected;
 
 Every turn when the turn count is even and the flower seller is proper-named and the player can see a flower seller and the player is not blind: 
     say "Mariquita [one of] [or]beams at you with a big happy grin.[or]calls out, 'Flores!'[or]offers you a little bunch of carnations tied with string.[or]shares a coffee with a friend.[or]fusses over her bunches of flowers, arranging them nicely.[or]watches the people passing by.[or]smiles as she stops to talk with a friend.[as decreasingly likely outcomes]"
 
 A shopping cart is an open transparent container. It is scenery. It is in Donuts Corner. The description of the shopping cart is "A metal folding shopping cart on wheels. "
 
-The little bunch of carnations is a thing in the shopping cart. The price of the carnations is $1.00. The description is "A bunch of red carnations, stems wrapped in paper and tied with green twine." 
+The little bunch of carnations is a thing in the shopping cart. The price of the carnations is $1.00. The description is "A bunch of red carnations, stems wrapped in paper and tied with green twine."  Understand "flowers" as the little bunch of carnations.
 
-Instead of taking the basket:
+Instead of taking the cart:
 	say "But that belongs to Mariquita! And she's so nice.";
 
 
@@ -1574,8 +1573,7 @@ A woman called a stroller-pushing lady is in Calle 24 Corner. The description of
 A guy in a yellow vest is a man in Calle 24 Corner. The description of the guy is "A guy in a high visibility vest, sweeping up trash. He's carrying a dustpan on a long handle. He seems a bit careworn."
 
 
-
-
+[Once you swipe the art card in Mission 24th]
 
 Brutalist Plaza is a room.  It is uneven. "You pick your way through paths around enormous, rough-hewn blocks of concrete and stone. They tower overhead like the tufa mounds of Mono Lake or a cityscape in a dream. A little to the southwest, the path broadens."
 
@@ -1710,6 +1708,9 @@ abstract reliefs	"Mission 24th"
 To record (P - person) as connected:
 	choose row with a name of P in Table of Friendships;
 	now the connected entry is the connected entry plus one;
+	say "You feel connected to the people of this place and time.";
+
+
 	
 	
 Table of Friendships
@@ -1727,6 +1728,9 @@ The description of Montgomery is "You are on a BART platform underground. It's c
 Montgomery Concourse is up from Montgomery. Montgomery Concourse is a concourse. It is near MUNI.
 
 Montgomery Plaza is up from Montgomery Concourse.  It is a street level station. It is near MUNI.  
+
+
+The jewelry table is scenery in Montgomery Plaza. "You are overwhelmed by the array of cheap rings with big semi-precious stones, earrings made of tiny feathers, and chunky silver bracelets in neat rows."
 
 An erhu player is a man in Montgomery Plaza.
 
@@ -1819,7 +1823,11 @@ Hallidie Plaza is west of Powell Concourse. "A deeply sunken plaza with tall con
 
 Turnaround Plaza is up from Powell Concourse.  It is a street level station. It is near MUNI. "There's a big plaza here with a cable car turnaround. Tourists stand in a long line to board the cable cars, many of them clutching their rolling suitcases and children tightly as they gawk at the crowds and skyscrapers. Market Street runs northeast to southwest along the plaza."
 
-A huge signpole is in Turnaround Plaza. "A tall signpole bristling with labels pointing to the Sister Cities of San Francisco. The signs point to Abidjan, Amman Assisi, Bangalore, Barcelona, Cork, Haifa, Ho Chi Minh City, Kiel, Krakow, Manila, Osaka, Paris, Seoul, Shanghai, Sydney, Taipei, Thessaloniki, and Zürich. "
+A huge signpole is in Turnaround Plaza. The description is "A tall signpole bristling with labels pointing to the Sister Cities of San Francisco. The signs point to Abidjan, Amman Assisi, Bangalore, Barcelona, Cork, Haifa, Ho Chi Minh City, Kiel, Krakow, Manila, Osaka, Paris, Seoul, Shanghai, Sydney, Taipei, Thessaloniki, and Zürich. "
+
+The textiles booth is scenery in Turnaround Plaza. "Hanging from the racks set up around the booth are embroidered huipil blouses, woolen ponchos from Peru, Guatemalan woven pants, striped wool shoulder bags, and colorful scarves."
+
+The textile vendor is a person in Turnaround Plaza. The description of the textile vendor is "A very short, very old Chicana lady with a million wrinkles and a kind smile."
 
 The Flood Building is northeast of Turnaround Plaza.  It is southwest of Fountain Plaza. The description of the Flood Building is "Elegant marble and gilt trimmings line the walls of this historic building. "
 
@@ -2124,7 +2132,7 @@ A card is a kind of device.
 A BART card, an ART card, a BAT card, a BAR card, a CART card, and a WART card are cards.
  
 
-The description of a BART card is "A [if player is not blind]blue and white card[end if] with a magnetic stripe. It says 'BART' in big [if player is not blind] black[end if] letters that seem oddly like scribbly handwriting. It buzzes very faintly in your hand."
+The description of a BART card is "A [if player is not blind]blue and white [end if]card with a magnetic stripe. It says 'BART' in raised [if player is not blind] black[end if] letters that seem oddly like scribbly handwriting. It buzzes very faintly in your hand."
 
 The description of an ART card is "A [if player is not blind]blue and white card[end if] with a magnetic stripe. It says 'ART' in big [if player is not blind] black[end if] letters that seem oddly like scribbly handwriting. The letters blur and seem to move." 
 
@@ -2133,7 +2141,6 @@ The description of a BAT card is "A [if player is not blind]blue and white card[
 The player is carrying a magic marker and a BART card.
 
 A magic marker is an object. The description of a magic marker is "A magic marker. [if the marker is magical]It fizzes and tingles with energy as if it were eager to make its mark.[end if]"
-
 
 
 Writing on is an action applying to two visible things. Understand "write on [something] with [something]" as writing on. Understand "tag [something] with [something]" or "scribble on [something] with [something]" as writing on. 
