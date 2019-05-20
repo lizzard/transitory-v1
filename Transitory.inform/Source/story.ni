@@ -1342,42 +1342,9 @@ A grungy skater is a girl in Plaza del Colibrí. The description of a skater is 
 
 
 
-Rainglass Plaza is a room.	The surface of Rainglass Plaza is smooth.
-		
-
-Hummingbird Station is a room. The surface of Hummingbird Station is smooth.
-		[write secret room accessible from ART card]
-
-Laguna de Manantial is a room.  The surface of Laguna de Manantial is sand.
-
-Ojo de Agua is a room. The surface of Ojo de Agua is gravel.
-
-Mission Dolores is a room.  The surface of Mission Dolores is bumpy.
-Padre Palóu is a man. He is in Mission Dolores.
-Francisca is a girl. She is in Mission Dolores. [daughter of Alvarez, one of the soldiers]
-
-Supitaxe is a man. He is in Mission Dolores. 
-Guilicse is a man. He is in Mission Dolores.
-Mutacxe is a man. He is in Mission Dolores.
-	 [these are some of the Huchiun men who first visited the vessel San Carlos in 1775]
-
-Chutchui is a room. The surface of Chutchui is grassy. 
-	
-A large roundhouse is an open enterable container in Chutchui. 
-A pine house is an open enterable container in Chutchui.
-A redwood house is an open enterable container in Chutchui.
-
-Chamis is a man. He is in Chutchui.
-Paszém is a girl. She is in Chutchui.  [they married]
-
-A tall red-colored staff is an object. Chamis carries the staff.
-
-Sitlintac is a room.  [manzanita, wild violets]
-
-Pilmo is a boy. He is in Sitlintac.
-Taulvo is a boy. He is in Sitlintac.
 		
 California Savings Corner is north of Plaza del Colibrí. It is west of Mission 16th Street Plaza. The surface of California Savings Corner is sidewalk. "This neighborhood bank building is still impressive, but grimy and faded with the years. The real life of this street corner is in the plazas across the street."
+
 		
 Noisebridge is a room. The surface of Noisebridge is smooth. The description of Noisebridge is "You are in a large hackerspace. People are messing around with laptops in the Hackitorium, poking at electronic gadgets, reading in the library area, and playing video games over by the windows. There are piles of junk up against one wall."
 
@@ -1414,8 +1381,44 @@ A pastel colored mural is scenery in the Hackitorium. The description of a paste
 A robot is a kind of person. Consenso is a robot in the Hackitorium.
 
 
+
+Rainglass Plaza is a room.	The surface of Rainglass Plaza is smooth.
+		
+
+Hummingbird Station is a room. The surface of Hummingbird Station is smooth.
+		[write secret room accessible from ART card]
+
+Laguna de Manantial is a room.  The surface of Laguna de Manantial is sand.
+
+Ojo de Agua is a room. The surface of Ojo de Agua is gravel.
+
+Mission Dolores is a room.  The surface of Mission Dolores is bumpy.
+Padre Palóu is a man. He is in Mission Dolores.
+Francisca is a girl. She is in Mission Dolores. [daughter of Alvarez, one of the soldiers]
+
+Supitaxe is a man. He is in Mission Dolores. 
+Guilicse is a man. He is in Mission Dolores.
+Mutacxe is a man. He is in Mission Dolores.
+	 [these are some of the Huchiun men who first visited the vessel San Carlos in 1775]
+
+Chutchui is a room. The surface of Chutchui is grassy. 
 	
-																							
+A large roundhouse is an open enterable container in Chutchui. 
+A pine house is an open enterable container in Chutchui.
+A redwood house is an open enterable container in Chutchui.
+
+Chamis is a man. He is in Chutchui.
+Paszém is a girl. She is in Chutchui.  [they married]
+
+A tall red-colored staff is an object. Chamis carries the staff.
+
+Sitlintac is a room.  [manzanita, wild violets]
+
+Pilmo is a boy. He is in Sitlintac.
+Taulvo is a boy. He is in Sitlintac.
+
+
+					
 
 Chapter 25 - Mission 24th St
 
@@ -1453,7 +1456,7 @@ After examining the train mural:
 	say "The magic marker seems to tingle for a moment in your pocket.";
 	now the magic marker is magical;
 
-The sock mural is scenery in Papel Picado Plaza. "A dynamic mural covers the east wall of the plaza, showing a cable car, the Bay and a view of Alcatraz; portraits of two men, and the words DUER, SOCK, and DEMON. Some of the Def Crown Villains, originally from Los Angeles, have collaborated here with Sock, a well known artist from France."
+The sock mural is scenery in Calle 24 Plaza. "A dynamic mural covers the east wall of the plaza, showing a cable car, the Bay and a view of Alcatraz; portraits of two men, and the words DUER, SOCK, and DEMON. Some of the Def Crown Villains, originally from Los Angeles, have collaborated here with Sock, a well known artist from France."
 
 
 A woman called a tamale lady is in Calle 24 Plaza. The description of a tamale lady is "A short, smiling woman in jeans and an army jacket stands next to a cooler on wheels." 
@@ -1528,6 +1531,10 @@ event
 "The crowds are leaving now that Orquestra La 24 is done for the day."
 
 
+Along Mission is northeast of Calle 24 Plaza. It is bumpy.  Along Mission is south of Old Bank Corner. The description is "Cruising along Mission between 16th and 24th stations, you pass a jumble of shops, restaurants, bars, and people all going about their business."	
+
+A woman called a stroller-pushing lady is in Along Mission. The description of the stroller-pushing lady  is "A lady in bright lipstick and a wig slightly askew, pushing a stroller. Wait . . . it's not a baby in there. It's a chihuahua in a sweater and the sweater matches its owner's sweater."
+													
 
 Donuts Corner is west of Calle 24 Plaza. The surface of Donuts Corner is sidewalk. "Just outside the Chinese Food and Donuts shop, this lively streetcorner has buses pulling up along 24th Street, many cars going by, people crossing the street or standing around[if player is not deaf], music blaring from passing cars and from the shops[end if]. [if player is not blind]Along Mission, high overhead, washingtonia palms stretch into the sky.[end if] To the east, there's another plaza."
 
@@ -1644,7 +1651,7 @@ A raccoon is a kind of animal.  In Calle 24 Corner is a raccoon. The description
 Every turn when the player can see a raccoon and the turn count is even: 
     say "A raccoon [one of]hauls itsef out of a concrete trash bin[or]skulks into a nearby alleyway[or]hides in a little nook, eating some discarded fries[or]has a little nap in a pile of trash[then at random]."
 
-A woman called a stroller-pushing lady is in Calle 24 Corner. The description of the stroller-pushing lady  is "A lady in bright lipstick and a wig slightly askew, pushing a stroller. Wait . . . it's not a baby in there. It's a chihuahua in a sweater and the sweater matches its owner's sweater."
+
 
 A guy in a yellow vest is a man in Calle 24 Corner. The description of the guy is "A guy in a high visibility vest, sweeping up trash. He's carrying a dustpan on a long handle. He seems a bit careworn."
 
