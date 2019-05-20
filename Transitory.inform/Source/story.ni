@@ -27,16 +27,17 @@ The maximum score is 200.
 
 [some general rules, not sure where to put them yet]
 
+Divisibility relates a number (called N) to a number (called M) when the remainder after dividing M by N is 0. The verb to divide means the divisibility relation. The verb to be a factor of means the divisibility relation. 
+
 A boy is a kind of man. A girl is a kind of woman.
 A person is usually neuter.
 An artwork is a kind of thing.
 
-[start of game locations - the traveller's house]
+[start of game locations - the traveller's house - move this to Mission 24th later]
 
 Home Base is north of Osage Alley. "A bare yet familiar room, with minimal furniture for sitting. There's a doorway to the north, to the rest of your home. A small sign is on the wall, in print and in braille. [paragraph break]The world outside seems to call to you from the door to the south. [line break]Why not explore?"
 
 A welcome sign is scenery in Home Base. "Welcome, traveller! Thank you for playtesting. [paragraph break]The most built-out areas are near 24th St and 16th St. [paragraph break]Further away, the trains should work correctly, but the world beyond the train platforms is only a skeleton. [paragraph break]Type 'help' for some basic commands and beginning hints." 
-
 
 The Bedroom is north of Home Base. "A room meant for sleeping, next to a small bathroom. To the west, there's another, more spacious room. A pocket door opens south to a bare living room."
 
@@ -53,7 +54,6 @@ Instead of taking the holo cube:
 		say "Voices murmur and laugh from the holocube.";
 		say "Familiar voices - family? The memories surface, then slip away.";
 	say "You settle the cube back in its place.";
-
 
 Room of the Traveller is west of The Bedroom. "You feel at home here, in this room with a long shelf, desk, and sturdy workbenches. It's arranged just how you like it." 
 
@@ -79,7 +79,6 @@ Instead of dropping the magic marker:
 Instead of dropping a card:
 	say "You think about dropping [the noun], but can't bring yourself to do it.";
 	stop the action.
-
 	
 Figure of BART map is the file "BART_map.png". 
 
@@ -740,7 +739,7 @@ Understand "hints" or "hint" as summoning hints. Summoning hints is an action ap
 
 Carry out summoning hints:
 	say "Hints are available about the following topics. Typing HINT followed by the name of a topic will give further information.[paragraph break]";
-	repeat through the Table of Standard Help:
+	repeat through the Table of Hints:
 		say " [title entry]: [summary entry][line break]". 
 
 Table of Hints
@@ -749,8 +748,9 @@ topic	title	summary	explanation
 "marker"	"marker"	"How to use the marker"	"After you've examined an artwork at 24th, your marker will initialize. You can use it to write on your BART card to modify it. The main use will be for ART; Once it's changed into an ART card, try swiping it and exploring the local area."
 "money"	"money"	"How do I use money? Can I get more?"	"You can buy a few things in the game so far. There will be ways to get more money, but they aren't written yet. Your BART card has an infinite value; it doesn't need refilling."
 "circle plaza"	"circle plaza"	"What is the secret of Circle Plaza? (SPOILER)"	"Swipe the ART card and go up. Circle Plaza has transformed into a giant Aztec calendar. Find the artifacts and put them into the calendar glyph slots."
-"artifacts"	"artifacts"	"Where do I find the artifacts?"	"Most (but not quite all) stations on the red line will have a puzzle to solve, which will lead to one of the glyph artifacts."
+"artifacts"	"artifacts"	"Where do I find the artifacts?"	"Most (but not quite all) stations on the Red Line will have a puzzle to solve, which will lead to one of the glyph artifacts."
 "Manastabal"	"Manastabal"	"Who is Manastabal?"	"Manastabal is based on the guide from Monique Wittig's Across the Acheron (Virgil, non) which is a lesbian retelling of Dante's Inferno and Paradisio."
+"train lines"	"train lines"	"What about the other train lines?"	"They should work (more or less) but I haven't written most of those stations, or their puzzles, yet. Each line will eventually have a larger meta-puzzle.  "
 "traveller"	"traveller"	"Who am I, anyway?"	"That's a very good question!"
 
 Understand "hint [text]" or "hint about [text]" as getting hints about. 
@@ -1116,10 +1116,40 @@ The description of Fruitvale is "You are on a BART platform."
 
 Chapter 18 - Glen Park
 
-The description of Glen Park is "You are on a BART platform."
+[The concourse is level with the street, here]
+
+Glen Park is a platform. It is smooth. The description of Glen Park is "You are on a BART platform. Massy slabs of concrete seem to rise solidy out of the earth, like the strong shoulders of an enormous animal. The floors are smooth marble. " 
+
+Glen Park Concourse is up from Glen Park. It is a concourse. It is brick. The description is "What a weird and glorious building. It feels light and airy. [if player is not blind]Soaring glass ceilings criss crossed by deep concrete beams.[end if] There is an amazing marble mosaic across one wall. Other walls are made entirely of thick bottle-like glass."
+
+A marble mosaic is scenery in Glen Park Concourse. The description is "One entire wall is surfaced with different kinds of marble and other smooth, complexly veined stone."
+
+After examining the marble mosaic:
+	say "None of the panels of marble and stone are laid at right angles to each other.";
+	say "[if player is not blind]Their red and brown glossiness seems to warm you.[end if][if player is blind]The smooth surface seems to glow with warmth.[end if]";
 	
-Glen Park Concourse is up from Glen Park.
 	
+	[display Figure of abstract reliefs;]
+
+	
+After examining the abstract reliefs:
+	display Figure of abstract reliefs;
+	say "Their blockiness is playful, reminding you of the shapes of children's toy blocks.";
+	say "Yet somehow their heaviness, as it ascends to the ground above, brings to mind the staunchness of determined builders.";
+	say "The magic marker seems to tingle for a moment in your pocket.";
+	now the magic marker is magical;
+	
+	
+
+A harried shopper is a woman in Glen Park Concourse. The description of a harried shopper is "This worried looking lady is clutching several grocery bags on one arm and muttering to herself. Her ankles are swollen."
+
+Cross Town Traffic is north of Glen Park Concourse. The description of Cross Town Traffic is "This corner right outside Glen Park station is super busy. It's right next to San Jose Avenue as it comes off Highway 280 and several roads intersect here going into the tiny, cute little downtown for this neighborhood. A brick circle is set into the street, mid-intersection."
+
+Glen Park Library is northwest of Cross Town Traffic. 
+
+
+[for time travel minus 100]
+
 Glen Canyon is a room.
 		
 A dairy cow is an animal. It is in Glen Canyon.
@@ -1173,7 +1203,7 @@ The description of Lafayette is "You are on a BART platform."
 
 Chapter 21 - Lake Merritt
 
-The description of Lake Merritt is "You are on a BART platform underground, but parts of the ceiling are open to the concourse above. The medians are tiled in irregular hexagons. The elevator is beautiful, made of glass and gleaming chrome. The floor is smooth slaps of red and black flecked granite."
+The description of Lake Merritt is "You are on a BART platform underground, but parts of the ceiling are open to the concourse above. The medians are tiled in irregular hexagons. The elevator is beautiful, made of glass and gleaming chrome. The floor is smooth slabs of red and black flecked granite."
 		
 Lake Merritt Concourse is up from Lake Merritt. It is a concourse. It is smooth.
 
@@ -1243,13 +1273,27 @@ Instead of climbing when the player is in Mission 16th Concourse and the ART car
 	say "You plot your route mentally, but decide not to climb. Maybe if you were in more of an artistic mood.";
 	stop the action.
 		
-Papel Picado Plaza is a street level station. Papel Picado Plaza is up from Mission 16th Concourse. The surface of Papel Picado Plaza is brick. "A lively streetcorner plaza. Lots of people are hanging around just watching the world go by. The little kiosk holding the elevator is topped with a mosaic and panes of colored glass. To the east there's a mural that says SOCK. Colorful metal railings, blue, green, orange, and pink, line the stairwell down to the station. They're worked to look like Mexican paper cutout art."
+Papel Picado Plaza is a street level station. Papel Picado Plaza is up from Mission 16th Concourse. The surface of Papel Picado Plaza is brick. "A lively streetcorner plaza. Lots of people are hanging around just watching the world go by. The little kiosk holding the elevator is topped with a mosaic and panes of colored glass.  Colorful metal railings, blue, green, orange, and pink, line the stairwell down to the station. They're worked to look like Mexican paper cutout art."
 
-The sock mural is scenery in Papel Picado Plaza. "A dynamic mural covers the east wall of the plaza, showing a cable car, the Bay and a view of Alcatraz; portraits of two men, and the words DUER, SOCK, and DEMON. Some of the Def Crown Villains, originally from Los Angeles, have collaborated here with Sock, a well known artist from France."
 
-A harried shopper is a woman in Papel Picado Plaza. The description of a harried shopper is "This worried looking lady is clutching several grocery bags on one arm and muttering to herself. Her ankles are swollen."
+
 
 A grizzled veteran is a man in Papel Picado Plaza. The description of a veteran is "A grizzled veteran in a red Jazzy powerchair. He has some cardboard with writing on it tucked between his back and the seat."
+
+A stencil artist is a woman in Papel Picado Plaza. The description of a graffiti artist is "A young woman with a big messenger bag over her shoulder, full of cans of spray paint and cardboard stencils. She has metallic lipstick on and at her feet is a designer purse with a chihuhua in it. The chihuahua is wearing a red glittery beret." 
+
+After talking to a stencil artist for the first time:
+	say "Her eyes dart around nervously. 'Got a cigarette?' she asks you.[line break] '";
+	say "'You've seen my work? E. Claire Bandersnatch. It's all over town.'[line break]";
+	now the printed name of the sidewalk artist is "E. Claire Bandersnatch";
+	now the sidewalk artist is proper-named;
+
+Understand "Claire" or "Bandersnatch" as the stencil artist when the stencil artist is proper-named.
+
+After talking to the stencil artist:
+	say "[one of]Did you like my Chelsea Manning stencils?[or]The sidewalk is the biggest art gallery in the world![or]You can climb into Noisebridge, if you know the way. Helps to be in an altered state![or]Whether you think you can or you can’t, you’re right![then at random] [line break]";
+
+
 
 The gadget seller is a man in Papel Picado Plaza. The description of the gadget seller is "A weatherbeaten man in a 49-ers cap."
 The gadget table is scenery in Papel Picado Plaza. "Phone cases, cables, chargers, and headphones are laid out on this cheap folding table."
@@ -1280,7 +1324,7 @@ After talking to a cheerful ocarina player for the first time:
 	say "'Hey there music lover.'[line break]";
 	say "Name's Victor. Victor Zaballa.";
 	say "You shake hands with Victor.";
-	now the printed name of the cheerful ocarina player is "Victor";
+	now the printed name of the cheerful ocarina player is "Victor the ocarina player";
 	now the cheerful ocarina player is proper-named;
 	
 Understand "Victor" or "ocarina player" as the cheerful ocarina player when the cheerful ocarina player is proper-named.
@@ -1295,19 +1339,6 @@ Understand "Victor" as the cheerful man when the cheerful man is proper-named.
 A gothy teenager is a girl in Plaza del Colibrí. The description of a gothy teenager is "A girl in blue lipstick, dressed all in black, is hanging out with her friends."
 
 A grungy skater is a girl in Plaza del Colibrí. The description of a skater is " A skater girl in cargo pants, eating a burrito while talking with friends. Her skateboard is covered with graffiti and stickers."
-
-A stencil artist is a woman in Plaza del Colibrí. The description of a graffiti artist is "A young woman with a big messenger bag over her shoulder, full of cans of spray paint and cardboard stencils. She has metallic lipstick on and at her feet is a designer purse with a chihuhua in it. The chihuahua is wearing a red glittery beret." 
-
-After talking to a stencil artist for the first time:
-	say "Her eyes dart around nervously. 'Got a cigarette?' she asks you.[line break] '";
-	say "'You've seen my work? E. Claire Bandersnatch. It's all over town.'[line break]";
-	now the printed name of the sidewalk artist is "E. Claire Bandersnatch";
-	now the sidewalk artist is proper-named;
-
-Understand "Claire" or "Bandersnatch" as the stencil artist when the stencil artist is proper-named.
-
-After talking to the stencil artist:
-	say "[one of]Did you like my Chelsea Manning stencils?[or]The sidewalk is the biggest art gallery in the world![or]You can climb into Noisebridge, if you know the way. Helps to be in an altered state![or]Whether you think you can or you can’t, you’re right![then at random] [line break]";
 
 
 
@@ -1405,7 +1436,7 @@ After examining the abstract reliefs:
 	now the magic marker is magical;
 	
 
-Calle 24 Plaza is up from Mission 24th Concourse. The surface of Calle 24 Plaza is bumpy.  "All around you are little shops and restaurants, people talking, buses pulling up to the stops on Mission and on 24th Street, music booming from cars going by. [if the player is not blind]Palm trees sway high overhead. Thick metal rails surround the enormous, square, open stairwell that goes down to the station concourse. A huge mural of a train runs across the wall of the taqueria bordering the plaza to the north.[end if]"
+Calle 24 Plaza is up from Mission 24th Concourse. The surface of Calle 24 Plaza is bumpy.  "All around you are little shops and restaurants, people talking, buses pulling up to the stops on Mission and on 24th Street, music booming from cars going by. [if the player is not blind]Palm trees sway high overhead. Thick metal rails surround the enormous, square, open stairwell that goes down to the station concourse.  To the east there's a mural that says SOCK. A huge mural of a train runs across the wall of the taqueria bordering the plaza.[end if]"
 
 The train mural is scenery in Calle 24 Plaza. It is an artwork. "A mural of a gleaming BART train carried on the backs of determined workers amid a geometric cityscape. Their faces, barely sketched in, are brown, with broad high cheekbones."  
 
@@ -1422,10 +1453,11 @@ After examining the train mural:
 	say "The magic marker seems to tingle for a moment in your pocket.";
 	now the magic marker is magical;
 
+The sock mural is scenery in Papel Picado Plaza. "A dynamic mural covers the east wall of the plaza, showing a cable car, the Bay and a view of Alcatraz; portraits of two men, and the words DUER, SOCK, and DEMON. Some of the Def Crown Villains, originally from Los Angeles, have collaborated here with Sock, a well known artist from France."
+
 
 A woman called a tamale lady is in Calle 24 Plaza. The description of a tamale lady is "A short, smiling woman in jeans and an army jacket stands next to a cooler on wheels." 
 
-Divisibility relates a number (called N) to a number (called M) when the remainder after dividing M by N is 0. The verb to divide means the divisibility relation. The verb to be a factor of means the divisibility relation. 
 
 After talking to the tamale lady for the first time:
 	say "She says, 'It's been a while since I've seen you, friend!'";
@@ -1737,6 +1769,7 @@ Before examining an artwork, record the noun as experienced.
 
 To record (E - artwork) as experienced: 
 	choose row with a reference of E in Table of Works; 
+	say "Your understanding of art deepens.";
 	if there is no experienced entry: 
 		now experienced entry is the time of day; 
 		
@@ -1745,6 +1778,7 @@ reference	station	artist	year (a number)	experienced (a time)
 coffee mural	"Mission 24th"	"Mark Bode, Mel Waters, Nite Owl, Dagon, Dino and Free"	2016
 train mural	"Mission 24th"	"Michael Rios with Anthony Machado and Richard Montez"	1975
 abstract reliefs	"Mission 24th"	"William George Mitchell"	1965
+marble mosaic	"Glen Park"	"Ernest Born"	1973	
 
 Listing works is an action applying to nothing.
 
