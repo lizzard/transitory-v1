@@ -692,7 +692,7 @@ Taking inventory is acting confused. Looking is acting confused. Examining an ex
 After acting confused for six turns:
         say "(If you are feeling lost, try typing 'help' for suggestions.)" 
 
-Understand "help [text]" or "help about [text]" as getting help about. Understand the commands "instructions" or "hint" or "hints" or "menu" or "info" or "about" as "help". 
+Understand "help [text]" or "help about [text]" as getting help about. Understand the commands "instructions" or "menu" or "info" or "about" as "help". 
 
 Getting help about is an action applying to one topic. 
 
@@ -722,7 +722,8 @@ You can also take things, open things, sit on things, and stand up. [line break]
 'tap' if your character is blind, will efficiently examine an entire area and its significant objects.[line break]
 'Wait X minutes' may be handy when waiting for trains. [line break]
 'Friends' will list the people you know in the game.[line break]
-'Help' will get you a small menu of hints. [line break]
+'Works' will list the artworks you've experienced.[line break]
+'Hints' will get you a small menu of extra hints, a little spoilery. [line break]
 There are many more commands to try![line break]"
 "map"	"map"	"Where to find a map"	"BART map images are on every train station platform. You can also pick up the SMARTmap in the closet in Home Base for a portable, text only option (useful if you, the player, use a screen reader). For exploring the world, you may want to take notes, or draw your own maps on paper as a guide to various areas."
 "marker"	"marker"	"Hints about the magic marker"	"Try writing on things that seem a little bit magical."
@@ -734,6 +735,36 @@ There are many more commands to try![line break]"
 "bugs"	"bugs"	"How to report bugs"	"Please report anything you think is wrong, or could use improvement, at https://github.com/lizzard/transitory/issues. You can also email lizhenry@gmail.com with 'TRANSITORY BUG' in the subject line."
 
 	
+
+Understand "hints" or "hint" as summoning hints. Summoning hints is an action applying to nothing. 
+
+Carry out summoning hints:
+	say "Hints are available about the following topics. Typing HINT followed by the name of a topic will give further information.[paragraph break]";
+	repeat through the Table of Standard Help:
+		say " [title entry]: [summary entry][line break]". 
+
+Table of Hints
+topic	title	summary	explanation
+"start"	"start"	"Hints for the start of the game"	"Explore all of Mission and 24th area, including your home, examine the artworks, examine and talk to people. You have to do that before you can ride the train."
+"marker"	"marker"	"How to use the marker"	"After you've examined an artwork at 24th, your marker will initialize. You can use it to write on your BART card to modify it. The main use will be for ART; Once it's changed into an ART card, try swiping it and exploring the local area."
+"money"	"money"	"How do I use money? Can I get more?"	"You can buy a few things in the game so far. There will be ways to get more money, but they aren't written yet. Your BART card has an infinite value; it doesn't need refilling."
+"circle plaza"	"circle plaza"	"What is the secret of Circle Plaza? (SPOILER)"	"Swipe the ART card and go up. Circle Plaza has transformed into a giant Aztec calendar. Find the artifacts and put them into the calendar glyph slots."
+"artifacts"	"artifacts"	"Where do I find the artifacts?"	"Most (but not quite all) stations on the red line will have a puzzle to solve, which will lead to one of the glyph artifacts."
+"Manastabal"	"Manastabal"	"Who is Manastabal?"	"Manastabal is based on the guide from Monique Wittig's Across the Acheron (Virgil, non) which is a lesbian retelling of Dante's Inferno and Paradisio."
+"traveller"	"traveller"	"Who am I, anyway?"	"That's a very good question!"
+
+Understand "hint [text]" or "hint about [text]" as getting hints about. 
+
+Getting hints about is an action applying to one topic. 
+
+Carry out getting hints about:
+	if the topic understood is a topic listed in the Table of Hints:
+		say "[explanation entry][paragraph break]";
+	otherwise:
+		say "You're out of ideas." 
+
+
+
 
 Listing exits is an action applying to nothing.
 Understand "exits" as listing exits.
@@ -918,7 +949,6 @@ This is the statue presented to the City of San Francisco by the Assyrian people
 A statue of Simón Bolívar is in United Nations Plaza. It is fixed in place. 
 
 An obsidian knife is in United Nations Plaza. 
-
 
 
 An obelisk is in United Nations Plaza.  An obelisk is fixed in place.  The description of an obelisk is "A huge black obelisk with the Preamble to the Universal Declaration of Human Rights carved in marble. [paragraph break]WHEREAS recognition of the inherent dignity and of the equal and inalienable rights of all members of the human family is the foundation of freedom, justice and peace in the world,

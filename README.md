@@ -44,3 +44,19 @@ Note: This also uses a modified version of Touchy Feely by Quantum Games, tempor
 
 Download from: 
 http://inform7.com/extensions/Emily%20Short/Transit%20System/index.html
+
+Playing the game:
+"Help" will get you a help menu. 
+Type "i" to look at your inventory (what you are carrying).  
+"Look" will show you a room description (again). 
+"Exits" will show you a list of possible exits from a room.
+You can "go" in all 8 directions (north, northeast, etc) as well as up and down. 
+"n" is a convenient shorthand for "go north" 
+You can also take things, open things, sit on things, and stand up. 
+"examine" ("x") or "look at" will let you examine an object. Or, sometimes, details in a room description.
+"tap" if your character is blind, will efficiently examine an entire area and its significant objects.
+"Wait X minutes" may be handy when waiting for trains. 
+"Friends" will list the people you know in the game.
+"Works" will list the artworks you've experienced.
+"Hints" will get you a small menu of extra hints, a little spoilery. 
+There are many more commands to try!
