@@ -27,11 +27,13 @@ The maximum score is 200.
 
 [some general rules, not sure where to put them yet]
 
+An artwork is a kind of thing.
+
 Divisibility relates a number (called N) to a number (called M) when the remainder after dividing M by N is 0. The verb to divide means the divisibility relation. The verb to be a factor of means the divisibility relation. 
 
 A boy is a kind of man. A girl is a kind of woman.
 A person is usually neuter.
-An artwork is a kind of thing.
+
 
 [start of game locations - the traveller's house - move this to Mission 24th later]
 
@@ -1487,9 +1489,6 @@ Instead of taking the cooler on wheels:
 
 A hipster dude on a motorized unicycle is a man in Calle 24 Plaza. The description of a hipster dude is "A guy [if player is not blind]in jeans, a hoodie, and a black helmet[end if] is standing on an electric unicycle, tootling along."
 
-A accordion player is a man in Calle 24 Plaza. The description of an accordion player is "A man [if player is not blind]in full mariachi uniform covered in bright buttons [end if]is carrying an accordion."
-
-A guitar player is a man in Calle 24 Plaza. The description of a guitar player is "A mariachi carring a big full bodied guitar and pulling a hand truck loaded with a little amp."
 
 A yelling preacher is a person. In Calle 24 Plaza is a yelling preacher. The description of the preacher is "A short man yells fervently in Spanish into a microphone. You recognize some things from the Bible[if player is not deaf], though it's hard to understand him from the low quality amp at his feet[end if]."
 
@@ -1535,6 +1534,9 @@ Along Mission is northeast of Calle 24 Plaza. It is bumpy.  Along Mission is sou
 
 A woman called a stroller-pushing lady is in Along Mission. The description of the stroller-pushing lady  is "A lady in bright lipstick and a wig slightly askew, pushing a stroller. Wait . . . it's not a baby in there. It's a chihuahua in a sweater and the sweater matches its owner's sweater."
 													
+A accordion player is a man in Along Mission. The description of an accordion player is "A man [if player is not blind]in full mariachi uniform covered in bright buttons [end if]is carrying an accordion."
+
+A guitar player is a man in Along Mission. The description of a guitar player is "A mariachi carring a big full bodied guitar and pulling a hand truck loaded with a little amp."
 
 Donuts Corner is west of Calle 24 Plaza. The surface of Donuts Corner is sidewalk. "Just outside the Chinese Food and Donuts shop, this lively streetcorner has buses pulling up along 24th Street, many cars going by, people crossing the street or standing around[if player is not deaf], music blaring from passing cars and from the shops[end if]. [if player is not blind]Along Mission, high overhead, washingtonia palms stretch into the sky.[end if] To the east, there's another plaza."
 
@@ -2199,6 +2201,11 @@ Instead of switching off a card when the location of the player is not a concour
 Understand "swipe [something switched off]" as switching on.
 Understand "swipe [something switched on]" as switching off. 
 
+Check switching on a card:
+	if the player is carrying a BART card:
+		say "Your BART card isn't charged up yet.";
+		stop the action;
+		
 Carry out switching on a card:
 	say "The card hums with energy.";
 	if the player is carrying an ART card:
