@@ -37,7 +37,7 @@ A person is usually neuter.
 
 [start of game locations - the traveller's house - move this to Mission 24th later]
 
-Home Base is north of Osage Alley. "A bare yet familiar room, with minimal furniture for sitting. There's a doorway to the north, to the rest of your home. A small sign is on the wall, in print and in braille. [paragraph break]The world outside seems to call to you from the door to the south. [line break]Why not explore?"
+Home Base is north of Osage Alley. "A bare yet familiar room, with minimal furniture for sitting. There's a doorway to the north, to the rest of your home. A small sign is on the wall, in print and in braille. [paragraph break]The world outside seems to call to you from the door to the south."
 
 A welcome sign is scenery in Home Base. "Welcome, traveller! Thank you for playtesting. [paragraph break]The most built-out areas are near 24th St and 16th St. [paragraph break]Further away, the trains should work correctly, but the world beyond the train platforms is only a skeleton. [paragraph break]Type 'help' for some basic commands and beginning hints." 
 
@@ -63,7 +63,7 @@ A desk, the shelf, and the workbenches are scenery in Room of the Traveller.
 
 A storage box is an object in Room of the Traveller. It is a closed openable container. It is fixed in place. 
 
-A slip of paper is in a storage box. The description of a slip of paper is "The things in the closet in the Traveller's Room are mostly for testing sightedness, hearing, and mobility. They aren't necessary for solving any puzzles, but the puzzles should be solvable while using them. If you want to test them, open the closet and take what you need. For example, wear the mirrorshades, then check your inventory and examine yourself."
+A slip of paper is in a storage box. The description of a slip of paper is "The things in the closet in the Traveller's Room are mostly for testing sightedness, hearing, and mobility. They aren't necessary for solving any puzzles, but the puzzles should be solvable while using them. If you want to test them, open the closet and take what you need. For example, wear the mirrorshades, then check your inventory and examine yourself.  [paragraph break]Note, hard of hearing and low vision modes aren't yet implemented. Also, for now, assume the Deaf player-character can lipread."
 
 In Room of the Traveller is an opaque, closed, openable container called a closet. The closet is scenery. 
 The wraparound mirrorshades, headphones, a thick woolly hat, the cruel shoes, a SMARTmap, a long cane, and earplugs are in the closet.
@@ -746,10 +746,12 @@ Carry out summoning hints:
 
 Table of Hints
 topic	title	summary	explanation
-"start"	"start"	"Hints for the start of the game"	"Explore all of Mission and 24th area, including your home, examine the artworks, examine and talk to people. You have to do that before you can ride the train."
+"start"	"start"	"Hints for the start of the game"	"Explore all of the Mission and 24th and 	16th area, including your home. Examine the artworks. Examine and talk to people. You have to do that before you can ride the train."
 "marker"	"marker"	"How to use the marker"	"After you've examined an artwork at 24th, your marker will initialize. You can use it to write on your BART card to modify it. The main use will be for ART; Once it's changed into an ART card, try swiping it and exploring the local area."
-"money"	"money"	"How do I use money? Can I get more?"	"You can buy a few things in the game so far. There will be ways to get more money, but they aren't written yet. Your BART card has an infinite value; it doesn't need refilling."
+"money"	"money"	"How do I use money? Can I get more?"	"You can buy a few things in the game so far. There will be ways to get more money, but they aren't written yet."
 "circle plaza"	"circle plaza"	"What is the secret of Circle Plaza? (SPOILER)"	"Swipe the ART card and go up. Circle Plaza has transformed into a giant Aztec calendar. Find the artifacts and put them into the calendar glyph slots."
+"noisebridge"	"noisebridge"	"How do I get to Noisebridge? (SPOILER)"	"Swipe the ART card and then climb the sculptures in the 16th St station."
+"printer (SPOILER)" 	"printer"	"How do I get the printer to work?"	"Try writing on the printer."
 "artifacts"	"artifacts"	"Where do I find the artifacts?"	"Most (but not quite all) stations on the Red Line will have a puzzle to solve, which will lead to one of the glyph artifacts."
 "Manastabal"	"Manastabal"	"Who is Manastabal?"	"Manastabal is based on the guide from Monique Wittig's Across the Acheron (Virgil, non) which is a lesbian retelling of Dante's Inferno and Paradisio."
 "train lines"	"train lines"	"What about the other train lines?"	"They should work (more or less) but I haven't written most of those stations, or their puzzles, yet. Each line will eventually have a larger meta-puzzle.  "
@@ -783,7 +785,7 @@ To say exit list:
 			say "[if count is greater than 1] or [end if][bold type][way][roman type] ([place])". 
 
 Teleporting to is an action applying to one thing.
-Understand "go to [any room]" as teleporting to. 
+Understand "go to [any room]" or "goto [any room]" as teleporting to. 
 
 	
 Carry out teleporting to: 
@@ -888,7 +890,7 @@ The Industrial School is a room.
 
 The House of Refuge is a room.
 
-A moonstone house is an object. It is in the House of Refuge. "A blocky little stone house, made of shimmering moonstone." The description of the moonstone house is "You feel the breath of the night-house, the darkness; realm of the nocturnal jaguar-sun."
+A moonstone house is an object. It is in the House of Refuge. "A blocky little stone house, made of shimmering moonstone." The description of the moonstone house is "You feel the breath of the night-house, the darkness, realm of the nocturnal jaguar-sun."
 
 The House of Correction is a room.
 
@@ -1130,17 +1132,9 @@ After examining the marble mosaic:
 	say "None of the panels of marble and stone are laid at right angles to each other.";
 	say "[if player is not blind]Their red and brown glossiness seems to warm you.[end if][if player is blind]The smooth surface seems to glow with warmth.[end if]";
 	
-	
-	[display Figure of abstract reliefs;]
 
 	
-After examining the abstract reliefs:
-	display Figure of abstract reliefs;
-	say "Their blockiness is playful, reminding you of the shapes of children's toy blocks.";
-	say "Yet somehow their heaviness, as it ascends to the ground above, brings to mind the staunchness of determined builders.";
-	say "The magic marker seems to tingle for a moment in your pocket.";
-	now the magic marker is magical;
-	
+
 	
 
 A harried shopper is a woman in Glen Park Concourse. The description of a harried shopper is "This worried looking lady is clutching several grocery bags on one arm and muttering to herself. Her ankles are swollen."
@@ -1250,7 +1244,8 @@ A paint-covered workman is a man in Mission 16th St. The description of a workma
 
 A tired lady is a woman in Mission 16th St. The description of a tired lady is "A woman in a puffy vest sits on a bench. She looks up at the train schedule, sighs, and looks back at her feet."
 
-Mission 16th Concourse is up from Mission 16th St. Mission 16th is a concourse. The surface of Mission 16th Concourse is brick. "[if player is not blind]Low but nicely curved arches made of smooth concrete form the ceiling of this long, busy station. Abstract cement sculptures molded in relief march up the sides of the enormous stairwell, open to the sky. [end if] [if player is not deaf]Music echoes from the stairwells. The acoustics are great![end if] Crowds of people swirl around the concourse." 
+Mission 16th Concourse is up from Mission 16th St. Mission 16th is a concourse. The surface of Mission 16th Concourse is brick. "[if player is not blind]Low but nicely curved arches made of smooth concrete form the ceiling of this long, busy station. Concrete sculptures molded in relief march up the sides of the enormous stairwell, open to the sky. [end if] [if player is not deaf]Music echoes from the stairwells. The acoustics are great![end if] Crowds of people swirl around the concourse." 
+
 
 A saxophone player is a man in Mission 16th Concourse. The description of a saxophone player is "A man sitting on a stool by the stairwell plays jazz on a saxophone. The instrument case is open in front of him, containing a scattering of change, dollar bills, and flyers for music shows."
 
@@ -1258,7 +1253,16 @@ A security guard is a woman in Mission 16th Concourse.  The description of a sec
 
 A station agent is a woman in Mission 16th Concourse. The description of the station agent is "She's in a little plexiglass kiosk next to the ticket readers."
 
-The concrete shapes are scenery in Mission 16th Concourse. "Big blocky shapes, rectangles, circles, half circles, are scuplted in relief along the rough sides of the enormous open stairwell to the plaza. They're reminiscent of brutalist skyscrapers and stoplights, a pleasing jumble of forms decorating the space. You feel more aware of the secret life of buildings. Their bones, their roots. The way they take up space against the sky.[if the player is carrying an ART card]The secretive shapes beckon like doors. You itch to climb them. [end if]"
+The concrete shapes are scenery in Mission 16th Concourse.  They are artworks. "Big blocky shapes, rectangles, circles, half circles, are scuplted in relief along the rough sides of the enormous open stairwell to the plaza.  You feel more aware of the secret life of buildings. Their bones, their roots. The way they take up space against the sky.[if the player is carrying an ART card]The secretive shapes beckon like doors. You itch to climb them. [end if]"
+
+After examining the concrete shapes:
+	display Figure of abstract reliefs;
+	say "Their blockiness is playful, reminding you of the shapes of children's toy blocks.";
+	say "Yet somehow their heaviness, as it ascends to the ground above, brings to mind the staunchness of determined builders.";
+	say "The magic marker seems to tingle for a moment in your pocket.";
+	now the magic marker is magical;
+	record the noun as experienced;
+	
 
 Understand "shapes", "abstract", "cement", "relief", "concrete", "sculptures", and "stairwell" as the concrete shapes.
   
@@ -1267,48 +1271,69 @@ Instead of climbing when the player is in Mission 16th Concourse and the ART car
 	say "Solid, yet somehow fluid. Building-ness infuses your very soul.";
 	say "Creation. Making things. Artifice AS NATURE.";
 	say "You snap out of your weird obsession with concrete and look around. Wild!";
-	now Noisebridge is mapped up of Mission 16th Concourse;
+	now Noisebridge is mapped south of Mission 16th Concourse;
 	now the player is in Noisebridge;
 	stop the action.
 	
 Instead of climbing when the player is in Mission 16th Concourse and the ART card is not switched on:
 	say "You plot your route mentally, but decide not to climb. Maybe if you were in more of an artistic mood.";
 	stop the action.
+	
+
+Check switching on the ART card:
+	now Hummingbird Station is mapped up of Mission 16th Concourse;
+	
+Check switching off the ART card:
+	now Papel Picado Plaza is mapped up of Mission 16th Concourse;
 		
-Papel Picado Plaza is a street level station. Papel Picado Plaza is up from Mission 16th Concourse. The surface of Papel Picado Plaza is brick. "A lively streetcorner plaza. Lots of people are hanging around just watching the world go by. The little kiosk holding the elevator is topped with a mosaic and panes of colored glass.  Colorful metal railings, blue, green, orange, and pink, line the stairwell down to the station. They're worked to look like Mexican paper cutout art."
+Papel Picado Plaza is a street level station. Papel Picado Plaza is up from Mission 16th Concourse. The surface of Papel Picado Plaza is brick. "A lively streetcorner plaza. Lots of people are hanging around just watching the world go by. [if the player is not blind]The little kiosk holding the elevator is topped with a mosaic and panes of colored glass.  Colorful ironwork railings, blue, green, orange, and pink, line the stairwell down to the station. They're worked to look like Mexican paper cutout art.[end if][if the player is blind]Fancy ironwork railings line the stairwell down to the station.[end if]"
 
+The ironwork railings are a backdrop. They are in Papel Picado Plaza and Plaza del Colibrí. The description is "Elaborately wrought railings in lacy metal line the stairwell down to the station. Each panel is worked in the shape of Mexican paper cutout art; stylized hummingbirds and flowers."
 
+A grizzled veteran is a man in Papel Picado Plaza. The description of a veteran is "A grizzled veteran in a [if the player is not blind]red Jazzy[end if] powerchair. [if the player is not blind]He has some cardboard with writing on it tucked between his back and the seat.[end if]"
 
-
-A grizzled veteran is a man in Papel Picado Plaza. The description of a veteran is "A grizzled veteran in a red Jazzy powerchair. He has some cardboard with writing on it tucked between his back and the seat."
-
-A stencil artist is a woman in Papel Picado Plaza. The description of a graffiti artist is "A young woman with a big messenger bag over her shoulder, full of cans of spray paint and cardboard stencils. She has metallic lipstick on and at her feet is a designer purse with a chihuhua in it. The chihuahua is wearing a red glittery beret." 
+A stencil artist is a woman in Papel Picado Plaza. The description of a stencil artist is "A young woman with a big messenger bag over her shoulder, full of cans of spray paint and cardboard stencils. [if the player is not blind]She has metallic lipstick on and at her feet is a designer purse with a chihuhua in it. The chihuahua is wearing a red glittery beret.[end if][if the player is blind]A young woman talking quickly, full of energy. After a bit you realize she is carrying a tiny dog in her purse.[end if]" 
 
 After talking to a stencil artist for the first time:
-	say "Her eyes dart around nervously. 'Got a cigarette?' she asks you.[line break] '";
+	say "Her eyes dart around nervously.";
 	say "'You've seen my work? E. Claire Bandersnatch. It's all over town.'[line break]";
-	now the printed name of the sidewalk artist is "E. Claire Bandersnatch";
-	now the sidewalk artist is proper-named;
+	say "'Got a cigarette?' she asks you.[line break]";
+	say "'Don't be a stranger! Let's talk again soon!'";
+	now the printed name of the stencil artist is "E. Claire Bandersnatch";
+	now the stencil artist is proper-named;
+	record the stencil artist as connected;
+	
+Instead of giving a cigarette to the stencil artist:	
+	now the stencil artist is carrying the noun;
+	say "She thanks you.";
+	say "'Look, I'll tell you the way in.'";
+	say "'The weird blocks in that stairwell will take you in the back way.'";
+	say "'Artists share the inward eye.'";
+	say "'Plus, it's magical!'";
+	record the stencil artist as connected;
+	stop the action.
 
-Understand "Claire" or "Bandersnatch" as the stencil artist when the stencil artist is proper-named.
+Understand "Claire" or "E Claire" or "Bandersnatch" as the stencil artist when the stencil artist is proper-named.
 
 After talking to the stencil artist:
-	say "[one of]Did you like my Chelsea Manning stencils?[or]The sidewalk is the biggest art gallery in the world![or]You can climb into Noisebridge, if you know the way. Helps to be in an altered state![or]Whether you think you can or you can’t, you’re right![then at random] [line break]";
+	say "[one of]Did you like my Chelsea Manning stencils?[or]The sidewalk is the biggest art gallery in the world![or]You can climb into Noisebridge, if you know the way. Helps to be in an altered state![or]Whether you think you can or you can’t, you’re right![then at random]";
+	say "She fidgets a bit.";
+	say "'Art is the key.'";
+	say "'Chaos is a ladder. And a ramp.'";
 
 
+The gadget seller is a man in Papel Picado Plaza. The description of the gadget seller is "[if the player is not blind]A weatherbeaten man in a 49-ers cap.[end if]"
 
-The gadget seller is a man in Papel Picado Plaza. The description of the gadget seller is "A weatherbeaten man in a 49-ers cap."
-The gadget table is scenery in Papel Picado Plaza. "Phone cases, cables, chargers, and headphones are laid out on this cheap folding table."
+The gadget table is scenery in Papel Picado Plaza. "Phone cases, cables, chargers, and headphones are laid out on this cheap folding table. The vendor doesn't seem quite ready for business though. He's still unpacking."
 		
 Old Bank Corner is south of Papel Picado Plaza. The surface of Old Bank Corner is sidewalk. "A crowded street corner in front of an old bank building. People are intent on getting across the street. "
 	
 A rough sleeper is a man in Old Bank Corner. The description of a rough sleeper is "A scruffy man is passed out on the sidewalk next to a trash bag full of scavenged cans."
 
-Plaza del Colibrí is west of Old Bank Corner. The surface of Plaza del Colibrí is brick. "Around the stairwell down to the station, there are colorful metal railings that look like Mexican cut paper art, orange, pink, green, and blue hummingbirds and flowers. There are low benches around the edges of the stairwell for people to sit on. A low building in the corner has a hummingbird mural." 
+Plaza del Colibrí is west of Old Bank Corner. The surface of Plaza del Colibrí is brick. "Around the stairwell down to the station, there are metal railings [if the player is not blind]that look like Mexican cut paper art, orange, pink, green, and blue hummingbirds and flowers[end if]. There are low benches around the edges of the stairwell for people to sit on. A low building in the corner has a hummingbird mural." 
 
 A hummingbird mural is scenery in Plaza del Colibrí. "These mosaic and metal murals show perky hummingbirds amid swirling flowers and branches. There is a bronze plaque under the murals."
 
-A carnelian flower is an object. It is in Plaza del Colibrí. "This stylized flower is sculpted in carnelian, smooth and polished." The description of the carnelian flower is "It shimmers, slipping in time. You think of sacrifice and the blood of captive warriors." The scent of the carnelian flower is "Cold stone; ambergris; thyme."
 
 A bronze plaque is scenery in Plaza del Colibrí. "Dedicated to Victor Miller (1948-2002) Founder and publisher of the New Mission News, the voice of the Inner Mission for over 20 years. Victor was a tireless advocate and watchdog for the community whose vision and journalistic skills provided the most perceptive and trustworthy observations of the Mission Neighborhood. 'Comforting the Afflicted and Affecting the Comfortable since 1980'".
 
@@ -1328,24 +1353,31 @@ After talking to a cheerful ocarina player for the first time:
 	say "You shake hands with Victor.";
 	now the printed name of the cheerful ocarina player is "Victor the ocarina player";
 	now the cheerful ocarina player is proper-named;
+	record the ocarina player as connected;
 	
 Understand "Victor" or "ocarina player" as the cheerful ocarina player when the cheerful ocarina player is proper-named.
 	
 After talking to a cheerful ocarina player:
-	say "'So, you've noticed my art... metalwork and tile.'[line break]";
-	say "'The hummingbird is sacred to Huitzilpochtli.'[line break]";
-	
+	say "'So, you've noticed my art. I work mainly in metal and tile.'[line break]";
+	say "You chat about the neighborhood, casually.";
+	say "'You seem like a well-travelled person, able to appreciate art.'";
+	say "'It's been nice talking with you.'";
+	say "'Did you know? The hummingbird is sacred to Huitzilpochtli.'[line break]";
+	record the ocarina player as connected;
+
 Understand "Victor" as the cheerful man when the cheerful man is proper-named.
+
+
+[secret room accessible from ART card]
+Hummingbird Station is a room. The surface of Hummingbird Station is smooth. The description is "It's like the ironwork railing has come to life. A plaza like an enormous greenhouse and aviary, partially roofed over by glass but still open at the sides. Birds are flitting and calling. Flowering vines climb the buildings, railings, lightpoles and the trunks of the tall palms. There are wide benches among bubbling fountains and pools around the stairwell."
+
+A carnelian flower is an object. It is in Plaza del Colibrí. "This stylized flower is sculpted in carnelian, smooth and polished." The description of the carnelian flower is "It shimmers, slipping in time. You think of sacrifice and the blood of captive warriors." The scent of the carnelian flower is "Cold stone; ambergris; thyme."
+
 	
 
-A gothy teenager is a girl in Plaza del Colibrí. The description of a gothy teenager is "A girl in blue lipstick, dressed all in black, is hanging out with her friends."
 
-A grungy skater is a girl in Plaza del Colibrí. The description of a skater is " A skater girl in cargo pants, eating a burrito while talking with friends. Her skateboard is covered with graffiti and stickers."
-
-
-
-		
-California Savings Corner is north of Plaza del Colibrí. It is west of Mission 16th Street Plaza. The surface of California Savings Corner is sidewalk. "This neighborhood bank building is still impressive, but grimy and faded with the years. The real life of this street corner is in the plazas across the street."
+	[this location can be cut entirely	
+California Savings Corner is north of Plaza del Colibrí. It is west of Mission 16th Street Plaza. The surface of California Savings Corner is sidewalk. "This neighborhood bank building is still impressive, but grimy and faded with the years. The real life of this street corner is in the plazas across the street."]
 
 		
 Noisebridge is a room. The surface of Noisebridge is smooth. The description of Noisebridge is "You are in a large hackerspace. People are messing around with laptops in the Hackitorium, poking at electronic gadgets, reading in the library area, and playing video games over by the windows. There are piles of junk up against one wall."
@@ -1356,10 +1388,11 @@ The 3-D printer is a device in Noisebridge. It is fixed in place. "A weird, boxy
 
 The 4-D printer is a device. "A weird, boxy gadget on a workbench. It has a big label that says '4-D Printer' [if the player is not blind]in smudgy black letters[end if]. It has a tangible aura of weirdness surrounding it for a few feet in every direction."
 
-The beer opener shaped like a Dalek is an object.
+The beer opener shaped like a Dalek is an object. The description is "A little gizmo, roughly printed, shaped like a Dalek from Doctor Who. When you put a penny in its slot, it works as a bottle opener.";
 
-The 4-D Timelock is a device.
+The 4-D Timelock is a wearable object. The description is "A bizarre gadget made of something tingling and electric. You can't figure out where it begins and ends. It might make a nice bracelet.";
 
+ 
 Instead of switching on the 3-D printer:
 	say "The 3-D printer clatters and shakes.";
 	say "Plastic from a reel above feeds into the machine.";
@@ -1367,7 +1400,7 @@ Instead of switching on the 3-D printer:
 	say "An object appears very slowly and then is ejected onto the workbench.";
 	now the beer opener is on the workbench.
 	
-Instead of switching on the 4-D printer:
+Instead of switching on the 4-D printer for the first time:
 	say "The 4-D printer clatters and shakes.";
 	say "Little nozzles zip around in multiple directions all at once, going so fast you can barely tell what's happening.";
 	say "Spools of ethereal metals and strands of light feed into the machine.";
@@ -1376,7 +1409,7 @@ Instead of switching on the 4-D printer:
 	
 West of Noisebridge is the Hackitorium. The description of the Hackitorium is "A long open part of Noisebridge, where people are working on their projects at a big long central table. There's a huge structure with flashing lights to one side, and a pastel colored mural on the wall."
 
-A huge structure is scenery in the Hackitorium. The description of a huge structure is "Beer bottles filled with LEDs and electronics are packed into milk crates, stacked ten feet high. Colorful flashing lights ripple across the structure hypnotically. A sign to the side of it says 'FLASCHENTASCHEN.'"
+A huge structure is scenery in the Hackitorium. The description of a huge structure is "Beer bottles filled with LEDs and electronics are packed into plastic milk crates, stacked ten feet high. [if the player is not blind]Colorful flashing lights ripple across the structure hypnotically.[end if] A sign to the side of it says 'FLASCHENTASCHEN.'"
 
 A pastel colored mural is scenery in the Hackitorium. The description of a pastel colored mural is "Swirling pastel paint fills one wall with scenes of Nikola Tesla and Margaret Hamilton."
 
@@ -1387,8 +1420,7 @@ A robot is a kind of person. Consenso is a robot in the Hackitorium.
 Rainglass Plaza is a room.	The surface of Rainglass Plaza is smooth.
 		
 
-Hummingbird Station is a room. The surface of Hummingbird Station is smooth.
-		[write secret room accessible from ART card]
+
 
 Laguna de Manantial is a room.  The surface of Laguna de Manantial is sand.
 
@@ -1426,19 +1458,21 @@ Chapter 25 - Mission 24th St
 
 The description of Mission 24th St is "You are underground, on a BART platform. [if the player is not deaf]The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. [end if][if the player is not blind]On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset.[end if]" 
 
-Mission 24th Concourse is up from Mission 24th St. Mission 24th Concourse is a concourse. "[if the player is not blind]Enormous concrete buttresses soar overhead, like a futuristic 70s airplane hangar.[end if] [if the player is not deaf]Music echoes hauntingly from a monumental stairwell rising up to the plaza, combining with the wild harmonics of trains below.[end if] [if the player is not blind]Abstract cement shapes are sculpted in relief along the oddly corrugated sides of the stairwell, open to the sky.[end if][if the player is blind and the player is deaf]A big open space, full of people walking around, mostly underground but you feel the air and light from an enormous, deep, open stairwell to the plaza above. Another flight of stairs leads down to the train platform.[end if]" 
+Mission 24th Concourse is up from Mission 24th St. Mission 24th Concourse is a concourse. "[if the player is not blind]Enormous concrete buttresses soar overhead, like a futuristic 70s airplane hangar.[end if] [if the player is not deaf]Music echoes hauntingly from a monumental stairwell rising up to the plaza, combining with the wild harmonics of trains below.[end if] [if the player is not blind]Abstract cement reliefs are sculpted all up and down the oddly corrugated sides of the stairwell, open to the sky.[end if][if the player is blind and the player is deaf]A big open space, full of people walking around, mostly underground but you feel the air and light from an enormous, deep, open stairwell to the plaza above. Another flight of stairs leads down to the train platform.[end if]" 
 
-The abstract reliefs are scenery in Mission 24th Concourse. The abstract reliefs are an artwork. "[if the player is blind]In the stairwell, you feel along the wall. [end if]Big blocky shapes, rectangles, circles, half circles, are scuplted in relief along the rough sides of the enormous open stairwell to the plaza. They're reminiscent of brutalist skyscrapers and stoplights, a pleasing jumble of forms decorating the space. You feel more aware of the secret life of buildings. Their bones, their roots. The way they take up space against the sky."
+The abstract reliefs are scenery. They are an artwork. They are in Mission 24th Concourse.  "[if the player is blind]In the stairwell, you feel along the wall. [end if]Big blocky shapes, rectangles, circles, half circles, are scuplted in relief along the rough sides of the enormous open stairwell to the plaza. They're reminiscent of brutalist skyscrapers and stoplights, a pleasing jumble of forms decorating the space."
 
-Understand "shapes", "abstract", "cement", "relief", "concrete", "sculpture", "sculptures", and "stairwell" as the abstract reliefs.  
+Understand "abstract", "cement", and "reliefs" as the abstract reliefs.  
 
 Figure of abstract reliefs is the file "abstract_reliefs_24.jpg". 
 
 After examining the abstract reliefs:
 	display Figure of abstract reliefs;
-	say "Your understanding of art deepens.";
+	say "Their huge shapes are playful, reminding you of children's toy blocks.";
+	say "Yet somehow their heaviness, as it ascends to the ground above, brings to mind the staunchness of determined builders.";
 	say "The magic marker seems to tingle for a moment in your pocket.";
 	now the magic marker is magical;
+	record the noun as experienced;
 	
 
 Calle 24 Plaza is up from Mission 24th Concourse. The surface of Calle 24 Plaza is bumpy.  "All around you are little shops and restaurants, people talking, buses pulling up to the stops on Mission and on 24th Street, music booming from cars going by. [if the player is not blind]Palm trees sway high overhead. Thick metal rails surround the enormous, square, open stairwell that goes down to the station concourse.  To the east there's a mural that says SOCK. A huge mural of a train runs across the wall of the taqueria bordering the plaza.[end if]"
@@ -1482,6 +1516,7 @@ Every turn when the player can see a tamale lady and five is a factor of the tur
 A cooler on wheels is an openable container. It is in Calle 24 Plaza. It is scenery. The description is "A [if player is not blind]red and white[end if] cooler with a hinged lid." The sound of the cooler is "As the tamale seller handles the cooler, opening and closing the lid, you can hear that it's made of hollow plastic." 
 
 A tamal is an edible thing. Understand "tamale" as a tamal. 20 tamales are in the cooler on wheels. The price of the tamal is $3.00. The description is "A delicious-smelling tamal wrapped in banana leaves, paper, and foil."  
+
 Does the player mean buying a tamal: it is very likely.
 
 Instead of taking the cooler on wheels:
@@ -1534,9 +1569,11 @@ Along Mission is northeast of Calle 24 Plaza. It is bumpy.  Along Mission is sou
 
 A woman called a stroller-pushing lady is in Along Mission. The description of the stroller-pushing lady  is "A lady in bright lipstick and a wig slightly askew, pushing a stroller. Wait . . . it's not a baby in there. It's a chihuahua in a sweater and the sweater matches its owner's sweater."
 													
-A accordion player is a man in Along Mission. The description of an accordion player is "A man [if player is not blind]in full mariachi uniform covered in bright buttons [end if]is carrying an accordion."
+A accordion player is a man in Along Mission. The description of an accordion player is "A man [if player is not blind]in full mariachi uniform covered in bright buttons [end if], carrying an accordion."
 
 A guitar player is a man in Along Mission. The description of a guitar player is "A mariachi carring a big full bodied guitar and pulling a hand truck loaded with a little amp."
+
+A perfectly good cigarette is in Along Mission. 
 
 Donuts Corner is west of Calle 24 Plaza. The surface of Donuts Corner is sidewalk. "Just outside the Chinese Food and Donuts shop, this lively streetcorner has buses pulling up along 24th Street, many cars going by, people crossing the street or standing around[if player is not deaf], music blaring from passing cars and from the shops[end if]. [if player is not blind]Along Mission, high overhead, washingtonia palms stretch into the sky.[end if] To the east, there's another plaza."
 
@@ -1685,7 +1722,7 @@ The greenstone caiman, the malachite hurricane, the moonstone house, the serpent
 The calendar is a fixed in place container in Times Circle. The calendar is scenery. The description of the calendar is "An enormous Central American calendar circle. You've heard of them before -- the most famous is the Aztec sun stone of Mexico City. Around the edges of the innermost or first ring are 20 divisions, each containing a different hollowed out space in elaborate shapes. The first ring is oddly compelling. [if the calendar does not contain an artifact]You wish you could read the glyphs. [end if][if the calendar contains an artifact][paragraph break]The calendar glyphs are glowing with strange energy! [end if][if the calendar contains 20 artifacts]The sun circle begins to shake. It floats up into the air![end if]" 
 
 Understand "calendar", "circle", "stones", "ground" and "sun stone" as the calendar.
-Understand "ring" or "divisions" or "shapes"  or "glyphs" as the first ring.  
+Understand "ring" or "divisions"  or "glyphs" as the first ring.  
 
 The first ring is scenery in Times Circle. "The hollow glyphs in the first circle draw your attention from the top, around the ring counterclockwise. Dreamlike, you understand what they represent. [paragraph break]
 Cipactli, the Caiman[if the greenstone caiman is in the calendar] (filled with the greenstone caiman) (glowing)[end if].[line break]
@@ -1787,6 +1824,9 @@ reference	station	artist	year (a number)	experienced (a time)
 coffee mural	"Mission 24th"	"Mark Bode, Mel Waters, Nite Owl, Dagon, Dino and Free"	2016
 train mural	"Mission 24th"	"Michael Rios with Anthony Machado and Richard Montez"	1975
 abstract reliefs	"Mission 24th"	"William George Mitchell"	1965
+ironwork railings	"Mission 16th"	"Victor Zaballa"	2003
+concrete shapes	"Mission 16th"	"William George Mitchell"	1965
+huge structure	"Mission 16th"	"Jarrod, Miloh, Rubin, Hzeller et al"	2016
 marble mosaic	"Glen Park"	"Ernest Born"	1973	
 
 Listing works is an action applying to nothing.
@@ -1809,10 +1849,13 @@ To record (P - person) as connected:
 
 	
 Table of Friendships
-name	station	connected
+name	station	connected (number)
 flower seller	"Mission 24th"	0
 sidewalk artist	"Mission 24th"	0	
 tamale lady	"Mission 24th"	0
+stencil artist	"Mission 16th"	0
+ocarina player	"Mission 16th"	0
+
 
 
 Listing friends is an action applying to nothing.
@@ -1880,6 +1923,10 @@ Chapter 29 - Oakland 12th St
 The description of Oakland 12th St is "You are on a BART platform underground. Narrow, glazed red bricks line the platform median, giving it an old timey feeling. The floor is mottled marble or granite rectangles." Oakland 12th St is a platform.
 
 Oakland 12th St Concourse is up from Oakland 12th St. It is a concourse. 
+
+A gothy teenager is a girl in Oakland 12th St Concourse. The description of a gothy teenager is "A girl in blue lipstick, dressed all in black, is hanging out with her friends."
+
+A grungy skater is a girl in Oakland 12th St Concourse. The description of a skater is " A skater girl in cargo pants, eating a burrito while talking with friends. Her skateboard is covered with graffiti and stickers."
 
 The aventurine deer is in Oakland 12th St Concourse. 
 
@@ -2254,10 +2301,13 @@ The description of a BAT card is "A [if player is not blind]blue and white card[
 
 The player is carrying a magic marker and a BART card.
 
-A magic marker is an object. The description of a magic marker is "A magic marker. [if the marker is magical]It fizzes and tingles with energy as if it were eager to make its mark.[end if]"
+The magic marker is an object. The description of the magic marker is "A magic marker. [if the marker is magical]It fizzes and tingles with energy as if it were eager to make its mark.[end if]"
 
+Writing on is an action applying to two visible things. Understand "write on [something] with [something]" as writing on. Understand "tag [something] " or "scribble on [something] with [something]" as writing on. 
 
-Writing on is an action applying to two visible things. Understand "write on [something] with [something]" as writing on. Understand "tag [something] with [something]" or "scribble on [something] with [something]" as writing on. 
+[Figure out how to make it assume that you're writing with the marker]
+[Does the player mean writing on the noun with the magic marker: 
+	it is very likely.]
 
 Check writing on:
 	unless the magic marker is magical:
