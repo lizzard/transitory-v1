@@ -1509,9 +1509,12 @@ After examining the train mural:
 
 The sock mural is scenery in Calle 24 Plaza. It is an artwork. "A dynamic mural covers the east wall of the plaza, showing a cable car, the Bay and a view of Alcatraz; portraits of two men, and the words DUER, SOCK, and DEMON. Some of the Def Crown Villains, originally from Los Angeles, have collaborated here with Sock, a well known artist from France." 
 
+A cooler on wheels is an openable container. It is scenery. It is in Calle 24 Plaza.  The description is "A [if player is not blind]red and white[end if] cooler with a hinged lid." The sound of the cooler is "As the tamale seller handles the cooler, opening and closing the lid, you can hear that it's made of hollow plastic." 
 
-A woman called a tamale lady is in Calle 24 Plaza. The description of a tamale lady is "A short, smiling woman in jeans and an army jacket stands next to a cooler on wheels." 
+A tamale is an edible thing in the cooler on wheels.  The price of a tamale is $5.00. The description is "A delicious-smelling tamal wrapped in banana leaves, paper, and foil."  
 
+
+The tamale lady is a woman in Calle 24 Plaza. The description of a tamale lady is "A short, smiling woman in jeans and an army jacket stands next to a cooler on wheels." 
 
 After talking to the tamale lady for the first time:
 	say "She says, 'It's been a while since I've seen you, friend!'";
@@ -1528,11 +1531,11 @@ After talking to the tamale lady:
 Every turn when the player can see a tamale lady and five is a factor of the turn count and the player is not deaf:
 	say "The tamale lady says [one of]'Tamales de pollo!'[or]'Tamales!'[or]'Tamales de carne!'[or]'I don’t know you but i love you so don’t do the chemicals honey![then at random]";
 
-A cooler on wheels is an openable container. it is scenery. It is in Calle 24 Plaza.  The description is "A [if player is not blind]red and white[end if] cooler with a hinged lid." The sound of the cooler is "As the tamale seller handles the cooler, opening and closing the lid, you can hear that it's made of hollow plastic." 
 
-A tamal is an edible thing. Understand "tamale" as a tamal. 20 tamals are in the cooler on wheels. The price of a tamal is $2.00. The description is "A delicious-smelling tamal wrapped in banana leaves, paper, and foil."  
 
-Does the player mean buying a tamal: it is very likely.
+The tamale lady carries 20 tamales.
+
+Does the player mean buying a tamale: it is very likely.
 
 Instead of taking the cooler on wheels:
 	say "But that belongs to the nice tamale lady!";
@@ -1683,7 +1686,7 @@ A flower seller is a woman. In Donuts Corner is a flower seller. The description
 
 Understand "Mariquita" as the flower seller when the flower seller is proper-named.
 
-[Does the player mean buying a little bunch of carnations when the location of the player is Donuts Corner: it is likely.]
+Does the player mean buying a little bunch of carnations when the location of the player is Donuts Corner: it is likely.
 
 Instead of talking to the flower seller for the first time:
 	say "You stop and chat with her. She's very friendly. [line break]Her name is Mariquita.[line break]Oh my. Did she just say what you think she said?![line break]Outrageous. You burst out laughing.";
