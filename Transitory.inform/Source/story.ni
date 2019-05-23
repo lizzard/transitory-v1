@@ -54,9 +54,9 @@ Carry out abstaining:
 
 Home Base is north of Osage Alley. "A bare yet familiar room, with minimal furniture for sitting. There's a hallway to the north, to the rest of your home. A small sign is on the wall, in print and in braille. [paragraph break]The world outside seems to call to you from a door to the south."
 
-A welcome sign is scenery in Home Base. "Welcome, traveller! Thank you for playtesting. [paragraph break]The most built-out areas are near 24th St and 16th St. [paragraph break]Further away, the trains should work correctly, but the world beyond the train platforms is only a skeleton. [paragraph break]Type 'help' for some basic commands and beginning hints." 
+A welcome sign is scenery in Home Base. "Welcome, traveller! Thank you for playtesting. [paragraph break]The most built-out areas are near 24th St and 16th St. [paragraph break]For initial playtesting, don't worry about taking the train. (You can walk between 24th and 16th.) [paragraph break]Type 'help' for some basic commands and beginning hints. You should also look at your inventory ('i' to see it)." 
 
-The Bedroom is north of Home Base. "A room meant for sleeping, next to a small bathroom. To the west, there's another, more spacious room. A pocket door opens south to a bare living room."
+The Bedroom is north of Home Base. The description is "A room meant for sleeping, next to a small bathroom. To the west, there's another, more spacious room. A pocket door opens south to a bare living room."
 
 A battered table is a supporter in The Bedroom. It is fixed in place. 
 
@@ -1490,7 +1490,7 @@ After examining the abstract reliefs:
 	record the noun as experienced;
 	
 
-Calle 24 Plaza is up from Mission 24th Concourse. The surface of Calle 24 Plaza is bumpy.  "All around you are little shops and restaurants, people talking, buses pulling up to the stops on Mission and on 24th Street, music booming from cars going by. [if the player is not blind]Palm trees sway high overhead. Thick metal rails surround the enormous, square, open stairwell that goes down to the station concourse.  To the east there's a mural that says SOCK. A huge mural of a train runs across the wall of the taqueria bordering the plaza.[end if]"
+Calle 24 Plaza is up from Mission 24th Concourse. The surface of Calle 24 Plaza is bumpy.  "All around you are little shops and restaurants, people talking, buses pulling up to the stops on Mission and on 24th Street, music booming from cars going by. [if the player is not blind]A large open stairwell goes down to the station concourse.  To the east there's a mural that says SOCK. Another huge mural of a train runs across the wall of the taqueria bordering the plaza.[end if]"
 
 The train mural is scenery in Calle 24 Plaza. It is an artwork. "A mural of a gleaming BART train carried on the backs of determined workers amid a geometric cityscape. Their faces, barely sketched in, are brown, with broad high cheekbones."  
 
@@ -1507,7 +1507,7 @@ After examining the train mural:
 	say "The magic marker seems to tingle for a moment in your pocket.";
 	now the magic marker is magical;
 
-The sock mural is scenery in Calle 24 Plaza. "A dynamic mural covers the east wall of the plaza, showing a cable car, the Bay and a view of Alcatraz; portraits of two men, and the words DUER, SOCK, and DEMON. Some of the Def Crown Villains, originally from Los Angeles, have collaborated here with Sock, a well known artist from France."
+The sock mural is scenery in Calle 24 Plaza. It is an artwork. "A dynamic mural covers the east wall of the plaza, showing a cable car, the Bay and a view of Alcatraz; portraits of two men, and the words DUER, SOCK, and DEMON. Some of the Def Crown Villains, originally from Los Angeles, have collaborated here with Sock, a well known artist from France." 
 
 
 A woman called a tamale lady is in Calle 24 Plaza. The description of a tamale lady is "A short, smiling woman in jeans and an army jacket stands next to a cooler on wheels." 
@@ -1526,11 +1526,11 @@ After talking to the tamale lady:
 	say "[one of]She hugs you. 'Hey baby. Everything good?[or]What’s new?'[or]When you’re a baby, you have your mama to take care of you, but now that you’re grown up you have to take care of yourself.[or]I love to feed people, you know? Everybody's gotta eat.[then at random]";
 
 Every turn when the player can see a tamale lady and five is a factor of the turn count and the player is not deaf:
-	say "The tamale lady says [one of]'Tamales de pollo!'[or]'Tamales!'[or]'Tamales de carne!'[or]'I don’t know you but i love you so don’t do the chemicals honey![or]When you’re a baby, you have your mama to take care of you, but now that you’re grown up you have to take care of yourself.[then at random]";
+	say "The tamale lady says [one of]'Tamales de pollo!'[or]'Tamales!'[or]'Tamales de carne!'[or]'I don’t know you but i love you so don’t do the chemicals honey![then at random]";
 
-A cooler on wheels is an openable container. It is in Calle 24 Plaza. It is scenery. The description is "A [if player is not blind]red and white[end if] cooler with a hinged lid." The sound of the cooler is "As the tamale seller handles the cooler, opening and closing the lid, you can hear that it's made of hollow plastic." 
+A cooler on wheels is an openable container. it is scenery. It is in Calle 24 Plaza.  The description is "A [if player is not blind]red and white[end if] cooler with a hinged lid." The sound of the cooler is "As the tamale seller handles the cooler, opening and closing the lid, you can hear that it's made of hollow plastic." 
 
-A tamal is an edible thing. Understand "tamale" as a tamal. 20 tamales are in the cooler on wheels. The price of the tamal is $3.00. The description is "A delicious-smelling tamal wrapped in banana leaves, paper, and foil."  
+A tamal is an edible thing. Understand "tamale" as a tamal. 20 tamals are in the cooler on wheels. The price of a tamal is $2.00. The description is "A delicious-smelling tamal wrapped in banana leaves, paper, and foil."  
 
 Does the player mean buying a tamal: it is very likely.
 
@@ -1542,9 +1542,10 @@ A hipster dude on a motorized unicycle is a man in Calle 24 Plaza. The descripti
 
 A yelling preacher is a person. In Calle 24 Plaza is a yelling preacher. The description of the preacher is "A short man yells fervently in Spanish into a microphone. You recognize some things from the Bible[if player is not deaf], though it's hard to understand him from the low quality amp at his feet[end if]."
 
-The orquestra is a person. The description of the orquestra is "A little group of musicians, some sitting on milk crates or buckets with their instruments, some standing and swaying gently as they play."
+The orquestra is a person. The description of the orquestra is "A little group of musicians, some sitting on milk crates or buckets with their instruments, some standing and swaying gently as they play." Understand "musicians" as the orquestra.
 
-Baile is a scene. Baile begins when the player is in Calle 24 for three turns.
+
+Baile is a scene. Baile begins when the player is in Calle 24 Plaza for three turns.
 
 When Baile begins: 
 	now the orquestra is in Calle 24 Plaza;
@@ -1582,7 +1583,7 @@ event
 
 Along Mission is northeast of Calle 24 Plaza. It is bumpy.  Along Mission is south of Old Bank Corner. The description is "Cruising along Mission between 16th and 24th stations, you pass a jumble of shops, restaurants, bars, and people all going about their business."	
 
-A woman called a stroller-pushing lady is in Along Mission. The description of the stroller-pushing lady  is "A lady in bright lipstick and a wig slightly askew, pushing a stroller. Wait . . . it's not a baby in there. It's a chihuahua in a sweater and the sweater matches its owner's sweater."
+A woman called a stroller-pushing lady is in Along Mission. The description of the stroller-pushing lady is "A lady in bright lipstick and a wig slightly askew, pushing a stroller. Wait . . . it's not a baby in there. It's a chihuahua in a sweater and the sweater matches its owner's sweater."
 													
 A accordion player is a man in Along Mission. The description of an accordion player is "A man [if player is not blind]in full mariachi uniform covered in bright buttons [end if], carrying an accordion."
 
@@ -1614,7 +1615,7 @@ Osage Alley is southwest of Circle Plaza. It is bumpy. The description of Osage 
 
 [The paintings are scenery in Osage Alley. The description is "[if the player is not blind]Vivid scrawls, mostly letters, hard for you to read as they're so intertwined and wildly shaped. In one exuberant splash of color to the north, there's the door to your home.[end if][if the player is blind]Trash and old spray paint cans litter the alley. The door to your home is in a stone wall to the north.[end if]"]
 
-The coffee mural is scenery in Osage Alley. It is an artwork. Understand "paintings", "mural", and "coffee" as the coffee mural. The description is "[if the player is not blind]A huge mural in bright colors splashes across the building to the west of the plaza. Two wide eyed cartoon characters in Aztec regalia look out from the mural. Above them is a cartoon street sign that reads COFFEE and across it, MISSION. Below the mural is a sloping area and a few steps that make a sort of stage. [end if][if the player is blind]A young guy next to you suddenly speaks up. 'Oh, you're curious about the mural? I know some guys who worked on that with Mel Waters, he's got stuff all over the Mission. The cafe people, Coffee and Mission, they like it, and the characters, they're like, I dunno, chibi Aztec king and queen or something. You ever see Danza Azteca? They come to the pow-wows. Big feathers, these sort of shell things on their ankles. [line break]He goes back to shaking his can of spray paint.[end if]" 
+The coffee mural is scenery in Osage Alley. It is an artwork. Understand "paintings", "mural", "wall" and "coffee" as the coffee mural. The description is "[if the player is not blind]A huge mural in bright colors splashes across the building to the west of the plaza. Two wide eyed cartoon characters in Aztec regalia look out from the mural. Above them is a cartoon street sign that reads COFFEE and across it, MISSION. Below the mural is a sloping area and a few steps that make a sort of stage. [end if][if the player is blind]A young guy next to you suddenly speaks up. 'Oh, you're curious about the mural? I know some guys who worked on that with Mel Waters, he's got stuff all over the Mission. The cafe people, Coffee and Mission, they like it, and the characters, they're like, I dunno, chibi Aztec king and queen or something. You ever see Danza Azteca? They come to the pow-wows. Big feathers, these sort of shell things on their ankles. [line break]He goes back to shaking his can of spray paint.[end if]" 
 
 After examining the coffee mural:
 	say "You think about the roots of the neighborhood.";
@@ -1639,7 +1640,7 @@ The stairwell is scenery in Circle Plaza. Understand "wall" and "well" and "bric
 
 The metal gratings are scenery in Circle Plaza. "Overlapping concentric circles make an unusual and beautiful pattern in the dark metal of these iron gratings. You think of raindrops in water, clocks, gears interlocking."
 
-Trees and the stage are scenery in Circle Plaza. 
+Trees, the steps, and the stage are scenery in Circle Plaza. 
 
 
 
@@ -1652,7 +1653,7 @@ A sidewalk artist carries a sketchpad. The description of the sketchpad is "[if 
 After talking to a sidewalk artist for the first time:
 	say "The artist looks up at you. 'Oh hey.' He says. 'Happy Tuesday!'";
 	say "'Name's Buddy. I like to draw the days.'[line break]";
-	say "You seem pretty nice, I don't mind asking you, got any food?";
+	say "'You seem pretty nice, I don't mind asking you, got any food?'";
 	now the printed name of the sidewalk artist is "Buddy the sidewalk artist";
 	now the sidewalk artist is proper-named;
 
@@ -1661,13 +1662,13 @@ After talking to a sidewalk artist for the first time:
 Understand "Buddy" as the sidewalk artist.
 
 Instead of giving an edible thing to the artist for the first time:
-	say "Hey! Thanks for [the noun]!";
-	say "'You like my drawing? It's Tuesday.";
+	say "'Hey! Thanks for [the noun]!'";
+	say "'You like my drawing? It's Tuesday.'";
 	say "'That's because it's Tuesday today. It can be Tuesday other times too.'";
 	say "'Especially right here in the plaza.'";
 	say "Buddy thinks for a minute, considering you.";
 	say "'Time is what you make of it. What with that magic marker and all.'";
-	say "Buddy laughs and goes back to his notepad.";
+	say "Buddy laughs and goes back to his sketchpad.";
 	say "His teeth are disturbingly bad.";
 	now the artist is carrying the noun;
 	record the artist as connected;
@@ -1677,9 +1678,12 @@ Instead of giving an edible thing to the artist:
 	now the artist is carrying the noun;
 	say "Hey! Thanks for [the noun]!"; 
 	
+	
 A flower seller is a woman. In Donuts Corner is a flower seller. The description of a flower seller is "[if the player is not blind]A short, smiling woman in a baseball hat and a red checked scarf pushes her wheely cart full of roses and carnations. Her jacket has a ladybug pin. [end if][if player is blind]There's a short woman just next to you, fussing over a metal cart.[end if]" 
 
 Understand "Mariquita" as the flower seller when the flower seller is proper-named.
+
+[Does the player mean buying a little bunch of carnations when the location of the player is Donuts Corner: it is likely.]
 
 Instead of talking to the flower seller for the first time:
 	say "You stop and chat with her. She's very friendly. [line break]Her name is Mariquita.[line break]Oh my. Did she just say what you think she said?![line break]Outrageous. You burst out laughing.";
@@ -1692,7 +1696,7 @@ Every turn when five is a factor of the turn count and the flower seller is prop
 
 A shopping cart is an open transparent container. It is scenery. It is in Donuts Corner. The description of the shopping cart is "A metal folding shopping cart on wheels. "
 
-The little bunch of carnations is a thing in the shopping cart. The price of the carnations is $1.00. The description is "A bunch of red carnations, stems wrapped in paper and tied with green twine."  Understand "flowers" as the little bunch of carnations.
+The little bunch of carnations is a thing in the shopping cart. The price of the carnations is $1.00. The description is "A bunch of red carnations, stems wrapped in paper and tied with green twine."  Understand "flowers" and "flower" as the little bunch of carnations.
 
 Instead of taking the cart:
 	say "But that belongs to Mariquita! And she's so nice.";
@@ -1843,6 +1847,7 @@ abstract reliefs	"Mission 24th"	"William George Mitchell"	1965
 ironwork railings	"Mission 16th"	"Victor Zaballa"	2003
 concrete shapes	"Mission 16th"	"William George Mitchell"	1965
 huge structure	"Mission 16th"	"Jarrod, Miloh, Rubin, Hzeller et al"	2016
+sock mural	"Mission 16th"	"Duer, Sock, and Demon"	2010
 marble mosaic	"Glen Park"	"Ernest Born"	1973	
 
 Listing works is an action applying to nothing.
