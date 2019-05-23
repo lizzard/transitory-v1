@@ -35,9 +35,24 @@ A boy is a kind of man. A girl is a kind of woman.
 A person is usually neuter.
 
 
+After reading a command:
+	if the player’s command matches “take all”:
+		replace the player’s command with “abstain”.
+	
+
+Understand "abstain" as abstaining. 
+
+Abstaining is an action applying to nothing. 
+	
+Carry out abstaining:
+	say "Best to take only what you need.";
+	stop the action.
+
+
+
 [start of game locations - the traveller's house - move this to Mission 24th later]
 
-Home Base is north of Osage Alley. "A bare yet familiar room, with minimal furniture for sitting. There's a doorway to the north, to the rest of your home. A small sign is on the wall, in print and in braille. [paragraph break]The world outside seems to call to you from the door to the south."
+Home Base is north of Osage Alley. "A bare yet familiar room, with minimal furniture for sitting. There's a hallway to the north, to the rest of your home. A small sign is on the wall, in print and in braille. [paragraph break]The world outside seems to call to you from a door to the south."
 
 A welcome sign is scenery in Home Base. "Welcome, traveller! Thank you for playtesting. [paragraph break]The most built-out areas are near 24th St and 16th St. [paragraph break]Further away, the trains should work correctly, but the world beyond the train platforms is only a skeleton. [paragraph break]Type 'help' for some basic commands and beginning hints." 
 
@@ -1624,8 +1639,9 @@ The stairwell is scenery in Circle Plaza. Understand "wall" and "well" and "bric
 
 The metal gratings are scenery in Circle Plaza. "Overlapping concentric circles make an unusual and beautiful pattern in the dark metal of these iron gratings. You think of raindrops in water, clocks, gears interlocking."
 
-Trees are scenery in Circle Plaza. 
-The stage is scenery in Circle Plaza. 
+Trees and the stage are scenery in Circle Plaza. 
+
+
 
 
 
