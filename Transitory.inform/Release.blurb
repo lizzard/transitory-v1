@@ -15,6 +15,8 @@ storyfile "/Users/ehenry/dev/inform7/transitory/Transitory.inform/Build/output.u
 ifiction "/Users/ehenry/dev/inform7/transitory/Transitory.inform/Metadata.iFiction" include
 cover "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/Cover.jpg"
 picture 1 "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/Cover.jpg"
+release file "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/Cover.jpg"
+release file "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/Small Cover.jpg"
 picture 3 "/Users/ehenry/dev/inform7/transitory/Transitory.materials/Figures/BART_map.png"
 picture 4 "/Users/ehenry/dev/inform7/transitory/Transitory.materials/Figures/abstract_reliefs_24.jpg"
 picture 5 "/Users/ehenry/dev/inform7/transitory/Transitory.materials/Figures/train_mural.jpg"
@@ -30,9 +32,26 @@ placeholder [BLURB] = "A work of interactive fiction."
 
 ! Other material to release
 
+
+! Website instructions
+
+placeholder [ENCODEDSTORYFILE] = "Transitory.gblorb.js"
+template path "/Users/ehenry/dev/inform7/transitory/Transitory.materials/Templates"
+template path "/Users/ehenry/Library/Inform/Templates"
+template path "/Applications/Inform.app/Contents/Resources/Internal/Templates"
+placeholder [INTERPRETERSCRIPTS] = " "
+interpreter "Quixe" "g"
+base64 "/Users/ehenry/dev/inform7/transitory/Transitory.inform/Build/output.ulx" to "/Users/ehenry/dev/inform7/transitory/Transitory.materials/Release/interpreter/Transitory.gblorb.js"
+
+! Website instructions
+
+template path "/Users/ehenry/dev/inform7/transitory/Transitory.materials/Templates"
+template path "/Users/ehenry/Library/Inform/Templates"
+template path "/Applications/Inform.app/Contents/Resources/Internal/Templates"
+css
+website "Standard"
+status instruction ||&nbsp;<a href="source:story.ni#line6"><img border=0 src=inform:/doc_images/Reveal.tif></a>||
 status alternative ||Using 'Release along with cover art', to provide something more distinctive than the default artwork above&nbsp;<a href=inform:/doc403.html><img border=0 src=inform:/doc_images/help.png></a>||
-status alternative ||Using 'Release along with a website'&nbsp;<a href=inform:/doc405.html><img border=0 src=inform:/doc_images/help.png></a>||
-status alternative ||Using 'Release along with an interpreter', for in-browser play on your website&nbsp;<a href=inform:/doc406.html><img border=0 src=inform:/doc_images/help.png></a>||
 status alternative ||Using 'Release along with a file of "Such-and-Such" called "whatever.pdf"', perhaps to add a manual, or a welcoming note&nbsp;<a href=inform:/doc401.html><img border=0 src=inform:/doc_images/help.png></a>||
 status alternative ||Using 'Release along with the source text'&nbsp;<a href=inform:/doc412.html><img border=0 src=inform:/doc_images/help.png></a>||
 status alternative ||Using 'Release along with a solution'&nbsp;<a href=inform:/doc411.html><img border=0 src=inform:/doc_images/help.png></a>||

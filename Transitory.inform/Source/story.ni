@@ -3,6 +3,8 @@
 Include Transit System by Emily Short.
 Include Basic Screen Effects by Emily Short.
 
+Release along with an interpreter. 
+
 Use MAX_STATIC_DATA of 500000.
 
 [Include Exit Lister by Eric Eve.]
@@ -14,6 +16,13 @@ Part 1 - Some beginning stuff
 
 When play begins: 
 	now the command prompt is "[time of day] >" ;
+
+
+			
+[A letter is a kind of thing. 
+
+The A-Letter, the B, the D, the R, and the T are letters. ]
+
 
 Rule for constructing the status line:
 	fill status bar with Table of Fancy Status; 
@@ -52,13 +61,15 @@ Carry out abstaining:
 
 [start of game locations - the traveller's house - move this to Mission 24th later]
 
-Home Base is north of Osage Alley. "A bare yet familiar room, with minimal furniture for sitting. There's a hallway to the north, to the rest of your home. A small sign is on the wall, in print and in braille. [paragraph break]The world outside seems to call to you from a door to the south."
+Home Base is north of Osage Alley. "A bare yet familiar room. A small sign is on the wall, in print and in braille. [paragraph break]There's a hallway to the north, to the rest of your home. The world outside seems to call to you from a door to the south."
 
-A welcome sign is scenery in Home Base. "Welcome, traveller! Thank you for playtesting. [paragraph break]The most built-out areas are near 24th St and 16th St. [paragraph break]For initial playtesting, don't worry about taking the train. (You can walk between 24th and 16th.) [paragraph break]Type 'help' for some basic commands and beginning hints. You should also look at your inventory ('i' to see it)." 
+A welcome sign is scenery in Home Base. "Welcome, traveller! Thank you for playtesting. [paragraph break]To start with: You should look at your inventory (type 'i' to see it).[paragraph break]Examine each object you're carrying (type 'x'' to examine)." 
 
-The Bedroom is north of Home Base. The description is "A room meant for sleeping, next to a small bathroom. To the west, there's another, more spacious room. A pocket door opens south to a bare living room."
+The Bedroom is north of Home Base. The description is "A room meant for sleeping, next to a small bathroom. There's a help sign by the door. To the west, there's another, more spacious room. A pocket door opens south to a bare living room."
 
 A battered table is a supporter in The Bedroom. It is fixed in place. 
+
+A help sign is scenery in The Bedroom. The description is "Type 'help' for some basic commands and beginning hints."
 
 A holo cube is an object. It is on a battered table. The description of a holo cube is "[if player is not blind]A cube with shifting images on its surfaces.[end if][if player is blind and player is not deaf]A smooth-faced cube whose surfaces move slightly under your hand, murmuring with voices.[end if]"
 
@@ -562,6 +573,10 @@ A property-aggregation rule for an object that is not a wheelchair worn by the p
 	
 A property-aggregation rule for a long cane:
 	add "wielded" to the tagline.
+	
+A property-aggregation rule for a magic marker:
+	if the magic marker is magical:
+		add "fizzing gently" to the tagline.
 
 The last property-aggregation rule (this is the print aggregated properties rule):
 	if the number of entries in the tagline is greater than 0:
@@ -1274,8 +1289,6 @@ After examining the concrete shapes:
 	display Figure of abstract reliefs;
 	say "Their blockiness is playful, reminding you of the shapes of children's toy blocks.";
 	say "Yet somehow their heaviness, as it ascends to the ground above, brings to mind the staunchness of determined builders.";
-	say "The magic marker seems to tingle for a moment in your pocket.";
-	now the magic marker is magical;
 	record the noun as experienced;
 	
 
@@ -1506,8 +1519,10 @@ After examining the train mural:
 	say "Your understanding of art deepens.";
 	say "The magic marker seems to tingle for a moment in your pocket.";
 	now the magic marker is magical;
+	record the train mural as experienced;
 
 The sock mural is scenery in Calle 24 Plaza. It is an artwork. "A dynamic mural covers the east wall of the plaza, showing a cable car, the Bay and a view of Alcatraz; portraits of two men, and the words DUER, SOCK, and DEMON. Some of the Def Crown Villains, originally from Los Angeles, have collaborated here with Sock, a well known artist from France." 
+	
 
 A cooler on wheels is an openable container. It is scenery. It is in Calle 24 Plaza.  The description is "A [if player is not blind]red and white[end if] cooler with a hinged lid." The sound of the cooler is "As the tamale seller handles the cooler, opening and closing the lid, you can hear that it's made of hollow plastic." 
 
@@ -1533,7 +1548,7 @@ Every turn when the player can see a tamale lady and five is a factor of the tur
 
 
 
-The tamale lady carries 20 tamales.
+The tamale lady carries 3 tamales.
 
 Does the player mean buying a tamale: it is very likely.
 
@@ -1614,19 +1629,22 @@ A plain donut is an edible thing in the display case. The price of the plain don
 A coconut donut is an edible thing in the display case. The price of the coconut donut is $1.00. The description is "A donut, simultanously dry and greasy, in a waxed paper jacket. Little bits of coconut are falling off it onto your hands."
 
 
-Osage Alley is southwest of Circle Plaza. It is bumpy. The description of Osage Alley is "This narrow alley leads to a streetcorner plaza opening out to the northeast. [if the player is not blind]Walls and garage doors are covered in colorful paintings, murals, swirls and wildstyle letters. You notice a large mural that says something about coffee. Tattered posters, stickers, and hastily scribbled tagging, in layers built up over time, are on the walls and light poles.[end if][if the player is blind]It smells of fresh spray paint and car exhaust.[end if]"
+Osage Alley is southwest of Circle Plaza. It is bumpy. The description of Osage Alley is "This narrow alley leads to a streetcorner plaza opening out to the northeast. [if the player is not blind]Walls and garage doors are covered in colorful paintings. You notice a large mural that says something about coffee. [end if][if the player is blind]It smells of fresh spray paint and car exhaust.[end if]"
 
 [The paintings are scenery in Osage Alley. The description is "[if the player is not blind]Vivid scrawls, mostly letters, hard for you to read as they're so intertwined and wildly shaped. In one exuberant splash of color to the north, there's the door to your home.[end if][if the player is blind]Trash and old spray paint cans litter the alley. The door to your home is in a stone wall to the north.[end if]"]
 
-The coffee mural is scenery in Osage Alley. It is an artwork. Understand "paintings", "mural", "wall" and "coffee" as the coffee mural. The description is "[if the player is not blind]A huge mural in bright colors splashes across the building to the west of the plaza. Two wide eyed cartoon characters in Aztec regalia look out from the mural. Above them is a cartoon street sign that reads COFFEE and across it, MISSION. Below the mural is a sloping area and a few steps that make a sort of stage. [end if][if the player is blind]A young guy next to you suddenly speaks up. 'Oh, you're curious about the mural? I know some guys who worked on that with Mel Waters, he's got stuff all over the Mission. The cafe people, Coffee and Mission, they like it, and the characters, they're like, I dunno, chibi Aztec king and queen or something. You ever see Danza Azteca? They come to the pow-wows. Big feathers, these sort of shell things on their ankles. [line break]He goes back to shaking his can of spray paint.[end if]" 
+The coffee mural is scenery in Osage Alley. It is an artwork. Understand "paintings", "mural", "wall" and "coffee" as the coffee mural. The description is "[if the player is not blind]Two wide eyed cartoon characters in Aztec regalia look out from a huge mural. Above them is a cartoon street sign that reads COFFEE and across it, MISSION. [end if][if the player is blind]A young guy next to you suddenly speaks up. 'I know some guys who worked on the coffee mural with Mel Waters. He's got stuff all over the Mission. Aztec dancers in regalia, kinda cartoon style.'[line break]He goes back to shaking his can of spray paint.[end if]" 
 
-After examining the coffee mural:
+
+After examining the coffee mural for the first time:
 	say "You think about the roots of the neighborhood.";
 	say "The people who came from the south, with the padres from Spain.";
 	say "Vaqueros, cooks, grinding the corn, drawing the water.";
-	say "Feathers, stone, and shell, ornaments of their ancestors, met again in the Ohlone people.";
-	say "Your understanding of art deepens.";
+	say "Feathers, stone, and shell, ornaments of their ancestors, met again in the Ohlone people.[paragraph break]";
 	say "The magic marker seems to tingle for a moment in your pocket.";
+	now the magic marker is magical;
+
+Before examining an artwork for the first time:
 	now the magic marker is magical;
 
 
@@ -2291,6 +2309,7 @@ Carry out switching on a card:
 		now the player is flying;	
 		say "Everything seems further away, and dimmer.";
 		say "You know what would hit the spot right now? A nice, juicy mosquito.";
+		say "You feel a strong urge to squeak.";
 		repeat with the item running through carried things: 
 			silently try dropping the item;
 		
@@ -2314,20 +2333,24 @@ A writing utensil can be magical or mundane. A writing utensil is usually mundan
 
 
 A card is a kind of device.  
+
+A transit card is a card. 
+
 A BART card, an ART card, a BAT card, a BAR card, a CART card, and a WART card are cards.
  
-
-The description of a BART card is "A [if player is not blind]blue and white [end if]card with a magnetic stripe. It says 'BART' in raised [if player is not blind] black[end if] letters that seem oddly like scribbly handwriting. It buzzes very faintly in your hand."
-
-The description of an ART card is "A [if player is not blind]blue and white card[end if] with a magnetic stripe. It says 'ART' in big [if player is not blind] black[end if] letters that seem oddly like scribbly handwriting. The letters blur and seem to move." 
-
-The description of a BAT card is "A [if player is not blind]blue and white card[end if] with a magnetic stripe. It says 'BAT' in big [if player is not blind] black[end if] letters that seem oddly like scribbly handwriting. The letters blur and seem to move."
-
 The player is carrying a magic marker and a BART card.
+
+The description of a BART card is "A [if player is not blind]blue and white [end if]card with a magnetic stripe. It says 'BART' in raised [if player is not blind]black[end if] letters that seem oddly like scribbly handwriting. It buzzes very faintly in your hand."
+
+The description of an ART card is "A [if player is not blind]blue and white card[end if] with a magnetic stripe. It says 'ART' in big [if player is not blind]black[end if] letters that seem oddly like scribbly handwriting. The letters blur and seem to move." 
+
+The description of a BAT card is "A [if player is not blind]blue and white card[end if] with a magnetic stripe. It says 'BAT' in big [if player is not blind]black[end if] letters that seem oddly like scribbly handwriting. The letters blur and seem to move."
+
+
 
 The magic marker is an object. The description of the magic marker is "A magic marker. [if the marker is magical]It fizzes and tingles with energy as if it were eager to make its mark.[end if]"
 
-Writing on is an action applying to two visible things. Understand "write on [something] with [something]" as writing on. Understand "tag [something] " or "scribble on [something] with [something]" as writing on. 
+Writing on is an action applying to one visible thing. Understand "write on [something]" as writing on. Understand "scribble on [something]" or "draw on [something]" as writing on. 
 
 [Figure out how to make it assume that you're writing with the marker]
 [Does the player mean writing on the noun with the magic marker: 
@@ -2335,12 +2358,18 @@ Writing on is an action applying to two visible things. Understand "write on [so
 
 Check writing on:
 	unless the magic marker is magical:
-		say "You can't think of anything to write, just yet.";
+		say "Lacking artistic inspiration, you can't think of anything to write.";
 		stop the action;
 	unless the noun is a card or the noun is a printer, say "Weird. It doesn't work. Try something else to write on." instead.
 
+		
+		
+
+		
+
 Carry out writing on:
 	if the noun is a card:
+		say "The marker fizzes with happy energy!";
 		now the noun is nowhere;
 		if a random chance of 1 in 2 succeeds:
 			now the player is carrying a BART card;
@@ -2360,6 +2389,54 @@ Carry out writing on:
 		say "Time seems to stop, then start again.";
 		now the noun is nowhere;
 		now the 3-D printer is in the location of the player;
+		
+
+[Carry out writing on:
+	if the noun is a BART card:
+		say "The marker fizzes with happy energy!";
+		say "You can modify one letter at a time in BART.";
+		say "To erase a letter, ERASE B, A, R, or T.";
+		say "To change a letter, CHANGE (B, A, R, or T) to (new letter) FROM CARD.";
+		say "To get your original BART card back, WRITE ON your modified card again.";
+	otherwise:
+		if the noun is a card:
+			now the noun is nowhere;
+			now the player is carrying a BART card;]
+				
+
+
+[Erasing is an action applying to one thing. Understand "erase [letter]" as erasing.
+
+[Procedural rule while erasing:
+	ignore the basic accessibility rule.]
+
+Check erasing:
+	place the noun in scope;
+	try silently taking the noun; 
+
+Carry out erasing:
+	if the noun is B:
+		now the BART card is nowhere;
+		say "You scribble on the card, removing the letter B.";
+		say "Everything around you has a new dimension!";
+		now the player is carrying an ART card;
+	if the noun is R:
+		now the BART card is nowhere;
+		say "You scribble on the card, removing the letter R.";
+		now the player is carrying a BAT card;
+	if the noun is T:
+		now the BART card is nowhere;
+		say "You scribble on the card, removing the letter T.";
+		now the player is carrying a BAR card;
+	otherwise:
+		say "The marker sluggishly refuses.";
+		stop the action.]
+		
+
+ 
+		
+		
+
 
 Squeaking is an action applying to nothing. Understand "squeak" as squeaking. 
 
@@ -2375,17 +2452,12 @@ Carry out squeaking:
 
 Table of Card Modifications
 Modification	Effect
-"ART"	"Everything looks much more interesting."	
-"BAR"	"A juice bar cart appears in the station."
-"BARD"	"A strangely dressed person with a lute wanders by, singing aggressively."
-"BARE"	"You are bare-naked! Shocking!"
-"BAT"	"You turn into a huge, flying bat."
-"BARF"	"There is a nasty puddle on the floor. Careful not to step in it."
-"BARK"	"All the little dogs in strollers and pit bulls on rope leashes start barking at once."
-"BARM"	"Smells very strongly of fermenting beer in this station, all of a sudden."
-"BARN"	"You are standing in a giant pile of hay. Several people in the station start to sneeze."
-"BART"
-"BERT"
+ART card	"Everything around you acquires a new dimension!"
+BAT card	"That feels very strange![line break]You turn into a huge, flying bat."
+BART card	"*Thunk* The world shifts a little, then settles into its ordinary groove."
+
+
+["BERT"
 "CART"
 "DART"
 "FART"
@@ -2394,6 +2466,14 @@ Modification	Effect
 "PART"
 "TART"
 "WART"
+
+BAR card	"A juice bar cart appears in the station."
+BARD card	"A strangely dressed person with a lute wanders by, singing aggressively."
+BARE card	"You are bare-naked! Shocking!"
+BARF card	"There is a nasty puddle on the floor. Careful not to step in it."
+BARK card	"All the little dogs in strollers and pit bulls on rope leashes start barking at once."
+BARM card	"Smells very strongly of fermenting beer in this station, all of a sudden."
+BARN card	"You are standing in a giant pile of hay. Several people in the station start to sneeze."]
 
 Part 10 - Train rules
 
