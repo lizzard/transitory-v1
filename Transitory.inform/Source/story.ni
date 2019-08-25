@@ -3,11 +3,9 @@
 Include Transit System by Emily Short.
 Include Basic Screen Effects by Emily Short.
 
-Release along with an interpreter. 
+Release along with an interpreter and a website. 
 
 Use MAX_STATIC_DATA of 500000.
-
-[Include Exit Lister by Eric Eve.]
 
 Use scoring.
 
@@ -16,12 +14,6 @@ Part 1 - Some beginning stuff
 
 When play begins: 
 	now the command prompt is "[time of day] >" ;
-
-
-			
-[A letter is a kind of thing. 
-
-The A-Letter, the B, the D, the R, and the T are letters. ]
 
 
 Rule for constructing the status line:
@@ -43,12 +35,10 @@ Divisibility relates a number (called N) to a number (called M) when the remaind
 A boy is a kind of man. A girl is a kind of woman.
 A person is usually neuter.
 
-
 After reading a command:
 	if the player’s command matches “take all”:
 		replace the player’s command with “abstain”.
 	
-
 Understand "abstain" as abstaining. 
 
 Abstaining is an action applying to nothing. 
@@ -56,8 +46,6 @@ Abstaining is an action applying to nothing.
 Carry out abstaining:
 	say "Best to take only what you need.";
 	stop the action.
-
-
 
 [start of game locations - the traveller's house - move this to Mission 24th later]
 
@@ -89,10 +77,10 @@ A desk, the shelf, and the workbenches are scenery in Room of the Traveller.
 
 A storage box is an object in Room of the Traveller. It is a closed openable container. It is fixed in place. 
 
-A slip of paper is in a storage box. The description of a slip of paper is "The things in the closet in the Traveller's Room are mostly for testing sightedness, hearing, and mobility. They aren't necessary for solving any puzzles, but the puzzles should be solvable while using them. If you want to test them, open the closet and take what you need. For example, wear the mirrorshades, then check your inventory and examine yourself.  [paragraph break]Note, hard of hearing and low vision modes aren't yet implemented. Also, for now, assume the Deaf player-character can lipread."
+A slip of paper is in a closet. The description of a slip of paper is "The things in the closet in the Traveller's Room are mostly for testing sightedness, hearing, and mobility. They aren't necessary for solving any puzzles, but the puzzles should be solvable while using them. If you want to test them, open the closet and take what you need. For example, wear the mirrorshades, then check your inventory and examine yourself.  [paragraph break]Note, hard of hearing and low vision modes aren't yet implemented. Also, for now, assume the Deaf player-character can lipread."
 
 In Room of the Traveller is an opaque, closed, openable container called a closet. The closet is scenery. 
-The wraparound mirrorshades, headphones, a thick woolly hat, the cruel shoes, a SMARTmap, a long cane, and earplugs are in the closet.
+The wraparound mirrorshades, headphones, a thick woolly hat, a pair of cruel shoes, a SMARTmap, a long cane, and earplugs are in the closet.
 
 A book is a kind of thing.  A SMARTmap is a book. A SMARTmap has a table name called the contents. The description of a SMARTmap is "An accessible map of the BART system with Braille entries. Use it like this: 'consult smartmap about red line' ";
 
@@ -130,184 +118,6 @@ topic	reply
 
 Part 2 - Multisensory
 
-[Written to include and extend Touchy Feely]
-[Touchy Feely by Quantum Games begins here. Extended by Liz Henry 2019]
-
-["Allows the player to use the other senses on things much more fully. Works well with, but does not require, Fully Spatial by Quantum Games. Fixed some report rules, Liz, 2019."] [Use authorial modesty.]
-[Putting this in main game code for ease of updating for playtesting]
-[2019-01-15 Fixed some report rules that didn't work right]
-[2019-02-02 Putting more possible default sensory descriptions]
-
-Section 1 - Feels
-
-Understand "touch" as touching the room. Touching the room is an action applying to nothing.
-
-A thing has some text called the feel. The feel of a thing is usually "".
-
-A room has some text called the feel. The feel of a room is usually "".
-
-The report touching yourself rule is not listed in the report touching rulebook.
-
-The report touching other people rule is not listed in the report touching rulebook.
-
-The report touching things rule is not listed in the report touching rulebook.
-
-Report touching (this is the Touchy Feely report touching rule):
-	if the feel of the noun is not "":
-		say "[the feel of the noun][line break]";
-	otherwise:
-		say "[thing without feel value][line break]";
-
-Report touching the room (this is the Touchy Feely report touching the room rule):
-	if the feel of the location of the player is not "":
-		say "[the feel of the location of the player][line break]";
-	otherwise:
-		say "[thing without feel value][line break]";
-
-The thing without feel value is a text variable. The thing without feel value is "[one of]Feels okay.[or]Feels like [a noun].[or]You feel nothing unexpected.[or]Yeah, that's [a noun] alright.[or]Feels pretty much like you'd think it would.[at random]"
-
-Section 2 - Scents
-
-A thing has some text called the scent. The scent of a thing is usually "".
-
-A room has some text called the scent. The scent of a room is usually "".
-
-The scent of a person is usually "Smells okay. Recently bathed, even."
-
-The report smelling rule is not listed in the report smelling rulebook.
-
-Report smelling (this is the Touchy Feely report smelling rule):
-	if the noun is nothing:
-		if the feel of the location of the player is not "":
-			say "[the scent of the location of the player][line break]";
-		otherwise:
-			say "[thing without scent value][line break]";
-	otherwise:
-		if the scent of the noun is not "":
-			say "[the scent of the noun][line break]";
-		otherwise:
-			say "[thing without scent value][line break]";
-
-The thing without scent value is a text variable. The thing without scent value is "[one of]It doesn't have much of a scent.[or]Smells okay.[or]Not much to report about how it smells.[or]Your nose doesn't detect much in this case.[or]Someday you may regret going around sniffing random objects. But not today.[then at random]"
-
-Section 3 - Tastes
-
-Understand "taste" as tasting the room. Tasting the room is an action applying to nothing.
-
-A thing has some text called the taste. The taste of a thing is usually "".
-
-A room has some text called the taste. The taste of a room is usually "".
-
-The taste of a person is "Tastes faintly salty. Should you be doing this?"
-
-The report tasting rule is not listed in the report tasting rulebook.
-	
-Report tasting (this is the Touchy Feely report tasting rule):
-	if the taste of the noun is not "":
-		say "[the taste of the noun][line break]";
-	otherwise:
-		say "[thing without taste value][line break]";	
-
-Report tasting the room (this is the Touchy Feely report tasting the room rule):
-	if the taste of the location of the player is not "":
-		say "[the taste of the location of the player][line break]";
-	otherwise:
-		say "[thing without taste value][line break]";
-
-The thing without taste value is a text variable. The thing without taste value is "[one of]You give the [noun] a quick experimental lick. Hmm.[or]You go to taste the [noun], then decide not to.[or]Tastes like you'd expect any [noun] to taste.[at random]"
-
-Section 4 - Sounds
-
-Understand "hear" as listening.
-
-A thing has some text called the sound. The sound of a thing is usually "".
-
-A room has some text called the sound. The sound of a room is usually "".
-
-The sound of a person is usually "You hear quiet breathing."
-
-The report listening rule is not listed in the report listening to rulebook.
-
-Report listening to (this is the Touchy Feely report listening rule):
-	if the noun is nothing:
-		if the sound of the location of the player is not "":
-			say "[the sound of the location of the player][line break]";
-		otherwise:
-			say "[thing without sound value][line break]";
-	otherwise:
-		if the sound of the noun is not "":
-			say "[the sound of the noun][line break]";
-		otherwise:
-			say "[thing without sound value][line break]";
-
-The thing without sound value is a text variable. The thing without sound value is "[one of]It's silent.[or]You hear nothing unexpected.[or]The [noun] doesn't make any noise.[or]The sound of silence.[or]It's quiet. Too quiet.[as decreasingly likely outcomes]"
-
-Section 5 - Descriptions
-
-Understand "see" as looking.
-
-Understand "see [something]" as examining.
-
-
-Section 6 - Special testing commands - Not for release
-
-Understand "testfeel" as testing the feel of things. Testing the feel of things is an action out of world, applying to nothing.
-
-Report testing the feel of things (this is the Touchy Feely feel testing rule):
-	repeat with R running through things:
-		if the feel of R is not "":
-			say "[R]: [feel of R][line break]";
-		otherwise:
-			say "[R]: [thing without feel value][line break]";
-	repeat with R running through rooms:
-		if the feel of R is not "":
-			say "[R]: [feel of R][line break]";
-		otherwise:
-			say "[R]: [thing without feel value][line break]";
-
-Understand "testscent" as testing the scent of things. Testing the scent of things is an action out of world, applying to nothing.
-
-Report testing the scent of things (this is the Touchy Feely scent testing rule):
-	repeat with R running through things:
-		if the scent of R is not "":
-			say "[R]: [scent of R][line break]";
-		otherwise:
-			say "[R]: [thing without scent value][line break]";
-	repeat with R running through rooms:
-		if the scent of R is not "":
-			say "[R]: [scent of R][line break]";
-		otherwise:
-			say "[R]: [thing without scent value][line break]";
-
-Understand "testtaste" as testing the taste of things. Testing the taste of things is an action out of world, applying to nothing.
-
-Report testing the taste of things (this is the Touchy Feely taste testing rule):
-	repeat with R running through things:
-		if the taste of R is not "":
-			say "[R]: [taste of R][line break]";
-		otherwise:
-			say "[R]: [thing without taste value][line break]";
-	repeat with R running through rooms:
-		if the taste of R is not "":
-			say "[R]: [taste of R][line break]";
-		otherwise:
-			say "[R]: [thing without taste value][line break]";
-
-Understand "testsound" as testing the sound of things. Testing the sound of things is an action out of world, applying to nothing.
-
-Report testing the sound of things (this is the Touchy Feely sound testing rule):
-	repeat with R running through things:
-		if the sound of R is not "":
-			say "[R]: [sound of R][line break]";
-		otherwise:
-			say "[R]: [thing without sound value][line break]";
-	repeat with R running through rooms:
-		if the sound of R is not "":
-			say "[R]: [sound of R][line break]";
-		otherwise:
-			say "[R]: [thing without sound value][line break]";
-
-[Touchy Feely Extended ends here.]
 
 
 Part 3 - Disabilities
@@ -418,8 +228,6 @@ A person has a deafness. The deafness of the player is hearing.
 
 sticker-covered headphones are a wearable object. "Headphones covered with stickers." 
 The description is "These big, fashionable headphones are slathered in Deaf culture and Deaf Pride stickers." 
-The sound is "These are headphones that block out sound. So it would be weird if you could hear them."
-The feel is "Slick headphones with cushiony, soft, breathable earpieces."
 
 Before wearing the headphones:
 	now the player is Deaf;
@@ -429,8 +237,7 @@ After taking off the headphones:
 	
 A thick woolly hat is a wearable object. "A thick woolly knit hat." 
 The description is "An attractive woollen hat knitted from thick yarn. It comes down well over your ears."
-The sound is "It makes a scrunchy sort of yarn noise if you get up real close and squeeze it."
-The feel is "Cozy, warm, soft and comfortable. It's a knit hat. It loves you."
+
 
 Before wearing the thick woolly hat:
 	now the player is hard-of-hearing;
@@ -438,10 +245,9 @@ Before wearing the thick woolly hat:
 After taking off the thick woolly hat:
 	now the player is hearing;
 	
-earplugs are a wearable object. "Little orange foam earplugs." 
+earplugs are a wearable object. "Squashy orange foam earplugs." 
 The description is "Foam earplugs, useful for when you don't want to be bothered by noise." 
-The sound is "They don't have a sound. That's the whole point."
-The feel is "Squashy little bits of foam."
+
 
 Before wearing the earplugs:
 	now the player is hard-of-hearing;  [this is meant to be little-d deaf but i havent figured out how to differentiate based on lower or upper case and it may not be possible.]
@@ -459,11 +265,11 @@ Ambulation is a kind of value. The ambulations are wheeling, walking, limping, f
 A person has an ambulation. The ambulation of a person is usually walking. 
 The ambulation of the player is walking.
 
-The cruel shoes are a wearable object. 
-Before wearing the cruel shoes:
+A pair of cruel shoes is a wearable object. 
+Before wearing a pair of cruel shoes:
 	now the player is wheeling;
 	
-After taking off the cruel shoes:
+After taking off a pair of cruel shoes:
 	now the player is walking;
 
 [experiment with wearing a wheelchair rather than using Rideable Vehicles]
@@ -815,11 +621,13 @@ To say exit list:
 			say "[if count is greater than 1] or [end if][bold type][way][roman type] ([place])". 
 
 Teleporting to is an action applying to one thing.
-Understand "go to [any room]" or "goto [any room]" as teleporting to. 
+Understand "bamf [any room]" as teleporting to. 
+
+Does the player mean teleporting to Ashby: It is very likely.
 
 	
 Carry out teleporting to: 
-	say "You blink out of existence and zap yourself to [the noun]. [line break]";
+	say "You blink out of existence and zap to [the noun]. [line break]";
 	move the player to the noun;
 
 
@@ -849,7 +657,7 @@ Richmond is a north endpoint.
 Millbrae is a south endpoint.
 
 Liftlandia is a region.  [everywhere an elevator might appear]
-Mission 24th Concourse is in Liftlandia.  Mission 24th Concourse is a street level station.
+Mission 24th Concourse is in Liftlandia.  Mission 24th Concourse is a concourse.
 
 Street Level is a region in Liftlandia. 
 Calle 24 Plaza is in Street Level. Calle 24 Plaza is a street level station.
@@ -896,12 +704,16 @@ The description of Antioch is "You are on a BART platform. You hear the noise of
 
 Chapter 2 - Ashby
 
-The description of Ashby is "You are on a BART platform underground.  Brick tiles on the floor, concrete sides to the platform tunnel  It isn't pretty."  Ashby is a platform.
+A room called Ashby is down from Ashby Concourse. The description of Ashby is "You are on a BART platform underground. Brick tiles on the floor, concrete sides to the platform tunnel. It isn't pretty."  Ashby is a platform.
 
-Ashby Concourse is up from Ashby. It is a concourse.
+Ashby Flea Market is west of Ashby Concourse. The description is "A lively flea market in the BART station parking lot."
+
+Ashby Concourse is up from Ashby. It is a concourse. The description is "To the east, a broad entrance to a spacious building. West, the concourse debouches into a large open air parking lot. "
 
 The quartzite rabbit is in Ashby Concourse.
-		
+
+The Ed Roberts Center is east of Ashby Concourse. The description of the Ed Roberts Center is "A large open building with a spiral ramp going up the center of the space. Various disability related organizations call this place home." The ramp is scenery in The Ed Roberts Center.
+
 West Berkeley Shellmound is a room.		
 
 Chapter 3 - Balboa Park
@@ -911,7 +723,6 @@ The description of Balboa Park is "You are on a BART platform with smooth marble
 Balboa Park Concourse is up from Balboa Park. It is a concourse. "Half underground, half open to the railyard outside, this unusually shaped station has the feeling of a massive pile of boulders or a brutalist fortress with a greenhouse roof on top. Under a hulking concrete buttress, you can go into a tiny shop."
 
 A tiny shop is inside from Balboa Park Concourse. The description of a tiny shop is "Inside this friendly little shop you can buy flowers, soda, candy, magazines, coffee, and homemade lumpia." 
-
 
 
 Ocean Avenue is north of Balboa Park Concourse. "A lot of buses and MUNI trains go by here. The J and K trains turn around in Green Yard next to the station, sometimes going into long, low barns for maintenance. To the west there are pedestrian bridges over the highway. Everything feels wrong for humans. it is a landscape made for trains and cars, hulking, hurtling, unseeing. "
@@ -1137,7 +948,6 @@ An astonished little boy is in Harry Bridges Plaza.
 
 
 
-
 Chapter 16 - Fremont
 
 The description of Fremont is "You are on a BART platform."
@@ -1354,7 +1164,7 @@ The gadget seller is a man in Papel Picado Plaza. The description of the gadget 
 
 The gadget table is scenery in Papel Picado Plaza. "Phone cases, cables, chargers, and headphones are laid out on this cheap folding table. The vendor doesn't seem quite ready for business though. He's still unpacking."
 		
-Old Bank Corner is south of Papel Picado Plaza. The surface of Old Bank Corner is sidewalk. "A crowded street corner in front of an old bank building. People are intent on getting across the street. "
+Old Bank Corner is south of Papel Picado Plaza. The surface of Old Bank Corner is sidewalk. "A crowded street corner in front of an old bank building. People are intent on getting across the street, to the BART plazas north and west of you. "
 	
 A rough sleeper is a man in Old Bank Corner. The description of a rough sleeper is "A scruffy man is passed out on the sidewalk next to a trash bag full of scavenged cans."
 
@@ -1363,9 +1173,19 @@ Plaza del Colibrí is west of Old Bank Corner. The surface of Plaza del Colibrí
 A hummingbird mural is scenery in Plaza del Colibrí. "These mosaic and metal murals show perky hummingbirds amid swirling flowers and branches. There is a bronze plaque under the murals."
 
 
-A bronze plaque is scenery in Plaza del Colibrí. "Dedicated to Victor Miller (1948-2002) Founder and publisher of the New Mission News, the voice of the Inner Mission for over 20 years. Victor was a tireless advocate and watchdog for the community whose vision and journalistic skills provided the most perceptive and trustworthy observations of the Mission Neighborhood. 'Comforting the Afflicted and Affecting the Comfortable since 1980'".
+A bronze plaque is scenery in Plaza del Colibrí. "Dedicated to Victor Miller (1948-2002) Founder and publisher of the New Mission News, the voice of the Inner Mission for over 20 years. Victor was a tireless advocate and watchdog for the community whose vision and journalistic skills provided the most perceptive and trustworthy observations of the Mission Neighborhood. 'Comforting the Afflicted and Affecting the Comfortable since 1980' [paragraph break]A little vase full of wilted flowers sits on the ground under the plaque. "
 
-A concrete pillar is an object in Plaza del Colibrí. It is fixed in place. It is a supporter. The description of a concrete pillar is "A waist-high square pillar, just big enough to sit on."
+A little vase is scenery in Plaza del Colibrí. It is an open container. The description is "The vase fills your heart with emotion like taking a deep breath; someone put it here in remembrance of their beloved dead. [if the vase does not contain a little bunch of carnations]Really, it should have fresh flowers.  [end if]"
+
+After inserting a little bunch of carnations into the little vase:
+	say "The vase trembles slightly.";
+	say "The mural behind it shifts. The flowers sway in a sudden breeze.";
+	say "A bird flies straight out of the mural, dropping a stone at your feet.";
+	say "You feel the whir of its wings on your face as it circles you closely, then zooms away.";
+	now the carnelian flower is in Plaza del Colibrí.
+	
+
+A concrete pillar is an object in Plaza del Colibrí. It is fixed in place. It is a supporter. The description of a concrete pillar is "A waist-high square pillar, just big enough to sit on." 
 
 An old guy in a brokendown manual wheelchair is a man in Plaza del Colibrí. The description of an old guy is "A guy slumped over in a rickety wheelchair with no footrests. He's moving slowly backwards, propelling the chair with his feet. The chair has 'SFGH' printed across the back." 
 
@@ -1396,29 +1216,29 @@ After talking to a cheerful ocarina player:
 Understand "Victor" as the cheerful man when the cheerful man is proper-named.
 
 
-[secret room accessible from ART card]
+[future integrated room ]
 Hummingbird Station is a room. The surface of Hummingbird Station is smooth. The description is "It's like the ironwork railing has come to life. A plaza like an enormous greenhouse and aviary, partially roofed over by glass but still open at the sides. Birds are flitting and calling. Flowering vines climb the buildings, railings, lightpoles and the trunks of the tall palms. There are wide benches among bubbling fountains and pools around the stairwell."
 
-A carnelian flower is an object. It is in Plaza del Colibrí. "This stylized flower is sculpted in carnelian, smooth and polished." The description of the carnelian flower is "It shimmers, slipping in time. You think of sacrifice and the blood of captive warriors." The scent of the carnelian flower is "Cold stone; ambergris; thyme."
+A carnelian flower is an object. "This stylized flower is sculpted in carnelian, smooth and polished." The description of the carnelian flower is "It shimmers, slipping in time. Cold stone; ambergris; thyme. You think of sacrifice and the blood of captive warriors." 
 
 	
 
-
-	[this location can be cut entirely	
-California Savings Corner is north of Plaza del Colibrí. It is west of Mission 16th Street Plaza. The surface of California Savings Corner is sidewalk. "This neighborhood bank building is still impressive, but grimy and faded with the years. The real life of this street corner is in the plazas across the street."]
-
 		
-Noisebridge is a room. The surface of Noisebridge is smooth. The description of Noisebridge is "You are in a large hackerspace. People are messing around with laptops in the Hackitorium, poking at electronic gadgets, reading in the library area, and playing video games over by the windows. There are piles of junk up against one wall."
+Noisebridge is a room. The surface of Noisebridge is smooth. The description of Noisebridge is "You are in a large hackerspace. People are messing around with laptops in the Hackitorium east of the main room, poking at electronic gadgets, reading in the library area, and playing video games over by the windows. There are piles of junk up against one wall."
 
 The workbench is a supporter in Noisebridge. It is fixed in place.
 
-The 3-D printer is a device in Noisebridge. It is fixed in place. "A weird, boxy gadget on a workbench. It has a big label that says '3-D Printer' [if the player is not blind]in smudgy black letters[end if]. When you put your hand on it, you feel a strange, tingling energy."
+The 3-D printer is a device in Noisebridge. It is fixed in place. The description of a 3-D printer is "A weird, boxy gadget on a workbench. It has a big label that says '3-D Printer' [if the player is not blind]in smudgy black letters[end if]. When you put your hand on it, you feel a strange, tingling energy."
 
-The 4-D printer is a device. "A weird, boxy gadget on a workbench. It has a big label that says '4-D Printer' [if the player is not blind]in smudgy black letters[end if]. It has a tangible aura of weirdness surrounding it for a few feet in every direction."
+The 4-D printer is a device. The description of a 4-D printer is "A weird, boxy gadget on a workbench. It has a big label that says '4-D Printer' [if the player is not blind]in smudgy black letters[end if]. It has a tangible aura of weirdness surrounding it for a few feet in every direction."
 
 The beer opener shaped like a Dalek is an object. The description is "A little gizmo, roughly printed, shaped like a Dalek from Doctor Who. When you put a penny in its slot, it works as a bottle opener.";
 
-The 4-D Timelock is a wearable object. The description is "A bizarre gadget made of something tingling and electric. You can't figure out where it begins and ends. It might make a nice bracelet.";
+The 4-D Timelock is a wearable device. The description is "A bizarre gadget made of something tingling and electric. You can't figure out where it begins and ends. It might make a nice bracelet.";
+
+[TODO put rules for Timelock operation here]
+[It should buzz when you enter a time locked area and a dial appears]
+
 
  
 Instead of switching on the 3-D printer:
@@ -1435,9 +1255,11 @@ Instead of switching on the 4-D printer for the first time:
 	say "An object appears gradually and then is ejected onto the workbench.";
 	now the 4-D timelock is on the workbench.
 	
-West of Noisebridge is the Hackitorium. The description of the Hackitorium is "A long open part of Noisebridge, where people are working on their projects at a big long central table. There's a huge structure with flashing lights to one side, and a pastel colored mural on the wall."
+East of Noisebridge is the Hackitorium. The description of the Hackitorium is "A long open part of Noisebridge, where people are working on their projects at a big long central table. There's a huge structure with flashing lights to one side, and a pastel colored mural on the wall."
 
-A huge structure is scenery in the Hackitorium. The description of a huge structure is "Beer bottles filled with LEDs and electronics are packed into plastic milk crates, stacked ten feet high. [if the player is not blind]Colorful flashing lights ripple across the structure hypnotically.[end if] A sign to the side of it says 'FLASCHENTASCHEN.'"
+A huge structure is scenery in the Hackitorium.  A huge structure is an artwork. The description of a huge structure is "Beer bottles filled with LEDs and electronics are packed into plastic milk crates, stacked ten feet high. [if the player is not blind]Colorful flashing lights ripple across the structure hypnotically.[end if] A sign to the side of it says 'FLASCHENTASCHEN.'" Understand "flaschentaschen" as a huge structure.
+
+[TODO register the mural and flaschentaschen as artworks]
 
 A pastel colored mural is scenery in the Hackitorium. The description of a pastel colored mural is "Swirling pastel paint fills one wall with scenes of Nikola Tesla and Margaret Hamilton."
 
@@ -1447,7 +1269,6 @@ A robot is a kind of person. Consenso is a robot in the Hackitorium.
 
 Rainglass Plaza is a room.	The surface of Rainglass Plaza is smooth.
 		
-
 
 
 Laguna de Manantial is a room.  The surface of Laguna de Manantial is sand.
@@ -1486,7 +1307,7 @@ Chapter 25 - Mission 24th St
 
 The description of Mission 24th St is "You are underground, on a BART platform. [if the player is not deaf]The hollow sound of vibrating train rails echoes through the station. Boxy concrete arches run overhead and then frame the sides of the train tunnel. [end if][if the player is not blind]On the platform itself, the floor is covered with long brick-red tiles, while the median walls are tiled in muted orange, gold, and brown, like a desert sunset.[end if]" 
 
-Mission 24th Concourse is up from Mission 24th St. Mission 24th Concourse is a concourse. "[if the player is not blind]Enormous concrete buttresses soar overhead, like a futuristic 70s airplane hangar.[end if] [if the player is not deaf]Music echoes hauntingly from a monumental stairwell rising up to the plaza, combining with the wild harmonics of trains below.[end if] [if the player is not blind]Abstract cement reliefs are sculpted all up and down the oddly corrugated sides of the stairwell, open to the sky.[end if][if the player is blind and the player is deaf]A big open space, full of people walking around, mostly underground but you feel the air and light from an enormous, deep, open stairwell to the plaza above. Another flight of stairs leads down to the train platform.[end if]" 
+Mission 24th Concourse is up from Mission 24th St. Mission 24th Concourse is a concourse. "[if the player is not blind]Enormous concrete buttresses soar overhead, like a futuristic 70s airplane hangar.[end if] [if the player is not deaf]Music echoes hauntingly from a monumental stairwell rising up to the plaza, combining with the wild harmonics of trains below.[end if] [if the player is not blind]Abstract cement reliefs are sculpted all up and down the oddly corrugated sides of the stairwell, open to the sky.[end if][if the player is blind]A big open space, full of people walking around, mostly underground but you feel the air and light from an enormous, deep, open stairwell to the plaza above. Another flight of stairs leads down to the train platform.[end if]" 
 
 The abstract reliefs are scenery. They are an artwork. They are in Mission 24th Concourse.  "[if the player is blind]In the stairwell, you feel along the wall. [end if]Big blocky shapes, rectangles, circles, half circles, are scuplted in relief along the rough sides of the enormous open stairwell to the plaza. They're reminiscent of brutalist skyscrapers and stoplights, a pleasing jumble of forms decorating the space."
 
@@ -1503,7 +1324,7 @@ After examining the abstract reliefs:
 	record the noun as experienced;
 	
 
-Calle 24 Plaza is up from Mission 24th Concourse. The surface of Calle 24 Plaza is bumpy.  "All around you are little shops and restaurants, people talking, buses pulling up to the stops on Mission and on 24th Street, music booming from cars going by. [if the player is not blind]A large open stairwell goes down to the station concourse.  To the east there's a mural that says SOCK. Another huge mural of a train runs across the wall of the taqueria bordering the plaza.[end if]"
+Calle 24 Plaza is up from Mission 24th Concourse. The surface of Calle 24 Plaza is bumpy.  "All around you are little shops and restaurants, people talking, buses pulling up to the stops on Mission and on 24th Street, music booming from cars going by. A large open stairwell goes down to the station concourse. You can also continue along Mission to the northeast. [if the player is not blind]To the east there's a mural that says SOCK. Another huge mural of a train runs across the wall of the taqueria bordering the plaza. [end if]"
 
 The train mural is scenery in Calle 24 Plaza. It is an artwork. "A mural of a gleaming BART train carried on the backs of determined workers amid a geometric cityscape. Their faces, barely sketched in, are brown, with broad high cheekbones."  
 
@@ -1524,7 +1345,7 @@ After examining the train mural:
 The sock mural is scenery in Calle 24 Plaza. It is an artwork. "A dynamic mural covers the east wall of the plaza, showing a cable car, the Bay and a view of Alcatraz; portraits of two men, and the words DUER, SOCK, and DEMON. Some of the Def Crown Villains, originally from Los Angeles, have collaborated here with Sock, a well known artist from France." 
 	
 
-A cooler on wheels is an openable container. It is scenery. It is in Calle 24 Plaza.  The description is "A [if player is not blind]red and white[end if] cooler with a hinged lid." The sound of the cooler is "As the tamale seller handles the cooler, opening and closing the lid, you can hear that it's made of hollow plastic." 
+A cooler on wheels is an openable container. It is scenery. It is in Calle 24 Plaza.  The description is "A [if player is not blind]red and white[end if] cooler with a hinged lid." 
 
 A tamale is an edible thing in the cooler on wheels.  The price of a tamale is $5.00. The description is "A delicious-smelling tamal wrapped in banana leaves, paper, and foil."  
 
@@ -1544,7 +1365,7 @@ After talking to the tamale lady:
 	say "[one of]She hugs you. 'Hey baby. Everything good?[or]What’s new?'[or]When you’re a baby, you have your mama to take care of you, but now that you’re grown up you have to take care of yourself.[or]I love to feed people, you know? Everybody's gotta eat.[then at random]";
 
 Every turn when the player can see a tamale lady and five is a factor of the turn count and the player is not deaf:
-	say "The tamale lady says [one of]'Tamales de pollo!'[or]'Tamales!'[or]'Tamales de carne!'[or]'I don’t know you but i love you so don’t do the chemicals honey![then at random]";
+	say "The tamale lady says [one of]'Tamales de pollo!'[or]'Tamales!'[or]'Tamales de carne!'[or]'I don’t know you but i love you so don’t do the chemicals honey![or]'Look out for that midnight elote lady, I hear things...'[then at random]";
 
 
 
@@ -1629,7 +1450,7 @@ A plain donut is an edible thing in the display case. The price of the plain don
 A coconut donut is an edible thing in the display case. The price of the coconut donut is $1.00. The description is "A donut, simultanously dry and greasy, in a waxed paper jacket. Little bits of coconut are falling off it onto your hands."
 
 
-Osage Alley is southwest of Circle Plaza. It is bumpy. The description of Osage Alley is "This narrow alley leads to a streetcorner plaza opening out to the northeast. [if the player is not blind]Walls and garage doors are covered in colorful paintings. You notice a large mural that says something about coffee. [end if][if the player is blind]It smells of fresh spray paint and car exhaust.[end if]"
+Osage Alley is southwest of Circle Plaza. It is bumpy. The description of Osage Alley is "This narrow alley leads to a streetcorner plaza opening out to the northeast. In the north wall of the alley, you recognize the door to your home. [if the player is not blind]Walls and garage doors are covered in colorful paintings. You notice a large mural that says something about coffee. [end if][if the player is blind]It smells of fresh spray paint and car exhaust.[end if]"
 
 [The paintings are scenery in Osage Alley. The description is "[if the player is not blind]Vivid scrawls, mostly letters, hard for you to read as they're so intertwined and wildly shaped. In one exuberant splash of color to the north, there's the door to your home.[end if][if the player is blind]Trash and old spray paint cans litter the alley. The door to your home is in a stone wall to the north.[end if]"]
 
@@ -1653,7 +1474,7 @@ The description of Circle Plaza is "[if player is not blind]You head into the cr
 
 Down from Circle Plaza is Mission 24th Concourse. 
 
-The sound of Circle Plaza is "Norteño blasts its cheerful accordions from a booth, saxophone notes float up from the huge, round stairwell which goes down to the station, songs blare from passing cars."
+
 
 The stairwell is scenery in Circle Plaza. Understand "wall" and "well" and "bricks" as the stairwell. "Burnt red bricks smoothly curve up around the edges of the wall around the big stairwell. There are a few people sitting with their backs against the curve. As you study the unusual structure, you notice metal gratings set into the plaza, one long strip near the edge where the plaza turns to sidewalk, and gratings around small, spindly saplings. The metal gratings have a circular pattern."
 
@@ -2071,9 +1892,7 @@ Urebure is a room.
 
 A stone tuft of grass is in Urebure. 
 
-Tanforan Racetrack is a room.
-	
-Tanforan Assembly Center is a room. The description of Tanforan Assembly Center is "A barbed wire fence surrounds the old racetrack. Thousands of Japanese-Americans are incarcerated inside, living in barracks and even in old horse stalls."
+
 	
 San Bruno Mountain is a room.
 
@@ -2091,6 +1910,12 @@ Chagunte is a room.
 Chapter 40 - San Francisco International Airport
 
 The description of San Francisco International Airport is "You are on a BART platform."
+
+Tanforan Racetrack is a room.
+	
+Tanforan Assembly Center is a room. The description of Tanforan Assembly Center is "A barbed wire fence surrounds the old racetrack. Thousands of Japanese-Americans are incarcerated inside, living in barracks and even in old horse stalls."
+
+[snake motel]
 
 Chapter 41 - San Leandro
 
@@ -2274,7 +2099,7 @@ Part 9 - Ticket reader
 A ticket reader is a thing.  "A ticket reader machine is here in a little kiosk[if player is hearing], softly humming[end if]."
 A ticket reader is fixed in place.
 Understand "machine" as a ticket reader.  
-The description of the ticket reader is "Its labels, both printed and Braille, are somewhat worn by time. A sign on the machine says 'Swipe *ART card for entry and exit."  The feel of the ticket reader is "Smooth metal, a little bit warm. The letters on its front panel are raised, as well as the Braille instructions. The ticket reader makes your fingers tingle as if powerful magnetic forces were swirling within the machine."  
+The description of the ticket reader is "[if the player is not blind]Its labels, both printed and Braille, are somewhat worn by time. A sign on the machine says 'Swipe *ART card for entry and exit[end if][if the player is blind]Smooth metal, a little bit warm. The letters on its front panel are raised, as well as the Braille instructions. The ticket reader makes your fingers tingle as if powerful magnetic forces were swirling within the machine.[end if]"  
 
 After going to a concourse:
 	now a ticket reader is in the location of the player;
@@ -2348,7 +2173,7 @@ The description of a BAT card is "A [if player is not blind]blue and white card[
 
 
 
-The magic marker is an object. The description of the magic marker is "A magic marker. [if the marker is magical]It fizzes and tingles with energy as if it were eager to make its mark.[end if]"
+The magic marker is an object. The description of the magic marker is "A plain old magic marker. [if the marker is magical]It fizzes and tingles with energy as if it were eager to make its mark.[end if]"
 
 Writing on is an action applying to one visible thing. Understand "write on [something]" as writing on. Understand "scribble on [something]" or "draw on [something]" as writing on. 
 
