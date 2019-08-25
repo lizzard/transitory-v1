@@ -593,8 +593,8 @@ A thing can be examined or unexamined. A thing is usually unexamined. Carry out 
 
 Taking inventory is acting confused. Looking is acting confused. Examining an examined thing is acting confused. 
 
-After acting confused for six turns:
-        say "(If you are feeling lost, try typing 'help' for suggestions.)" 
+After acting confused for four turns:
+        say "(If you are feeling lost, try typing 'help' for suggestions or 'hint' for a list of hints.)" 
 
 Understand "help [text]" or "help about [text]" as getting help about. Understand the commands "instructions" or "menu" or "info" or "about" as "help". 
 
@@ -649,14 +649,14 @@ Carry out summoning hints:
 
 Table of Hints
 topic	title	summary	explanation
-"start"	"start"	"Hints for the start of the game"	"Explore all of the Mission and 24th and 	16th area, including your home. Examine the artworks. Examine and talk to people. You have to do that before you can ride the train."
-"marker"	"marker"	"How to use the marker"	"After you've examined an artwork at 24th, your marker will initialize. You can use it to write on your BART card to modify it. The main use will be for ART; Once it's changed into an ART card, try swiping it and exploring the local area."
+"start"	"start"	"Hints for the start of the game"	"Explore all of the Mission (24th and 16th), including your home. Examine the artworks. Examine and talk to people. You have to do that before you can ride the train."
+"marker"	"marker"	"How to use the marker"	"After you've examined an artwork, your marker will initialize. Write on your BART card to magically modify it, then look at your inventory again to check how it's changed. Once it's changed into an ART card, try swiping it and exploring the local area."
 "money"	"money"	"How do I use money? Can I get more?"	"You can buy a few things in the game so far. There will be ways to get more money, but they aren't written yet."
-"circle plaza"	"circle plaza"	"What is the secret of Circle Plaza? (SPOILER)"	"Swipe the ART card and go up. Circle Plaza has transformed into a giant Aztec calendar. Find the artifacts and put them into the calendar glyph slots."
-"noisebridge"	"noisebridge"	"How do I get to Noisebridge? (SPOILER)"	"Swipe the ART card and then climb the sculptures in the 16th St station."
-"printer (SPOILER)" 	"printer"	"How do I get the printer to work?"	"Try writing on the printer."
+"circle plaza"	"circle plaza"	"What is the secret of Circle Plaza? (SPOILER)"	"Swipe the ART card in 24th and go up. Circle Plaza has transformed into a giant Aztec calendar. Find the artifacts (on the Red Line stations) and put them into the calendar."
+"noisebridge"	"noisebridge"	"How do I get to Noisebridge? (SPOILER)"	"Swipe the ART card in 16th and then climb the sculptures."
+"printer (SPOILER)" 	"printer"	"Can I make the 3D printer make more useful things?"	"The printer has a fizzy magic aura; maybe it's writeable, like your card?"
 "artifacts"	"artifacts"	"Where do I find the artifacts?"	"Most (but not quite all) stations on the Red Line will have a puzzle to solve, which will lead to one of the glyph artifacts."
-"Manastabal"	"Manastabal"	"Who is Manastabal?"	"Manastabal is based on the guide from Monique Wittig's Across the Acheron (Virgil, non) which is a lesbian retelling of Dante's Inferno and Paradisio."
+"Manastabal"	"Manastabal"	"Who is Manastabal?"	"Manastabal is based on the guide from Monique Wittig's Across the Acheron (Virgil, non) which is a lesbian, non-linear retelling of Dante's Inferno and Paradisio."
 "train lines"	"train lines"	"What about the other train lines?"	"They should work (more or less) but I haven't written most of those stations, or their puzzles, yet. Each line will eventually have a larger meta-puzzle.  "
 "traveller"	"traveller"	"Who am I, anyway?"	"That's a very good question!"
 
