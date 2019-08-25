@@ -28,6 +28,9 @@ The maximum score is 200.
 
 [some general rules, not sure where to put them yet]
 
+A surface is a kind of value. A room has a surface. 
+The surfaces are smooth, bumpy, sidewalk, brick, cracked, gravel, sand, grassy, and mud. A room is usually smooth.
+
 An artwork is a kind of thing.
 
 Divisibility relates a number (called N) to a number (called M) when the remainder after dividing M by N is 0. The verb to divide means the divisibility relation. The verb to be a factor of means the divisibility relation. 
@@ -49,11 +52,11 @@ Carry out abstaining:
 
 [start of game locations - the traveller's house - move this to Mission 24th later]
 
-Home Base is north of Osage Alley. "A bare yet familiar room. A small sign is on the wall, in print and in braille. [paragraph break]There's a hallway to the north, to the rest of your home. The world outside seems to call to you from a door to the south."
+Home Base is north of Osage Alley.  The surface of Home Base is smooth. "A bare yet familiar room. A small sign is on the wall, in print and in braille. [paragraph break]There's a hallway to the north, to the rest of your home. The world outside seems to call to you from a door to the south."
 
 A welcome sign is scenery in Home Base. "Welcome, traveller! Thank you for playtesting. [paragraph break]To start with: You should look at your inventory (type 'i' to see it).[paragraph break]Examine each object you're carrying (type 'x'' to examine)." 
 
-The Bedroom is north of Home Base. The description is "A room meant for sleeping, next to a small bathroom. There's a help sign by the door. To the west, there's another, more spacious room. A pocket door opens south to a bare living room."
+The Bedroom is north of Home Base.It is smooth. The description is "A room meant for sleeping, next to a small bathroom. There's a help sign by the door. To the west, there's another, more spacious room. A pocket door opens south to a bare living room."
 
 A battered table is a supporter in The Bedroom. It is fixed in place. 
 
@@ -71,7 +74,7 @@ Instead of taking the holo cube:
 		say "Familiar voices - family? The memories surface, then slip away.";
 	say "You settle the cube back in its place.";
 
-Room of the Traveller is west of The Bedroom. "You feel at home here, in this room with a long shelf, desk, and sturdy workbenches. It's arranged just how you like it." 
+Room of the Traveller is west of The Bedroom. The surface of Room of the Traveller is smooth. The description is "You feel at home here, in this room with a long shelf, desk, and sturdy workbenches. It's arranged just how you like it." 
 
 A desk, the shelf, and the workbenches are scenery in Room of the Traveller. 
 
@@ -116,7 +119,69 @@ topic	reply
 "solar" or "solar line"	"The Solar Line runs through Embarcadero, L1, L2, L4, L5, Moon Base Copernicus, Venus Orbital, Freyja Montes, Mercury Orbital, Mercury Rachmaninoff, Phobos, Utopia Planitia, Ceres, Europa, Saturn Orbital, Titan, Oberon, Triton, Kuiper Belt, Pluto, Eris, and Planet Nine."
 
 
-Part 2 - Multisensory
+Part 2 - Works and Friends
+
+
+Before examining an artwork, record the noun as experienced.
+
+To record (E - artwork) as experienced: 
+	choose row with a reference of E in Table of Works; 
+	say "Your understanding of art deepens.";
+	if there is no experienced entry: 
+		now experienced entry is the time of day; 
+		
+Table of Works 
+reference	station	artist	year (a number)	experienced (a time)
+coffee mural	"Mission 24th"	"Mark Bode, Mel Waters, Nite Owl, Dagon, Dino and Free"	2016
+train mural	"Mission 24th"	"Michael Rios with Anthony Machado and Richard Montez"	1975
+abstract reliefs	"Mission 24th"	"William George Mitchell"	1965
+ironwork railings	"Mission 16th"	"Victor Zaballa"	2003
+concrete shapes	"Mission 16th"	"William George Mitchell"	1965
+huge structure	"Mission 16th"	"Jarrod, Miloh, Rubin, Hzeller et al"	2016
+sock mural	"Mission 16th"	"Duer, Sock, and Demon"	2010
+marble mosaic	"Glen Park"	"Ernest Born"	1973	
+
+Listing works is an action applying to nothing.
+
+Understand "works" or "artworks" as listing works.
+
+Report listing works:
+	say "Artworks you've considered recently: [line break]";
+	repeat with N running from 1 to the number of rows in the Table of Works:
+		choose row N in the Table of Works;
+		if there is an experienced entry : 
+			say "[reference entry], by [artist entry], at [station entry]." 	
+			
+
+
+To record (P - person) as connected:
+	choose row with a name of P in Table of Friendships;
+	now the connected entry is the connected entry plus one;
+	say "You feel connected to the people of this place and time.";
+
+	
+Table of Friendships
+name	station	connected (number)
+flower seller	"Mission 24th"	0
+sidewalk artist	"Mission 24th"	0	
+tamale lady	"Mission 24th"	0
+stencil artist	"Mission 16th"	0
+ocarina player	"Mission 16th"	0
+
+
+
+Listing friends is an action applying to nothing.
+
+Understand "friends" as listing friends.
+
+Report listing friends:
+	say "Friends you've made recently: [line break]";
+	repeat with N running from 1 to the number of rows in the Table of Friendships:
+		choose row N in the Table of Friendships;
+		if the connected entry is greater than 0: 
+			say "[name entry], at [station entry]." 
+
+
 
 
 
@@ -288,28 +353,26 @@ Before going to any room:
 			stop the action;
 		otherwise:
 			if the surface of the location is bumpy:
-				say "[one of]Bumpy ground, but still navigable.[or]Something on your chair is rattling as you go over this jolting surface.[or]Your joints ache with every bump you roll over.[or]The bumps jar your spine.[at random]";
-			if the surface of the location is uneven:
-				say "[one of]You bump and careen across the uneven ground.[or]You carefully pick your way across the uneven ground.[at random]";
+				say "[one of]Bumpy ground, but still navigable.[or]It's annoyingly bumpy ground here.[or]Something on your chair is rattling as you go over this jolting surface.[or]You bump and careen across the uneven ground.[or]You carefully pick your way across the uneven ground.[or]Your joints ache with every bump you roll over.[or]The bumps jar your spine.[at random]";
 			if the surface of the location is brick:
-				say "[one of]Your wheels judder across the bumpy floor.[or]Every brick and tile jostles you a little.[or]You can feel the bricks bumping under your tires.[at random]";
+				say "[one of]Your wheels judder across the blocky floor.[or]Every brick and tile jostles you a little.[or]You can feel the bricks bumping under your tires.[at random]";
 			if the surface of the location is grassy:
-				say "The ground is a little soft. Luckily, your wheels can handle it.";
+				say "[one of]The ground is a little soft. Luckily, your wheels can handle it.[or]You trundle determinedly over the uneven grass.[or]Paying special attention to the ground to look for holes or stones, you make your way across the grass[at random]";
 			if the surface of the location is mud:
 				say "You stick in the mud briefly, then wrench free.";
 			if the surface of the location is sand:
 				say "Your wheels sink into the sand. It's difficult to get across it.";
 			if the surface of the location is gravel:
-				say "[one of]Your wheels skid around in the gravel in the deep spots. Embarassing. [or]Ugh, gravel.[at random]";
+				say "[one of]Your wheels skid around in the gravel in the deep spots. Embarassing. [or]Ugh, gravel.[or]Little stones are sticking in your tires. Hope this gravel won't get too deep.[at random]";
 			if the surface of the location is smooth:
-				say "[one of] [or]You zoom on over.[or]You wheel across pleasantly flat ground.[or]Silently, with minimal effort, you traverse the smooth floor.[or]This is such a nice, zippy chair.[or]Swanlike, you sail across the smooth ground.[or]You glide over gracefully, feeling suave.[or]Pirouetting smoothly in place, you wheel on over.[then at random]";
+				say "[one of] [or]You zoom on over.[or]You wheel across pleasantly flat ground.[or]Silently, with minimal effort, you traverse the smooth floor.[or]This is such a nice, zippy chair.Smooth![or]Ahhh. Level ground. Feels great.[or]Swanlike, you sail across the smooth ground.[or]You glide over gracefully, feeling suave.[or]Pirouetting smoothly in place, you wheel on over.[then at random]";
 	if the ambulation of the player is walking:
 		if the player is carrying a wheelchair:
 			say "You have some trouble going anywhere while carrying something that big. Maybe if you put it down and sit in it, things will be easier.";
 			stop the action;
 		
 After wearing a wheelchair:
-	say "You sit in [the noun]. It's comfy.";
+	say "You sit in [the noun]. It's comfy and responsive to your touch.";
 	now the ambulation of the player is wheeling;
 	stop the action.
 	
@@ -340,9 +403,44 @@ Before standing up:
 	otherwise:
 		say "You're already up.";
 		continue the action.
-		
-The print standard inventory rule is not listed in any rulebook. 		
 
+
+
+Section 4 - Some varied defaults for examining
+
+
+[replace the look description for examining objects, without assuming sightedness]
+
+The description of yourself is "As fantabulous as ever. [line break] You are [sightedness], [deafness], and [ambulation].";
+
+The examine undescribed things rule is not listed in any rulebook.
+
+Carry out examining (this is the multisensory examine undescribed things rule):
+	if examine text printed is false:
+		say "[one of]Nothing special about [the noun].[or]Ordinary enough.[or]Yeah, it's [a noun].[or]You note the presence of [a noun].[at random][run paragraph on]";
+
+	
+
+[todo: fix the paragraph breaks after objects with descriptions]	
+Studying the vicinity is an action applying to nothing. 
+
+Report studying the vicinity:
+	if the player is blind or the player is low-vision:
+		say "You explore with your cane tip and free hand, navigating the area. [paragraph break]";
+		if the location does not contain something which is scenery:
+			say "There's little of interest in [the location]." instead;	
+		repeat with point of interest running through scenery in the location:
+			say "[point of interest]: [run paragraph on]";
+			try examining the point of interest;			
+	otherwise:
+		say "You should try examining specific things with all available senses."
+
+Understand "tap", "sweep" or "explore" as studying the vicinity. 
+
+	
+
+[Adds taglines to your inventory for particular things] 		
+The print standard inventory rule is not listed in any rulebook. 		
 Carry out taking inventory (this is the new print inventory rule):
 	say "You are carrying: [line break]";
 	list the contents of the player, with newlines, indented, including contents, with extra indentation. 
@@ -390,38 +488,7 @@ The last property-aggregation rule (this is the print aggregated properties rule
 		rule succeeds;
 	rule fails. 
 
-
-Section 4 - Some varied defaults for examining
-
-[replace the look description for examining objects, without assuming sightedness]
-
-The description of yourself is "As fantabulous as ever. [line break] You are [sightedness], [deafness], and [ambulation].";
-
-The examine undescribed things rule is not listed in any rulebook.
-
-Carry out examining (this is the multisensory examine undescribed things rule):
-	if examine text printed is false:
-		say "[one of]Nothing special about [the noun].[or]Ordinary enough.[or]Yeah, it's [a noun].[or]You note the presence of [a noun].[at random][run paragraph on]";
 	
-
-	
-	
-[todo: fix the paragraph breaks after objects with descriptions]	
-Studying the vicinity is an action applying to nothing. 
-
-Report studying the vicinity:
-	if the player is blind or the player is low-vision:
-		say "You explore with your cane tip and free hand, navigating the area. [paragraph break]";
-		if the location does not contain something which is scenery:
-			say "There's little of interest in [the location]." instead;	
-		repeat with point of interest running through scenery in the location:
-			say "[point of interest]: [run paragraph on]";
-			try examining the point of interest;			
-	otherwise:
-		say "You should try examining specific things with all available senses."
-
-Understand "tap", "sweep" or "explore" as studying the vicinity. 
-
 
 Waiting more is an action applying to one number.
 
@@ -638,8 +705,7 @@ Section 1 - Regions
 
 
 
-A surface is a kind of value. A room has a surface. 
-The surfaces are smooth, bumpy, sidewalk, brick, cracked, uneven, gravel, sand, grassy, and mud. A room is usually smooth.
+
 
 A room can be a platform. 
 A room can be a concourse. 
@@ -1433,7 +1499,7 @@ A perfectly good cigarette is in Along Mission.
 Donuts Corner is west of Calle 24 Plaza. The surface of Donuts Corner is sidewalk. "Just outside the Chinese Food and Donuts shop, this lively streetcorner has buses pulling up along 24th Street, many cars going by, people crossing the street or standing around[if player is not deaf], music blaring from passing cars and from the shops[end if]. [if player is not blind]Along Mission, high overhead, washingtonia palms stretch into the sky.[end if] To the east, there's another plaza."
 
 
-West of Donuts Corner is a room called Chinese Food and Donuts. 
+West of Donuts Corner is a room called Chinese Food and Donuts. It is smooth. 
 
 The description of Chinese Food is "The donut shop is warm and bright. It smells like tasty food and baked goods.[if the player is not blind] One display case holds rows of donuts. Another has steam trays full of hot food.[end if]" 
 
@@ -1469,7 +1535,7 @@ Before examining an artwork for the first time:
 	now the magic marker is magical;
 
 
-Circle Plaza is south of Donuts Corner. It is bumpy.
+Circle Plaza is south of Donuts Corner. It is sidewalk.
 The description of Circle Plaza is "[if player is not blind]You head into the crowds of this busy space built around an unusual circular wall, like a giant well made of bricks. People are selling stuff from tables and little booths. Across 24th street to the north, there's a donut shop. [end if][if player is not deaf]Many kinds of music are playing at once. [end if][if player is not hearing or player is not sighted]This is a typical, busy, open space on Mission Street. It's super familiar; the alley to your home is just to the southwest of this lively plaza.[end if]".
 
 Down from Circle Plaza is Mission 24th Concourse. 
@@ -1559,9 +1625,9 @@ A guy in a yellow vest is a man in Calle 24 Corner. The description of the guy i
 
 [Once you swipe the art card in Mission 24th]
 
-Brutalist Plaza is a room.  It is uneven. "You pick your way through paths around enormous, rough-hewn blocks of concrete and stone. They tower overhead like the tufa mounds of Mono Lake or a cityscape in a dream. A little to the southwest, the path broadens."
+Brutalist Plaza is a room.  It is bumpy. "You pick your way through paths around enormous, rough-hewn blocks of concrete and stone. They tower overhead like the tufa mounds of Mono Lake or a cityscape in a dream. A little to the southwest, the path broadens."
 
-Times Circle is southwest of Brutalist Plaza. It is bumpy. "A plaza opens up before you, a dream echo of the circular plaza of the world you know best. Underfoot, an enormous circle split into sections is set into the stones." 
+Times Circle is southwest of Brutalist Plaza. It is smooth. "A plaza opens up before you, a dream echo of the circular plaza of the world you know best. Underfoot, an enormous circle split into sections is set into the stones." 
 
 Manastabal is a woman. 
 
@@ -1671,66 +1737,6 @@ and the magic marker activates.  check in the table? or...?
 ]
 
 
-
-
-Before examining an artwork, record the noun as experienced.
-
-To record (E - artwork) as experienced: 
-	choose row with a reference of E in Table of Works; 
-	say "Your understanding of art deepens.";
-	if there is no experienced entry: 
-		now experienced entry is the time of day; 
-		
-Table of Works 
-reference	station	artist	year (a number)	experienced (a time)
-coffee mural	"Mission 24th"	"Mark Bode, Mel Waters, Nite Owl, Dagon, Dino and Free"	2016
-train mural	"Mission 24th"	"Michael Rios with Anthony Machado and Richard Montez"	1975
-abstract reliefs	"Mission 24th"	"William George Mitchell"	1965
-ironwork railings	"Mission 16th"	"Victor Zaballa"	2003
-concrete shapes	"Mission 16th"	"William George Mitchell"	1965
-huge structure	"Mission 16th"	"Jarrod, Miloh, Rubin, Hzeller et al"	2016
-sock mural	"Mission 16th"	"Duer, Sock, and Demon"	2010
-marble mosaic	"Glen Park"	"Ernest Born"	1973	
-
-Listing works is an action applying to nothing.
-
-Understand "works" or "artworks" as listing works.
-
-Report listing works:
-	say "Artworks you've considered recently: [line break]";
-	repeat with N running from 1 to the number of rows in the Table of Works:
-		choose row N in the Table of Works;
-		if there is an experienced entry : 
-			say "[reference entry], by [artist entry], at [station entry]." 	
-			
-
-
-To record (P - person) as connected:
-	choose row with a name of P in Table of Friendships;
-	now the connected entry is the connected entry plus one;
-	say "You feel connected to the people of this place and time.";
-
-	
-Table of Friendships
-name	station	connected (number)
-flower seller	"Mission 24th"	0
-sidewalk artist	"Mission 24th"	0	
-tamale lady	"Mission 24th"	0
-stencil artist	"Mission 16th"	0
-ocarina player	"Mission 16th"	0
-
-
-
-Listing friends is an action applying to nothing.
-
-Understand "friends" as listing friends.
-
-Report listing friends:
-	say "Friends you've made recently: [line break]";
-	repeat with N running from 1 to the number of rows in the Table of Friendships:
-		choose row N in the Table of Friendships;
-		if the connected entry is greater than 0: 
-			say "[name entry], at [station entry]." 
 
 
 Chapter 26 - Montgomery
