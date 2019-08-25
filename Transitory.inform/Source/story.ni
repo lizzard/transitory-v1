@@ -121,7 +121,6 @@ topic	reply
 
 Part 2 - Works and Friends
 
-
 Before examining an artwork, record the noun as experienced.
 
 To record (E - artwork) as experienced: 
@@ -137,9 +136,10 @@ train mural	"Mission 24th"	"Michael Rios with Anthony Machado and Richard Montez
 abstract reliefs	"Mission 24th"	"William George Mitchell"	1965
 ironwork railings	"Mission 16th"	"Victor Zaballa"	2003
 concrete shapes	"Mission 16th"	"William George Mitchell"	1965
-huge structure	"Mission 16th"	"Jarrod, Miloh, Rubin, Hzeller et al"	2016
+flaschentaschen	"Mission 16th"	"Jarrod, Miloh, Rubin, Hzeller et al"	2016
 sock mural	"Mission 16th"	"Duer, Sock, and Demon"	2010
-marble mosaic	"Glen Park"	"Ernest Born"	1973	
+marble mosaic	"Glen Park"	"Ernest Born"	1973
+pastel mural	"Mission 16th"	"A Noisebridger"	2013	
 
 Listing works is an action applying to nothing.
 
@@ -433,7 +433,7 @@ Report studying the vicinity:
 			say "[point of interest]: [run paragraph on]";
 			try examining the point of interest;			
 	otherwise:
-		say "You should try examining specific things with all available senses."
+		say "You don't have a cane. Maybe try examining specific things."
 
 Understand "tap", "sweep" or "explore" as studying the vicinity. 
 
@@ -1323,11 +1323,25 @@ Instead of switching on the 4-D printer for the first time:
 	
 East of Noisebridge is the Hackitorium. The description of the Hackitorium is "A long open part of Noisebridge, where people are working on their projects at a big long central table. There's a huge structure with flashing lights to one side, and a pastel colored mural on the wall."
 
-A huge structure is scenery in the Hackitorium.  A huge structure is an artwork. The description of a huge structure is "Beer bottles filled with LEDs and electronics are packed into plastic milk crates, stacked ten feet high. [if the player is not blind]Colorful flashing lights ripple across the structure hypnotically.[end if] A sign to the side of it says 'FLASCHENTASCHEN.'" Understand "flaschentaschen" as a huge structure.
+Flaschentaschen is scenery in the Hackitorium. It is an artwork.  The description of flaschentaschen is "Beer bottles filled with LEDs and electronics are packed into plastic milk crates, stacked ten feet high. [if the player is not blind]Colorful flashing lights ripple across the structure hypnotically.[end if] A sign to the side of it says 'FLASCHENTASCHEN.'" Understand "huge structure"  or "structure" or "lights" as flaschentaschen.
 
-[TODO register the mural and flaschentaschen as artworks]
+Figure of flaschentaschen is the file "flaschentaschen.jpg". 
 
-A pastel colored mural is scenery in the Hackitorium. The description of a pastel colored mural is "Swirling pastel paint fills one wall with scenes of Nikola Tesla and Margaret Hamilton."
+After examining flaschentaschen:
+	display Figure of flaschentaschen;
+	say "You feel a deep respect for the playful inventiveness of the designers, constructors, and programmers of this beautiful object made of junk.";
+	say "Not to mention the beer drinking necessary to get all those bottles!";
+	
+
+
+A pastel colored mural is scenery in the Hackitorium. It is an artwork. The description of a pastel colored mural is "Swirling pastel paint fills one wall with scenes of Nikola Tesla and Margaret Hamilton."
+
+Figure of pastel colored mural is the file "pastel-mural-nb.jpg". 
+
+After examining pastel colored mural:
+	display Figure of pastel colored mural;
+	say "The homage paid here to nerd icons touches you with its earnestness";
+	say "People who put in the time to figure out the nitty gritty of how things work, honoring their comrades in art.";
 
 A robot is a kind of person. Consenso is a robot in the Hackitorium.
 
@@ -1392,7 +1406,7 @@ After examining the abstract reliefs:
 
 Calle 24 Plaza is up from Mission 24th Concourse. The surface of Calle 24 Plaza is bumpy.  "All around you are little shops and restaurants, people talking, buses pulling up to the stops on Mission and on 24th Street, music booming from cars going by. A large open stairwell goes down to the station concourse. You can also continue along Mission to the northeast. [if the player is not blind]To the east there's a mural that says SOCK. Another huge mural of a train runs across the wall of the taqueria bordering the plaza. [end if]"
 
-The train mural is scenery in Calle 24 Plaza. It is an artwork. "A mural of a gleaming BART train carried on the backs of determined workers amid a geometric cityscape. Their faces, barely sketched in, are brown, with broad high cheekbones."  
+The train mural is scenery in Calle 24 Plaza. It is an artwork. "A mural of a gleaming BART train carried on the backs of determined workers amid a geometric cityscape. Their faces, barely sketched in, are brown, with broad high cheekbones." 
 
 Figure of train mural is the file "train_mural.jpg". 
 
@@ -1409,6 +1423,10 @@ After examining the train mural:
 	record the train mural as experienced;
 
 The sock mural is scenery in Calle 24 Plaza. It is an artwork. "A dynamic mural covers the east wall of the plaza, showing a cable car, the Bay and a view of Alcatraz; portraits of two men, and the words DUER, SOCK, and DEMON. Some of the Def Crown Villains, originally from Los Angeles, have collaborated here with Sock, a well known artist from France." 
+
+After examining the sock mural for the first time:
+	say "The magic marker seems to tingle for a moment in your pocket.";
+	now the magic marker is magical; 
 	
 
 A cooler on wheels is an openable container. It is scenery. It is in Calle 24 Plaza.  The description is "A [if player is not blind]red and white[end if] cooler with a hinged lid." 
@@ -1531,8 +1549,7 @@ After examining the coffee mural for the first time:
 	say "The magic marker seems to tingle for a moment in your pocket.";
 	now the magic marker is magical;
 
-Before examining an artwork for the first time:
-	now the magic marker is magical;
+
 
 
 Circle Plaza is south of Donuts Corner. It is sidewalk.
@@ -1729,12 +1746,6 @@ After switching off the ART card:
 After writing on the ART card:
 	now Calle 24 Plaza is mapped up of Mission 24th Concourse.  
 	
-
-[
-After you've examined each artwork in mission 24th, an artist appears and talks with you
-and the magic marker activates.  check in the table? or...?
-	
-]
 
 
 
@@ -2161,8 +2172,6 @@ Carry out switching off a card:
 A writing utensil is a kind of thing. A magic marker is a writing utensil. 
 A writing utensil can be magical or mundane. A writing utensil is usually mundane.
 
-
-
 A card is a kind of device.  
 
 A transit card is a card. 
@@ -2178,7 +2187,6 @@ The description of an ART card is "A [if player is not blind]blue and white card
 The description of a BAT card is "A [if player is not blind]blue and white card[end if] with a magnetic stripe. It says 'BAT' in big [if player is not blind]black[end if] letters that seem oddly like scribbly handwriting. The letters blur and seem to move."
 
 
-
 The magic marker is an object. The description of the magic marker is "A plain old magic marker. [if the marker is magical]It fizzes and tingles with energy as if it were eager to make its mark.[end if]"
 
 Writing on is an action applying to one visible thing. Understand "write on [something]" as writing on. Understand "scribble on [something]" or "draw on [something]" as writing on. 
@@ -2192,6 +2200,7 @@ Check writing on:
 		say "Lacking artistic inspiration, you can't think of anything to write.";
 		stop the action;
 	unless the noun is a card or the noun is a printer, say "Weird. It doesn't work. Try something else to write on." instead.
+
 
 		
 		
