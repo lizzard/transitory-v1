@@ -121,15 +121,16 @@ topic	reply
 
 Part 2 - Works and Friends
 
-Before examining an artwork, record the noun as experienced.
+Carry out examining an artwork:
+	record the noun as experienced.
 
 To record (E - artwork) as experienced: 
 	choose row with a reference of E in Table of Works; 
-	say "Your understanding of art deepens.";
 	if there is no experienced entry: 
+		say "~*~*~* Your understanding of art deepens. *~*~*~ [line break]";
 		now experienced entry is the time of day; 
 	if the magic marker is not magical:
-		say "The magic marker seems to tingle for a moment in your pocket.";
+		say "~*~*~* The magic marker seems to tingle for a moment in your pocket. *~*~*~ [line break]";
 		now the magic marker is magical.
 		
 Table of Works 
@@ -151,6 +152,7 @@ Understand "works" or "artworks" as listing works.
 
 Report listing works:
 	say "Artworks you've considered recently: [line break]";
+	say "======================== [line break]";
 	repeat with N running from 1 to the number of rows in the Table of Works:
 		choose row N in the Table of Works;
 		if there is an experienced entry : 
@@ -180,11 +182,12 @@ Understand "friends" as listing friends.
 
 Report listing friends:
 	say "Friends you've made recently: [line break]";
+	say "======================== [line break]";
 	repeat with N running from 1 to the number of rows in the Table of Friendships:
 		choose row N in the Table of Friendships;
 		if the connected entry is greater than 0: 
 			say "[name entry], at [station entry]." 
-
+ 
 
 
 
@@ -1538,18 +1541,16 @@ Osage Alley is southwest of Circle Plaza. It is bumpy. The description of Osage 
 
 [The paintings are scenery in Osage Alley. The description is "[if the player is not blind]Vivid scrawls, mostly letters, hard for you to read as they're so intertwined and wildly shaped. In one exuberant splash of color to the north, there's the door to your home.[end if][if the player is blind]Trash and old spray paint cans litter the alley. The door to your home is in a stone wall to the north.[end if]"]
 
-The coffee mural is scenery in Osage Alley. It is an artwork. Understand "paintings", "mural", "wall" and "coffee" as the coffee mural. The description is "[if the player is not blind]Two wide eyed cartoon characters in Aztec regalia look out from a huge mural. Above them is a cartoon street sign that reads COFFEE and across it, MISSION. [end if][if the player is blind]A young guy next to you suddenly speaks up. 'I know some guys who worked on the coffee mural with Mel Waters. He's got stuff all over the Mission. Aztec dancers in regalia, kinda cartoon style.'[line break]He goes back to shaking his can of spray paint.[end if]" 
-
+The coffee mural is scenery in Osage Alley. It is an artwork. Understand "paintings", "mural", "wall" and "coffee" as the coffee mural. The description is "[if the player is not blind]Two wide eyed cartoon characters in Aztec regalia look out from a huge mural. A painted street sign reads COFFEE and across it, MISSION. [end if][if the player is blind]A young guy next to you suddenly speaks up. 'I know some guys who worked on the coffee mural with Mel Waters. He's got stuff all over the Mission. Aztec dancers in regalia, kinda cartoon style.'[line break]He goes back to shaking his can of spray paint.[end if]" 
 
 After examining the coffee mural for the first time:
 	say "You think about the roots of the neighborhood.";
 	say "The people who came from the south, with the padres from Spain.";
-	say "Vaqueros, cooks, grinding the corn, drawing the water.";
 	say "Feathers, stone, and shell, ornaments of their ancestors, met again in the Ohlone people.[paragraph break]";
 
 
 
-
+[	say "Vaqueros, cooks, grinding the corn, drawing the water.";]
 
 Circle Plaza is south of Donuts Corner. It is sidewalk.
 The description of Circle Plaza is "[if player is not blind]You head into the crowds of this busy space built around an unusual circular wall, like a giant well made of bricks. People are selling stuff from tables and little booths. Across 24th street to the north, there's a donut shop. [end if][if player is not deaf]Many kinds of music are playing at once. [end if][if player is not hearing or player is not sighted]This is a typical, busy, open space on Mission Street. It's super familiar; the alley to your home is just to the southwest of this lively plaza.[end if]".
@@ -1565,8 +1566,6 @@ The stairwell is scenery in Circle Plaza. Understand "wall" and "well" and "bric
 The metal gratings are scenery in Circle Plaza. "Overlapping concentric circles make an unusual and beautiful pattern in the dark metal of these iron gratings. You think of raindrops in water, clocks, gears interlocking."
 
 Trees, the steps, and the stage are scenery in Circle Plaza. 
-
-
 
 
 
@@ -1696,6 +1695,10 @@ Before taking an artifact, record the noun as found.
 Before inserting an artifact into:
 	if the second noun is the calendar:
 		record the noun as placed;
+		say "Manastabal swirls into the room.";
+		say "Ah, you found [the noun]. Excellent.";
+		say "I felt a shift in the tapestry of Time."; 
+		say "She disappears in a puff of smoke.";
 	continue the action.
 
 To record (T - artifact) as found: 
