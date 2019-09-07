@@ -52,11 +52,11 @@ Carry out abstaining:
 
 [start of game locations - the traveller's house - move this to Mission 24th later]
 
-Home Base is north of Osage Alley.  The surface of Home Base is smooth. "A bare yet familiar room. A small sign is on the wall, in print and in braille. [paragraph break]There's a hallway to the north, to the rest of your home. The world outside seems to call to you from a door to the south."
+Home of the Traveller is north of Osage Alley.  The surface of Home of the Traveller is smooth. "A bare yet familiar room. A small sign is on the wall, in print and in braille. [paragraph break]There's a hallway to the north, to the rest of your home. The world outside seems to call to you from a door to the south."
 
-A welcome sign is scenery in Home Base. "Welcome, traveller! Thank you for playtesting. [paragraph break]To start with: You should look at your inventory (type 'i' to see it).[paragraph break]Examine each object you're carrying (type 'x'' to examine)." 
+A welcome sign is scenery in Home of the Traveller. "Welcome, traveller! Thank you for playtesting. [paragraph break]To start with: You should look at your inventory (type 'i' to see it).[paragraph break]Examine each object you're carrying (type 'x'' to examine)." 
 
-The Bedroom is north of Home Base.It is smooth. The description is "A room meant for sleeping, next to a small bathroom. There's a help sign by the door. To the west, there's another, more spacious room. A pocket door opens south to a bare living room."
+The Bedroom is north of Home of the Traveller. It is smooth. The description is "A room meant for sleeping, next to a small bathroom. There's a help sign by the door. To the west, there's another, more spacious room. A pocket door opens south to a bare living room."
 
 A battered table is a supporter in The Bedroom. It is fixed in place. 
 
@@ -128,6 +128,9 @@ To record (E - artwork) as experienced:
 	say "Your understanding of art deepens.";
 	if there is no experienced entry: 
 		now experienced entry is the time of day; 
+	if the magic marker is not magical:
+		say "The magic marker seems to tingle for a moment in your pocket.";
+		now the magic marker is magical.
 		
 Table of Works 
 reference	station	artist	year (a number)	experienced (a time)
@@ -137,9 +140,10 @@ abstract reliefs	"Mission 24th"	"William George Mitchell"	1965
 ironwork railings	"Mission 16th"	"Victor Zaballa"	2003
 concrete shapes	"Mission 16th"	"William George Mitchell"	1965
 flaschentaschen	"Mission 16th"	"Jarrod, Miloh, Rubin, Hzeller et al"	2016
-sock mural	"Mission 16th"	"Duer, Sock, and Demon"	2010
 marble mosaic	"Glen Park"	"Ernest Born"	1973
 pastel mural	"Mission 16th"	"A Noisebridger"	2013	
+
+[sock mural	"Mission 16th"	"Duer, Sock, and Demon"	2010]
 
 Listing works is an action applying to nothing.
 
@@ -629,10 +633,10 @@ You can also take things, open things, sit on things, and stand up. [line break]
 'Works' will list the artworks you've experienced.[line break]
 'Hints' will get you a small menu of extra hints, a little spoilery. [line break]
 There are many more commands to try![line break]"
-"map"	"map"	"Where to find a map"	"BART map images are on every train station platform. You can also pick up the SMARTmap in the closet in Home Base for a portable, text only option (useful if you, the player, use a screen reader). For exploring the world, you may want to take notes, or draw your own maps on paper as a guide to various areas."
+"map"	"map"	"Where to find a map"	"BART map images are on every train station platform. You can also pick up the SMARTmap in the closet in your Home for a portable, text only option (useful if you, the player, use a screen reader). For exploring the world, you may want to take notes, or draw your own maps on paper as a guide to various areas."
 "marker"	"marker"	"Hints about the magic marker"	"Try writing on things that seem a little bit magical."
 "exits"	"exits"	"Using the EXITS command"	"Type 'exits' if you want a list of possible exits. It's a little cheaty, but so much less frustrating."
-"explore"	"explore"	"The explore command"	"If your character is blind or low vision, you can use the command 'explore', 'tap', or 'sweep' to explore a space with your long cane. The long cane and mirrorshades are in the closet in Home Base."
+"explore"	"explore"	"The explore command"	"If your character is blind or low vision, you can use the command 'explore', 'tap', or 'sweep' to explore a space with your long cane. The long cane and mirrorshades are in the closet in your home."
 "murals"	"murals"	"The art and murals"	"It's worth examining the local art. It may not have anything immediately useful but it provides context for the local puzzles and mysteries. There may be (obvious once you encounter them) times when you can interact more with the art."
 "score"	"score"	"Things that make your score go up"	"One point for each new room visited. 5 for each Artifact you pick up. 5 more points when you place the 20 Artifacts where they need to go (You'll know it when you see it.)"
 "card"	"card"	"Big hints about the (B)ART card"	"Take it to the concourse levels of the stations and swipe. Depending on the current state of your card, there may be different and perhaps unusual effects."
@@ -933,7 +937,7 @@ The description of Concord is "You are on a BART platform."
 
 Chapter 11 - Daly City
 
-The description of Daly City is "You are on a BART platform. Fog drifts in from the nearby ocean."
+Daly City is smooth. The description of Daly City is "You are on a BART platform. Fog drifts in from the nearby ocean. The floor is paved with white terrazzo." 
 			
 Mitline is a room.
 			
@@ -1241,7 +1245,7 @@ A hummingbird mural is scenery in Plaza del Colibrí. "These mosaic and metal mu
 
 A bronze plaque is scenery in Plaza del Colibrí. "Dedicated to Victor Miller (1948-2002) Founder and publisher of the New Mission News, the voice of the Inner Mission for over 20 years. Victor was a tireless advocate and watchdog for the community whose vision and journalistic skills provided the most perceptive and trustworthy observations of the Mission Neighborhood. 'Comforting the Afflicted and Affecting the Comfortable since 1980' [paragraph break]A little vase full of wilted flowers sits on the ground under the plaque. "
 
-A little vase is scenery in Plaza del Colibrí. It is an open container. The description is "The vase fills your heart with emotion like taking a deep breath; someone put it here in remembrance of their beloved dead. [if the vase does not contain a little bunch of carnations]Really, it should have fresh flowers.  [end if]"
+A little vase is in Plaza del Colibrí. It is an open container. The description is "The vase fills your heart with emotion like taking a deep breath; someone put it here in remembrance of their beloved dead. [if the vase does not contain a little bunch of carnations]Really, it should have fresh flowers.  [end if]"
 
 After inserting a little bunch of carnations into the little vase:
 	say "The vase trembles slightly.";
@@ -1340,7 +1344,7 @@ Figure of pastel colored mural is the file "pastel-mural-nb.jpg".
 
 After examining pastel colored mural:
 	display Figure of pastel colored mural;
-	say "The homage paid here to nerd icons touches you with its earnestness";
+	say "The homage paid here to nerd icons touches you with its earnestness.[line break]";
 	say "People who put in the time to figure out the nitty gritty of how things work, honoring their comrades in art.";
 
 A robot is a kind of person. Consenso is a robot in the Hackitorium.
@@ -1399,12 +1403,10 @@ After examining the abstract reliefs:
 	display Figure of abstract reliefs;
 	say "Their huge shapes are playful, reminding you of children's toy blocks.";
 	say "Yet somehow their heaviness, as it ascends to the ground above, brings to mind the staunchness of determined builders.";
-	say "The magic marker seems to tingle for a moment in your pocket.";
-	now the magic marker is magical;
 	record the noun as experienced;
 	
 
-Calle 24 Plaza is up from Mission 24th Concourse. The surface of Calle 24 Plaza is bumpy.  "All around you are little shops and restaurants, people talking, buses pulling up to the stops on Mission and on 24th Street, music booming from cars going by. A large open stairwell goes down to the station concourse. You can also continue along Mission to the northeast. [if the player is not blind]To the east there's a mural that says SOCK. Another huge mural of a train runs across the wall of the taqueria bordering the plaza. [end if]"
+Calle 24 Plaza is up from Mission 24th Concourse. The surface of Calle 24 Plaza is bumpy.  "All around you are little shops and restaurants, people talking, buses pulling up to the stops on Mission and on 24th Street, music booming from cars going by. A large open stairwell goes down to the station concourse. You can also continue along Mission to the northeast. [if the player is not blind]A huge mural of a train runs across the wall of the taqueria bordering the plaza.  [end if]"
 
 The train mural is scenery in Calle 24 Plaza. It is an artwork. "A mural of a gleaming BART train carried on the backs of determined workers amid a geometric cityscape. Their faces, barely sketched in, are brown, with broad high cheekbones." 
 
@@ -1418,15 +1420,13 @@ After examining the train mural:
 	say "People could move more freely through the city.";
 	say "Inevitably, something was lost.";
 	say "Your understanding of art deepens.";
-	say "The magic marker seems to tingle for a moment in your pocket.";
-	now the magic marker is magical;
 	record the train mural as experienced;
 
-The sock mural is scenery in Calle 24 Plaza. It is an artwork. "A dynamic mural covers the east wall of the plaza, showing a cable car, the Bay and a view of Alcatraz; portraits of two men, and the words DUER, SOCK, and DEMON. Some of the Def Crown Villains, originally from Los Angeles, have collaborated here with Sock, a well known artist from France." 
+[The sock mural is scenery in Calle 24 Plaza. It is an artwork. "A dynamic mural covers the east wall of the plaza, showing a cable car, the Bay and a view of Alcatraz; portraits of two men, and the words DUER, SOCK, and DEMON. Some of the Def Crown Villains, originally from Los Angeles, have collaborated here with Sock, a well known artist from France." 
 
 After examining the sock mural for the first time:
 	say "The magic marker seems to tingle for a moment in your pocket.";
-	now the magic marker is magical; 
+	now the magic marker is magical; ]
 	
 
 A cooler on wheels is an openable container. It is scenery. It is in Calle 24 Plaza.  The description is "A [if player is not blind]red and white[end if] cooler with a hinged lid." 
@@ -1468,18 +1468,18 @@ A yelling preacher is a person. In Calle 24 Plaza is a yelling preacher. The des
 The orquestra is a person. The description of the orquestra is "A little group of musicians, some sitting on milk crates or buckets with their instruments, some standing and swaying gently as they play." Understand "musicians" as the orquestra.
 
 
-Baile is a scene. Baile begins when the player is in Calle 24 Plaza for three turns.
+Baile is a scene. Baile begins when the player has been in Calle 24 Plaza for three turns.
 
 When Baile begins: 
 	now the orquestra is in Calle 24 Plaza;
 	say "A group of musicians has settled under a portable shade pavilion in the plaza. They start grooving out, playing Cuban oldies."
 
-Every turn during Baile:	
-	repeat through Table of Baile Events:
-		if player is in Calle 24 Plaza:
+Every turn during Baile:
+	if player is in Calle 24 Plaza:	
+		repeat through Table of Baile Events:
 			say "[event entry][paragraph break]";
-		blank out the whole row;
-		rule succeeds. 
+			blank out the whole row;
+			rule succeeds. 
 
 Instead of talking to anyone during Baile:
 	say "You smile and bob your head a bit, grooving to the music with the people around you.";
@@ -1546,8 +1546,7 @@ After examining the coffee mural for the first time:
 	say "The people who came from the south, with the padres from Spain.";
 	say "Vaqueros, cooks, grinding the corn, drawing the water.";
 	say "Feathers, stone, and shell, ornaments of their ancestors, met again in the Ohlone people.[paragraph break]";
-	say "The magic marker seems to tingle for a moment in your pocket.";
-	now the magic marker is magical;
+
 
 
 
@@ -2154,7 +2153,7 @@ Carry out switching on a card:
 		say "You feel a strong urge to squeak.";
 		repeat with the item running through carried things: 
 			silently try dropping the item;
-		
+	
 			
 	
 Carry out switching off a card:
