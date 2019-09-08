@@ -1177,6 +1177,7 @@ Instead of climbing when the player is in Mission 16th Concourse and the ART car
 	say "Creation. Making things. Artifice AS NATURE.";
 	say "You snap out of your weird obsession with concrete and look around. Wild!";
 	now Noisebridge is mapped south of Mission 16th Concourse;
+	now Mission 16th Concourse is mapped north of Noisebridge;
 	now the player is in Noisebridge;
 	stop the action.
 	
@@ -1184,12 +1185,11 @@ Instead of climbing when the player is in Mission 16th Concourse and the ART car
 	say "You plot your route mentally, but decide not to climb. Maybe if you were in more of an artistic mood.";
 	stop the action.
 	
+Instead of switching on the powerchair:
+	say "You switched it on without even thinking about it when you sat in it. It's ready to go!";
+	stop the action.
 
-Check switching on the ART card:
-	now Hummingbird Station is mapped up of Mission 16th Concourse;
-	
-Check switching off the ART card:
-	now Papel Picado Plaza is mapped up of Mission 16th Concourse;
+
 		
 Papel Picado Plaza is a street level station. Papel Picado Plaza is up from Mission 16th Concourse. The surface of Papel Picado Plaza is brick. "A lively streetcorner plaza. Lots of people are hanging around just watching the world go by. [if the player is not blind]The little kiosk holding the elevator is topped with a mosaic and panes of colored glass.  Colorful ironwork railings, blue, green, orange, and pink, line the stairwell down to the station. They're worked to look like Mexican paper cutout art.[end if][if the player is blind]Fancy ironwork railings line the stairwell down to the station.[end if]"
 
@@ -1734,13 +1734,16 @@ Points	Citation	Found (a time)	Placed (a time)
 After switching on the ART card:
 	now Brutalist Plaza is mapped up of Mission 24th Concourse;
 	now Mission 24th Concourse is mapped down of Brutalist Plaza;
+	now Hummingbird Station is mapped up of Mission 16th Concourse;
+	now Mission 16th Concourse is mapped down of Hummingbird Station;
+	now Noisebridge is mapped south of Hummingbird Station;
+	now Hummingbird Station is mapped north of Noisebridge;
 	
 After switching off the ART card:
 	now Calle 24 Plaza is mapped up of Mission 24th Concourse;
 	now Mission 24th Concourse is mapped down of Calle 24 Plaza;
-	
-After writing on the ART card:
-	now Calle 24 Plaza is mapped up of Mission 24th Concourse.  
+	now Papel Picado Plaza is mapped up of Mission 16th Concourse;
+	now Mission 16th Concourse is mapped down of Papel Picado Plaza;
 	
 
 
