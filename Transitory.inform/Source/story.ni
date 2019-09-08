@@ -90,15 +90,6 @@ A book is a kind of thing.  A SMARTmap is a book. A SMARTmap has a table name ca
 A powerchair is in Room of the Traveller.
 
 [some special rules for the beginning objects and actions]
-
-Instead of dropping the magic marker:
-	say "Wouldn't want to lose it. You put it into your pocket, instead.";
-	stop the action.
-	
-Instead of dropping a card:
-	say "You think about dropping [the noun], but can't bring yourself to do it.";
-	stop the action.
-	
 Figure of BART map is the file "BART_map.png". 
 
 Instead of consulting a book about a topic listed in the contents of the noun: 
@@ -488,6 +479,9 @@ A property-aggregation rule for a long cane:
 A property-aggregation rule for a magic marker:
 	if the magic marker is magical:
 		add "fizzing gently" to the tagline.
+		
+A property-aggregation rule for a transit card:
+	add "fizzing happily" to the tagline.
 
 The last property-aggregation rule (this is the print aggregated properties rule):
 	if the number of entries in the tagline is greater than 0:
@@ -2124,7 +2118,32 @@ After going to a concourse:
 	now a ticket reader is in the location of the player;
 	continue the action.
 	
-[something is wack, here, because i also had to declare the ticket reader abover in the after looking statement]
+[something is wack, here, because i also had to declare the ticket reader above in the after looking statement]
+
+
+A writing utensil is a kind of thing. A magic marker is a writing utensil. 
+A writing utensil can be magical or mundane. A writing utensil is usually mundane.
+
+
+A transit card is a kind of device. 
+
+A BART card is carried by the player.  The description of a BART card is "A plastic card with space for four letters. They currently read BART."
+
+An ART card, a BART card, a BAR card, a BAR card, a BARS card, a BAST card, a BAT card, a BARD card, a BARE card, a BARF card, a BARK card, a BARM card, a BARN card, a BART card, a BORT card, a CART card, a DART card, a FART card, a HART card, a MART card, a PART card, a TART card, a WART card are transit cards. 
+
+
+Instead of dropping the magic marker:
+	if the player is carrying a BAT card:
+		stop the action;
+	say "Wouldn't want to lose your [noun]. You put it into your pocket, instead.";
+	stop the action.
+	
+Instead of dropping a transit card:
+	if the player is carrying a BAT card:
+		stop the action;
+	say "You think about dropping [the noun], but can't bring yourself to do it.";
+	stop the action.
+	
 
 Instead of switching on a card when the location of the player is not a concourse:
 	say "You need to do that by swiping it on a ticket reader.";
@@ -2134,12 +2153,12 @@ Instead of switching off a card when the location of the player is not a concour
 Understand "swipe [something switched off]" as switching on.
 Understand "swipe [something switched on]" as switching off. 
 
-Check switching on a card:
+Check switching on a transit card:
 	if the player is carrying a BART card:
 		say "Your BART card isn't charged up yet.";
 		stop the action;
 		
-Carry out switching on a card:
+Carry out switching on a transit card:
 	say "The card hums with energy.";
 	if the player is carrying an ART card:
 		say "[The noun] makes you feel fizzy all over.";
@@ -2159,70 +2178,34 @@ Carry out switching on a card:
 	
 			
 	
-Carry out switching off a card:
+Carry out switching off a transit card:
 	say "The card shuts off with a little thump.";
 	if the player is carrying an ART card:
 		say "The world looks ordinary again. It's kind of a relief.";
 	if the player is carrying a BAT card:
 		now the player is mobile;
 		say "You feel like yourself again.";
-	if the player is not carrying a BAT card:
 		now the description of yourself is "As fantabulous as ever. [line break] You are [sightedness], [deafness], and [ambulation].";
-		
 
-		
-A writing utensil is a kind of thing. A magic marker is a writing utensil. 
-A writing utensil can be magical or mundane. A writing utensil is usually mundane.
-
-A card is a kind of device.  
-
-A transit card is a card. 
-
-A BART card, an ART card, a BAT card, a BAR card, a CART card, and a WART card are cards.
  
 The player is carrying a magic marker and a BART card.
-
-The description of a BART card is "A [if player is not blind]blue and white [end if]card with a magnetic stripe. It says 'BART' in raised [if player is not blind]black[end if] letters that seem oddly like scribbly handwriting. It buzzes very faintly in your hand."
-
-The description of an ART card is "A [if player is not blind]blue and white card[end if] with a magnetic stripe. It says 'ART' in big [if player is not blind]black[end if] letters that seem oddly like scribbly handwriting. The letters blur and seem to move." 
-
-The description of a BAT card is "A [if player is not blind]blue and white card[end if] with a magnetic stripe. It says 'BAT' in big [if player is not blind]black[end if] letters that seem oddly like scribbly handwriting. The letters blur and seem to move."
 
 
 The magic marker is an object. The description of the magic marker is "A plain old magic marker. [if the marker is magical]It fizzes and tingles with energy as if it were eager to make its mark.[end if]"
 
 Writing on is an action applying to one visible thing. Understand "write on [something]" as writing on. Understand "scribble on [something]" or "draw on [something]" as writing on. 
 
-[Figure out how to make it assume that you're writing with the marker]
-[Does the player mean writing on the noun with the magic marker: 
-	it is very likely.]
 
-Check writing on:
+Instead of writing on:
+	unless the noun is a transit card or the noun is a printer:
+		say "Weird. It doesn't work. Try something else to write on." instead;
+		stop the action;
 	unless the magic marker is magical:
 		say "Lacking artistic inspiration, you can't think of anything to write.";
 		stop the action;
-	unless the noun is a card or the noun is a printer, say "Weird. It doesn't work. Try something else to write on." instead.
-
-
-		
-		
-
-		
-
-Carry out writing on:
-	if the noun is a card:
-		say "The marker fizzes with happy energy!";
-		now the noun is nowhere;
-		if a random chance of 1 in 2 succeeds:
-			now the player is carrying a BART card;
-			say "The world shifts a little, then settles into its ordinary groove.";
-		otherwise:
-			if a random chance of 1 in 2 succeeds:
-				say "You scribble on the card. It fizzes and tingles.";
-				now the player is carrying an ART card;
-			otherwise:
-				say "You feel very strange.";
-				now the player is carrying a BAT card;			
+	if the noun is a transit card:
+		say "You can change or erase one letter of the magical base spell, BART.";
+		now the command prompt is "Pick your word:  "; 
 	if the noun is a 3-D printer:
 		say "Everything contracts to a tiny point, then expands.";
 		now the noun is nowhere;
@@ -2231,53 +2214,54 @@ Carry out writing on:
 		say "Time seems to stop, then start again.";
 		now the noun is nowhere;
 		now the 3-D printer is in the location of the player;
-		
 
-[Carry out writing on:
-	if the noun is a BART card:
-		say "The marker fizzes with happy energy!";
-		say "You can modify one letter at a time in BART.";
-		say "To erase a letter, ERASE B, A, R, or T.";
-		say "To change a letter, CHANGE (B, A, R, or T) to (new letter) FROM CARD.";
-		say "To get your original BART card back, WRITE ON your modified card again.";
+		
+After reading a command when the command prompt is "Pick your word:  ":
+	if the player's command is a topic listed in the Table of Card Values:
+		say "The magic marker fizzes with happy energy!";
+		say "[message entry][line break]";
+		say "You modify the card to read [letters entry].";
+		now the command prompt is ">";
+		if the player is carrying the BAT card:
+			now the player is mobile;
+			say "You feel like yourself again.";
+			now the description of yourself is "As fantabulous as ever. [line break] You are [sightedness], [deafness], and [ambulation].";
+		if the player is carrying a transit card (called the card):
+			now the card is nowhere;
+		now the player is carrying the object entry;
+		now the description of the object entry is "A plastic card with space for four letters. They currently spell [letters entry].";
+		reject the player's command;
 	otherwise:
-		if the noun is a card:
-			now the noun is nowhere;
-			now the player is carrying a BART card;]
-				
-
-
-[Erasing is an action applying to one thing. Understand "erase [letter]" as erasing.
-
-[Procedural rule while erasing:
-	ignore the basic accessibility rule.]
-
-Check erasing:
-	place the noun in scope;
-	try silently taking the noun; 
-
-Carry out erasing:
-	if the noun is B:
-		now the BART card is nowhere;
-		say "You scribble on the card, removing the letter B.";
-		say "Everything around you has a new dimension!";
-		now the player is carrying an ART card;
-	if the noun is R:
-		now the BART card is nowhere;
-		say "You scribble on the card, removing the letter R.";
-		now the player is carrying a BAT card;
-	if the noun is T:
-		now the BART card is nowhere;
-		say "You scribble on the card, removing the letter T.";
-		now the player is carrying a BAR card;
-	otherwise:
-		say "The marker sluggishly refuses.";
-		stop the action.]
+		say "You can only change one letter from 'BART' and it has to spell a word!";
+		now the command prompt is ">";
+		reject the player's command.
 		
 
- 
+Table of Card Values
+Topic	letters	object	message
+"ART"	"ART"	ART card	"You scribble on the card. It fizzes and tingles."
+"BAR"	"BAR"	BAR card	"A tall glass of delicious juice would be so good right now."
+"BARS"	"BARS"	BARS card	"Boing!"
+"BAST"	"BAST"	BAST card	"Meow!"
+"BAT"	"BAT"	BAT card	"You feel very strange."
+"BARD"	"BARD"	BARD card	"You feel like breaking into song."
+"BARE"	"BARE"	BARE card	"You feel some urges you don't quite understand."
+"BARF"	"BARF"	BARF card	"You feel sick."
+"BARK"	"BARK"	BARK card	"A nearby dog looks at you quizzically."
+"BARM"	"BARM"	BARM card	"Brewed any beer lately?"
+"BARN"	"BARN"	BARN card	"A faint smell of hay reaches you."
+"BART"	"BART"	BART card	"The world shifts a little, then settles into its ordinary groove."
+"BORT"	"BORT"	BORT card	"You feel abrasive."
+"CART"	"CART"	CART card	"You sense a rumble as of distant wheels."
+"DART"	"DART"	DART card	"You feel paranoid."
+"FART"	"FART"	FART card	"You feel a sense of internal unease."
+"HART"	"HART"	HART card	"[if player is not blind]You catch a glimpse of something out of the corner of your eye[end if][if player is blind]You feel something pass by[end if]."
+"MART"	"MART"	MART card	"Activity all around you seems to intensify."
+"PART"	"PART"	PART card	"Something happens. You aren't sure what."
+"TART"	"TART"	TART card	"You feel rather frisky."
+"WART"	"WART"	WART card	"Your hands itch."
 		
-		
+	
 
 
 Squeaking is an action applying to nothing. Understand "squeak" as squeaking. 
@@ -2290,32 +2274,6 @@ Carry out squeaking:
 		say "OooOOOooo! Bugs!";
 		say "You catch a delicious gnat and crunch it up, savoring the juices.";
 		
-
-
-Table of Card Modifications
-Modification	Effect
-ART card	"Everything around you acquires a new dimension!"
-BAT card	"That feels very strange![line break]You turn into a huge, flying bat."
-BART card	"*Thunk* The world shifts a little, then settles into its ordinary groove."
-
-
-["BERT"
-"CART"
-"DART"
-"FART"
-"HART"
-"MART"
-"PART"
-"TART"
-"WART"
-
-BAR card	"A juice bar cart appears in the station."
-BARD card	"A strangely dressed person with a lute wanders by, singing aggressively."
-BARE card	"You are bare-naked! Shocking!"
-BARF card	"There is a nasty puddle on the floor. Careful not to step in it."
-BARK card	"All the little dogs in strollers and pit bulls on rope leashes start barking at once."
-BARM card	"Smells very strongly of fermenting beer in this station, all of a sudden."
-BARN card	"You are standing in a giant pile of hay. Several people in the station start to sneeze."]
 
 Part 10 - Train rules
 
