@@ -9,24 +9,27 @@ Use MAX_STATIC_DATA of 500000.
 
 Use scoring.
 
-
 Part 1 - Some beginning stuff
 
 When play begins: 
 	now the command prompt is "[time of day] >" ;
 
-
 Rule for constructing the status line:
+	[deepen the status line to 2 rows;
+	center "[location]" at row 1;
+	center "Exits: [short exit list]" at row 2;]
 	fill status bar with Table of Fancy Status; 
 	rule succeeds.
 	
 Table of Fancy Status
-left 	central 	right 
-" [location]"	"[number of visited rooms]/[number of rooms] locations"	"Score: [score]"
+left	right 
+" [location]"	"Score: [score]"
+" Exits: [short exit list]"	"[number of visited rooms]/[number of rooms] locations"
+
+
+[some general rules, here for convenience, but they may be moved later]
 
 The maximum score is 200.
-
-[some general rules, not sure where to put them yet]
 
 A surface is a kind of value. A room has a surface. 
 The surfaces are smooth, bumpy, sidewalk, brick, cracked, gravel, sand, grassy, and mud. A room is usually smooth.
@@ -52,9 +55,9 @@ Carry out abstaining:
 
 [start of game locations - the traveller's house - move this to Mission 24th later]
 
-Home of the Traveller is north of Osage Alley.  The surface of Home of the Traveller is smooth. "A bare yet familiar room. A small sign is on the wall, in print and in braille. [paragraph break]There's a hallway to the north, to the rest of your home. The world outside seems to call to you from a door to the south."
+Home of the Traveller is north of Osage Alley.  The surface of Home of the Traveller is smooth. "You recognize the familiar surroundings of your home. Though you're comfortable in these small rooms, the world outside calls to you."
 
-A welcome sign is scenery in Home of the Traveller. "Welcome, traveller! Thank you for playtesting. [paragraph break]To start with: You should look at your inventory (type 'i' to see it).[paragraph break]Examine each object you're carrying (type 'x'' to examine)." 
+A welcome sign is in Home of the Traveller. The description of a welcome sign is "Welcome, traveller! Thank you for playtesting. [paragraph break]To start with: You should look at your inventory (type 'i' to see it).[paragraph break]Examine each object you're carrying (type 'x'' to examine)." 
 
 The Bedroom is north of Home of the Traveller. It is smooth. The description is "A room meant for sleeping, next to a small bathroom. There's a help sign by the door. To the west, there's another, more spacious room. A pocket door opens south to a bare living room."
 
@@ -90,6 +93,12 @@ A book is a kind of thing.  A SMARTmap is a book. A SMARTmap has a table name ca
 A powerchair is in Room of the Traveller.
 
 [some special rules for the beginning objects and actions]
+
+Instead of switching on the powerchair:
+	say "You switched it on without even thinking about it when you sat in it. It's ready to go!";
+	stop the action.
+
+
 Figure of BART map is the file "BART_map.png". 
 
 Instead of consulting a book about a topic listed in the contents of the noun: 
@@ -688,6 +697,34 @@ To say exit list:
 			increment count;
 			say "[if count is greater than 1] or [end if][bold type][way][roman type] ([place])". 
 
+
+To say short exit list:
+	let place be location;
+	let count be 0;
+	repeat with way running through directions:
+		let place be the room way from the location;
+		if place is a room:
+			increment count;
+			say "[if count is greater than 1] or [end if][bold type][way][roman type]". 
+
+Rule for printing the name of a direction (called the way) while constructing the status line:      choose row with a heading of the way in the Table of Abbreviation;      say "[shortcut entry]". 
+
+Table of Abbreviation 
+heading	shortcut
+north	"N"
+northeast	"NE"
+northwest	"NW"
+east	"E"
+southeast	"SE"
+south	"S"
+southwest	"SW"
+west	"W"
+up	"U"
+down	"D"
+inside	"IN"
+outside	"OUT"
+
+
 Teleporting to is an action applying to one thing.
 Understand "bamf [any room]" as teleporting to. 
 
@@ -1185,9 +1222,6 @@ Instead of climbing when the player is in Mission 16th Concourse and the ART car
 	say "You plot your route mentally, but decide not to climb. Maybe if you were in more of an artistic mood.";
 	stop the action.
 	
-Instead of switching on the powerchair:
-	say "You switched it on without even thinking about it when you sat in it. It's ready to go!";
-	stop the action.
 
 
 		
@@ -1237,8 +1271,14 @@ A rough sleeper is a man in Old Bank Corner. The description of a rough sleeper 
 
 Plaza del Colibrí is west of Old Bank Corner. The surface of Plaza del Colibrí is brick. "Around the stairwell down to the station, there are metal railings [if the player is not blind]that look like Mexican cut paper art, orange, pink, green, and blue hummingbirds and flowers[end if]. There are low benches around the edges of the stairwell for people to sit on. A low building in the corner has a hummingbird mural." 
 
-A hummingbird mural is scenery in Plaza del Colibrí. "These mosaic and metal murals show perky hummingbirds amid swirling flowers and branches. There is a bronze plaque under the murals."
 
+Figure of hummingbird is the file "hummingbird.jpg".  
+
+After examining a hummingbird mural:
+	display Figure of hummingbird;
+	say "The colorful tiles swirl with motion.";
+
+A hummingbird mural is scenery in Plaza del Colibrí. It is an artwork. "These mosaic and metal murals show perky hummingbirds amid swirling flowers and branches. There is a bronze plaque under the murals."
 
 A bronze plaque is scenery in Plaza del Colibrí. "Dedicated to Victor Miller (1948-2002) Founder and publisher of the New Mission News, the voice of the Inner Mission for over 20 years. Victor was a tireless advocate and watchdog for the community whose vision and journalistic skills provided the most perceptive and trustworthy observations of the Mission Neighborhood. 'Comforting the Afflicted and Affecting the Comfortable since 1980' [paragraph break]A little vase full of wilted flowers sits on the ground under the plaque. "
 
@@ -1547,7 +1587,7 @@ After examining the coffee mural for the first time:
 [	say "Vaqueros, cooks, grinding the corn, drawing the water.";]
 
 Circle Plaza is south of Donuts Corner. It is sidewalk.
-The description of Circle Plaza is "[if player is not blind]You head into the crowds of this busy space built around an unusual circular wall, like a giant well made of bricks. People are selling stuff from tables and little booths. Across 24th street to the north, there's a donut shop. [end if][if player is not deaf]Many kinds of music are playing at once. [end if][if player is not hearing or player is not sighted]This is a typical, busy, open space on Mission Street. It's super familiar; the alley to your home is just to the southwest of this lively plaza.[end if]".
+The description of Circle Plaza is "[if player is not blind]You head into the crowds of this busy space built around an unusual circular wall, like a giant well made of bricks. People are selling stuff from tables and little booths. [end if][if player is not deaf]Many kinds of music are playing at once. [end if][if player is not hearing or player is not sighted]This is a typical, busy, open space on Mission Street. It's super familiar; the alley to your home is just to the southwest of this lively plaza.[end if]".
 
 Down from Circle Plaza is Mission 24th Concourse. 
 

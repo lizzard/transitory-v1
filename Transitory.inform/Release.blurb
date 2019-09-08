@@ -18,10 +18,11 @@ picture 1 "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/Cover
 release file "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/Cover.jpg"
 release file "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/Small Cover.jpg"
 picture 3 "/Users/ehenry/dev/inform7/transitory/Transitory.materials/Figures/BART_map.png"
-picture 4 "/Users/ehenry/dev/inform7/transitory/Transitory.materials/Figures/flaschentaschen.jpg"
-picture 5 "/Users/ehenry/dev/inform7/transitory/Transitory.materials/Figures/pastel-mural-nb.jpg"
-picture 6 "/Users/ehenry/dev/inform7/transitory/Transitory.materials/Figures/abstract_reliefs_24.jpg"
-picture 7 "/Users/ehenry/dev/inform7/transitory/Transitory.materials/Figures/train_mural.jpg"
+picture 4 "/Users/ehenry/dev/inform7/transitory/Transitory.materials/Figures/hummingbird.jpg"
+picture 5 "/Users/ehenry/dev/inform7/transitory/Transitory.materials/Figures/flaschentaschen.jpg"
+picture 6 "/Users/ehenry/dev/inform7/transitory/Transitory.materials/Figures/pastel-mural-nb.jpg"
+picture 7 "/Users/ehenry/dev/inform7/transitory/Transitory.materials/Figures/abstract_reliefs_24.jpg"
+picture 8 "/Users/ehenry/dev/inform7/transitory/Transitory.materials/Figures/train_mural.jpg"
 
 ! Placeholder variables
 
