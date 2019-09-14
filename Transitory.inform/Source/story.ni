@@ -55,11 +55,11 @@ Carry out abstaining:
 
 [start of game locations - the traveller's house - move this to Mission 24th later]
 
-Home of the Traveller is north of Osage Alley.  The surface of Home of the Traveller is smooth. "You recognize the familiar surroundings of your home. Though you're comfortable in these small rooms, the world outside calls to you."
+Home of the Traveller is north of Osage Alley.  The surface of Home of the Traveller is smooth. "You recognize the familiar surroundings of your home. A hallway leads north. [if the player is in the Home of the Traveller for more than one time]Though you're comfortable in these small rooms, the world outside calls to you from the door to the south.[end if]"
 
 A welcome sign is in Home of the Traveller. The description of a welcome sign is "Welcome, traveller! Thank you for playtesting. [paragraph break]To start with: You should look at your inventory (type 'i' to see it).[paragraph break]Examine each object you're carrying (type 'x'' to examine)." 
 
-The Bedroom is north of Home of the Traveller. It is smooth. The description is "A room meant for sleeping, next to a small bathroom. There's a help sign by the door. To the west, there's another, more spacious room. A pocket door opens south to a bare living room."
+The Bedroom is north of Home of the Traveller. It is smooth. The description is "A room meant for sleeping. To the west, there's another, more spacious room. A pocket door opens south to a bare living room. On the wall, there's a little sign that says 'HELP'."
 
 A battered table is a supporter in The Bedroom. It is fixed in place. 
 
@@ -152,7 +152,7 @@ Understand "works" or "artworks" as listing works.
 
 Report listing works:
 	say "Artworks you've considered recently: [line break]";
-	say "======================== [line break]";
+	say "========================== [line break]";
 	repeat with N running from 1 to the number of rows in the Table of Works:
 		choose row N in the Table of Works;
 		if there is an experienced entry : 
@@ -182,7 +182,7 @@ Understand "friends" as listing friends.
 
 Report listing friends:
 	say "Friends you've made recently: [line break]";
-	say "======================== [line break]";
+	say "===================== [line break]";
 	repeat with N running from 1 to the number of rows in the Table of Friendships:
 		choose row N in the Table of Friendships;
 		if the connected entry is greater than 0: 
@@ -619,36 +619,38 @@ Carry out getting help about:
 Understand "help" as summoning help. Summoning help is an action applying to nothing. 
 
 Carry out summoning help:
-	say "Help is available about the following topics. Typing HELP followed by the name of a topic will give further information.[paragraph break]";
+	say "Type HELP followed by the name of a topic.[paragraph break]";
 	repeat through the Table of Standard Help:
-		say " [title entry]: [summary entry][line break]". 
+		say " [title entry]:		[summary entry][line break]". 
 
 Table of Standard Help
 topic	title	summary	explanation
-"self"	"self"	"The point of view character"	"Keep in mind you can type 'examine self' or 'x self'. This might be useful or informative, sometimes."
-"commands"	"commands"	"A list of basic commands in the game"	"Type 'i' to look at your inventory (what you are carrying).  [line break]
-'Look' will show you a room description (again). [line break]
-'Exits' will show you a list of possible exits from a room.[line break]
-You can 'go' in all 8 directions (north, northeast, etc) as well as up and down. [line break]
-'n' is a convenient shorthand for 'go north' [line break]
-You can also take things, open things, sit on things, and stand up. [line break]
-'examine' ('x') or 'look at' will let you examine an object. Or, sometimes, details in a room description.[line break]
-'tap' if your character is blind, will efficiently examine an entire area and its significant objects.[line break]
-'Wait X minutes' may be handy when waiting for trains. [line break]
-'Friends' will list the people you know in the game.[line break]
-'Works' will list the artworks you've experienced.[line break]
-'Hints' will get you a small menu of extra hints, a little spoilery. [line break]
-There are many more commands to try![line break]"
-"map"	"map"	"Where to find a map"	"BART map images are on every train station platform. You can also pick up the SMARTmap in the closet in your Home for a portable, text only option (useful if you, the player, use a screen reader). For exploring the world, you may want to take notes, or draw your own maps on paper as a guide to various areas."
+"commands"	"commands"	"A list of basic commands in the game"	"You can 'go' in all 8 directions (north, northeast, etc) as well as up and down. [line break]
+You can also take things, open things, sit on things, and stand up. [paragraph break]
+look: shows you the description of the room you're in [line break]
+i:  lists what you are carrying or wearing. Short for 'inventory'  [line break]
+n: shorthand for 'go north' [line break]
+x: lets you examine something more closely [line break]
+x self: look at yourself [line break]
+talk to (person): converse with a character in the game [line break]
+wear: put on a wearable object [line break]
+tap: if your character is blind, examines an entire area and its significant objects [line break]
+exits: shows you a list of possible exits from a room[line break]
+wait X minutes: May be handy when waiting for trains. [line break]
+friends: lists the people you know in the game [line break]
+works: lists the artworks you've experienced [line break]
+score: shows your current score [line break]
+hints: shows a small menu of extra hints, a little spoilery. [paragraph break]
+[line break]"
+"map"	"map"	"Where to find a map"	"For exploring the world, you may want to take notes, or draw your own maps on paper as a guide to various areas. [line break]BART map images are on every train station platform. [line break]You can also pick up the SMARTmap in the closet in your Home for a portable, text only option (useful if you, the player, use a screen reader). "
 "marker"	"marker"	"Hints about the magic marker"	"Try writing on things that seem a little bit magical."
-"exits"	"exits"	"Using the EXITS command"	"Type 'exits' if you want a list of possible exits. It's a little cheaty, but so much less frustrating."
-"explore"	"explore"	"The explore command"	"If your character is blind or low vision, you can use the command 'explore', 'tap', or 'sweep' to explore a space with your long cane. The long cane and mirrorshades are in the closet in your home."
-"murals"	"murals"	"The art and murals"	"It's worth examining the local art. It may not have anything immediately useful but it provides context for the local puzzles and mysteries. There may be (obvious once you encounter them) times when you can interact more with the art."
-"score"	"score"	"Things that make your score go up"	"One point for each new room visited. 5 for each Artifact you pick up. 5 more points when you place the 20 Artifacts where they need to go (You'll know it when you see it.)"
 "card"	"card"	"Big hints about the (B)ART card"	"Take it to the concourse levels of the stations and swipe. Depending on the current state of your card, there may be different and perhaps unusual effects."
+"exits"	"exits"	"Using the EXITS command"	"Type 'exits' if you want a list of possible exits and where they lead. [line break] At the top of your status bar, there's always a list of available exits."
+"murals"	"murals"	"The art and murals"	"It's worth examining the local art. It provides context for the local puzzles and mysteries. There may be times (obvious once you encounter them) when you can interact more with the art."
+"score"	"score"	"Things that make your score go up"	"One point for each new room visited. 5 for each Artifact you pick up. 5 more points when you place the 20 Artifacts where they need to go (You'll know it when you see it.)"
 "bugs"	"bugs"	"How to report bugs"	"Please report anything you think is wrong, or could use improvement, at https://github.com/lizzard/transitory/issues. You can also email lizhenry@gmail.com with 'TRANSITORY BUG' in the subject line."
 
-	
+
 
 Understand "hints" or "hint" as summoning hints. Summoning hints is an action applying to nothing. 
 
@@ -664,7 +666,7 @@ topic	title	summary	explanation
 "money"	"money"	"How do I use money? Can I get more?"	"You can buy a few things in the game so far. There will be ways to get more money, but they aren't written yet."
 "circle plaza"	"circle plaza"	"What is the secret of Circle Plaza? (SPOILER)"	"Swipe the ART card in 24th and go up. Circle Plaza has transformed into a giant Aztec calendar. Find the artifacts (on the Red Line stations) and put them into the calendar."
 "noisebridge"	"noisebridge"	"How do I get to Noisebridge? (SPOILER)"	"Swipe the ART card in 16th and then climb the sculptures."
-"printer (SPOILER)" 	"printer"	"Can I make the 3D printer make more useful things?"	"The printer has a fizzy magic aura; maybe it's writeable, like your card?"
+"printer" 	"printer"	"Can I make the 3D printer make more useful things?"	"The printer has a fizzy magic aura; maybe it's writeable, like your card?"
 "artifacts"	"artifacts"	"Where do I find the artifacts?"	"Most (but not quite all) stations on the Red Line will have a puzzle to solve, which will lead to one of the glyph artifacts."
 "Manastabal"	"Manastabal"	"Who is Manastabal?"	"Manastabal is based on the guide from Monique Wittig's Across the Acheron (Virgil, non) which is a lesbian, non-linear retelling of Dante's Inferno and Paradisio."
 "train lines"	"train lines"	"What about the other train lines?"	"They should work (more or less) but I haven't written most of those stations, or their puzzles, yet. Each line will eventually have a larger meta-puzzle.  "
@@ -1591,8 +1593,6 @@ The description of Circle Plaza is "[if player is not blind]You head into the cr
 
 Down from Circle Plaza is Mission 24th Concourse. 
 
-
-
 The stairwell is scenery in Circle Plaza. Understand "wall" and "well" and "bricks" as the stairwell. "Burnt red bricks smoothly curve up around the edges of the wall around the big stairwell. There are a few people sitting with their backs against the curve. As you study the unusual structure, you notice metal gratings set into the plaza, one long strip near the edge where the plaza turns to sidewalk, and gratings around small, spindly saplings. The metal gratings have a circular pattern."
 
 [   A couple of medium-sized trees grow out of a planter in a space at the top of the wall.  ]
@@ -1600,7 +1600,6 @@ The stairwell is scenery in Circle Plaza. Understand "wall" and "well" and "bric
 The metal gratings are scenery in Circle Plaza. "Overlapping concentric circles make an unusual and beautiful pattern in the dark metal of these iron gratings. You think of raindrops in water, clocks, gears interlocking."
 
 Trees, the steps, and the stage are scenery in Circle Plaza. 
-
 
 
 A sidewalk artist is a man in Circle Plaza. The description of a sidewalk artist is "[if proper-named]Buddy [otherwise] A scruffy man[end if] is lying on the sidewalk, drawing in a carefree way on a sketchpad with sharpie markers scattered all around him."
