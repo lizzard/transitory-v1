@@ -163,7 +163,7 @@ Report listing works:
 To record (P - person) as connected:
 	choose row with a name of P in Table of Friendships;
 	now the connected entry is the connected entry plus one;
-	say "You feel connected to the people of this place and time.";
+	say "*** You feel connected to the people of this place and time. ***[line break]";
 
 	
 Table of Friendships
@@ -1507,7 +1507,8 @@ A yelling preacher is a person. In Calle 24 Plaza is a yelling preacher. The des
 The orquestra is a person. The description of the orquestra is "A little group of musicians, some sitting on milk crates or buckets with their instruments, some standing and swaying gently as they play." Understand "musicians" as the orquestra.
 
 
-Baile is a scene. Baile begins when the player has been in Calle 24 Plaza for three turns.
+[
+Baile is a scene. Baile begins when the player has been in Calle 24 Plaza for five turns.
 
 When Baile begins: 
 	now the orquestra is in Calle 24 Plaza;
@@ -1525,8 +1526,11 @@ Instead of talking to anyone during Baile:
 	
 Baile ends when the number of filled rows in the Table of Baile Events is 0.
 
+
 When Baile ends:
 	now the orquestra is nowhere;
+	
+
 
 Table of Baile events
 event
@@ -1541,6 +1545,7 @@ event
 "A tourist happily films the scene, turning to take in the crowd, the passers-by, and the musicians. "
 "The musicians stop, chatting companionably as they pack up."
 "The crowds are leaving now that Orquestra La 24 is done for the day."
+]
 
 
 Along Mission is northeast of Calle 24 Plaza. It is bumpy.  Along Mission is south of Old Bank Corner. The description is "Cruising along Mission between 16th and 24th stations, you pass a jumble of shops, restaurants, bars, and people all going about their business."	
@@ -1560,9 +1565,9 @@ West of Donuts Corner is a room called Chinese Food and Donuts. It is smooth.
 
 The description of Chinese Food is "The donut shop is warm and bright. It smells like tasty food and baked goods.[if the player is not blind] One display case holds rows of donuts. Another has steam trays full of hot food.[end if]" 
 
-A pink-jacketed girl is in Chinese Food. The description is "A little girl[if player is not blind] with long braids and a pink jacket. She has a bedazzled Dora the Explorer backpack.[end if][if player is blind] trying to decide what kind of donut to get.[end if]"
+A pink-jacketed girl is in Chinese Food. She is a girl. The description is "A little girl[if player is not blind] with long braids and a pink jacket. She has a bedazzled Dora the Explorer backpack.[end if][if player is blind] trying to decide what kind of donut to get.[end if]"
 
-An impatient lady is in Chinese Food. "Behind the counter, a lady is waiting impatiently for you to make up your mind what you want." The description of an impatient lady is "She says, 'Next! You want a donut? Coconut donut? Plain? You want eggrolls?'"  
+An impatient lady is in Chinese Food. She is a woman. "Behind the counter, a lady is waiting impatiently for you to make up your mind what you want." The description of an impatient lady is "She says, 'Next! You want a donut? Coconut donut? Plain? You want eggrolls?'"  
 
 The display case is scenery in Chinese Food. It is a container. The description is "A glass-fronted food display running along the length of the counter, with donuts on one side and steam trays of egg rolls and other hot food on the other." 
 
@@ -1573,7 +1578,7 @@ A plain donut is an edible thing in the display case. The price of the plain don
 A coconut donut is an edible thing in the display case. The price of the coconut donut is $1.00. The description is "A donut, simultanously dry and greasy, in a waxed paper jacket. Little bits of coconut are falling off it onto your hands."
 
 
-Osage Alley is southwest of Circle Plaza. It is bumpy. The description of Osage Alley is "This narrow alley leads to a streetcorner plaza opening out to the northeast. In the north wall of the alley, you recognize the door to your home. [if the player is not blind]Walls and garage doors are covered in colorful paintings. You notice a large mural that says something about coffee. [end if][if the player is blind]It smells of fresh spray paint and car exhaust.[end if]"
+Osage Alley is southwest of Circle Plaza. It is bumpy. The description of Osage Alley is "This narrow alley leads to a plaza to the northeast. In the north wall of the alley, you recognize the door to your home. [if the player is not blind]Walls and garage doors are covered in colorful paintings. You notice a large mural that says something about coffee. [end if][if the player is blind]It smells of fresh spray paint and car exhaust.[end if]"
 
 [The paintings are scenery in Osage Alley. The description is "[if the player is not blind]Vivid scrawls, mostly letters, hard for you to read as they're so intertwined and wildly shaped. In one exuberant splash of color to the north, there's the door to your home.[end if][if the player is blind]Trash and old spray paint cans litter the alley. The door to your home is in a stone wall to the north.[end if]"]
 
@@ -1589,7 +1594,7 @@ After examining the coffee mural for the first time:
 [	say "Vaqueros, cooks, grinding the corn, drawing the water.";]
 
 Circle Plaza is south of Donuts Corner. It is sidewalk.
-The description of Circle Plaza is "[if player is not blind]You head into the crowds of this busy space built around an unusual circular wall, like a giant well made of bricks. People are selling stuff from tables and little booths. [end if][if player is not deaf]Many kinds of music are playing at once. [end if][if player is not hearing or player is not sighted]This is a typical, busy, open space on Mission Street. It's super familiar; the alley to your home is just to the southwest of this lively plaza.[end if]".
+The description of Circle Plaza is "[if player is not blind]You head into the crowds of this busy space built around an unusual circular brick wall. It's the stairwell down into the station. People are selling stuff from tables and little booths. [end if][if player is not deaf]Many kinds of music are playing at once. [end if][if player is not hearing or player is not sighted]This is a typical, busy, open space on Mission Street. It's super familiar; the alley to your home is just to the southwest of this lively plaza.[end if]".
 
 Down from Circle Plaza is Mission 24th Concourse. 
 
@@ -1602,7 +1607,7 @@ The metal gratings are scenery in Circle Plaza. "Overlapping concentric circles 
 Trees, the steps, and the stage are scenery in Circle Plaza. 
 
 
-A sidewalk artist is a man in Circle Plaza. The description of a sidewalk artist is "[if proper-named]Buddy [otherwise] A scruffy man[end if] is lying on the sidewalk, drawing in a carefree way on a sketchpad with sharpie markers scattered all around him."
+A sidewalk artist is a man in Circle Plaza. The description of a sidewalk artist is "[if proper-named]Buddy [otherwise]A scruffy man[end if] is lying on the sidewalk, drawing in a carefree way on a sketchpad."
 
 A sidewalk artist carries a sketchpad. The description of the sketchpad is "[if the player is blind]The artist says 'I love to draw, are you interested? I'm drawing Happy Tuesday!'[end if][if the player is not blind]A cheap sketch pad with a drawing of the words 'Happy Tuesday' in rainbow marker.[end if]"
 
@@ -1612,7 +1617,7 @@ After talking to a sidewalk artist for the first time:
 	say "'You seem pretty nice, I don't mind asking you, got any food?'";
 	now the printed name of the sidewalk artist is "Buddy the sidewalk artist";
 	now the sidewalk artist is proper-named;
-
+	record the artist as connected;
 
 	
 Understand "Buddy" as the sidewalk artist.
@@ -1625,9 +1630,8 @@ Instead of giving an edible thing to the artist for the first time:
 	say "Buddy thinks for a minute, considering you.";
 	say "'Time is what you make of it. What with that magic marker and all.'";
 	say "Buddy laughs and goes back to his sketchpad.";
-	say "His teeth are disturbingly bad.";
+	say "You notice he is missing a lot of teeth.";
 	now the artist is carrying the noun;
-	record the artist as connected;
 	stop the action;
 
 Instead of giving an edible thing to the artist:
@@ -1658,14 +1662,13 @@ Instead of taking the cart:
 	say "But that belongs to Mariquita! And she's so nice.";
 
 
-Calle 24 Corner is east of Circle Plaza. The surface of Calle 24 Corner is sidewalk. "This busy street corner by the McDonalds is grimy. It's basically a crowded spot where people wait to cross the street. Across Mission to the west, there's a nice plaza with a busy market. Across 24th Street to the north, another lovely plaza with musicians, preachers, and some places to sit. [if player is not Deaf]Classical music is blasting from hidden speakers at an obnoxious level, meant to drive loiterers away.[end if]" 
+Calle 24 Corner is east of Circle Plaza. The surface of Calle 24 Corner is sidewalk. "This busy street corner by the McDonalds is grimy. It's basically a crowded spot where people wait to cross the street.  [if player is not Deaf]Classical music is blasting from hidden speakers at an obnoxious level, meant to drive loiterers away.[end if]" 
 
 Calle 24 Corner is south of Calle 24 Plaza. The surface of Calle 24 Corner is sidewalk.
 
 A raccoon is a kind of animal.  In Calle 24 Corner is a raccoon. The description of the raccoon is "A greasy looking plump raccoon. It's battered, but unbowed."  
 Every turn when the player can see a raccoon and the turn count is even: 
     say "A raccoon [one of]hauls itsef out of a concrete trash bin[or]skulks into a nearby alleyway[or]hides in a little nook, eating some discarded fries[or]has a little nap in a pile of trash[then at random]."
-
 
 
 A guy in a yellow vest is a man in Calle 24 Corner. The description of the guy is "A guy in a high visibility vest, sweeping up trash. He's carrying a dustpan on a long handle. He seems a bit careworn."
@@ -2233,7 +2236,7 @@ Carry out switching off a transit card:
 The player is carrying a magic marker and a BART card.
 
 
-The magic marker is an object. The description of the magic marker is "A plain old magic marker. [if the marker is magical]It fizzes and tingles with energy as if it were eager to make its mark.[end if]"
+The magic marker is an object. The description of the magic marker is "A [if the marker is not magical]plain old [end if]magic marker. [if the marker is magical]It tingles with energy.[end if]"
 
 Writing on is an action applying to one visible thing. Understand "write on [something]" as writing on. Understand "scribble on [something]" or "draw on [something]" as writing on. 
 
