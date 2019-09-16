@@ -15,9 +15,6 @@ When play begins:
 	now the command prompt is "[time of day] >" ;
 
 Rule for constructing the status line:
-	[deepen the status line to 2 rows;
-	center "[location]" at row 1;
-	center "Exits: [short exit list]" at row 2;]
 	fill status bar with Table of Fancy Status; 
 	rule succeeds.
 	
@@ -33,6 +30,8 @@ The maximum score is 200.
 
 A surface is a kind of value. A room has a surface. 
 The surfaces are smooth, bumpy, sidewalk, brick, cracked, gravel, sand, grassy, and mud. A room is usually smooth.
+
+A timeliness is a kind of value. A room has a timeliness. The timelinesses are present and wibbly. A room is usually present.
 
 An artwork is a kind of thing.
 
@@ -204,11 +203,9 @@ wraparound mirrorshades are a wearable object. "Shiny reflecting glasses."
 The description of wraparound mirrorshades is "Astonishingly dorky metallic glasses."
 Understand "glasses" or "shades" as wraparound mirrorshades.
   
-
-blue goggles are a wearable object. "Thick blue goggles." 
+Blue goggles are a wearable object. "Thick blue goggles." 
 The description of blue goggles is "Large, thick-lensed, coke-bottle tinted goggles."
 Understand "goggles" as blue goggles.
-
 
 A long cane is an object. "A long probing cane."
 The description of the white cane is "A long, thin, cane, used for navigation by people who don't see well or who are blind."
@@ -310,7 +307,6 @@ After taking off the headphones:
 A thick woolly hat is a wearable object. "A thick woolly knit hat." 
 The description is "An attractive woollen hat knitted from thick yarn. It comes down well over your ears."
 
-
 Before wearing the thick woolly hat:
 	now the player is hard-of-hearing;
 	
@@ -319,7 +315,6 @@ After taking off the thick woolly hat:
 	
 earplugs are a wearable object. "Squashy orange foam earplugs." 
 The description is "Foam earplugs, useful for when you don't want to be bothered by noise." 
-
 
 Before wearing the earplugs:
 	now the player is hard-of-hearing;  [this is meant to be little-d deaf but i havent figured out how to differentiate based on lower or upper case and it may not be possible.]
@@ -343,8 +338,6 @@ Before wearing a pair of cruel shoes:
 	
 After taking off a pair of cruel shoes:
 	now the player is walking;
-
-[experiment with wearing a wheelchair rather than using Rideable Vehicles]
 
 A wheelchair is a kind of wearable thing. A powerchair is a wheelchair. A manual chair is a wheelchair. A scooter is a wheelchair. 
 
@@ -415,7 +408,6 @@ Before standing up:
 
 Section 4 - Some varied defaults for examining
 
-
 [replace the look description for examining objects, without assuming sightedness]
 
 The description of yourself is "As fantabulous as ever. [line break] You are [sightedness], [deafness], and [ambulation].";
@@ -426,7 +418,6 @@ Carry out examining (this is the multisensory examine undescribed things rule):
 	if examine text printed is false:
 		say "[one of]Nothing special about [the noun].[or]Ordinary enough.[or]Yeah, it's [a noun].[or]You note the presence of [a noun].[at random][run paragraph on]";
 
-	
 
 [todo: fix the paragraph breaks after objects with descriptions]	
 Studying the vicinity is an action applying to nothing. 
@@ -1190,7 +1181,7 @@ A paint-covered workman is a man in Mission 16th St. The description of a workma
 
 A tired lady is a woman in Mission 16th St. The description of a tired lady is "A woman in a puffy vest sits on a bench. She looks up at the train schedule, sighs, and looks back at her feet."
 
-Mission 16th Concourse is up from Mission 16th St. Mission 16th is a concourse. The surface of Mission 16th Concourse is brick. "[if player is not blind]Low but nicely curved arches made of smooth concrete form the ceiling of this long, busy station. Concrete sculptures molded in relief march up the sides of the enormous stairwell, open to the sky. [end if] [if player is not deaf]Music echoes from the stairwells. The acoustics are great![end if] Crowds of people swirl around the concourse." 
+Mission 16th Concourse is up from Mission 16th St. Mission 16th is a concourse. The surface of Mission 16th Concourse is brick. "[if player is not blind]Low but nicely curved arches made of smooth concrete form the ceiling of this long, busy station. Concrete sculptures molded in relief march up the sides of the enormous stairwell, open to the sky. [end if] [if player is not deaf]Music echoes from the stairwells. The acoustics are great![end if] Crowds of people swirl around the concourse.[if the player is carrying an ART card]You think that you could climb up the blocky sculptures.[end if]" 
 
 
 A saxophone player is a man in Mission 16th Concourse. The description of a saxophone player is "A man sitting on a stool by the stairwell plays jazz on a saxophone. The instrument case is open in front of him, containing a scattering of change, dollar bills, and flyers for music shows."
@@ -1227,7 +1218,7 @@ Instead of climbing when the player is in Mission 16th Concourse and the ART car
 
 
 		
-Papel Picado Plaza is a street level station. Papel Picado Plaza is up from Mission 16th Concourse. The surface of Papel Picado Plaza is brick. "A lively streetcorner plaza. Lots of people are hanging around just watching the world go by. [if the player is not blind]The little kiosk holding the elevator is topped with a mosaic and panes of colored glass.  Colorful ironwork railings, blue, green, orange, and pink, line the stairwell down to the station. They're worked to look like Mexican paper cutout art.[end if][if the player is blind]Fancy ironwork railings line the stairwell down to the station.[end if]"
+Papel Picado Plaza is a street level station. It is wibbly. Papel Picado Plaza is up from Mission 16th Concourse. The surface of Papel Picado Plaza is brick. "A lively streetcorner plaza. Lots of people are hanging around just watching the world go by. [if the player is not blind]The little kiosk holding the elevator is topped with a mosaic and panes of colored glass.  Colorful ironwork railings, blue, green, orange, and pink, line the stairwell down to the station. They're worked to look like Mexican paper cutout art.[end if][if the player is blind]Fancy ironwork railings line the stairwell down to the station.[end if]"
 
 The ironwork railings are a backdrop. They are in Papel Picado Plaza and Plaza del Colibrí. The description is "Elaborately wrought railings in lacy metal line the stairwell down to the station. Each panel is worked in the shape of Mexican paper cutout art; stylized hummingbirds and flowers."
 
@@ -1331,7 +1322,6 @@ Hummingbird Station is a room. The surface of Hummingbird Station is smooth. The
 A carnelian flower is an object. "This stylized flower is sculpted in carnelian, smooth and polished." The description of the carnelian flower is "It shimmers, slipping in time. Cold stone; ambergris; thyme. You think of sacrifice and the blood of captive warriors." 
 
 	
-
 		
 Noisebridge is a room. The surface of Noisebridge is smooth. The description of Noisebridge is "You are in a large hackerspace. People are messing around with laptops in the Hackitorium east of the main room, poking at electronic gadgets, reading in the library area, and playing video games over by the windows. There are piles of junk up against one wall."
 
@@ -1407,7 +1397,7 @@ Guilicse is a man. He is in Mission Dolores.
 Mutacxe is a man. He is in Mission Dolores.
 	 [these are some of the Huchiun men who first visited the vessel San Carlos in 1775]
 
-Chutchui is a room. The surface of Chutchui is grassy. 
+Chutchui is a room. It is wibbly. The surface of Chutchui is grassy. 
 	
 A large roundhouse is an open enterable container in Chutchui. 
 A pine house is an open enterable container in Chutchui.
@@ -1606,7 +1596,6 @@ The metal gratings are scenery in Circle Plaza. "Overlapping concentric circles 
 
 Trees, the steps, and the stage are scenery in Circle Plaza. 
 
-
 A sidewalk artist is a man in Circle Plaza. The description of a sidewalk artist is "[if proper-named]Buddy [otherwise]A scruffy man[end if] is lying on the sidewalk, drawing in a carefree way on a sketchpad."
 
 A sidewalk artist carries a sketchpad. The description of the sketchpad is "[if the player is blind]The artist says 'I love to draw, are you interested? I'm drawing Happy Tuesday!'[end if][if the player is not blind]A cheap sketch pad with a drawing of the words 'Happy Tuesday' in rainbow marker.[end if]"
@@ -1669,7 +1658,6 @@ Calle 24 Corner is south of Calle 24 Plaza. The surface of Calle 24 Corner is si
 A raccoon is a kind of animal.  In Calle 24 Corner is a raccoon. The description of the raccoon is "A greasy looking plump raccoon. It's battered, but unbowed."  
 Every turn when the player can see a raccoon and the turn count is even: 
     say "A raccoon [one of]hauls itsef out of a concrete trash bin[or]skulks into a nearby alleyway[or]hides in a little nook, eating some discarded fries[or]has a little nap in a pile of trash[then at random]."
-
 
 A guy in a yellow vest is a man in Calle 24 Corner. The description of the guy is "A guy in a high visibility vest, sweeping up trash. He's carrying a dustpan on a long handle. He seems a bit careworn."
 
@@ -1798,7 +1786,6 @@ The description of Montgomery is "You are on a BART platform underground. It's c
 Montgomery Concourse is up from Montgomery. Montgomery Concourse is a concourse. It is near MUNI.
 
 Montgomery Plaza is up from Montgomery Concourse.  It is a street level station. It is near MUNI.  
-
 
 The jewelry table is scenery in Montgomery Plaza. "You are overwhelmed by the array of cheap rings with big semi-precious stones, earrings made of tiny feathers, and chunky silver bracelets in neat rows."
 
@@ -2150,7 +2137,7 @@ Check going to Street Level:
 		
 
 
-Part 9 - Ticket reader
+Part 9 - Ticket reader and devices
 
 [the reader itself]
 
@@ -2318,7 +2305,29 @@ Carry out squeaking:
 		say "You echolocate.";
 		say "OooOOOooo! Bugs!";
 		say "You catch a delicious gnat and crunch it up, savoring the juices.";
+	
 		
+After going to a wibbly room:
+	if the player is wearing a 4-D timelock:
+		say "The 4-D timelock gives an excited little buzz!";
+		
+After switching on the 4-D timelock:
+	if the player is in a wibbly room:
+		if the location of the player is a Mainline room listed in the Table of Wibbly Rooms:
+			now the player is in otherline room entry;
+			stop the action;
+		if the location of the player is an Otherline room listed in the Table of Wibbly Rooms:
+			now the player is in mainline room entry;
+			stop the action;
+	otherwise:
+		say "The timelock display blinks, then fades.";
+		stop the action.
+			
+
+Table of Wibbly Rooms
+Mainline room	Otherline room
+Papel Picado Plaza	Chutchui		
+
 
 Part 10 - Train rules
 
