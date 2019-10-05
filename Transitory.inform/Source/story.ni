@@ -40,6 +40,8 @@ Divisibility relates a number (called N) to a number (called M) when the remaind
 A boy is a kind of man. A girl is a kind of woman.
 A person is usually neuter.
 
+A container can be lighted or dark. A container is usually dark.
+
 After reading a command:
 	if the player’s command matches “take all”:
 		replace the player’s command with “abstain”.
@@ -482,6 +484,9 @@ A property-aggregation rule for a magic marker:
 		
 A property-aggregation rule for a transit card:
 	add "fizzing happily" to the tagline.
+	
+A property-aggregation rule for a cat:
+	add "purring" to the tagline.
 
 The last property-aggregation rule (this is the print aggregated properties rule):
 	if the number of entries in the tagline is greater than 0:
@@ -2150,7 +2155,7 @@ After going to a concourse:
 	now a ticket reader is in the location of the player;
 	continue the action.
 	
-[something is wack, here, because i also had to declare the ticket reader above in the after looking statement]
+[FIXME: something is wack, here, because i also had to declare the ticket reader above in the after looking statement]
 
 
 A writing utensil is a kind of thing. A magic marker is a writing utensil. 
@@ -2190,7 +2195,7 @@ Check switching on a transit card:
 		say "Your BART card isn't charged up yet.";
 		stop the action;
 		
-Carry out switching on a transit card:
+After switching on a transit card:
 	say "The card hums with energy.";
 	if the player is carrying an ART card:
 		say "[The noun] makes you feel fizzy all over.";
@@ -2207,8 +2212,39 @@ Carry out switching on a transit card:
 		say "You feel a strong urge to squeak.";
 		repeat with the item running through carried things: 
 			silently try dropping the item;
+	if the player is carrying a BAR card:
+		say "A lady comes by pushing a juice bar cart.";
+		say "Delicious fresh juice! Only a dollar!";
+		now Juicy is in the location of the player;
+		now Juicy carries a juice;
+	if the player is carrying a BARS card:
+		say "Giant metal bars come down and trap you in a cartoonish prison!";
+		now an iron cage is in the location of the player;
+		now the player is inside the iron cage;
+	if the player is carrying a BAST card:
+		say "There is a wild flurry of activity behind the ticket reader.";
+		now a cat is in the location of the player;
+	if the player is carrying a BARD card:
+		say "[if player is not deaf]A discordant note sounds as something thumps to the ground at your feet.[end if][if player is deaf]You feel something brush your foot.[end if]";
+		now the lute is in the location of the player;
 	
-			
+
+		
+A juice is an edible thing.  The price of a juice is $1.00. The description of a slime mold juice is "It's surprisingly refreshing, for something made from slime molds."
+
+Juicy is a woman.  	 The description of Juicy is "A young woman wearing a sweatsuit with JUICY written across the seat of her pants. She is pushing little mobile juice bar."
+
+An iron cage is an openable container. It is fixed in place. It is closed and locked.  An iron cage is lighted.
+
+The can't take other people rule does nothing when taking an animal.
+
+A cat is an animal. The description of a cat is "A sleek and elegant cat."
+
+An instrument is a kind of thing.
+A lute is an instrument. The description of a lute is "A battered lute with broken strings."
+
+
+
 	
 Carry out switching off a transit card:
 	say "The card shuts off with a little thump.";
@@ -2218,6 +2254,9 @@ Carry out switching off a transit card:
 		now the player is mobile;
 		say "You feel like yourself again.";
 		now the description of yourself is "As fantabulous as ever. [line break] You are [sightedness], [deafness], and [ambulation].";
+	if the player is carrying a BARS card:
+		now the iron cage is unlocked;
+		say "There is a heavy thunk from the iron lock.";
 
  
 The player is carrying a magic marker and a BART card.
