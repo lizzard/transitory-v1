@@ -7,6 +7,8 @@
 		<key>IFSettingNaturalInform</key>
 		<true/>
 	</dict>
+	<key>IFCompilerVersionSettings</key>
+	<dict/>
 	<key>IFI7OutputSettings</key>
 	<dict>
 		<key>IFSettingCreateBlorb</key>
